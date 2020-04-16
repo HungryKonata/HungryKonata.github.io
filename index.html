@@ -188,7 +188,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-16 00:10:52 / 修改时间：15:28:38" itemprop="dateCreated datePublished" datetime="2020-04-16T00:10:52+08:00">2020-04-16</time>
+              <time title="创建时间：2020-04-16 00:10:52 / 修改时间：18:09:33" itemprop="dateCreated datePublished" datetime="2020-04-16T00:10:52+08:00">2020-04-16</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -215,7 +215,7 @@
 <p>知乎问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a></p>
 </blockquote>
 <p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
-<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
+<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷酷男孩。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
 <p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
 
       
@@ -267,7 +267,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-16 18:06:32" itemprop="dateModified" datetime="2020-04-16T18:06:32+08:00">2020-04-16</time>
+                <time title="修改时间：2020-04-16 18:09:57" itemprop="dateModified" datetime="2020-04-16T18:09:57+08:00">2020-04-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -293,7 +293,7 @@
           <blockquote>
 <p>本文是我学习时对资料的一个个人学习笔记，资料来自于<a href="https://blog.csdn.net/zouxy09/article/details/9156785/" target="_blank" rel="noopener">MEL原理</a></p>
 </blockquote>
-<h3 id="声谱图spectrogram">1. 声谱图（Spectrogram）</h3>
+<h3 id="声谱图">1. 声谱图</h3>
 <p>首先我们来弄明白比倒谱分析更易懂的声谱图</p>
 <p>我们处理的是语音信号，那么我们该如何去描述它呢？最简单的方法当然是录下来一段语音，然后把直接它放到语音分析软件里，这时软件就会给我们一个语音的时序图 <img src="https://img-blog.csdnimg.cn/20200316215054369.png" /> 很显然，横轴是时间，纵轴是声音的震幅。</p>
 <p>接下来我们要对这段波形进行傅里叶变换，<strong>但是我们不直接变换。在语音信号处理中我们一般先把语音切片成帧(frame)，对每帧进行傅里叶变换</strong>,我们来看图 <img src="https://img-blog.csdnimg.cn/20200316215605772.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
@@ -362,7 +362,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-16 18:04:27" itemprop="dateModified" datetime="2020-04-16T18:04:27+08:00">2020-04-16</time>
+                <time title="修改时间：2020-04-16 18:10:22" itemprop="dateModified" datetime="2020-04-16T18:10:22+08:00">2020-04-16</time>
               </span>
 
           
@@ -382,7 +382,7 @@
 <p>这篇文章的主题是高斯混合模型（GMM），GMM与最大期望（EM）方法有很大的联系，而在GMM的求解过程中使用了极大似然估计法</p>
 <hr />
 <h1 id="一极大似然估计">一、极大似然估计</h1>
-<p>我们先来复习一下极大似然估计法是怎么进行的,来看一个概率论课上的经典实例</p>
+<p>我们先来复习一下极大似然估计法是怎么进行的,来看一个概率论课上的实例</p>
 <p><strong>设样本服从正态分布</strong><span class="math inline">\(N(\mu,\sigma^2)\)</span>，则似然函数为<span class="math display">\[L(\mu,\sigma^2)=\prod^{N}_{i=1}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span> 试估计参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值 其中<span class="math inline">\(x_{i}\)</span>是样本，也就是说这个函数<span class="math inline">\(L(\mu,\sigma^{2})\)</span>是各个样本的概率的积。</p>
 <p>我们需要做的是由似然函数<strong>估计</strong>出参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值。之所以说是估计，是因为<strong>使用有限的样本不可能准确求出原本高斯分布的参数</strong>。 那么怎么由似然函数求值呢？ 1. 首先我们要对似然函数<strong>求对数</strong>，这是因为似然函数是各个事件发生的概率的积，当很多概率乘在一起时，会导致这个似然函数的值非常小，计算机由于精度的原因无法处理 2. <strong>对参数</strong>求导,再令导数为0。我们知道，这样求出的点是似然函数的极值点，而我们需要的是使得似然函数取得最大值时的参数值。这样这个极值点便<strong>很可能</strong>是我们要求的参数值 3. 求解上述似然方程 --- 求解过程如下 对似然函数取对数得到 <span class="math display">\[\ln L(\mu,\sigma^2)=\sum_{i=1}^N \ln\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span> 化简得到<span class="math display">\[\ln L(\mu,\sigma^2) = -\frac{n}{2}\ln(2\pi)-\frac{n}{2}\ln(\sigma^2)-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_{i}-\mu)^2\]</span></p>
 <p>对参数求导得到 <span class="math display">\[ \left \{
