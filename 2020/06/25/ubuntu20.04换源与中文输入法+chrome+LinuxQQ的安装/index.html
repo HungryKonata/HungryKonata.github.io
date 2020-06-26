@@ -219,6 +219,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/06/25/ubuntu20.04%E6%8D%A2%E6%BA%90%E4%B8%8E%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95+chrome+LinuxQQ%E7%9A%84%E5%AE%89%E8%A3%85/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/25/ubuntu20.04%E6%8D%A2%E6%BA%90%E4%B8%8E%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95+chrome+LinuxQQ%E7%9A%84%E5%AE%89%E8%A3%85/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -296,7 +310,7 @@
 
           </div>
           
-    <div class="comments" id="gitalk-container"></div>
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -523,23 +537,32 @@
 
   
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '69011bb64f53e902a208',
-      clientSecret: '0a36e5ef77801af655217f5f70f565e3784d4e64# GitHub Application Client Secret',
-      repo        : 'BlogComments',
-      owner       : 'HungryKonata',
-      admin       : [''],
-      id          : '4cdac75bd5cf5bb0d30aa67c9c6b4209',
-        language: 'zh-CN',
-      distractionFreeMode: true
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'dty42XsTsHqdJgqPF1O0A9gN-gzGzoHsz',
+      appKey     : 'SPMb6AXN1fjAJBFrBUSu7Gq0',
+      placeholder: "HappyHappy",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
 });
 </script>
 

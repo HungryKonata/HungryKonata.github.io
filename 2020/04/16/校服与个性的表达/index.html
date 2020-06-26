@@ -212,6 +212,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -266,7 +280,7 @@
 
           </div>
           
-    <div class="comments" id="gitalk-container"></div>
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -492,23 +506,32 @@
 
   
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '69011bb64f53e902a208',
-      clientSecret: '0a36e5ef77801af655217f5f70f565e3784d4e64# GitHub Application Client Secret',
-      repo        : 'BlogComments',
-      owner       : 'HungryKonata',
-      admin       : [''],
-      id          : '93f76382cac60a81fa7b556c490146cc',
-        language: 'zh-CN',
-      distractionFreeMode: true
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'dty42XsTsHqdJgqPF1O0A9gN-gzGzoHsz',
+      appKey     : 'SPMb6AXN1fjAJBFrBUSu7Gq0',
+      placeholder: "HappyHappy",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
 });
 </script>
 
