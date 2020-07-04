@@ -31,83 +31,6 @@
       </tags>
   </entry>
   <entry>
-    <title>夏天</title>
-    <url>/2020/04/28/%E5%A4%8F%E5%A4%A9/</url>
-    <content><![CDATA[<blockquote>
-<p>彩虹合唱团 --《夏天的梦是什么颜色的》</p>
-</blockquote>
-<a id="more"></a>
-<blockquote>
-<p>夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是微微踮起的脚尖</p>
-<p>是海岸线上的尖叫</p>
-<p>啊 夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是列车远去的白烟</p>
-<p>是关门轻轻的背影</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-        <tag>歌词</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>校服与个性的表达</title>
-    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
-    <content><![CDATA[<blockquote>
-<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
-</blockquote>
-<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
-<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
-<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>知乎</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>正则化笔记</title>
-    <url>/2020/04/13/%E6%AD%A3%E5%88%99%E5%8C%96%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="一.为什么需要正则化">一.为什么需要正则化?</h2>
-<p>简单来说，在使用神经网络时，为了增加模型的泛化能力，防止模型只在训练集上有效、在测试集上不够有效，我们使用正则化</p>
-<blockquote>
-<p>正则化是为了防止过拟合， 进而增强泛化能力。泛化误差= 测试误差。也可以说是为了使得训练数据训练的模型在测试集上的表现（或说性能）好不好</p>
-</blockquote>
-<h2 id="二.正则化有哪几种常用方法">二.正则化有哪几种常用方法？</h2>
-<p>常用的有<span class="math inline">\(l_1-norm\)</span>、<span class="math inline">\(l_2-norm\)</span>即在损失函数中添加<strong>惩罚项</strong>;还有例如<span class="math inline">\(Droupout\)</span>方法。下面让我们来更仔细地看一下是怎么进行的</p>
-<h3 id="l_1-norm">2.1 <span class="math inline">\(l_1-norm\)</span></h3>
-<p><span class="math inline">\(l_1-norm\)</span>也叫做<code>lasso回归</code>。 机器学习模型当中的参数，可形式化地组成参数向量，记为<span class="math inline">\(\vec w\)</span>，为方便表示，我下面都记为大写字母W。不失一般性，以线性模型为例，模型可记为 <span class="math display">\[F(x;W)=W^Tx=\sum_{i=1}^nw_i\cdot x\]</span> 为了进一步地偷懒，我们将<span class="math inline">\(W^T\)</span>也叫做<span class="math inline">\(W\)</span>。 现在我们来定义一个平方损失函数，其中W是模型的参数矩阵，x为模型的某个输入值，y为实际值，那么有损失函数 <span class="math display">\[C=||Wx-y||^2\]</span> 所以有模型参数 <span class="math display">\[W^*=arg\min_{C}||Wx-y||^2\]</span> 试想，假如我们使用某种方法使得cost降到最小，那么可想而知很容易便会产生过拟合(overfitting)。现在我们不希望这个cost降到最低，一个可行的方法是在损失函数公式中我们给它加入一个反向的<code>干扰项</code>，我们给它取个更专业的名字--<code>惩罚项</code>。 我们重新定义这个这个损失函数。<span class="math inline">\(l_1-norm\)</span>方法在式子中加入了一个<code>一次</code>的惩罚项,<code>用来描述模型的复杂程度</code> <span class="math display">\[C=||Wx-y||^2+\alpha||W||\]</span> 其中<span class="math inline">\(\alpha\)</span>用来衡量惩罚项的重要程度。 使用这样的损失函数，便可以一定程度上防止产生过拟合</p>
-<h3 id="l_2-norm">2.2 <span class="math inline">\(l_2-norm\)</span></h3>
-<p>将惩罚项定位二次项，这样定义损失函数的方法我们称之为<span class="math inline">\(l_2-norm\)</span>,也可以叫它Ridge回归（岭回归）。例如: <span class="math display">\[C=||Wx-y||^2+\alpha||W||^2\]</span></p>
-<h3 id="dropout正则化">2.3 Dropout正则化</h3>
-<p>L1、L2正则化是通过修改损失函数来实现的，而Dropout则是通过<strong>修改神经网络本身</strong>来实现的，它是在训练网络时用的一种技巧(trick)。 举例来说，假如现在我们有20个样本，但是定义了300个神经元，那么直接进行训练，由于神经元数量很多，所以模型的拟合效果会很好，也因此会很容易产生过拟合现象。现在我们每一次训练神经网络时，随机丢弃一部分神经元，下一次训练时，再随机丢掉一部分神经元，那么这样我们也可以有效降低过拟合效应。 下面是一个示例代码，来自莫烦py教程 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># torch.manual_seed(1)    # reproducible</span></span><br><span class="line"></span><br><span class="line">N_SAMPLES = <span class="number">20</span></span><br><span class="line">N_HIDDEN = <span class="number">300</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># training data</span></span><br><span class="line">x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">y = x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># test data</span></span><br><span class="line">test_x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">test_y = test_x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># show data</span></span><br><span class="line">plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'train'</span>)</span><br><span class="line">plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'test'</span>)</span><br><span class="line">plt.legend(loc=<span class="string">'upper left'</span>)</span><br><span class="line">plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>))</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">net_overfitting = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">net_dropped = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">print(net_overfitting)  <span class="comment"># net architecture</span></span><br><span class="line">print(net_dropped)</span><br><span class="line"></span><br><span class="line">optimizer_ofit = torch.optim.Adam(net_overfitting.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">optimizer_drop = torch.optim.Adam(net_dropped.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">loss_func = torch.nn.MSELoss()</span><br><span class="line"></span><br><span class="line">plt.ion()   <span class="comment"># something about plotting</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> range(<span class="number">500</span>):</span><br><span class="line">    pred_ofit = net_overfitting(x)</span><br><span class="line">    pred_drop = net_dropped(x)</span><br><span class="line">    loss_ofit = loss_func(pred_ofit, y)</span><br><span class="line">    loss_drop = loss_func(pred_drop, y)</span><br><span class="line"></span><br><span class="line">    optimizer_ofit.zero_grad()</span><br><span class="line">    optimizer_drop.zero_grad()  <span class="comment"># 清空过往梯度，才能更顺利地进行再一次地计算梯度</span></span><br><span class="line">    loss_ofit.backward()</span><br><span class="line">    loss_drop.backward()  <span class="comment"># backward通过反向传播计算当前梯度</span></span><br><span class="line">    optimizer_ofit.step()  <span class="comment"># step才更新网络参数</span></span><br><span class="line">    optimizer_drop.step()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> t % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># change to eval mode in order to fix drop out effect</span></span><br><span class="line">        net_overfitting.eval()</span><br><span class="line">        net_dropped.eval()  <span class="comment"># parameters for dropout differ from train mode</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># plotting</span></span><br><span class="line">        plt.cla()</span><br><span class="line">        test_pred_ofit = net_overfitting(test_x)</span><br><span class="line">        test_pred_drop = net_dropped(test_x)</span><br><span class="line">        plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'train'</span>)</span><br><span class="line">        plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'test'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_ofit.data.numpy(), <span class="string">'r-'</span>, lw=<span class="number">3</span>, label=<span class="string">'overfitting'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_drop.data.numpy(), <span class="string">'b--'</span>, lw=<span class="number">3</span>, label=<span class="string">'dropout(50%)'</span>)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.2</span>, <span class="string">'overfitting loss=%.4f'</span> % loss_func(test_pred_ofit, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>:  <span class="string">'red'</span>&#125;)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.5</span>, <span class="string">'dropout loss=%.4f'</span> % loss_func(test_pred_drop, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>: <span class="string">'blue'</span>&#125;)</span><br><span class="line">        plt.legend(loc=<span class="string">'upper left'</span>); plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>));plt.pause(<span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># change back to train mode</span></span><br><span class="line">        net_overfitting.train()</span><br><span class="line">        net_dropped.train()</span><br><span class="line"></span><br><span class="line">plt.ioff()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure> 结果： <img src="https://img-blog.csdnimg.cn/20200407134135992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 可以看到进行所谓dropout后的网络在所有数据上的损失函数更小</p>
-<p>总结一下我们应该怎么使用这种dropout技巧： 1. 定义网络时，在隐藏层中间使用<code>torch.nn.Dropout(prop)</code> 2. 神经网络有eval()和train()两种模式。计算预测值时记得切换到eval()模式，这种模式会关闭dropout；而在train()模式下，使用模型进行预测时仍然有部分神经元被dropout ### 2.4 增加训练集样本数量 这种方法自然也是可以削减过拟合的</p>
-<h2 id="参考">参考</h2>
-<ul>
-<li><a href="https://blog.csdn.net/qq_20412595/article/details/81636105?depth_1-utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1&amp;utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1" target="_blank" rel="noopener">正则化理解</a></li>
-<li><a href="https://blog.csdn.net/jinping_shi/article/details/52433975" target="_blank" rel="noopener">L1与L2正则化</a></li>
-<li><a href="https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg" target="_blank" rel="noopener">莫烦python</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>回归</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ubuntu20.04换源与中文输入法+chrome+LinuxQQ的安装</title>
     <url>/2020/06/25/ubuntu20.04%E6%8D%A2%E6%BA%90%E4%B8%8E%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95+chrome+LinuxQQ%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<p>安装了最新的ubuntu20.04，赶紧来配置一下吧</p>
@@ -163,6 +86,111 @@
       <tags>
         <tag>配环境</tag>
         <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则化笔记</title>
+    <url>/2020/04/13/%E6%AD%A3%E5%88%99%E5%8C%96%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="一.为什么需要正则化">一.为什么需要正则化?</h2>
+<p>简单来说，在使用神经网络时，为了增加模型的泛化能力，防止模型只在训练集上有效、在测试集上不够有效，我们使用正则化</p>
+<blockquote>
+<p>正则化是为了防止过拟合， 进而增强泛化能力。泛化误差= 测试误差。也可以说是为了使得训练数据训练的模型在测试集上的表现（或说性能）好不好</p>
+</blockquote>
+<h2 id="二.正则化有哪几种常用方法">二.正则化有哪几种常用方法？</h2>
+<p>常用的有<span class="math inline">\(l_1-norm\)</span>、<span class="math inline">\(l_2-norm\)</span>即在损失函数中添加<strong>惩罚项</strong>;还有例如<span class="math inline">\(Droupout\)</span>方法。下面让我们来更仔细地看一下是怎么进行的</p>
+<h3 id="l_1-norm">2.1 <span class="math inline">\(l_1-norm\)</span></h3>
+<p><span class="math inline">\(l_1-norm\)</span>也叫做<code>lasso回归</code>。 机器学习模型当中的参数，可形式化地组成参数向量，记为<span class="math inline">\(\vec w\)</span>，为方便表示，我下面都记为大写字母W。不失一般性，以线性模型为例，模型可记为 <span class="math display">\[F(x;W)=W^Tx=\sum_{i=1}^nw_i\cdot x\]</span> 为了进一步地偷懒，我们将<span class="math inline">\(W^T\)</span>也叫做<span class="math inline">\(W\)</span>。 现在我们来定义一个平方损失函数，其中W是模型的参数矩阵，x为模型的某个输入值，y为实际值，那么有损失函数 <span class="math display">\[C=||Wx-y||^2\]</span> 所以有模型参数 <span class="math display">\[W^*=arg\min_{C}||Wx-y||^2\]</span> 试想，假如我们使用某种方法使得cost降到最小，那么可想而知很容易便会产生过拟合(overfitting)。现在我们不希望这个cost降到最低，一个可行的方法是在损失函数公式中我们给它加入一个反向的<code>干扰项</code>，我们给它取个更专业的名字--<code>惩罚项</code>。 我们重新定义这个这个损失函数。<span class="math inline">\(l_1-norm\)</span>方法在式子中加入了一个<code>一次</code>的惩罚项,<code>用来描述模型的复杂程度</code> <span class="math display">\[C=||Wx-y||^2+\alpha||W||\]</span> 其中<span class="math inline">\(\alpha\)</span>用来衡量惩罚项的重要程度。 使用这样的损失函数，便可以一定程度上防止产生过拟合</p>
+<h3 id="l_2-norm">2.2 <span class="math inline">\(l_2-norm\)</span></h3>
+<p>将惩罚项定位二次项，这样定义损失函数的方法我们称之为<span class="math inline">\(l_2-norm\)</span>,也可以叫它Ridge回归（岭回归）。例如: <span class="math display">\[C=||Wx-y||^2+\alpha||W||^2\]</span></p>
+<h3 id="dropout正则化">2.3 Dropout正则化</h3>
+<p>L1、L2正则化是通过修改损失函数来实现的，而Dropout则是通过<strong>修改神经网络本身</strong>来实现的，它是在训练网络时用的一种技巧(trick)。 举例来说，假如现在我们有20个样本，但是定义了300个神经元，那么直接进行训练，由于神经元数量很多，所以模型的拟合效果会很好，也因此会很容易产生过拟合现象。现在我们每一次训练神经网络时，随机丢弃一部分神经元，下一次训练时，再随机丢掉一部分神经元，那么这样我们也可以有效降低过拟合效应。 下面是一个示例代码，来自莫烦py教程 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># torch.manual_seed(1)    # reproducible</span></span><br><span class="line"></span><br><span class="line">N_SAMPLES = <span class="number">20</span></span><br><span class="line">N_HIDDEN = <span class="number">300</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># training data</span></span><br><span class="line">x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">y = x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># test data</span></span><br><span class="line">test_x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">test_y = test_x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># show data</span></span><br><span class="line">plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'train'</span>)</span><br><span class="line">plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'test'</span>)</span><br><span class="line">plt.legend(loc=<span class="string">'upper left'</span>)</span><br><span class="line">plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>))</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">net_overfitting = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">net_dropped = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">print(net_overfitting)  <span class="comment"># net architecture</span></span><br><span class="line">print(net_dropped)</span><br><span class="line"></span><br><span class="line">optimizer_ofit = torch.optim.Adam(net_overfitting.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">optimizer_drop = torch.optim.Adam(net_dropped.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">loss_func = torch.nn.MSELoss()</span><br><span class="line"></span><br><span class="line">plt.ion()   <span class="comment"># something about plotting</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> range(<span class="number">500</span>):</span><br><span class="line">    pred_ofit = net_overfitting(x)</span><br><span class="line">    pred_drop = net_dropped(x)</span><br><span class="line">    loss_ofit = loss_func(pred_ofit, y)</span><br><span class="line">    loss_drop = loss_func(pred_drop, y)</span><br><span class="line"></span><br><span class="line">    optimizer_ofit.zero_grad()</span><br><span class="line">    optimizer_drop.zero_grad()  <span class="comment"># 清空过往梯度，才能更顺利地进行再一次地计算梯度</span></span><br><span class="line">    loss_ofit.backward()</span><br><span class="line">    loss_drop.backward()  <span class="comment"># backward通过反向传播计算当前梯度</span></span><br><span class="line">    optimizer_ofit.step()  <span class="comment"># step才更新网络参数</span></span><br><span class="line">    optimizer_drop.step()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> t % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># change to eval mode in order to fix drop out effect</span></span><br><span class="line">        net_overfitting.eval()</span><br><span class="line">        net_dropped.eval()  <span class="comment"># parameters for dropout differ from train mode</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># plotting</span></span><br><span class="line">        plt.cla()</span><br><span class="line">        test_pred_ofit = net_overfitting(test_x)</span><br><span class="line">        test_pred_drop = net_dropped(test_x)</span><br><span class="line">        plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'train'</span>)</span><br><span class="line">        plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'test'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_ofit.data.numpy(), <span class="string">'r-'</span>, lw=<span class="number">3</span>, label=<span class="string">'overfitting'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_drop.data.numpy(), <span class="string">'b--'</span>, lw=<span class="number">3</span>, label=<span class="string">'dropout(50%)'</span>)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.2</span>, <span class="string">'overfitting loss=%.4f'</span> % loss_func(test_pred_ofit, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>:  <span class="string">'red'</span>&#125;)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.5</span>, <span class="string">'dropout loss=%.4f'</span> % loss_func(test_pred_drop, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>: <span class="string">'blue'</span>&#125;)</span><br><span class="line">        plt.legend(loc=<span class="string">'upper left'</span>); plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>));plt.pause(<span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># change back to train mode</span></span><br><span class="line">        net_overfitting.train()</span><br><span class="line">        net_dropped.train()</span><br><span class="line"></span><br><span class="line">plt.ioff()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure> 结果： <img src="https://img-blog.csdnimg.cn/20200407134135992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 可以看到进行所谓dropout后的网络在所有数据上的损失函数更小</p>
+<p>总结一下我们应该怎么使用这种dropout技巧： 1. 定义网络时，在隐藏层中间使用<code>torch.nn.Dropout(prop)</code> 2. 神经网络有eval()和train()两种模式。计算预测值时记得切换到eval()模式，这种模式会关闭dropout；而在train()模式下，使用模型进行预测时仍然有部分神经元被dropout ### 2.4 增加训练集样本数量 这种方法自然也是可以削减过拟合的</p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://blog.csdn.net/qq_20412595/article/details/81636105?depth_1-utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1&amp;utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1" target="_blank" rel="noopener">正则化理解</a></li>
+<li><a href="https://blog.csdn.net/jinping_shi/article/details/52433975" target="_blank" rel="noopener">L1与L2正则化</a></li>
+<li><a href="https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg" target="_blank" rel="noopener">莫烦python</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>回归</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>夏天</title>
+    <url>/2020/04/28/%E5%A4%8F%E5%A4%A9/</url>
+    <content><![CDATA[<blockquote>
+<p>彩虹合唱团 --《夏天的梦是什么颜色的》</p>
+</blockquote>
+<a id="more"></a>
+<blockquote>
+<p>夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是微微踮起的脚尖</p>
+<p>是海岸线上的尖叫</p>
+<p>啊 夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是列车远去的白烟</p>
+<p>是关门轻轻的背影</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+        <tag>歌词</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>校服与个性的表达</title>
+    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
+    <content><![CDATA[<blockquote>
+<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
+</blockquote>
+<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
+<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
+<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>知乎</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语在高考中的权重可以调整吗</title>
+    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
+    <content><![CDATA[<blockquote>
+<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
+</blockquote>
+<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
+<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
+<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
+<a id="more"></a>
+<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
+<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
+<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
+<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
+<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
+<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平其实非常有限，无法在不借助翻译软件时顺利阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。而只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
+<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及嘛</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>知乎</tag>
+        <tag>高考</tag>
+        <tag>英语</tag>
       </tags>
   </entry>
   <entry>
@@ -257,34 +285,6 @@
       <tags>
         <tag>总结</tag>
         <tag>信号处理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语在高考中的权重可以调整吗</title>
-    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
-    <content><![CDATA[<blockquote>
-<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
-</blockquote>
-<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
-<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
-<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
-<a id="more"></a>
-<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
-<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
-<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
-<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
-<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
-<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平其实非常有限，无法在不借助翻译软件时顺利阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。而只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
-<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及嘛</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>知乎</tag>
-        <tag>高考</tag>
-        <tag>英语</tag>
       </tags>
   </entry>
   <entry>
