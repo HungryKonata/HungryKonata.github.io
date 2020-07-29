@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>what I adore</title>
-    <url>/2020/05/06/what%20I%20adore/</url>
+    <title>夏天</title>
+    <url>/2020/04/28/%E5%A4%8F%E5%A4%A9/</url>
     <content><![CDATA[<blockquote>
+<p>--《夏天的梦是什么颜色的》合唱</p>
+</blockquote>
+<a id="more"></a>
+<blockquote>
+<p>夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是微微踮起的脚尖</p>
+<p>是海岸线上的尖叫</p>
+<p>啊 夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是列车远去的白烟</p>
+<p>是关门轻轻的背影</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+        <tag>歌词</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我喜欢</title>
+    <url>/2020/05/06/%E6%88%91%E5%96%9C%E6%AC%A2/</url>
+    <content><![CDATA[<blockquote>
+<p>--《what I adore》 合唱</p>
+</blockquote>
+<a id="more"></a>
+<blockquote>
 <p>我喜欢 无尽田野上奔跑的麋鹿</p>
 <p>我喜欢 外婆门前的榕树</p>
 <p>我喜欢母亲的便当</p>
@@ -18,9 +49,6 @@
 <p>雾腾腾的早餐店 阿公的桂花糕</p>
 <p>我喜欢 每一朵暮云 每一株绿树</p>
 </blockquote>
-<blockquote>
-<p>--《我喜欢》 彩虹合唱团</p>
-</blockquote>
 <p><img src="https://img-blog.csdnimg.cn/20200506214619877.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
 ]]></content>
       <categories>
@@ -31,9 +59,29 @@
       </tags>
   </entry>
   <entry>
+    <title>校服与个性的表达</title>
+    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
+    <content><![CDATA[<blockquote>
+<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
+</blockquote>
+<a id="more"></a>
+<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
+<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
+<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>知乎</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ubuntu20.04换源与中文输入法+chrome+LinuxQQ的安装</title>
     <url>/2020/06/25/ubuntu20.04%E6%8D%A2%E6%BA%90%E4%B8%8E%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95+chrome+LinuxQQ%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<p>安装了最新的ubuntu20.04，赶紧来配置一下吧</p>
+<a id="more"></a>
 <h3 id="换源">1. 换源</h3>
 <p>在gnome中不需要手动操作文本进行换源，比全命令行方便很多</p>
 <p>点击左下角的<code>show applications</code>按钮,找到<code>Software＆Updates</code>，点进去</p>
@@ -41,7 +89,6 @@
 <img src="https://img-blog.csdnimg.cn/20200625142754297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="设置页面" /><figcaption>设置页面</figcaption>
 </figure>
 <p>在其中点击<code>Download from</code>按键，下拉菜单中点击<code>other</code>，然后在其中找到国内你喜欢的源就可以了。推荐使用阿里镜像(我觉得比其他源下载更快</p>
-<a id="more"></a>
 <figure>
 <img src="https://img-blog.csdnimg.cn/20200625143227790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="选择镜像站" /><figcaption>选择镜像站</figcaption>
 </figure>
@@ -96,6 +143,7 @@
 <blockquote>
 <p>正则化是为了防止过拟合， 进而增强泛化能力。泛化误差= 测试误差。也可以说是为了使得训练数据训练的模型在测试集上的表现（或说性能）好不好</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="二.正则化有哪几种常用方法">二.正则化有哪几种常用方法？</h2>
 <p>常用的有<span class="math inline">\(l_1-norm\)</span>、<span class="math inline">\(l_2-norm\)</span>即在损失函数中添加<strong>惩罚项</strong>;还有例如<span class="math inline">\(Droupout\)</span>方法。下面让我们来更仔细地看一下是怎么进行的</p>
 <h3 id="l_1-norm">2.1 <span class="math inline">\(l_1-norm\)</span></h3>
@@ -121,67 +169,22 @@
       </tags>
   </entry>
   <entry>
-    <title>夏天</title>
-    <url>/2020/04/28/%E5%A4%8F%E5%A4%A9/</url>
-    <content><![CDATA[<blockquote>
-<p>彩虹合唱团 --《夏天的梦是什么颜色的》</p>
-</blockquote>
-<a id="more"></a>
-<blockquote>
-<p>夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是微微踮起的脚尖</p>
-<p>是海岸线上的尖叫</p>
-<p>啊 夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是列车远去的白烟</p>
-<p>是关门轻轻的背影</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-        <tag>歌词</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>校服与个性的表达</title>
-    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
-    <content><![CDATA[<blockquote>
-<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
-</blockquote>
-<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
-<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
-<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>知乎</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英语在高考中的权重可以调整吗</title>
     <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
     <content><![CDATA[<blockquote>
 <p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
 </blockquote>
+<a id="more"></a>
 <p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
 <p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
 <p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
-<a id="more"></a>
 <p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
 <p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
 <p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
 <p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
 <p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
-<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平其实非常有限，无法在不借助翻译软件时顺利阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。而只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
-<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及嘛</p>
+<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平很不咋地，也根本无法直接阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。但只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
+<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及</p>
 <p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
 ]]></content>
       <categories>
@@ -199,11 +202,11 @@
     <content><![CDATA[<blockquote>
 <p>本文是我学习时对资料的一个个人学习笔记，资料来自于<a href="https://blog.csdn.net/zouxy09/article/details/9156785/" target="_blank" rel="noopener">MEL原理</a></p>
 </blockquote>
+<a id="more"></a>
 <h3 id="声谱图">1. 声谱图</h3>
 <p>首先我们来弄明白比倒谱分析更易懂的声谱图</p>
 <p>我们处理的是语音信号，那么我们该如何去描述它呢？最简单的方法当然是录下来一段语音，然后把直接它放到语音分析软件里，这时软件就会给我们一个语音的时序图 <img src="https://img-blog.csdnimg.cn/20200316215054369.png" /> 很显然，横轴是时间，纵轴是声音的震幅。</p>
 <p>接下来我们要对这段波形进行傅里叶变换，<strong>但是我们不直接变换。在语音信号处理中我们一般先把语音切片成帧(frame)，对每帧进行傅里叶变换</strong>,我们来看图 <img src="https://img-blog.csdnimg.cn/20200316215605772.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-<a id="more"></a>
 <blockquote>
 <p>这里，这段语音被分为很多帧，每帧语音都对应于一个频谱（通过短时FFT计算），频谱表示频率与能量的关系。在实际使用中，频谱图有三种，即线性振幅谱、对数振幅谱、自功率谱（对数振幅谱中各谱线的振幅都作了对数计算，所以其纵坐标的单位是dB（分贝）。这个变换的目的是使那些振幅较低的成分相对高振幅成分得以拉高，以便观察掩盖在低幅噪声中的周期信号）</p>
 </blockquote>
@@ -297,8 +300,9 @@
 <hr />
 <h1 id="一极大似然估计">一、极大似然估计</h1>
 <p>我们先来复习一下极大似然估计法是怎么进行的,来看一个概率论课上的实例</p>
-<p><strong>设样本服从正态分布</strong><span class="math inline">\(N(\mu,\sigma^2)\)</span>，则似然函数为<span class="math display">\[L(\mu,\sigma^2)=\prod^{N}_{i=1}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span> 试估计参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值 其中<span class="math inline">\(x_{i}\)</span>是样本，也就是说这个函数<span class="math inline">\(L(\mu,\sigma^{2})\)</span>是各个样本的概率的积。</p>
+<p><strong>设样本服从正态分布</strong><span class="math inline">\(N(\mu,\sigma^2)\)</span>，则似然函数为<span class="math display">\[L(\mu,\sigma^2)=\prod^{N}_{i=1}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span></p>
 <a id="more"></a>
+<p>试估计参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值 其中<span class="math inline">\(x_{i}\)</span>是样本，也就是说这个函数<span class="math inline">\(L(\mu,\sigma^{2})\)</span>是各个样本的概率的积。</p>
 <p>我们需要做的是由似然函数<strong>估计</strong>出参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值。之所以说是估计，是因为<strong>使用有限的样本不可能准确求出原本高斯分布的参数</strong>。 那么怎么由似然函数求值呢？ 1. 首先我们要对似然函数<strong>求对数</strong>，这是因为似然函数是各个事件发生的概率的积，当很多概率乘在一起时，会导致这个似然函数的值非常小，计算机由于精度的原因无法处理 2. <strong>对参数</strong>求导,再令导数为0。我们知道，这样求出的点是似然函数的极值点，而我们需要的是使得似然函数取得最大值时的参数值。这样这个极值点便<strong>很可能</strong>是我们要求的参数值 3. 求解上述似然方程 --- 求解过程如下 对似然函数取对数得到 <span class="math display">\[\ln L(\mu,\sigma^2)=\sum_{i=1}^N \ln\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span> 化简得到<span class="math display">\[\ln L(\mu,\sigma^2) = -\frac{n}{2}\ln(2\pi)-\frac{n}{2}\ln(\sigma^2)-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_{i}-\mu)^2\]</span></p>
 <p>对参数求导得到 <span class="math display">\[ \left \{
 \begin{aligned}
