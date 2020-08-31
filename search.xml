@@ -65,12 +65,12 @@
 <p>--《夏天的梦是什么颜色的》 合唱</p>
 </blockquote>
 
-        <div id="aplayer-eFJdnKFs" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-imfKcrdi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-eFJdnKFs"),
+            element: document.getElementById("aplayer-imfKcrdi"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -107,6 +107,77 @@
       </tags>
   </entry>
   <entry>
+    <title>我喜欢</title>
+    <url>/2020/05/06/%E6%88%91%E5%96%9C%E6%AC%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>--《what I adore》 合唱</p>
+</blockquote>
+<a id="more"></a>
+
+        <div id="aplayer-kMVOSdmG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-kMVOSdmG"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "我喜欢",
+              author: "金承志",
+              url: "http://music.163.com/song/media/outer/url?id=464647435.mp3",
+              pic: "https://img-blog.csdnimg.cn/20200831131615443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<blockquote>
+<p>我喜欢 无尽田野上奔跑的麋鹿</p>
+<p>我喜欢 外婆门前的榕树</p>
+<p>我喜欢母亲的便当</p>
+<p>我喜欢父亲的胡渣</p>
+<p>我喜欢八月的夜晚还在营业的游乐场</p>
+<p>我喜欢放学的铃铛</p>
+<p>我喜欢停电的夜晚</p>
+<p>点一对蜡烛 在幽静的玄关</p>
+<p>我喜欢 城市尽头那远远的青山</p>
+<p>我喜欢 热气球飞上西边的天空</p>
+<p>我喜欢 清晨的石板路</p>
+<p>雾腾腾的早餐店 阿公的桂花糕</p>
+<p>我喜欢 每一朵暮云 每一株绿树</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200506214619877.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>校服与个性的表达</title>
+    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
+</blockquote>
+<a id="more"></a>
+<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
+<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
+<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>知乎</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>正则化笔记</title>
     <url>/2020/04/13/%E6%AD%A3%E5%88%99%E5%8C%96%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一.为什么需要正则化">一.为什么需要正则化?</h2>
@@ -140,53 +211,109 @@
       </tags>
   </entry>
   <entry>
-    <title>校服与个性的表达</title>
-    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
+    <title>给博客添加音乐播放器</title>
+    <url>/2020/08/30/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
-</blockquote>
-<a id="more"></a>
-<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
-<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
-<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>知乎</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我喜欢</title>
-    <url>/2020/05/06/%E6%88%91%E5%96%9C%E6%AC%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>--《what I adore》 合唱</p>
+<p>利用aplayer插件给博客添加音乐播放器功能</p>
 </blockquote>
 <a id="more"></a>
 <blockquote>
-<p>我喜欢 无尽田野上奔跑的麋鹿</p>
-<p>我喜欢 外婆门前的榕树</p>
-<p>我喜欢母亲的便当</p>
-<p>我喜欢父亲的胡渣</p>
-<p>我喜欢八月的夜晚还在营业的游乐场</p>
-<p>我喜欢放学的铃铛</p>
-<p>我喜欢停电的夜晚</p>
-<p>点一对蜡烛 在幽静的玄关</p>
-<p>我喜欢 城市尽头那远远的青山</p>
-<p>我喜欢 热气球飞上西边的天空</p>
-<p>我喜欢 清晨的石板路</p>
-<p>雾腾腾的早餐店 阿公的桂花糕</p>
-<p>我喜欢 每一朵暮云 每一株绿树</p>
+<h3 id="一.-安装插件"><strong>一. 安装插件</strong></h3>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200506214619877.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+<p>首先找到站点文件夹根目录，打开命令行，输入如下命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-aplayer --save</span><br></pre></td></tr></table></figure>
+<p>等待下载安装完成即可</p>
+<blockquote>
+<h3 id="二.-获取音乐链接外链"><strong>二. 获取音乐链接外链</strong></h3>
+</blockquote>
+<p>利用不同的播放器都可以获得音乐外链</p>
+<p>这里我借用网易云音乐获取歌曲外链，例如我想插入歌曲《旅行者一号》</p>
+<p>在网易云网站中搜索这首歌曲，并打开歌曲的网页播放器，它有一个网址</p>
+<blockquote>
+<p>https://music.163.com/#/song?id=490439632</p>
+</blockquote>
+<p>网站后面的 <strong>id=490439632</strong> 就是歌曲的编号了。然后将歌曲的编号加入下面的链接中</p>
+<blockquote>
+<p>http://music.163.com/song/media/outer/url?id= .mp3</p>
+</blockquote>
+<p>例如我这里的外链就是</p>
+<blockquote>
+<p>http://music.163.com/song/media/outer/url?id=490439632.mp3</p>
+</blockquote>
+<blockquote>
+<h3 id="三.-文章中插入播放器"><strong>三. 文章中插入播放器</strong></h3>
+</blockquote>
+<p>在markdown文章中插如下入语句</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer title author url [picture_url, narrow, autoplay, width:xxx, lrc:xxx] %&#125;</span><br></pre></td></tr></table></figure>
+<p>其中的标签参数解释如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title : 曲目标题</span><br><span class="line">author: 曲目作者</span><br><span class="line">url: 音乐文件 URL 地址</span><br><span class="line">picture_url: (可选) 音乐对应的图片地址</span><br><span class="line">narrow: （可选）播放器袖珍风格</span><br><span class="line">autoplay: (可选) 自动播放，移动端浏览器暂时不支持此功能</span><br><span class="line">width:xxx: (可选) 播放器宽度 (默认: 100%)</span><br><span class="line">lrc:xxx: （可选）歌词文件 URL 地址</span><br><span class="line">当开启 Hexo 的 文章资源文件夹 功能时，可以将图片、音乐文件、歌词文件放入与文章对应的资源文件夹中，然后直接引用：</span><br><span class="line"></span><br><span class="line">&#123;% aplayer &quot;Caffeine&quot; &quot;Jeff Williams&quot; &quot;caffeine.mp3&quot; &quot;picture.jpg&quot; &quot;lrc:caffeine.txt&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<p>例如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer <span class="string">"旅行者一号"</span> <span class="string">"合唱团"</span> <span class="string">"http://music.163.com/song/media/outer/url?id=490439632.mp3"</span>  <span class="string">"https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center"</span> %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果如下</p>
+
+        <div id="aplayer-RewIsFmW" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-RewIsFmW"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "旅行者一号",
+              author: "合唱团",
+              url: "http://music.163.com/song/media/outer/url?id=490439632.mp3",
+              pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<p>到这里基本的播放功能就已经配置完成了</p>
+<blockquote>
+<h3 id="四.-给播放器添加歌词"><strong>四. 给播放器添加歌词</strong></h3>
+</blockquote>
+<h3 id="歌词标签">歌词标签</h3>
+<p>除了使用标签 <code>lrc</code> 选项来设定歌词，也可以直接使用 <code>aplayerlrc</code> 标签来直接插入歌词文本在博客中：</p>
+<p>我们可以利用网易云提供的API来下载歌词</p>
+<p>打开网址</p>
+<blockquote>
+<p>http://music.163.com/api/song/media?id=490439632</p>
+</blockquote>
+<p>这就是我所想要下载的歌词。注意网址后面的id就是我们上面的歌曲id</p>
+<p>不过这个网址中的歌词还包含了一些lrc文件的前后缀，需要把它整理成如下格式:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayerlrc &quot;title&quot; &quot;author&quot; &quot;url&quot; &quot;autoplay&quot; %&#125;</span><br><span class="line">[00:00.00]lrc here</span><br><span class="line">&#123;% endaplayerlrc %&#125;</span><br></pre></td></tr></table></figure>
+<p>例如这首歌的歌词就是这样:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayerlrc &quot;旅行者一号&quot; &quot;合唱团&quot; &quot;http:&#x2F;&#x2F;music.163.com&#x2F;song&#x2F;media&#x2F;outer&#x2F;url?id&#x3D;490439632.mp3&quot; %&#125;</span><br><span class="line">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音&#x2F;混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</span><br><span class="line">&#123;% endaplayerlrc %&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<div id="aplayer-wVFEzmoU" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+				<pre class="aplayer-lrc-content">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音/混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</pre>
+			</div>
+			<script>
+				var ap = new APlayer({
+					element: document.getElementById("aplayer-wVFEzmoU"),
+					narrow: false,
+					autoplay: false,
+					showlrc: 2,
+					music: {
+						title: "旅行者一号",
+						author: "合唱团",
+						url: "http://music.163.com/song/media/outer/url?id=490439632.mp3",
+						pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
+					}
+				});
+				window.aplayers || (window.aplayers = []);
+				window.aplayers.push(ap);
+			</script>
+<p>还可以给歌曲添加播放列表 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">播放列表</span><br><span class="line">&#123;% aplayerlist %&#125;</span><br><span class="line">&#123;</span><br><span class="line">    &quot;narrow&quot;: false,                          &#x2F;&#x2F; （可选）播放器袖珍风格</span><br><span class="line">    &quot;autoplay&quot;: true,                         &#x2F;&#x2F; （可选) 自动播放，移动端浏览器暂时不支持此功能</span><br><span class="line">    &quot;mode&quot;: &quot;random&quot;,                         &#x2F;&#x2F; （可选）曲目循环类型，有 &#39;random&#39;（随机播放）, &#39;single&#39; (单曲播放), &#39;circulation&#39; (循环播放), &#39;order&#39; (列表播放)， 默认：&#39;circulation&#39; </span><br><span class="line">    &quot;showlrc&quot;: 3,                             &#x2F;&#x2F; （可选）歌词显示配置项，可选项有：1,2,3</span><br><span class="line">    &quot;mutex&quot;: true,                            &#x2F;&#x2F; （可选）该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停</span><br><span class="line">    &quot;theme&quot;: &quot;#e6d0b2&quot;,	                      &#x2F;&#x2F; （可选）播放器风格色彩设置，默认：#b7daff</span><br><span class="line">    &quot;preload&quot;: &quot;metadata&quot;,                    &#x2F;&#x2F; （可选）音乐文件预载入模式，可选项： &#39;none&#39; &#39;metadata&#39; &#39;auto&#39;, 默认: &#39;auto&#39;</span><br><span class="line">    &quot;listmaxheight&quot;: &quot;513px&quot;,                 &#x2F;&#x2F; (可选) 该播放列表的最大长度</span><br><span class="line">    &quot;music&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;title&quot;: &quot;CoCo&quot;,</span><br><span class="line">            &quot;author&quot;: &quot;Jeff Williams&quot;,</span><br><span class="line">            &quot;url&quot;: &quot;caffeine.mp3&quot;,</span><br><span class="line">            &quot;pic&quot;: &quot;caffeine.jpeg&quot;,</span><br><span class="line">            &quot;lrc&quot;: &quot;caffeine.txt&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;title&quot;: &quot;アイロニ&quot;,</span><br><span class="line">            &quot;author&quot;: &quot;鹿乃&quot;,</span><br><span class="line">            &quot;url&quot;: &quot;irony.mp3&quot;,</span><br><span class="line">            &quot;pic&quot;: &quot;irony.jpg&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line">&#123;% endaplayerlist %&#125;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
-        <category>感想</category>
+        <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>感想</tag>
+        <tag>音乐播放器</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -263,133 +390,6 @@ p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \\
       <tags>
         <tag>总结</tag>
         <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>给博客添加播放器功能</title>
-    <url>/2020/08/30/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%92%AD%E6%94%BE%E5%99%A8%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>利用aplayer插件给博客添加音乐播放器功能</p>
-</blockquote>
-<a id="more"></a>
-<blockquote>
-<h3 id="一.-安装插件"><strong>一. 安装插件</strong></h3>
-</blockquote>
-<p>首先找到站点文件夹根目录，打开命令行，输入如下命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-aplayer --save</span><br></pre></td></tr></table></figure>
-<p>等待下载安装完成即可</p>
-<blockquote>
-<h3 id="二.-获取音乐链接外链"><strong>二. 获取音乐链接外链</strong></h3>
-</blockquote>
-<p>利用不同的播放器都可以获得音乐外链</p>
-<p>这里我借用网易云音乐获取歌曲外链，例如我想插入歌曲《旅行者一号》</p>
-<p>在网易云网站中搜索这首歌曲，并打开歌曲的网页播放器，它有一个网址</p>
-<blockquote>
-<p>https://music.163.com/#/song?id=490439632</p>
-</blockquote>
-<p>网站后面的 <strong>id=490439632</strong> 就是歌曲的编号了。然后将歌曲的编号加入下面的链接中</p>
-<blockquote>
-<p>http://music.163.com/song/media/outer/url?id= .mp3</p>
-</blockquote>
-<p>例如我这里的外链就是</p>
-<blockquote>
-<p>http://music.163.com/song/media/outer/url?id=490439632.mp3</p>
-</blockquote>
-<blockquote>
-<h3 id="三.-文章中插入播放器"><strong>三. 文章中插入播放器</strong></h3>
-</blockquote>
-<p>在markdown文章中插如下入语句</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer title author url [picture_url, narrow, autoplay, width:xxx, lrc:xxx] %&#125;</span><br></pre></td></tr></table></figure>
-<p>其中的标签参数解释如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title : 曲目标题</span><br><span class="line">author: 曲目作者</span><br><span class="line">url: 音乐文件 URL 地址</span><br><span class="line">picture_url: (可选) 音乐对应的图片地址</span><br><span class="line">narrow: （可选）播放器袖珍风格</span><br><span class="line">autoplay: (可选) 自动播放，移动端浏览器暂时不支持此功能</span><br><span class="line">width:xxx: (可选) 播放器宽度 (默认: 100%)</span><br><span class="line">lrc:xxx: （可选）歌词文件 URL 地址</span><br><span class="line">当开启 Hexo 的 文章资源文件夹 功能时，可以将图片、音乐文件、歌词文件放入与文章对应的资源文件夹中，然后直接引用：</span><br><span class="line"></span><br><span class="line">&#123;% aplayer &quot;Caffeine&quot; &quot;Jeff Williams&quot; &quot;caffeine.mp3&quot; &quot;picture.jpg&quot; &quot;lrc:caffeine.txt&quot; %&#125;</span><br></pre></td></tr></table></figure>
-<p>例如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer <span class="string">"旅行者一号"</span> <span class="string">"合唱团"</span> <span class="string">"http://music.163.com/song/media/outer/url?id=490439632.mp3"</span>  <span class="string">"https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center"</span> %&#125;</span><br></pre></td></tr></table></figure></p>
-<p>效果如下</p>
-
-        <div id="aplayer-LDNNhDSH" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-LDNNhDSH"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "旅行者一号",
-              author: "合唱团",
-              url: "http://music.163.com/song/media/outer/url?id=490439632.mp3",
-              pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<p>到这里基本的播放功能就已经配置完成了</p>
-<blockquote>
-<h3 id="四.-给播放器添加歌词"><strong>四. 给播放器添加歌词</strong></h3>
-</blockquote>
-<h3 id="歌词标签">歌词标签</h3>
-<p>除了使用标签 <code>lrc</code> 选项来设定歌词，也可以直接使用 <code>aplayerlrc</code> 标签来直接插入歌词文本在博客中：</p>
-<p>我们可以利用网易云提供的API来下载歌词</p>
-<p>打开网址</p>
-<blockquote>
-<p>http://music.163.com/api/song/media?id=490439632</p>
-</blockquote>
-<p>这就是我所想要下载的歌词。注意网址后面的id就是我们上面的歌曲id</p>
-<p>不过这个网址中的歌词还包含了一些lrc文件的前后缀，需要把它整理成如下格式:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayerlrc &quot;title&quot; &quot;author&quot; &quot;url&quot; &quot;autoplay&quot; %&#125;</span><br><span class="line">[00:00.00]lrc here</span><br><span class="line">&#123;% endaplayerlrc %&#125;</span><br></pre></td></tr></table></figure>
-<p>例如这首歌的歌词就是这样:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayerlrc &quot;旅行者一号&quot; &quot;合唱团&quot; &quot;http:&#x2F;&#x2F;music.163.com&#x2F;song&#x2F;media&#x2F;outer&#x2F;url?id&#x3D;490439632.mp3&quot; %&#125;</span><br><span class="line">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音&#x2F;混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</span><br><span class="line">&#123;% endaplayerlrc %&#125;</span><br></pre></td></tr></table></figure>
-<p>效果如下:</p>
-<div id="aplayer-QFTYrOHn" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-				<pre class="aplayer-lrc-content">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音/混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</pre>
-			</div>
-			<script>
-				var ap = new APlayer({
-					element: document.getElementById("aplayer-QFTYrOHn"),
-					narrow: false,
-					autoplay: false,
-					showlrc: 2,
-					music: {
-						title: "旅行者一号",
-						author: "合唱团",
-						url: "http://music.163.com/song/media/outer/url?id=490439632.mp3",
-						pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
-					}
-				});
-				window.aplayers || (window.aplayers = []);
-				window.aplayers.push(ap);
-			</script>
-<p>还可以给歌曲添加播放列表 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">播放列表</span><br><span class="line">&#123;% aplayerlist %&#125;</span><br><span class="line">&#123;</span><br><span class="line">    &quot;narrow&quot;: false,                          &#x2F;&#x2F; （可选）播放器袖珍风格</span><br><span class="line">    &quot;autoplay&quot;: true,                         &#x2F;&#x2F; （可选) 自动播放，移动端浏览器暂时不支持此功能</span><br><span class="line">    &quot;mode&quot;: &quot;random&quot;,                         &#x2F;&#x2F; （可选）曲目循环类型，有 &#39;random&#39;（随机播放）, &#39;single&#39; (单曲播放), &#39;circulation&#39; (循环播放), &#39;order&#39; (列表播放)， 默认：&#39;circulation&#39; </span><br><span class="line">    &quot;showlrc&quot;: 3,                             &#x2F;&#x2F; （可选）歌词显示配置项，可选项有：1,2,3</span><br><span class="line">    &quot;mutex&quot;: true,                            &#x2F;&#x2F; （可选）该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停</span><br><span class="line">    &quot;theme&quot;: &quot;#e6d0b2&quot;,	                      &#x2F;&#x2F; （可选）播放器风格色彩设置，默认：#b7daff</span><br><span class="line">    &quot;preload&quot;: &quot;metadata&quot;,                    &#x2F;&#x2F; （可选）音乐文件预载入模式，可选项： &#39;none&#39; &#39;metadata&#39; &#39;auto&#39;, 默认: &#39;auto&#39;</span><br><span class="line">    &quot;listmaxheight&quot;: &quot;513px&quot;,                 &#x2F;&#x2F; (可选) 该播放列表的最大长度</span><br><span class="line">    &quot;music&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;title&quot;: &quot;CoCo&quot;,</span><br><span class="line">            &quot;author&quot;: &quot;Jeff Williams&quot;,</span><br><span class="line">            &quot;url&quot;: &quot;caffeine.mp3&quot;,</span><br><span class="line">            &quot;pic&quot;: &quot;caffeine.jpeg&quot;,</span><br><span class="line">            &quot;lrc&quot;: &quot;caffeine.txt&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;title&quot;: &quot;アイロニ&quot;,</span><br><span class="line">            &quot;author&quot;: &quot;鹿乃&quot;,</span><br><span class="line">            &quot;url&quot;: &quot;irony.mp3&quot;,</span><br><span class="line">            &quot;pic&quot;: &quot;irony.jpg&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line">&#123;% endaplayerlist %&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>英语在高考中的权重可以调整吗</title>
-    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
-</blockquote>
-<a id="more"></a>
-<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
-<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
-<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
-<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
-<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
-<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
-<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
-<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
-<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平很不咋地，也根本无法直接阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。但只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
-<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>知乎</tag>
-        <tag>高考</tag>
-        <tag>英语</tag>
       </tags>
   </entry>
   <entry>
@@ -484,6 +484,34 @@ p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \\
       <tags>
         <tag>总结</tag>
         <tag>信号处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语在高考中的权重可以调整吗</title>
+    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
+</blockquote>
+<a id="more"></a>
+<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
+<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
+<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
+<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
+<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
+<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
+<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
+<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
+<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平很不咋地，也根本无法直接阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。但只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
+<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>知乎</tag>
+        <tag>高考</tag>
+        <tag>英语</tag>
       </tags>
   </entry>
 </search>
