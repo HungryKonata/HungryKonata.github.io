@@ -59,6 +59,73 @@
       </tags>
   </entry>
   <entry>
+    <title>校服与个性的表达</title>
+    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
+</blockquote>
+<a id="more"></a>
+<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
+<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
+<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>知乎</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>换季了</title>
+    <url>/2020/04/28/%E6%8D%A2%E5%AD%A3%E4%BA%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>--《夏天》 合唱</p>
+</blockquote>
+
+        <div id="aplayer-SQDdbLyo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-SQDdbLyo"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "夏天",
+              author: "金承志",
+              url: "http://music.163.com/song/media/outer/url?id=1302066394.mp3",
+              pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<a id="more"></a>
+<blockquote>
+<p>夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是微微踮起的脚尖</p>
+<p>是海岸线上的尖叫</p>
+<p>夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是列车远去的白烟</p>
+<p>是关门轻轻的背影</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+        <tag>歌曲</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>正则化笔记</title>
     <url>/2020/04/13/%E6%AD%A3%E5%88%99%E5%8C%96%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一.为什么需要正则化">一.为什么需要正则化?</h2>
@@ -99,12 +166,12 @@
 </blockquote>
 <a id="more"></a>
 
-        <div id="aplayer-zbZZxMtT" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-sMbFMTUj" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-zbZZxMtT"),
+            element: document.getElementById("aplayer-sMbFMTUj"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -141,6 +208,34 @@
       </categories>
       <tags>
         <tag>感想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语在高考中的权重可以调整吗</title>
+    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
+</blockquote>
+<a id="more"></a>
+<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
+<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
+<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
+<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
+<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
+<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
+<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
+<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
+<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平很不咋地，也根本无法直接阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。但只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
+<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>知乎</tag>
+        <tag>高考</tag>
+        <tag>英语</tag>
       </tags>
   </entry>
   <entry>
@@ -183,12 +278,12 @@
 <p>例如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer <span class="string">"旅行者一号"</span> <span class="string">"合唱团"</span> <span class="string">"http://music.163.com/song/media/outer/url?id=490439632.mp3"</span>  <span class="string">"https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center"</span> %&#125;</span><br></pre></td></tr></table></figure></p>
 <p>效果如下</p>
 
-        <div id="aplayer-uVqUvLcJ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-kUsbLjGQ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-uVqUvLcJ"),
+            element: document.getElementById("aplayer-kUsbLjGQ"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -220,12 +315,12 @@
 <p>例如这首歌的歌词就是这样:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayerlrc &quot;旅行者一号&quot; &quot;合唱团&quot; &quot;http:&#x2F;&#x2F;music.163.com&#x2F;song&#x2F;media&#x2F;outer&#x2F;url?id&#x3D;490439632.mp3&quot; %&#125;</span><br><span class="line">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音&#x2F;混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</span><br><span class="line">&#123;% endaplayerlrc %&#125;</span><br></pre></td></tr></table></figure>
 <p>效果如下:</p>
-<div id="aplayer-lpCAfynL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+<div id="aplayer-EoglSvfy" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
 				<pre class="aplayer-lrc-content">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音/混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</pre>
 			</div>
 			<script>
 				var ap = new APlayer({
-					element: document.getElementById("aplayer-lpCAfynL"),
+					element: document.getElementById("aplayer-EoglSvfy"),
 					narrow: false,
 					autoplay: false,
 					showlrc: 2,
@@ -247,177 +342,6 @@
       <tags>
         <tag>音乐播放器</tag>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>换季了</title>
-    <url>/2020/04/28/%E6%8D%A2%E5%AD%A3%E4%BA%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>--《夏天》 合唱</p>
-</blockquote>
-
-        <div id="aplayer-vwWUVGHi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-vwWUVGHi"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "夏天",
-              author: "金承志",
-              url: "http://music.163.com/song/media/outer/url?id=1302066394.mp3",
-              pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<a id="more"></a>
-<blockquote>
-<p>夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是微微踮起的脚尖</p>
-<p>是海岸线上的尖叫</p>
-<p>夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是列车远去的白烟</p>
-<p>是关门轻轻的背影</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-        <tag>歌曲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语在高考中的权重可以调整吗</title>
-    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
-</blockquote>
-<a id="more"></a>
-<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
-<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
-<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
-<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
-<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
-<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
-<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
-<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
-<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平很不咋地，也根本无法直接阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。但只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
-<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>高考</tag>
-        <tag>英语</tag>
-        <tag>知乎</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>校服与个性的表达</title>
-    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
-</blockquote>
-<a id="more"></a>
-<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
-<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
-<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>知乎</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>语音处理笔记--高斯混合模型与最大期望算法</title>
-    <url>/2020/04/13/%E8%AF%AD%E9%9F%B3%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0--%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%9C%80%E5%A4%A7%E6%9C%9F%E6%9C%9B%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>本文内容是我在学习过程中对资料的一个个人总结与学习笔记。引用内容写在灰色的引用框中。如有错误欢迎指正</p>
-</blockquote>
-<a id="more"></a>
-<p>这篇文章的主题是高斯混合模型（GMM），GMM与最大期望（EM）方法有很大的联系，而在GMM的求解过程中使用了极大似然估计法</p>
-<hr />
-<h1 id="一极大似然估计">一、极大似然估计</h1>
-<p>我们先来复习一下极大似然估计法是怎么进行的,来看一个概率论课上的实例</p>
-<p><strong>设样本服从正态分布</strong><span class="math inline">\(N(\mu,\sigma^2)\)</span>，则似然函数为<span class="math display">\[L(\mu,\sigma^2)=\prod^{N}_{i=1}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span></p>
-<p>试估计参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值 其中<span class="math inline">\(x_{i}\)</span>是样本，也就是说这个函数<span class="math inline">\(L(\mu,\sigma^{2})\)</span>是各个样本的概率的积。</p>
-<p>我们需要做的是由似然函数<strong>估计</strong>出参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值。之所以说是估计，是因为<strong>使用有限的样本不可能准确求出原本高斯分布的参数</strong>。 那么怎么由似然函数求值呢？ 1. 首先我们要对似然函数<strong>求对数</strong>，这是因为似然函数是各个事件发生的概率的积，当很多概率乘在一起时，会导致这个似然函数的值非常小，计算机由于精度的原因无法处理 2. <strong>对参数</strong>求导,再令导数为0。我们知道，这样求出的点是似然函数的极值点，而我们需要的是使得似然函数取得最大值时的参数值。这样这个极值点便<strong>很可能</strong>是我们要求的参数值 3. 求解上述似然方程 --- 求解过程如下 对似然函数取对数得到 <span class="math display">\[\ln L(\mu,\sigma^2)=\sum_{i=1}^N \ln\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span> 化简得到<span class="math display">\[\ln L(\mu,\sigma^2) = -\frac{n}{2}\ln(2\pi)-\frac{n}{2}\ln(\sigma^2)-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_{i}-\mu)^2\]</span></p>
-<p>对参数求导得到 <span class="math display">\[ \left \{
-\begin{aligned}
-&amp; \frac{\partial \ln L(\mu,\sigma^2)}{\partial\mu}=\frac{1}{\sigma^2}\sum_{i = 1}^{n}(x_i-\mu) =0\\
-&amp;   \frac{\partial \ln L(\mu,\sigma^2)}{\partial\sigma}=-\frac{n}{2\sigma^2}+\frac{1}{2\sigma^4}\sum_{i=1}^n(x_i-\mu)^2
-\end{aligned}
-\right.\]</span> 联合求解得到 <span class="math display">\[ \left \{
-\begin{aligned}
-&amp; \hat{\mu}=\overline x = \frac{1}{n}\sum_{i=1}^N x_i   \\ 
-&amp; \hat\sigma^2=\frac{1}{n}\sum_{i=1}^N(x_i-\overline x)^2
-\end{aligned}
-\right.\]</span></p>
-<hr />
-<p>现在我们来概括一下，极大似然法分为如下几步 &gt; （1）写出似然函数； &gt; （2）对似然函数取对数，并整理 （3）求导数； （4）解似然方程。</p>
-<pre><code>    最大似然估计的特点：
-    1.比其他估计方法更加简单；
-    2.收敛性：无偏或者渐近无偏，当样本数目增加时，收敛性质会更好；
-    3.如果假设的类条件概率模型正确，则通常能获得较好的结果。但如果假设模型出现偏差，将导致非常差的估计结果。</code></pre>
-<p>一定要注意一点，我们在进行极大似然估计时，样本服从什么分布是我们假定的。 另外，极大似然估计方法也可以用一个简单的式子来概括: <span class="math display">\[θ=arg\max_θ∑_i \log P(x^{(i)};θ)\]</span> 也即<span class="math inline">\(\theta\)</span>为使得似然函数取最大值时对应的<span class="math inline">\(\theta\)</span>值</p>
-<h1 id="二gmm原理">二、GMM原理</h1>
-<p>首先我们来了解一下机器学习中的归纳偏执(bias) &gt;在机器学习中，一个学习算法也会有一个前提假设，这里被称作“归纳偏执 (bias)”（bias 这个英文词在机器学习和统计里还有其他许多的意思）。例如线性回归，目的是要找一个函数尽可能好地拟合给定的数据点，它的归纳偏执就是“满足要求的函数必须是线性函数”。一个没有归纳偏执的学习算法从某种意义上来说毫无用处，就像一个完全没有归纳能力的人一样，在第一次看到鱼的时候有人告诉他那是鱼，下次看到另一条鱼了，他并不知道那也是鱼，因为两条鱼总有一些地方不一样的，或者就算是同一条鱼，在河里不同的地方看到，或者只是看到的时间不一样，也会被他认为是不同的，因为他无法归纳，无法提取主要矛盾、忽略次要因素，只好要求所有的条件都完全一样──然而哲学家已经告诉过我们了：世界上不会有任何样东西是完全一样的，所以这个人即使是有无比强悍的记忆力，也绝学不到任何一点知识。 这个问题在机器学习中称作“过拟合 (Overfitting)”，例如前面的回归的问题，如果去掉“线性函数”这个归纳偏执，因为对于 N 个点，我们总是可以构造一个 N-1 次多项式函数，让它完美地穿过所有的这 N 个点，或者如果我用任何大于 N-1 次的多项式函数的话，我甚至可以构造出无穷多个满足条件的函数出来。如果假定特定领域里的问题所给定的数据个数总是有个上限的话，我可以取一个足够大的 N ，从而得到一个（或者无穷多个）“超级函数”，能够 fit 这个领域内所有的问题。然而这个（或者这无穷多个）“超级函数”有用吗？只要我们注意到学习的目的（通常）不是解释现有的事物，而是从中归纳出知识，并能应用到新的事物上，结果就显而易见了。 没有归纳偏执或者归纳偏执太宽泛会导致 Overfitting ，然而另一个极端──限制过大的归纳偏执也是有问题的：如果数据本身并不是线性的，强行用线性函数去做回归通常并不能得到好结果。难点正在于在这之间寻找一个平衡点。不过人在这里相对于（现在的）机器来说有一个很大的优势：人通常不会孤立地用某一个独立的系统和模型去处理问题，一个人每天都会从各个来源获取大量的信息，并且通过各种手段进行整合处理，归纳所得的所有知识最终得以统一地存储起来，并能有机地组合起来去解决特定的问题。这里的“有机”这个词很有意思，搞理论的人总能提出各种各样的模型，并且这些模型都有严格的理论基础保证能达到期望的目的，然而绝大多数模型都会有那么一些“参数”（例如 K-means 中的 k ），通常没有理论来说明参数取哪个值更好，而模型实际的效果却通常和参数是否取到最优值有很大的关系，我觉得，在这里“有机”不妨看作是所有模型的参数已经自动地取到了最优值。另外，虽然进展不大，但是人们也一直都期望在计算机领域也建立起一个统一的知识系统（例如语意网就是这样一个尝试）。</p>
-<p>GMM就是这样的一种归纳偏执:我们假定样本服从一种高斯分布，不过这种高斯分布与&quot;单一的&quot;高斯分布不一样，它由若干个高斯分布混合起来而形成。</p>
-<blockquote>
-<p>Gaussian Mixture Model (GMM)。 GMM 和 k-means 很像，不过 GMM 是学习出一些概率密度函数来（所以 GMM 除了用在 clustering 上之外，还经常被用于 density estimation ），简单地说，k-means 的结果是每个数据点被 assign 到其中某一个 cluster 了，而 GMM 则给出这些数据点被 assign 到每个 cluster 的概率，又称作 soft assignment 。</p>
-</blockquote>
-<blockquote>
-<p>每个 GMM 由 K 个 Gaussian 分布组成，每个 Gaussian 称为一个“Component”，这些 Component 线性加成在一起就组成了 GMM 的概率密度函数：</p>
-</blockquote>
-<p><span class="math display">\[\displaystyle
-\begin{aligned}
-p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \\
-     &amp; = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)
-\end{aligned}\]</span> &gt;根据上面的式子，如果我们要从 GMM 的分布中随机地取一个点的话，实际上可以分为两步：首先随机地在这 K 个 Component 之中选一个，每个 Component 被选中的概率实际上就是它的系数 _k ，选中了 Component 之后，再单独地考虑从这个 Component 的分布中选取一个点就可以了──这里已经回到了普通的 Gaussian 分布，转化为了已知的问题。</p>
-<p>高斯混合模型解决了一个这样的问题:如果一个样本集的分布有明显的聚类特征，那么我们可以利用GMM来近似这种分布。利用GMM，不仅完成了对样本集的分类，还得到了它的一个概率密度函数。 <strong>利用概率密度函数，我们很容易就可以得到所谓<code>似然函数</code>，再对它进行求解，便可以得到高斯混合模型的参数</strong>。 显然，它的似然函数是<span class="math display">\[L= \prod_{i=1}^N \sum_{k=1}^K \pi_k \mathcal{N}(x ; \mu_k, \Sigma_k)\]</span> log-likelihood function为: <span class="math display">\[L_{log}=\displaystyle
-\sum_{i=1}^N \log \left\{\sum_{k=1}^K \pi_k \mathcal{N}(x_i ; \mu_k, \Sigma_k)\right\}
-\]</span> 然后求解这个似然函数即可，求解过程是一个纯技术问题，我们暂时把它忽略。 总之，求解的结果是一个<span class="math inline">\(N\times K\)</span>的矩阵，这个矩阵的每一行代表了样本属于各个component的概率,对于每一个 <span class="math inline">\(x_i\)</span> ，我们只要取该矩阵第 i 行中最大的那个概率值所对应的那个 Component 为 <span class="math inline">\(x_i\)</span> 所属的 cluster 就可以实现一个完整的聚类方法了。 &gt;从上面的分析中我们可以看到 GMM 和 K-means 的迭代求解法其实非常相似，因此也有和 K-means 同样的问题──并不能保证总是能取到全局最优，如果运气比较差，取到不好的初始值，就有可能得到很差的结果。对于 K-means 的情况，我们通常是重复一定次数然后取最好的结果，不过 GMM 每一次迭代的计算量比 K-means 要大许多，一个更流行的做法是先用 K-means （已经重复并取最优值了）得到一个粗略的结果，然后将其作为初值（只要将 K-means 所得的 centroids 传入 gmm 函数即可），再用 GMM 进行细致迭代。</p>
-<blockquote>
-<p>如我们最开始所讨论的，GMM 所得的结果（Px）不仅仅是数据点的 label ，而包含了数据点标记为每个 label 的概率，很多时候这实际上是非常有用的信息</p>
-</blockquote>
-<h1 id="三丶em算法">三丶EM算法</h1>
-<p>我们可以看到，K-means与GMM实际上是有几分相似的，并且它们都可以追溯到EM算法。 <strong>EM算法是一种利用似然函数来获取模型参数的算法。</strong> 首先我们来复习两个概念</p>
-<h2 id="边缘分布">边缘分布</h2>
-<p>摘取百度百科对边缘分布的解释 &gt;边缘分布（Marginal Distribution）指在概率论和统计学的多维随机变量中，只包含其中部分变量的概率分布。</p>
-<p>假设有一个和两个变量相关的概率分布： <span class="math display">\[P(x|y)\]</span> 关于其中一个特定变量的边缘分布则为给定其他变量的条件概率分布：(增加了一个y和求和符号) <span class="math display">\[P(x)=\sum_{y}P(x,y)=\sum_yP(x|y)P(y)\]</span></p>
-<blockquote>
-<p>在这个边缘分布中，我们得到只关于一个变量的概率分布，而不再考虑另一变量的影响，<strong>实际上进行了降维操作</strong>。在实际应用中，例如人工神经网络的神经元互相关联，在计算它们各自的参数的时候，就会使用边缘分布计算得到某一特定神经元（变量）的值。</p>
-</blockquote>
-<h2 id="jensen不等式">Jensen不等式</h2>
-<p>定理:X为一随机变量，如果<span class="math inline">\(f\)</span>是凸函数，那么有<span class="math display">\[E[f(X)]\ge f[E(X)]\]</span></p>
-<h2 id="推导">推导</h2>
-<h3 id="问题引入">问题引入</h3>
-<p>现在我们有一组观测样本<span class="math display">\[\vec x=(x_1,x_2...x_m)\]</span> 在确定了归纳偏执之后，我们希望获得模型的参数，那么有 <span class="math display">\[θ=arg\max_θ∑\log P(x_i;θ)\]</span> 但是很不幸，<strong>我们的观测数据实际上还有隐藏的观测值数据</strong> <span class="math display">\[\vec z=(z_1,z_2,...z_i)\]</span> 那么我们利用边缘分布的定义，极大化模型分布的对数似然函数如下： <span class="math display">\[θ=arg\max_θ∑logP(x_i;θ)=arg\max_θ∑log∑_{z_i}P(x_i，z_i;θ)\]</span> <strong>这个式子怎么求解呢？所需要用到的方法就是EM算法了</strong></p>
-<h3 id="求解过程">求解过程</h3>
-<p>概括如下 &gt;EM是一个在已知部分相关变量的情况下，估计未知变量的迭代技术。EM的算法流程如下： 初始化分布参数 重复直到收敛： E步骤：根据参数的假设值，给出未知变量的期望估计，应用于缺失值。 M步骤：根据未知变量的估计值，给出当前的参数的极大似然估计。</p>
-<blockquote>
-<p>现在我们总结下EM算法的流程。 　　　　输入：观察数据x=(x(1),x(2),...x(m))，联合分布p(x,z;θ), 条件分布p(z|x;θ), 最大迭代次数J。 　　　　1) 随机初始化模型参数θ的初值θ0。 　　　　2） for j from 1 to J开始EM算法迭代： 　　　　　　a) E步：计算联合分布的条件概率期望： <span class="math display">\[Qi(z(i))=P(z(i)|x(i)，θj))\]</span> <span class="math display">\[L(θ,θ_j)=∑_{i=1}^m∑_{z_i}Q_i(z_i)logP(x_i，z_i;θ)\]</span> 　　　　　　b) M步：极大化L(θ,θj),得到θj+1: <span class="math display">\[θ_{j+1}=arg\max_θL(θ,θ_j)\]</span> 　　　　　　c) 如果θj+1已收敛，则算法结束。否则继续回到步骤a)进行E步迭代。 　　　　输出：模型参数θ。 ### 证明 关于证明我就不ctrl+c/ctrl+v了，直接传送门~ <a href="https://wenku.baidu.com/view/3396bb4d6294dd88d0d26bee.html" target="_blank" rel="noopener">传送门</a> # 参考资料 * <a href="https://baike.baidu.com/item/%E8%BE%B9%E7%BC%98%E5%88%86%E5%B8%83" target="_blank" rel="noopener">边缘分布百度百科</a> * <a href="https://blog.csdn.net/zhihua_oba/article/details/73776553" target="_blank" rel="noopener">EM介绍</a> * <a href="https://www.cnblogs.com/jerrylead/archive/2011/04/06/2006936.html" target="_blank" rel="noopener">EM详细推导</a> * <a href="https://wenku.baidu.com/view/3396bb4d6294dd88d0d26bee.html" target="_blank" rel="noopener">EM文库</a> * <a href="http://blog.pluskid.org/?p=39" target="_blank" rel="noopener">GMM原理</a> * <a href="https://blog.csdn.net/zengxiantao1994/article/details/72787849" target="_blank" rel="noopener">极大似然估计介绍</a></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>总结</tag>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -512,6 +436,82 @@ p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \\
       <tags>
         <tag>总结</tag>
         <tag>信号处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>语音处理笔记--高斯混合模型与最大期望算法</title>
+    <url>/2020/04/13/%E8%AF%AD%E9%9F%B3%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0--%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%9C%80%E5%A4%A7%E6%9C%9F%E6%9C%9B%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>本文内容是我在学习过程中对资料的一个个人总结与学习笔记。引用内容写在灰色的引用框中。如有错误欢迎指正</p>
+</blockquote>
+<a id="more"></a>
+<p>这篇文章的主题是高斯混合模型（GMM），GMM与最大期望（EM）方法有很大的联系，而在GMM的求解过程中使用了极大似然估计法</p>
+<hr />
+<h1 id="一极大似然估计">一、极大似然估计</h1>
+<p>我们先来复习一下极大似然估计法是怎么进行的,来看一个概率论课上的实例</p>
+<p><strong>设样本服从正态分布</strong><span class="math inline">\(N(\mu,\sigma^2)\)</span>，则似然函数为<span class="math display">\[L(\mu,\sigma^2)=\prod^{N}_{i=1}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span></p>
+<p>试估计参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值 其中<span class="math inline">\(x_{i}\)</span>是样本，也就是说这个函数<span class="math inline">\(L(\mu,\sigma^{2})\)</span>是各个样本的概率的积。</p>
+<p>我们需要做的是由似然函数<strong>估计</strong>出参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值。之所以说是估计，是因为<strong>使用有限的样本不可能准确求出原本高斯分布的参数</strong>。 那么怎么由似然函数求值呢？ 1. 首先我们要对似然函数<strong>求对数</strong>，这是因为似然函数是各个事件发生的概率的积，当很多概率乘在一起时，会导致这个似然函数的值非常小，计算机由于精度的原因无法处理 2. <strong>对参数</strong>求导,再令导数为0。我们知道，这样求出的点是似然函数的极值点，而我们需要的是使得似然函数取得最大值时的参数值。这样这个极值点便<strong>很可能</strong>是我们要求的参数值 3. 求解上述似然方程 --- 求解过程如下 对似然函数取对数得到 <span class="math display">\[\ln L(\mu,\sigma^2)=\sum_{i=1}^N \ln\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span> 化简得到<span class="math display">\[\ln L(\mu,\sigma^2) = -\frac{n}{2}\ln(2\pi)-\frac{n}{2}\ln(\sigma^2)-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_{i}-\mu)^2\]</span></p>
+<p>对参数求导得到 <span class="math display">\[ \left \{
+\begin{aligned}
+&amp; \frac{\partial \ln L(\mu,\sigma^2)}{\partial\mu}=\frac{1}{\sigma^2}\sum_{i = 1}^{n}(x_i-\mu) =0\\
+&amp;   \frac{\partial \ln L(\mu,\sigma^2)}{\partial\sigma}=-\frac{n}{2\sigma^2}+\frac{1}{2\sigma^4}\sum_{i=1}^n(x_i-\mu)^2
+\end{aligned}
+\right.\]</span> 联合求解得到 <span class="math display">\[ \left \{
+\begin{aligned}
+&amp; \hat{\mu}=\overline x = \frac{1}{n}\sum_{i=1}^N x_i   \\ 
+&amp; \hat\sigma^2=\frac{1}{n}\sum_{i=1}^N(x_i-\overline x)^2
+\end{aligned}
+\right.\]</span></p>
+<hr />
+<p>现在我们来概括一下，极大似然法分为如下几步 &gt; （1）写出似然函数； &gt; （2）对似然函数取对数，并整理 （3）求导数； （4）解似然方程。</p>
+<pre><code>    最大似然估计的特点：
+    1.比其他估计方法更加简单；
+    2.收敛性：无偏或者渐近无偏，当样本数目增加时，收敛性质会更好；
+    3.如果假设的类条件概率模型正确，则通常能获得较好的结果。但如果假设模型出现偏差，将导致非常差的估计结果。</code></pre>
+<p>一定要注意一点，我们在进行极大似然估计时，样本服从什么分布是我们假定的。 另外，极大似然估计方法也可以用一个简单的式子来概括: <span class="math display">\[θ=arg\max_θ∑_i \log P(x^{(i)};θ)\]</span> 也即<span class="math inline">\(\theta\)</span>为使得似然函数取最大值时对应的<span class="math inline">\(\theta\)</span>值</p>
+<h1 id="二gmm原理">二、GMM原理</h1>
+<p>首先我们来了解一下机器学习中的归纳偏执(bias) &gt;在机器学习中，一个学习算法也会有一个前提假设，这里被称作“归纳偏执 (bias)”（bias 这个英文词在机器学习和统计里还有其他许多的意思）。例如线性回归，目的是要找一个函数尽可能好地拟合给定的数据点，它的归纳偏执就是“满足要求的函数必须是线性函数”。一个没有归纳偏执的学习算法从某种意义上来说毫无用处，就像一个完全没有归纳能力的人一样，在第一次看到鱼的时候有人告诉他那是鱼，下次看到另一条鱼了，他并不知道那也是鱼，因为两条鱼总有一些地方不一样的，或者就算是同一条鱼，在河里不同的地方看到，或者只是看到的时间不一样，也会被他认为是不同的，因为他无法归纳，无法提取主要矛盾、忽略次要因素，只好要求所有的条件都完全一样──然而哲学家已经告诉过我们了：世界上不会有任何样东西是完全一样的，所以这个人即使是有无比强悍的记忆力，也绝学不到任何一点知识。 这个问题在机器学习中称作“过拟合 (Overfitting)”，例如前面的回归的问题，如果去掉“线性函数”这个归纳偏执，因为对于 N 个点，我们总是可以构造一个 N-1 次多项式函数，让它完美地穿过所有的这 N 个点，或者如果我用任何大于 N-1 次的多项式函数的话，我甚至可以构造出无穷多个满足条件的函数出来。如果假定特定领域里的问题所给定的数据个数总是有个上限的话，我可以取一个足够大的 N ，从而得到一个（或者无穷多个）“超级函数”，能够 fit 这个领域内所有的问题。然而这个（或者这无穷多个）“超级函数”有用吗？只要我们注意到学习的目的（通常）不是解释现有的事物，而是从中归纳出知识，并能应用到新的事物上，结果就显而易见了。 没有归纳偏执或者归纳偏执太宽泛会导致 Overfitting ，然而另一个极端──限制过大的归纳偏执也是有问题的：如果数据本身并不是线性的，强行用线性函数去做回归通常并不能得到好结果。难点正在于在这之间寻找一个平衡点。不过人在这里相对于（现在的）机器来说有一个很大的优势：人通常不会孤立地用某一个独立的系统和模型去处理问题，一个人每天都会从各个来源获取大量的信息，并且通过各种手段进行整合处理，归纳所得的所有知识最终得以统一地存储起来，并能有机地组合起来去解决特定的问题。这里的“有机”这个词很有意思，搞理论的人总能提出各种各样的模型，并且这些模型都有严格的理论基础保证能达到期望的目的，然而绝大多数模型都会有那么一些“参数”（例如 K-means 中的 k ），通常没有理论来说明参数取哪个值更好，而模型实际的效果却通常和参数是否取到最优值有很大的关系，我觉得，在这里“有机”不妨看作是所有模型的参数已经自动地取到了最优值。另外，虽然进展不大，但是人们也一直都期望在计算机领域也建立起一个统一的知识系统（例如语意网就是这样一个尝试）。</p>
+<p>GMM就是这样的一种归纳偏执:我们假定样本服从一种高斯分布，不过这种高斯分布与&quot;单一的&quot;高斯分布不一样，它由若干个高斯分布混合起来而形成。</p>
+<blockquote>
+<p>Gaussian Mixture Model (GMM)。 GMM 和 k-means 很像，不过 GMM 是学习出一些概率密度函数来（所以 GMM 除了用在 clustering 上之外，还经常被用于 density estimation ），简单地说，k-means 的结果是每个数据点被 assign 到其中某一个 cluster 了，而 GMM 则给出这些数据点被 assign 到每个 cluster 的概率，又称作 soft assignment 。</p>
+</blockquote>
+<blockquote>
+<p>每个 GMM 由 K 个 Gaussian 分布组成，每个 Gaussian 称为一个“Component”，这些 Component 线性加成在一起就组成了 GMM 的概率密度函数：</p>
+</blockquote>
+<p><span class="math display">\[\displaystyle
+\begin{aligned}
+p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \\
+     &amp; = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)
+\end{aligned}\]</span> &gt;根据上面的式子，如果我们要从 GMM 的分布中随机地取一个点的话，实际上可以分为两步：首先随机地在这 K 个 Component 之中选一个，每个 Component 被选中的概率实际上就是它的系数 _k ，选中了 Component 之后，再单独地考虑从这个 Component 的分布中选取一个点就可以了──这里已经回到了普通的 Gaussian 分布，转化为了已知的问题。</p>
+<p>高斯混合模型解决了一个这样的问题:如果一个样本集的分布有明显的聚类特征，那么我们可以利用GMM来近似这种分布。利用GMM，不仅完成了对样本集的分类，还得到了它的一个概率密度函数。 <strong>利用概率密度函数，我们很容易就可以得到所谓<code>似然函数</code>，再对它进行求解，便可以得到高斯混合模型的参数</strong>。 显然，它的似然函数是<span class="math display">\[L= \prod_{i=1}^N \sum_{k=1}^K \pi_k \mathcal{N}(x ; \mu_k, \Sigma_k)\]</span> log-likelihood function为: <span class="math display">\[L_{log}=\displaystyle
+\sum_{i=1}^N \log \left\{\sum_{k=1}^K \pi_k \mathcal{N}(x_i ; \mu_k, \Sigma_k)\right\}
+\]</span> 然后求解这个似然函数即可，求解过程是一个纯技术问题，我们暂时把它忽略。 总之，求解的结果是一个<span class="math inline">\(N\times K\)</span>的矩阵，这个矩阵的每一行代表了样本属于各个component的概率,对于每一个 <span class="math inline">\(x_i\)</span> ，我们只要取该矩阵第 i 行中最大的那个概率值所对应的那个 Component 为 <span class="math inline">\(x_i\)</span> 所属的 cluster 就可以实现一个完整的聚类方法了。 &gt;从上面的分析中我们可以看到 GMM 和 K-means 的迭代求解法其实非常相似，因此也有和 K-means 同样的问题──并不能保证总是能取到全局最优，如果运气比较差，取到不好的初始值，就有可能得到很差的结果。对于 K-means 的情况，我们通常是重复一定次数然后取最好的结果，不过 GMM 每一次迭代的计算量比 K-means 要大许多，一个更流行的做法是先用 K-means （已经重复并取最优值了）得到一个粗略的结果，然后将其作为初值（只要将 K-means 所得的 centroids 传入 gmm 函数即可），再用 GMM 进行细致迭代。</p>
+<blockquote>
+<p>如我们最开始所讨论的，GMM 所得的结果（Px）不仅仅是数据点的 label ，而包含了数据点标记为每个 label 的概率，很多时候这实际上是非常有用的信息</p>
+</blockquote>
+<h1 id="三丶em算法">三丶EM算法</h1>
+<p>我们可以看到，K-means与GMM实际上是有几分相似的，并且它们都可以追溯到EM算法。 <strong>EM算法是一种利用似然函数来获取模型参数的算法。</strong> 首先我们来复习两个概念</p>
+<h2 id="边缘分布">边缘分布</h2>
+<p>摘取百度百科对边缘分布的解释 &gt;边缘分布（Marginal Distribution）指在概率论和统计学的多维随机变量中，只包含其中部分变量的概率分布。</p>
+<p>假设有一个和两个变量相关的概率分布： <span class="math display">\[P(x|y)\]</span> 关于其中一个特定变量的边缘分布则为给定其他变量的条件概率分布：(增加了一个y和求和符号) <span class="math display">\[P(x)=\sum_{y}P(x,y)=\sum_yP(x|y)P(y)\]</span></p>
+<blockquote>
+<p>在这个边缘分布中，我们得到只关于一个变量的概率分布，而不再考虑另一变量的影响，<strong>实际上进行了降维操作</strong>。在实际应用中，例如人工神经网络的神经元互相关联，在计算它们各自的参数的时候，就会使用边缘分布计算得到某一特定神经元（变量）的值。</p>
+</blockquote>
+<h2 id="jensen不等式">Jensen不等式</h2>
+<p>定理:X为一随机变量，如果<span class="math inline">\(f\)</span>是凸函数，那么有<span class="math display">\[E[f(X)]\ge f[E(X)]\]</span></p>
+<h2 id="推导">推导</h2>
+<h3 id="问题引入">问题引入</h3>
+<p>现在我们有一组观测样本<span class="math display">\[\vec x=(x_1,x_2...x_m)\]</span> 在确定了归纳偏执之后，我们希望获得模型的参数，那么有 <span class="math display">\[θ=arg\max_θ∑\log P(x_i;θ)\]</span> 但是很不幸，<strong>我们的观测数据实际上还有隐藏的观测值数据</strong> <span class="math display">\[\vec z=(z_1,z_2,...z_i)\]</span> 那么我们利用边缘分布的定义，极大化模型分布的对数似然函数如下： <span class="math display">\[θ=arg\max_θ∑logP(x_i;θ)=arg\max_θ∑log∑_{z_i}P(x_i，z_i;θ)\]</span> <strong>这个式子怎么求解呢？所需要用到的方法就是EM算法了</strong></p>
+<h3 id="求解过程">求解过程</h3>
+<p>概括如下 &gt;EM是一个在已知部分相关变量的情况下，估计未知变量的迭代技术。EM的算法流程如下： 初始化分布参数 重复直到收敛： E步骤：根据参数的假设值，给出未知变量的期望估计，应用于缺失值。 M步骤：根据未知变量的估计值，给出当前的参数的极大似然估计。</p>
+<blockquote>
+<p>现在我们总结下EM算法的流程。 　　　　输入：观察数据x=(x(1),x(2),...x(m))，联合分布p(x,z;θ), 条件分布p(z|x;θ), 最大迭代次数J。 　　　　1) 随机初始化模型参数θ的初值θ0。 　　　　2） for j from 1 to J开始EM算法迭代： 　　　　　　a) E步：计算联合分布的条件概率期望： <span class="math display">\[Qi(z(i))=P(z(i)|x(i)，θj))\]</span> <span class="math display">\[L(θ,θ_j)=∑_{i=1}^m∑_{z_i}Q_i(z_i)logP(x_i，z_i;θ)\]</span> 　　　　　　b) M步：极大化L(θ,θj),得到θj+1: <span class="math display">\[θ_{j+1}=arg\max_θL(θ,θ_j)\]</span> 　　　　　　c) 如果θj+1已收敛，则算法结束。否则继续回到步骤a)进行E步迭代。 　　　　输出：模型参数θ。 ### 证明 关于证明我就不ctrl+c/ctrl+v了，直接传送门~ <a href="https://wenku.baidu.com/view/3396bb4d6294dd88d0d26bee.html" target="_blank" rel="noopener">传送门</a> # 参考资料 * <a href="https://baike.baidu.com/item/%E8%BE%B9%E7%BC%98%E5%88%86%E5%B8%83" target="_blank" rel="noopener">边缘分布百度百科</a> * <a href="https://blog.csdn.net/zhihua_oba/article/details/73776553" target="_blank" rel="noopener">EM介绍</a> * <a href="https://www.cnblogs.com/jerrylead/archive/2011/04/06/2006936.html" target="_blank" rel="noopener">EM详细推导</a> * <a href="https://wenku.baidu.com/view/3396bb4d6294dd88d0d26bee.html" target="_blank" rel="noopener">EM文库</a> * <a href="http://blog.pluskid.org/?p=39" target="_blank" rel="noopener">GMM原理</a> * <a href="https://blog.csdn.net/zengxiantao1994/article/details/72787849" target="_blank" rel="noopener">极大似然估计介绍</a></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>总结</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
 </search>
