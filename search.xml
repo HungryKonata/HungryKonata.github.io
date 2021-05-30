@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>换季了</title>
+    <url>/2020/04/28/%E6%8D%A2%E5%AD%A3%E4%BA%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>--《夏天》 合唱</p>
+</blockquote>
+
+        <div id="aplayer-qFxzFIob" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-qFxzFIob"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "夏天",
+              author: "金承志",
+              url: "http://music.163.com/song/media/outer/url?id=1302066394.mp3",
+              pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<a id="more"></a>
+<blockquote>
+<p>夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是微微踮起的脚尖</p>
+<p>是海岸线上的尖叫</p>
+<p>夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是列车远去的白烟</p>
+<p>是关门轻轻的背影</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+        <tag>歌曲</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ubuntu20.04换源与中文输入法+chrome+LinuxQQ的安装</title>
     <url>/2020/06/25/ubuntu20.04%E6%8D%A2%E6%BA%90%E4%B8%8E%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95+chrome+LinuxQQ%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>安装了最新的ubuntu20.04，赶紧来配置一下吧</p>
@@ -66,12 +114,12 @@
 </blockquote>
 <a id="more"></a>
 
-        <div id="aplayer-KmyPZTQj" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-rnwSGYrR" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-KmyPZTQj"),
+            element: document.getElementById("aplayer-rnwSGYrR"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -111,125 +159,22 @@
       </tags>
   </entry>
   <entry>
-    <title>利用爬虫框架获取番剧排行榜</title>
-    <url>/2020/11/30/%E5%88%A9%E7%94%A8%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E8%8E%B7%E5%8F%96%E7%95%AA%E5%89%A7%E6%8E%92%E8%A1%8C%E6%A6%9C/</url>
+    <title>校服与个性的表达</title>
+    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>scrapy框架笔记，参考官方文档与部分教程，完成一个爬虫程序，爬取了b站的2021年1月番剧数</p>
+<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="创建项目">1. 创建项目</h3>
-<p>在需要存储的代码目录下输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scrapy startproject animeRankSpider</span><br></pre></td></tr></table></figure>
-<p>该命令生成如下文件夹结构</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">|--animeRankSpider</span><br><span class="line">   |--scrapy.cfg</span><br><span class="line">   |--animeRankSpider</span><br><span class="line">      |--__init__.py</span><br><span class="line">      |--items.py</span><br><span class="line">      |--middlewares.py</span><br><span class="line">      |--pipelines.py</span><br><span class="line">      |--settings.py</span><br><span class="line">      |--spiders.py</span><br><span class="line">         |--__init__.py</span><br></pre></td></tr></table></figure>
-<p>这些文件分别为:</p>
-<ul>
-<li><code>scrapy.cfg</code> 为scrapy的配置文件</li>
-<li><code>items.py</code> 为爬取内容的每个小单元设计，称之为item</li>
-<li><code>middlewares.py</code> 为爬虫中间件</li>
-<li><code>pipelines.py</code> 为信息处理过程的设计</li>
-<li><code>setting.py</code> 为爬虫的一些设置</li>
-</ul>
-<h3 id="设计爬虫单元scrapy中称为item">2. 设计爬虫单元(scrapy中称为<code>item</code>)</h3>
-<p>观察b站新番相关数据，我准备爬取的内容为新番标题、弹幕量、播放量、追番人数、排名。</p>
-<p>打开<code>items.py</code>，输入如下内容</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AnimerankspiderItem</span><span class="params">(scrapy.Item)</span>:</span></span><br><span class="line">    <span class="comment"># define the fields for your item here like:</span></span><br><span class="line">    <span class="comment"># name = scrapy.Field()</span></span><br><span class="line">    name = scrapy.Field()</span><br><span class="line">    rank = scrapy.Field()</span><br><span class="line">    view = scrapy.Field()</span><br><span class="line">    bullet = scrapy.Field()</span><br><span class="line">    like = scrapy.Field()</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<h3 id="网页分析">3. 网页分析</h3>
-<p>爬取的网站为<code>https://www.bilibili.com/v/popular/rank/bangumi</code> ，可以在终端中输入下面的指令帮助分析</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy shell &quot;https:&#x2F;&#x2F;www.bilibili.com&#x2F;v&#x2F;popular&#x2F;rank&#x2F;bangumi&quot;</span><br></pre></td></tr></table></figure>
-<p>例如，在输入时</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">response.xpath(&#39;&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a&#x2F;text()&#39;)</span><br></pre></td></tr></table></figure>
-<p>会有输出</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&lt;Selector xpath&#x3D;&#39;&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a&#x2F;text()&#39; data&#x3D;&#39;Re：从零开始的异世界生活 第二季 后半&#39;&gt;]</span><br></pre></td></tr></table></figure>
-<p>也就是说可以根据页面中元素的xpath路径可以找到网页中元素的位置，这正是爬虫所需要的</p>
-<p>这里安利一款chrome插件<code>Xpath Helper</code> ，可以帮助分析Xpath</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20210117220922596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="新番标题xpath" /><figcaption>新番标题xpath</figcaption>
-</figure>
-<p>观察两部新番标题的Xpath，分别为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a</span><br><span class="line">&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[2]&#x2F;div[2]&#x2F;div[2]&#x2F;a</span><br></pre></td></tr></table></figure>
-<p>可以发现，差别仅在于标签<code>li</code>后面的系数。经过进一步验证，发现网站的其他内容也有类似的格式</p>
-<p>因此分析结果如下,<code>index</code>代表不同新番的系数，从1开始取值</p>
-<ul>
-<li>标题格式<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/a</code></li>
-<li>播放量<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[1]</code></li>
-<li>弹幕量<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[2]</code></li>
-<li>追番人数<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[3]</code></li>
-<li>排序<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[1]</code></li>
-</ul>
-<h2 id="爬虫编写">4.爬虫编写</h2>
-<p>输入命令，引号中内容为爬虫网站的主域名</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy genspider animeRankSpider &quot;bilibili.com&quot;</span><br></pre></td></tr></table></figure>
-<p>在animeRankSpider/spiders文件夹下创建了一个py结尾的新爬虫文件，输入如下代码</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> animeRankSpider.items <span class="keyword">import</span> AnimerankspiderItem</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BilibiliSpider</span><span class="params">(scrapy.Spider)</span>:</span></span><br><span class="line">    name = <span class="string">'animeRankSpider'</span></span><br><span class="line">    allowed_domains = [<span class="string">'bilibili.com'</span>]</span><br><span class="line">    start_urls = [<span class="string">'https://www.bilibili.com/v/popular/rank/bangumi'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        <span class="comment"># filename = 'rank.html'</span></span><br><span class="line">        <span class="comment"># open(filename, 'wb').write(response.body)</span></span><br><span class="line">        items = []</span><br><span class="line">        rootPath = <span class="string">'//*[@id="app"]/div[2]/div[2]/ul'</span></span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> range(<span class="number">49</span>):</span><br><span class="line">            item = AnimerankspiderItem()</span><br><span class="line">            namePath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/a/text()'</span>.format(index)</span><br><span class="line">            viewPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[1]/text()'</span>.format(index)</span><br><span class="line">            rankPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[1]/text()'</span>.format(index)</span><br><span class="line">            bulletPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[2]/text()'</span>.format(index)</span><br><span class="line">            likePath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[3]/text()'</span>.format(index)</span><br><span class="line">            name = response.xpath(namePath).extract()</span><br><span class="line">            view = response.xpath(viewPath).extract()</span><br><span class="line">            rank = response.xpath(rankPath).extract()</span><br><span class="line">            bullet = response.xpath(bulletPath).extract()</span><br><span class="line">            like = response.xpath(likePath).extract()</span><br><span class="line">            item[<span class="string">'name'</span>] = name</span><br><span class="line">            item[<span class="string">'view'</span>] = view</span><br><span class="line">            item[<span class="string">'rank'</span>] = rank</span><br><span class="line">            item[<span class="string">'bullet'</span>] = bullet</span><br><span class="line">            item[<span class="string">'like'</span>] = like</span><br><span class="line">            items.append(item)</span><br><span class="line">        <span class="keyword">return</span> items</span><br></pre></td></tr></table></figure>
-<h2 id="运行爬虫">5. 运行爬虫</h2>
-<p>终端中输入命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy crawl animeRankSpider -o out.csv</span><br></pre></td></tr></table></figure>
-<p>等待片刻，生成的out.csv即为爬虫所得，可以用记事本或者excel打开</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20210117211750595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="新番排行榜" /><figcaption>新番排行榜</figcaption>
-</figure>
-<p>代码上传到了百度网盘，链接如下</p>
-<p>链接：https://pan.baidu.com/s/1HzjZdmUQ-u7FeapgyAH8vA 提取码：lhvh</p>
-<h3 id="参考资料">参考资料</h3>
-<ul>
-<li><a href="https://www.osgeo.cn/scrapy/intro/tutorial.html" target="_blank" rel="noopener">scrapy文档</a></li>
-<li><a href="https://www.runoob.com/w3cnote/scrapy-detail.html" target="_blank" rel="noopener">scrapy教程</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>换季了</title>
-    <url>/2020/04/28/%E6%8D%A2%E5%AD%A3%E4%BA%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>--《夏天》 合唱</p>
-</blockquote>
-
-        <div id="aplayer-gEMuLjAW" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-gEMuLjAW"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "夏天",
-              author: "金承志",
-              url: "http://music.163.com/song/media/outer/url?id=1302066394.mp3",
-              pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<a id="more"></a>
-<blockquote>
-<p>夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是微微踮起的脚尖</p>
-<p>是海岸线上的尖叫</p>
-<p>夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是列车远去的白烟</p>
-<p>是关门轻轻的背影</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
+<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
+<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
 ]]></content>
       <categories>
         <category>感想</category>
       </categories>
       <tags>
-        <tag>感想</tag>
-        <tag>歌曲</tag>
+        <tag>知乎</tag>
       </tags>
   </entry>
   <entry>
@@ -272,12 +217,12 @@
 <p>例如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer <span class="string">"旅行者一号"</span> <span class="string">"合唱团"</span> <span class="string">"http://music.163.com/song/media/outer/url?id=490439632.mp3"</span>  <span class="string">"https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center"</span> %&#125;</span><br></pre></td></tr></table></figure></p>
 <p>效果如下</p>
 
-        <div id="aplayer-LkBfuqYJ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-rnGPSgiD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-LkBfuqYJ"),
+            element: document.getElementById("aplayer-rnGPSgiD"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -309,12 +254,12 @@
 <p>例如这首歌的歌词就是这样:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayerlrc &quot;旅行者一号&quot; &quot;合唱团&quot; &quot;http:&#x2F;&#x2F;music.163.com&#x2F;song&#x2F;media&#x2F;outer&#x2F;url?id&#x3D;490439632.mp3&quot; %&#125;</span><br><span class="line">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音&#x2F;混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</span><br><span class="line">&#123;% endaplayerlrc %&#125;</span><br></pre></td></tr></table></figure>
 <p>效果如下:</p>
-<div id="aplayer-MlVObImd" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+<div id="aplayer-MAgyAeYp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
 				<pre class="aplayer-lrc-content">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音/混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</pre>
 			</div>
 			<script>
 				var ap = new APlayer({
-					element: document.getElementById("aplayer-MlVObImd"),
+					element: document.getElementById("aplayer-MAgyAeYp"),
 					narrow: false,
 					autoplay: false,
 					showlrc: 2,
@@ -361,112 +306,9 @@
         <category>感想</category>
       </categories>
       <tags>
+        <tag>知乎</tag>
         <tag>高考</tag>
         <tag>英语</tag>
-        <tag>知乎</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构与算法笔记归档</title>
-    <url>/2021/02/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E5%BD%92%E6%A1%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>数据结构与算法笔记。代码大部分使用C++与Java两种实现</p>
-</blockquote>
-<a id="more"></a>
-<p>我的CSDN博客中写了一些数据结构与算法题目笔记，题目均为经典算法题且大部分来自leetcode,并且大都分别使用<code>C++</code>与<code>Java</code>两种实现</p>
-<p>现按题目中使用的数据结构归档如下以方便查阅，不断更新中</p>
-<h3 id="数组与链表">1. 数组与链表</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113125703" target="_blank" rel="noopener">链表 : 反向打印链表</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">数组 : 找出重复元素</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113328112" target="_blank" rel="noopener">链表 : 删除特定结点</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113388316" target="_blank" rel="noopener">数组 : 调整数组顺序使奇数位于偶数之前</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113185283" target="_blank" rel="noopener">数组 : 旋转数组中的最小元素</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113404494" target="_blank" rel="noopener">链表 : 链表中的倒数第k个结点</a></li>
-</ul>
-<h3 id="栈与队列">2. 栈与队列</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113143160" target="_blank" rel="noopener">栈与队列 : 用两个栈实现队列</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113523886" target="_blank" rel="noopener">栈 : 包含min函数的栈</a></li>
-</ul>
-<h3 id="二叉树">3. 二叉树</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113447366" target="_blank" rel="noopener">二叉树 : 二叉树的镜像</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113466097" target="_blank" rel="noopener">二叉树 : 对称的二叉树</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113561673" target="_blank" rel="noopener">二叉树 : 二叉搜索树的第k大结点</a></li>
-</ul>
-<h3 id="动态规划">4. 动态规划</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113177772" target="_blank" rel="noopener">使用动态规划解决斐波那契数列</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113178283" target="_blank" rel="noopener">动态规划 : 青蛙跳台阶问题</a></li>
-</ul>
-<h3 id="堆优先队列集合">5. 堆、优先队列、集合</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113654275" target="_blank" rel="noopener">C++中的堆与优先序列</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">集合 : 寻找数组中的重复元素</a></li>
-</ul>
-<h3 id="位操作">6. 位操作</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113307993" target="_blank" rel="noopener">二进制中1的个数</a></li>
-</ul>
-<h3 id="双指针法">7. 双指针法</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113633652" target="_blank" rel="noopener">合并区间问题</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113407412" target="_blank" rel="noopener">双指针法 ： 反转链表</a></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>校服与个性的表达</title>
-    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
-</blockquote>
-<a id="more"></a>
-<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
-<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
-<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>知乎</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>闹钟电视</title>
-    <url>/2021/05/14/%E9%97%B9%E9%92%9F%E7%94%B5%E8%A7%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-TRmTVYZo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-TRmTVYZo"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "もう少しだけ",
-              author: "Yoasobi",
-              url: "http://music.163.com/song/media/outer/url?id=1840862630.mp3",
-              pic: "https://img-blog.csdnimg.cn/20210514143129720.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<a id="more"></a>
-<p><img src="https://img.3dmgame.com/uploads/images/news/20190830/1567146340_769830.gif" /></p>
-]]></content>
-      <categories>
-        <category>歌曲</category>
-      </categories>
-      <tags>
-        <tag>歌曲</tag>
       </tags>
   </entry>
   <entry>
@@ -637,6 +479,164 @@ p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \\
       <tags>
         <tag>总结</tag>
         <tag>信号处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>闹钟电视</title>
+    <url>/2021/05/14/%E9%97%B9%E9%92%9F%E7%94%B5%E8%A7%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-dlwvbOeS" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-dlwvbOeS"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "もう少しだけ",
+              author: "Yoasobi",
+              url: "http://music.163.com/song/media/outer/url?id=1840862630.mp3",
+              pic: "https://img-blog.csdnimg.cn/20210514143129720.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<a id="more"></a>
+<p><img src="https://img.3dmgame.com/uploads/images/news/20190830/1567146340_769830.gif" /></p>
+]]></content>
+      <categories>
+        <category>歌曲</category>
+      </categories>
+      <tags>
+        <tag>歌曲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法笔记归档</title>
+    <url>/2021/02/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E5%BD%92%E6%A1%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>数据结构与算法笔记。代码大部分使用C++与Java两种实现</p>
+</blockquote>
+<a id="more"></a>
+<p>我的CSDN博客中写了一些数据结构与算法题目笔记，题目均为经典算法题且大部分来自leetcode,并且大都分别使用<code>C++</code>与<code>Java</code>两种实现</p>
+<p>现按题目中使用的数据结构归档如下以方便查阅，不断更新中</p>
+<h3 id="数组与链表">1. 数组与链表</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113125703" target="_blank" rel="noopener">链表 : 反向打印链表</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">数组 : 找出重复元素</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113328112" target="_blank" rel="noopener">链表 : 删除特定结点</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113388316" target="_blank" rel="noopener">数组 : 调整数组顺序使奇数位于偶数之前</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113185283" target="_blank" rel="noopener">数组 : 旋转数组中的最小元素</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113404494" target="_blank" rel="noopener">链表 : 链表中的倒数第k个结点</a></li>
+</ul>
+<h3 id="栈与队列">2. 栈与队列</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113143160" target="_blank" rel="noopener">栈与队列 : 用两个栈实现队列</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113523886" target="_blank" rel="noopener">栈 : 包含min函数的栈</a></li>
+</ul>
+<h3 id="二叉树">3. 二叉树</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113447366" target="_blank" rel="noopener">二叉树 : 二叉树的镜像</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113466097" target="_blank" rel="noopener">二叉树 : 对称的二叉树</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113561673" target="_blank" rel="noopener">二叉树 : 二叉搜索树的第k大结点</a></li>
+</ul>
+<h3 id="动态规划">4. 动态规划</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113177772" target="_blank" rel="noopener">使用动态规划解决斐波那契数列</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113178283" target="_blank" rel="noopener">动态规划 : 青蛙跳台阶问题</a></li>
+</ul>
+<h3 id="堆优先队列集合">5. 堆、优先队列、集合</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113654275" target="_blank" rel="noopener">C++中的堆与优先序列</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">集合 : 寻找数组中的重复元素</a></li>
+</ul>
+<h3 id="位操作">6. 位操作</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113307993" target="_blank" rel="noopener">二进制中1的个数</a></li>
+</ul>
+<h3 id="双指针法">7. 双指针法</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113633652" target="_blank" rel="noopener">合并区间问题</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113407412" target="_blank" rel="noopener">双指针法 ： 反转链表</a></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>利用爬虫框架获取番剧排行榜</title>
+    <url>/2020/11/30/%E5%88%A9%E7%94%A8%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E8%8E%B7%E5%8F%96%E7%95%AA%E5%89%A7%E6%8E%92%E8%A1%8C%E6%A6%9C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>scrapy框架笔记，参考官方文档与部分教程，完成一个爬虫程序，爬取了b站的2021年1月番剧数</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="创建项目">1. 创建项目</h3>
+<p>在需要存储的代码目录下输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scrapy startproject animeRankSpider</span><br></pre></td></tr></table></figure>
+<p>该命令生成如下文件夹结构</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">|--animeRankSpider</span><br><span class="line">   |--scrapy.cfg</span><br><span class="line">   |--animeRankSpider</span><br><span class="line">      |--__init__.py</span><br><span class="line">      |--items.py</span><br><span class="line">      |--middlewares.py</span><br><span class="line">      |--pipelines.py</span><br><span class="line">      |--settings.py</span><br><span class="line">      |--spiders.py</span><br><span class="line">         |--__init__.py</span><br></pre></td></tr></table></figure>
+<p>这些文件分别为:</p>
+<ul>
+<li><code>scrapy.cfg</code> 为scrapy的配置文件</li>
+<li><code>items.py</code> 为爬取内容的每个小单元设计，称之为item</li>
+<li><code>middlewares.py</code> 为爬虫中间件</li>
+<li><code>pipelines.py</code> 为信息处理过程的设计</li>
+<li><code>setting.py</code> 为爬虫的一些设置</li>
+</ul>
+<h3 id="设计爬虫单元scrapy中称为item">2. 设计爬虫单元(scrapy中称为<code>item</code>)</h3>
+<p>观察b站新番相关数据，我准备爬取的内容为新番标题、弹幕量、播放量、追番人数、排名。</p>
+<p>打开<code>items.py</code>，输入如下内容</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AnimerankspiderItem</span><span class="params">(scrapy.Item)</span>:</span></span><br><span class="line">    <span class="comment"># define the fields for your item here like:</span></span><br><span class="line">    <span class="comment"># name = scrapy.Field()</span></span><br><span class="line">    name = scrapy.Field()</span><br><span class="line">    rank = scrapy.Field()</span><br><span class="line">    view = scrapy.Field()</span><br><span class="line">    bullet = scrapy.Field()</span><br><span class="line">    like = scrapy.Field()</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<h3 id="网页分析">3. 网页分析</h3>
+<p>爬取的网站为<code>https://www.bilibili.com/v/popular/rank/bangumi</code> ，可以在终端中输入下面的指令帮助分析</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy shell &quot;https:&#x2F;&#x2F;www.bilibili.com&#x2F;v&#x2F;popular&#x2F;rank&#x2F;bangumi&quot;</span><br></pre></td></tr></table></figure>
+<p>例如，在输入时</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">response.xpath(&#39;&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a&#x2F;text()&#39;)</span><br></pre></td></tr></table></figure>
+<p>会有输出</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&lt;Selector xpath&#x3D;&#39;&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a&#x2F;text()&#39; data&#x3D;&#39;Re：从零开始的异世界生活 第二季 后半&#39;&gt;]</span><br></pre></td></tr></table></figure>
+<p>也就是说可以根据页面中元素的xpath路径可以找到网页中元素的位置，这正是爬虫所需要的</p>
+<p>这里安利一款chrome插件<code>Xpath Helper</code> ，可以帮助分析Xpath</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20210117220922596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="新番标题xpath" /><figcaption>新番标题xpath</figcaption>
+</figure>
+<p>观察两部新番标题的Xpath，分别为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a</span><br><span class="line">&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[2]&#x2F;div[2]&#x2F;div[2]&#x2F;a</span><br></pre></td></tr></table></figure>
+<p>可以发现，差别仅在于标签<code>li</code>后面的系数。经过进一步验证，发现网站的其他内容也有类似的格式</p>
+<p>因此分析结果如下,<code>index</code>代表不同新番的系数，从1开始取值</p>
+<ul>
+<li>标题格式<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/a</code></li>
+<li>播放量<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[1]</code></li>
+<li>弹幕量<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[2]</code></li>
+<li>追番人数<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[3]</code></li>
+<li>排序<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[1]</code></li>
+</ul>
+<h2 id="爬虫编写">4.爬虫编写</h2>
+<p>输入命令，引号中内容为爬虫网站的主域名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy genspider animeRankSpider &quot;bilibili.com&quot;</span><br></pre></td></tr></table></figure>
+<p>在animeRankSpider/spiders文件夹下创建了一个py结尾的新爬虫文件，输入如下代码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> animeRankSpider.items <span class="keyword">import</span> AnimerankspiderItem</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BilibiliSpider</span><span class="params">(scrapy.Spider)</span>:</span></span><br><span class="line">    name = <span class="string">'animeRankSpider'</span></span><br><span class="line">    allowed_domains = [<span class="string">'bilibili.com'</span>]</span><br><span class="line">    start_urls = [<span class="string">'https://www.bilibili.com/v/popular/rank/bangumi'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        <span class="comment"># filename = 'rank.html'</span></span><br><span class="line">        <span class="comment"># open(filename, 'wb').write(response.body)</span></span><br><span class="line">        items = []</span><br><span class="line">        rootPath = <span class="string">'//*[@id="app"]/div[2]/div[2]/ul'</span></span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> range(<span class="number">49</span>):</span><br><span class="line">            item = AnimerankspiderItem()</span><br><span class="line">            namePath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/a/text()'</span>.format(index)</span><br><span class="line">            viewPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[1]/text()'</span>.format(index)</span><br><span class="line">            rankPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[1]/text()'</span>.format(index)</span><br><span class="line">            bulletPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[2]/text()'</span>.format(index)</span><br><span class="line">            likePath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[3]/text()'</span>.format(index)</span><br><span class="line">            name = response.xpath(namePath).extract()</span><br><span class="line">            view = response.xpath(viewPath).extract()</span><br><span class="line">            rank = response.xpath(rankPath).extract()</span><br><span class="line">            bullet = response.xpath(bulletPath).extract()</span><br><span class="line">            like = response.xpath(likePath).extract()</span><br><span class="line">            item[<span class="string">'name'</span>] = name</span><br><span class="line">            item[<span class="string">'view'</span>] = view</span><br><span class="line">            item[<span class="string">'rank'</span>] = rank</span><br><span class="line">            item[<span class="string">'bullet'</span>] = bullet</span><br><span class="line">            item[<span class="string">'like'</span>] = like</span><br><span class="line">            items.append(item)</span><br><span class="line">        <span class="keyword">return</span> items</span><br></pre></td></tr></table></figure>
+<h2 id="运行爬虫">5. 运行爬虫</h2>
+<p>终端中输入命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy crawl animeRankSpider -o out.csv</span><br></pre></td></tr></table></figure>
+<p>等待片刻，生成的out.csv即为爬虫所得，可以用记事本或者excel打开</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20210117211750595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="新番排行榜" /><figcaption>新番排行榜</figcaption>
+</figure>
+<p>代码上传到了百度网盘，链接如下</p>
+<p>链接：https://pan.baidu.com/s/1HzjZdmUQ-u7FeapgyAH8vA 提取码：lhvh</p>
+<h3 id="参考资料">参考资料</h3>
+<ul>
+<li><a href="https://www.osgeo.cn/scrapy/intro/tutorial.html" target="_blank" rel="noopener">scrapy文档</a></li>
+<li><a href="https://www.runoob.com/w3cnote/scrapy-detail.html" target="_blank" rel="noopener">scrapy教程</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
