@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="完备性是泛函分析中的重要概念，本文对此概念进行简要总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="泛函分析(2)空间完备性">
+<meta property="og:url" content="http://yoursite.com/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/index.html">
+<meta property="og:site_name" content="konata此方">
+<meta property="og:description" content="完备性是泛函分析中的重要概念，本文对此概念进行简要总结">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16">
+<meta property="article:published_time" content="2021-10-13T15:54:03.607Z">
+<meta property="article:modified_time" content="2021-10-13T16:18:06.094Z">
+<meta property="article:author" content="konata">
+<meta property="article:tag" content="总结">
+<meta property="article:tag" content="泛函分析">
+<meta property="article:tag" content="完备空间">
+<meta property="article:tag" content="柯西序列">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16">
+
+<link rel="canonical" href="http://yoursite.com/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>泛函分析(2)空间完备性 | konata此方</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">konata此方</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">wish you happy everyday</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="konata">
+      <meta itemprop="description" content="做一个有理想的普通人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="konata此方">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          泛函分析(2)空间完备性
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-13 23:54:03" itemprop="dateCreated datePublished" datetime="2021-10-13T23:54:03+08:00">2021-10-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-14 00:18:06" itemprop="dateModified" datetime="2021-10-14T00:18:06+08:00">2021-10-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">数学</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>完备性是泛函分析中的重要概念，本文对此概念进行简要总结</p>
+<a id="more"></a>
+<figure>
+<img src="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16" alt="圆" /><figcaption>圆</figcaption>
+</figure>
+<h1 id="空间完备性"><strong>空间完备性</strong></h1>
+<p>为了定义完备性，需要首先清楚柯西序列和收敛的概念</p>
+<h2 id="收敛性与柯西列"><strong>1. 收敛性与柯西列</strong></h2>
+<h3 id="柯西列"><strong>1.1 柯西列</strong></h3>
+<p>给定某个度量空间 <span class="math inline">\(X\)</span> 中的序列 <span class="math inline">\(\left\{x_{i}\right\}\)</span>, 当满足以下条件时，他就叫做柯西序列 (Cauchy sequence)</p>
+<p>对任意 <span class="math inline">\(\varepsilon&gt;0\)</span>, 存在 <span class="math inline">\(N\)</span> ，当 <span class="math inline">\(m, n \geqslant N\)</span> 时就满足 <span class="math inline">\(d\left(u_{m}, u_{n}\right)&lt;\varepsilon\)</span>.</p>
+<p><strong>1.2 收敛</strong></p>
+<p>设 <span class="math inline">\((X, d)\)</span> 为度量空间， <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为 <span class="math inline">\(\mathrm{X}\)</span> 中的数列，若存在 <span class="math inline">\(x \in X\)</span> 使得 <span class="math inline">\(\lim _{n \rightarrow \infty} d\left(x_{n}, x\right)=0\)</span> ，则 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 在 <span class="math inline">\(X\)</span> 中收敛, 称 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为收敛列, 称 <span class="math inline">\(x\)</span> 为 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 的极限, 记做 <span class="math inline">\(x_{n} \rightarrow x\)</span> 。</p>
+<p><span class="math inline">\(Remark:\)</span></p>
+<ol type="1">
+<li><p>收敛列比柯西列更严格。或者说收敛列一定是柯西列</p></li>
+<li><p>柯西列的直观理解是，一个序列的元素随着序数的增加而愈发靠近，并且最终趋于无限近</p></li>
+<li><p>收敛列一定有界，不仅如此，柯西列也一定有界</p></li>
+</ol>
+<h2 id="完备空间概念"><strong>2. 完备空间概念</strong></h2>
+<p>完备空间指这样性质的空间: 空间中的任何柯西序列都收敛于这个空间中</p>
+<p><span class="math inline">\(Remark:\)</span></p>
+<ol type="1">
+<li><p>完备空间是特殊的度量空间。因为按照定义完备空间需要&quot;柯西列收敛&quot;，而为了定义收敛，需要先定义先度量</p></li>
+<li><p><strong>欧几里得空间是完备空间</strong>。这给了它很好的性质，也即柯西列的收敛性</p></li>
+</ol>
+<p>证明如下:</p>
+<p>Let <span class="math inline">\(\left\langle\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)\right\rangle_{n \in \mathbb{N}}\)</span> be a Cauchy sequence in <span class="math inline">\(\mathbb{R}^{m}\)</span>.</p>
+<p>Let <span class="math inline">\(\epsilon&gt;0\)</span></p>
+<p>Then <span class="math inline">\(\frac{\epsilon}{m}&gt;0\)</span>.</p>
+<p>We have that Real Number Line is Complete Metric Space.</p>
+<p>Therefore:</p>
+<p><span class="math inline">\(\exists y_{1}, y_{2}, \ldots, y_{m} \in \mathbb{R}\)</span> and <span class="math inline">\(N_{1}, N_{2}, \ldots, N_{m} \in \mathbb{N}\)</span> (depending on <span class="math inline">\(\epsilon\)</span> ) such that:</p>
+<p><span class="math display">\[
+\forall k \in \mathbb{N}: 1 \leq k \leq m: \forall n_{k}&gt;N_{k}:\left\langle x_{n, k}-y_{k}\right\rangle&lt;\frac{\epsilon}{m}
+\]</span></p>
+<p>From Euclidean Space is Normed Space:</p>
+<p><span class="math display">\[
+\left\|\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)-\left(y_{1}, y_{2}, \ldots, y_{m}\right)\right\| \leq \sum_{k=1}^{m}\left|x_{n, k}-y_{k}\right|&lt;\epsilon
+\]</span></p>
+<p>Hence the Euclidean space is a complete metric space.</p>
+<ol start="3" type="1">
+<li><p>数集<span class="math inline">\(\mathbb{R}\)</span>、<span class="math inline">\(\mathbb{C}\)</span>都是完备的</p></li>
+<li><p>R和C的子集不一定完备。例如取<span class="math inline">\(X=(0,1)\)</span>。取一柯西列(元素可以无限靠近)<span class="math inline">\(x=1/n\)</span>，其极限0不在该空间中</p></li>
+<li><p>完备度量空间一定为闭集(结合上面例子记忆)</p></li>
+<li><p>完备度量空间的闭子集仍然完备</p></li>
+<li><p>“完备” 可以形象理解为空间中没有 “漏洞”．有限维空间都是完备的．可数维空间都是不完备的．例如有理数集和多项式组成的空间就是不完备的（柯西序列的极限可以是 e^x，但是 e^x并不属于该空间）</p></li>
+</ol>
+<h3 id="参考">参考</h3>
+<ul>
+<li><p><a href="https://zhuanlan.zhihu.com/p/85867887" target="_blank" rel="noopener">收敛性、完备性和紧性</a></p></li>
+<li><p><a href="https://proofwiki.org/wiki/Euclidean_Space_is_Complete_Metric_Space" target="_blank" rel="noopener">Euclidean Space is Complete Metric Space</a></p></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%80%BB%E7%BB%93/" rel="tag"># 总结</a>
+              <a href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/" rel="tag"># 泛函分析</a>
+              <a href="/tags/%E5%AE%8C%E5%A4%87%E7%A9%BA%E9%97%B4/" rel="tag"># 完备空间</a>
+              <a href="/tags/%E6%9F%AF%E8%A5%BF%E5%BA%8F%E5%88%97/" rel="tag"># 柯西序列</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/05/%E7%89%9B%E9%A1%BF%E6%B3%95%E7%94%A8%E4%BA%8E%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/" rel="prev" title="牛顿法用于优化问题">
+      <i class="fa fa-chevron-left"></i> 牛顿法用于优化问题
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(1)%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/" rel="next" title="泛函分析(1)度量空间">
+      泛函分析(1)度量空间 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#空间完备性"><span class="nav-number">1.</span> <span class="nav-text">空间完备性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#收敛性与柯西列"><span class="nav-number">1.1.</span> <span class="nav-text">1. 收敛性与柯西列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#柯西列"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 柯西列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完备空间概念"><span class="nav-number">1.2.</span> <span class="nav-text">2. 完备空间概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">1.2.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">konata</p>
+  <div class="site-description" itemprop="description">做一个有理想的普通人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HungryKonata" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HungryKonata" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/plastic-memory" title="Zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;plastic-memory" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i>Zhihu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_42138454" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_42138454" rel="noopener" target="_blank"><i class="fab fa-CSDN fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">konata</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'dty42XsTsHqdJgqPF1O0A9gN-gzGzoHsz',
+      appKey     : 'SPMb6AXN1fjAJBFrBUSu7Gq0',
+      placeholder: "邮箱和网址非必填，填上昵称就可以发表评论啦",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
