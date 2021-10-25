@@ -20,25 +20,25 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="完备性是泛函分析中的重要概念，本文对此概念进行简要总结">
+  <meta name="description" content="电信类专业的一门重要课程是随机过程，这门课的概率论以实变函数、测度论为基础，而学习测度论的过程中无可避免地会遇到一些抽象代数的概念，本文对相关概念进行简单总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="泛函分析(2)空间完备性">
-<meta property="og:url" content="http://yoursite.com/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/index.html">
+<meta property="og:title" content="抽象代数基本概念总结">
+<meta property="og:url" content="http://yoursite.com/2021/10/25/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="konata此方">
-<meta property="og:description" content="完备性是泛函分析中的重要概念，本文对此概念进行简要总结">
+<meta property="og:description" content="电信类专业的一门重要课程是随机过程，这门课的概率论以实变函数、测度论为基础，而学习测度论的过程中无可避免地会遇到一些抽象代数的概念，本文对相关概念进行简单总结">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16">
-<meta property="article:published_time" content="2021-10-13T15:54:03.607Z">
-<meta property="article:modified_time" content="2021-10-13T16:18:06.094Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/fbc4c32fae144638a524e393c56a3a5e.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/1092d66b15c24d10b8dd48e16307bb27.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
+<meta property="article:published_time" content="2021-10-25T14:51:04.784Z">
+<meta property="article:modified_time" content="2021-10-25T14:55:37.444Z">
 <meta property="article:author" content="konata">
 <meta property="article:tag" content="总结">
-<meta property="article:tag" content="泛函分析">
-<meta property="article:tag" content="完备空间">
-<meta property="article:tag" content="柯西序列">
+<meta property="article:tag" content="抽象代数">
+<meta property="article:tag" content="群环域">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/fbc4c32fae144638a524e393c56a3a5e.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center">
 
-<link rel="canonical" href="http://yoursite.com/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/">
+<link rel="canonical" href="http://yoursite.com/2021/10/25/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93/">
 
 
 <script id="page-configurations">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title>泛函分析(2)空间完备性 | konata此方</title>
+  <title>抽象代数基本概念总结 | konata此方</title>
   
 
 
@@ -200,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/10/25/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -213,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          泛函分析(2)空间完备性
+          抽象代数基本概念总结
         </h1>
 
         <div class="post-meta">
@@ -222,16 +222,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-10-13 23:54:03" itemprop="dateCreated datePublished" datetime="2021-10-13T23:54:03+08:00">2021-10-13</time>
+              <time title="创建时间：2021-10-25 22:51:04 / 修改时间：22:55:37" itemprop="dateCreated datePublished" datetime="2021-10-25T22:51:04+08:00">2021-10-25</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-14 00:18:06" itemprop="dateModified" datetime="2021-10-14T00:18:06+08:00">2021-10-14</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -258,8 +252,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/10/25/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/10/25/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -274,58 +268,132 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>完备性是泛函分析中的重要概念，本文对此概念进行简要总结</p>
+        <p>电信类专业的一门重要课程是随机过程，这门课的概率论以实变函数、测度论为基础，而学习测度论的过程中无可避免地会遇到一些抽象代数的概念，本文对相关概念进行简单总结</p>
 <a id="more"></a>
-<figure>
-<img src="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16" alt="圆" /><figcaption>圆</figcaption>
-</figure>
-<h1 id="空间完备性"><strong>空间完备性</strong></h1>
-<p>为了定义完备性，需要首先清楚柯西序列和收敛的概念</p>
-<h2 id="收敛性与柯西列"><strong>1. 收敛性与柯西列</strong></h2>
-<h3 id="柯西列"><strong>1.1 柯西列</strong></h3>
-<p>给定某个度量空间 <span class="math inline">\(X\)</span> 中的序列 <span class="math inline">\(\left\{x_{i}\right\}\)</span>, 当满足以下条件时，他就叫做柯西序列 (Cauchy sequence)</p>
-<p>对任意 <span class="math inline">\(\varepsilon&gt;0\)</span>, 存在 <span class="math inline">\(N\)</span> ，当 <span class="math inline">\(m, n \geqslant N\)</span> 时就满足 <span class="math inline">\(d\left(u_{m}, u_{n}\right)&lt;\varepsilon\)</span>.</p>
-<p><strong>1.2 收敛</strong></p>
-<p>设 <span class="math inline">\((X, d)\)</span> 为度量空间， <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为 <span class="math inline">\(\mathrm{X}\)</span> 中的数列，若存在 <span class="math inline">\(x \in X\)</span> 使得 <span class="math inline">\(\lim _{n \rightarrow \infty} d\left(x_{n}, x\right)=0\)</span> ，则 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 在 <span class="math inline">\(X\)</span> 中收敛, 称 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为收敛列, 称 <span class="math inline">\(x\)</span> 为 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 的极限, 记做 <span class="math inline">\(x_{n} \rightarrow x\)</span> 。</p>
-<p><span class="math inline">\(Remark:\)</span></p>
+<p><img src="https://img-blog.csdnimg.cn/fbc4c32fae144638a524e393c56a3a5e.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" /></p>
+<blockquote>
+<p>终极总结: 群是一些有基本对称性的东西，域是一些像实数复数的东西，环是一些像多项式、矩阵的东西</p>
+</blockquote>
+<h2 id="群">群</h2>
+<p>在数学中，<strong>群</strong>（group）是由一种集合以及一个二元运算所组成的代数结构，并且符合“群公理”。群公理包含下述四个性质，分别是封闭性、结合律、单位元和对于集合中所有元素存在逆元素。<strong>群是一些有对称性的东西</strong></p>
+<h3 id="定义">定义</h3>
+<p>群<span class="math inline">\((G,\cdot)\)</span>是由集合<em>G</em>和二元运算&quot;·&quot;构成的，<span class="math inline">\(\cdot为二元运算: M \times M \rightarrow M\)</span>。符合以下四个性质（称“群公理”）的数学结构。其中，二元运算结合任何两个元素<em>a</em>和<em>b</em>而形成另一个元素，记为<em>a</em>·<em>b</em>，符号&quot;·&quot;是具体的运算，比如整数加法。</p>
+<p>四个群公理为:</p>
 <ol type="1">
-<li><p>收敛列比柯西列更严格。或者说收敛列一定是柯西列</p></li>
-<li><p>柯西列的直观理解是，一个序列的元素随着序数的增加而愈发靠近，并且最终趋于无限近</p></li>
-<li><p>收敛列一定有界，不仅如此，柯西列也一定有界</p></li>
+<li>封闭性。<span class="math inline">\(a\cdot b\)</span>仍然在集合G中</li>
+<li>结合律。<span class="math inline">\((a \cdot b)\cdot c= a \cdot (b \cdot c)\)</span></li>
+<li>单位元。存在<em>G</em>中的一个元素<em>e</em>，使得对于所有<em>G</em>中的元素<em>a</em>，总有等式<em>e</em>·<em>a</em> = <em>a</em>·<em>e</em> = <em>a</em> 成立。</li>
+<li>逆元。对于每个<em>G</em>中的<em>a</em>，存在<em>G</em>中的一个元素<em>b</em>使得总有<em>a</em>·<em>b</em> = <em>b</em>·<em>a</em> = <em>e</em>，此处<em>e</em>为单位元。</li>
 </ol>
-<h2 id="完备空间概念"><strong>2. 完备空间概念</strong></h2>
-<p>完备空间指这样性质的空间: 空间中的任何柯西序列都收敛于这个空间中</p>
 <p><span class="math inline">\(Remark:\)</span></p>
-<ol type="1">
-<li><p>完备空间是特殊的度量空间。因为按照定义完备空间需要&quot;柯西列收敛&quot;，而为了定义收敛，需要先定义先度量</p></li>
-<li><p><strong>欧几里得空间是完备空间</strong>。这给了它很好的性质，也即柯西列的收敛性</p></li>
-</ol>
-<p>证明如下:</p>
-<p>Let <span class="math inline">\(\left\langle\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)\right\rangle_{n \in \mathbb{N}}\)</span> be a Cauchy sequence in <span class="math inline">\(\mathbb{R}^{m}\)</span>.</p>
-<p>Let <span class="math inline">\(\epsilon&gt;0\)</span></p>
-<p>Then <span class="math inline">\(\frac{\epsilon}{m}&gt;0\)</span>.</p>
-<p>We have that Real Number Line is Complete Metric Space.</p>
-<p>Therefore:</p>
-<p><span class="math inline">\(\exists y_{1}, y_{2}, \ldots, y_{m} \in \mathbb{R}\)</span> and <span class="math inline">\(N_{1}, N_{2}, \ldots, N_{m} \in \mathbb{N}\)</span> (depending on <span class="math inline">\(\epsilon\)</span> ) such that:</p>
-<p><span class="math display">\[
-\forall k \in \mathbb{N}: 1 \leq k \leq m: \forall n_{k}&gt;N_{k}:\left\langle x_{n, k}-y_{k}\right\rangle&lt;\frac{\epsilon}{m}
-\]</span></p>
-<p>From Euclidean Space is Normed Space:</p>
-<p><span class="math display">\[
-\left\|\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)-\left(y_{1}, y_{2}, \ldots, y_{m}\right)\right\| \leq \sum_{k=1}^{m}\left|x_{n, k}-y_{k}\right|&lt;\epsilon
-\]</span></p>
-<p>Hence the Euclidean space is a complete metric space.</p>
-<ol start="3" type="1">
-<li><p>数集<span class="math inline">\(\mathbb{R}\)</span>、<span class="math inline">\(\mathbb{C}\)</span>都是完备的</p></li>
-<li><p>R和C的子集不一定完备。例如取<span class="math inline">\(X=(0,1)\)</span>。取一柯西列(元素可以无限靠近)<span class="math inline">\(x=1/n\)</span>，其极限0不在该空间中</p></li>
-<li><p>完备度量空间一定为闭集(结合上面例子记忆)</p></li>
-<li><p>完备度量空间的闭子集仍然完备</p></li>
-<li><p>“完备” 可以形象理解为空间中没有 “漏洞”．有限维空间都是完备的．可数维空间都是不完备的．例如有理数集和多项式组成的空间就是不完备的（柯西序列的极限可以是 e^x，但是 e^x并不属于该空间）</p></li>
-</ol>
-<h3 id="参考">参考</h3>
 <ul>
-<li><p><a href="https://zhuanlan.zhihu.com/p/85867887" target="_blank" rel="noopener">收敛性、完备性和紧性</a></p></li>
-<li><p><a href="https://proofwiki.org/wiki/Euclidean_Space_is_Complete_Metric_Space" target="_blank" rel="noopener">Euclidean Space is Complete Metric Space</a></p></li>
+<li>封闭性非常自然，不用多讨论。2、3、4三点结合起来<strong>保证群有一种很基本的对称性</strong>。例如整数加法群，群公理2要求(a+b)+c=a+(b+c)(<strong>运算次序对结果无影响</strong>，是代数结构的基本对称性)，群公理三要求有单位元数字0(<strong>对称的中心点</strong>)，群公理4保证了这个整数群<strong>正负对称</strong></li>
+<li>群的四公理不要求二元运算有交换性。如果这个二元运算还有交换性，即a*b=b*a，称这个群为交换群(或Abel群)，这个群有更强的对称性；否则称为非交换群</li>
+<li>群四公理是有顺序的。仅满足1为原群，再加上2为半群，再加上3为幺半群(幺的意思就是1，含有单位元)，再加上4称为群。如果还加上交换性，也就是阿贝尔群</li>
+</ul>
+<h2 id="域">域</h2>
+<p>域是一些<strong>像实数复数</strong>以及定义在上面的<strong>像加法、乘法</strong>的东西。更严格来说，有如下规定</p>
+<p>域由集合F以及定义在上面的两种二元运算代数结构构成，即<span class="math inline">\((F,+,*)\)</span>，它满足如下<strong>八条公理</strong>(线性空间也是八条公理，这八个公理很像)。对 <span class="math inline">\(\forall a, b, c \in F\)</span></p>
+<ol type="1">
+<li>对加法和乘法都封闭</li>
+<li>加法和乘法都分别符合结合律</li>
+</ol>
+<p><span class="math inline">\(\forall a, b, c \in F,(a+b)+c=a+(b+c),(a * b) * c=a *(b * c)\)</span></p>
+<ol start="3" type="1">
+<li>加法和乘法都分别符合交换律</li>
+</ol>
+<p><span class="math inline">\(\forall a, b \in F, a+b=b+a, a * b=b * a\)</span></p>
+<ol start="4" type="1">
+<li>乘法对加法有分配律</li>
+</ol>
+<p><span class="math inline">\(\forall a, b \in F, a+b=b+a, a * b=b * a\)</span></p>
+<ol start="5" type="1">
+<li>存在加法单位</li>
+</ol>
+<p>在F中有元素 0 , 使得 <span class="math inline">\(\forall a \in F, a+0=a\)</span></p>
+<ol start="6" type="1">
+<li>存在乘法单位，且这个单位不同于加法单位0</li>
+</ol>
+<p>在F中有不同于O的元素 1 ，使得 <span class="math inline">\(\forall a \in F, a * 1=a\)</span></p>
+<ol start="7" type="1">
+<li>存在加法逆元</li>
+</ol>
+<p><span class="math inline">\(\forall a \in F, \exists-a\)</span> 使得 <span class="math inline">\(a+(-a)=0\)</span></p>
+<ol start="8" type="1">
+<li>非0元素存在乘法逆元</li>
+</ol>
+<p><span class="math inline">\(\forall a \in F, a \neq 0, \exists a^{-1}\)</span> 使得 <span class="math inline">\(a * a^{-1}=1\)</span></p>
+<p><span class="math inline">\(Remark:\)</span></p>
+<ul>
+<li>上面的八条公理看起来很乱，实际是为了定义这样的性质: <span class="math inline">\((F,+,*)\)</span>中的<span class="math inline">\((F,+)\)</span>是一个交换群(+运算有强对称性)；<span class="math inline">\((F,*)\)</span>也是一个交换群(*运算有强对称性); 并且*运算对+运算构成分配律(两种运算之间也有关系，且不对等)。反过来，如果(F,+)与(F,*)都是交换群，且*对+有分配律，那么他们合起来构成域(F,+,*)</li>
+<li>“元素0不同于元素1”的要求排除了平凡的只由一个元素组成的域</li>
+<li>域是一个乘法可逆且乘法可交换的环。换句话说域在环的基础上增加了除法。实际上，域的另一个定义是: 域是交换性除环</li>
+</ul>
+<h2 id="环">环</h2>
+<p>环比域更宽泛，域是特殊的环。在上面域的讨论中，8条公理保证(F,+)和(F,*)都是交换群，且*对+有分配律。而环不要求(F,*)是交换群，仅要求为半群。环的严格定义如下:</p>
+<p>集合 <span class="math inline">\(R\)</span> 和定义于其上的二元运算 <span class="math inline">\(+\)</span> 和·构成的三元组， <span class="math inline">\((R,+, \cdot)\)</span> 构成一个环，若它们满足:</p>
+<ol type="1">
+<li><span class="math inline">\((R,+)\)</span> 形成一个交换群, 其单位元称为零元, 记作 0 ，即:</li>
+</ol>
+<ul>
+<li><span class="math inline">\((R,+)\)</span> 是封闭的</li>
+<li><span class="math inline">\((a+b)=(b+a)\)</span></li>
+<li><span class="math inline">\((a+b)+c=a+(b+c)\)</span></li>
+<li><span class="math inline">\(0+a=a+0=a\)</span></li>
+<li><span class="math inline">\(\forall a \in R, \exists(-a)\)</span> 满足 <span class="math inline">\(a+(-a)=(-a)+a=0,-a\)</span> 称为 <span class="math inline">\(a\)</span> 的加法逆元</li>
+</ul>
+<ol start="2" type="1">
+<li><span class="math inline">\((R, \cdot)\)</span> 形成一个半群，即:</li>
+</ol>
+<ul>
+<li><span class="math inline">\((R, \cdot)\)</span> 是封闭的</li>
+<li><span class="math inline">\((a \cdot b) \cdot c=a \cdot(b \cdot c)\)</span></li>
+</ul>
+<ol start="3" type="1">
+<li>乘法关于加法满足分配律，即(左分配和右分配):</li>
+</ol>
+<ul>
+<li><span class="math inline">\(a \cdot(b+c)=(a \cdot b)+(a \cdot c)\)</span></li>
+<li><span class="math inline">\((a+b) \cdot c=(a \cdot c)+(b \cdot c)\)</span></li>
+</ul>
+<p><span class="math inline">\(Remark:\)</span></p>
+<ul>
+<li>一个环上的*运算如果满足*可逆且*可交换，那么构成一个域</li>
+<li>如果*可交换，称为交换环</li>
+<li>若环R是么环，且R\{0}对R上的乘法形成一个群，即: <span class="math inline">\(\forall a \in R \backslash\{0\}, \exists a^{-1} \in R \backslash\{0\}\)</span>, 使得 <span class="math inline">\(a^{-1} \cdot a=a \cdot a^{-1}=1\)</span> 。则R称为除环。类似于把*运算理解成数域中的除法，显然除法也有对称性</li>
+</ul>
+<figure>
+<img src="https://img-blog.csdnimg.cn/1092d66b15c24d10b8dd48e16307bb27.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="群环域" /><figcaption>群环域</figcaption>
+</figure>
+<h2 id="向量空间">向量空间</h2>
+<p>向量空间与域都有八个公理，而且他们有一些相似性，这两者也可以进行对比,引用下知乎上Yuhang Liu的观点</p>
+<blockquote>
+<p>线性空间是一个加法群再配上一个域的数乘运算。它跟环最明显的区别是它上面没有乘法（数乘不是乘法），仅仅依靠线性空间的结构你不能把两个向量相乘。当然，线性空间上可以继续扩展结构，定义一种“有乘法的线性空间”，也就是 代数（是，代数 本身是一种代数结构，我不知道当时为什么人们要把它命名为代数。。），比如说 矩阵代数，它上面有加法，有数乘，还有自然的矩阵乘法。不严格地讲，代数就是一个既是线性空间又是环的东西（有人会把线性空间的条件放宽到模，但是很多文献里面讨论代数一般还是假定基底是一个域的）。</p>
+<p>环就是一个既有加法也有乘法的东西，且加法和乘法之间满足一些相容性条件。域是一个乘法可逆且乘法可交换的环。</p>
+<p>链接：https://www.zhihu.com/question/61294717/answer/186162348</p>
+</blockquote>
+<p>向量空间定义如下:</p>
+<p>给定域<em>F</em>，<em>F</em>上的向量空间<em>V</em>是一个集合，其上定义了两种二元运算：</p>
+<ul>
+<li><strong>向量加法</strong> + : <em>V</em> + <em>V</em> → <em>V</em>，把<em>V</em>中的两个元素 <strong>u</strong> 和 <strong>v</strong> 映射到<em>V</em>中另一个元素，记作 <strong>u + v</strong>；</li>
+<li><strong>标量乘法</strong> · : <em>F</em> × <em>V</em> → <em>V</em>，把<em>F</em>中的一个元素 <em>a</em> 和 <em>V</em> 中的一个元素<strong>u</strong>变为<em>V</em>中的另一个元素，记作 <em>a</em> <strong>·u</strong>。</li>
+</ul>
+<p><em>V</em>中的元素称为向量，相对地，<em>F</em>中的元素称为标量。</p>
+<p>向量+与数乘* 满足8条公理，此处不赘述。其中前四个公理说明装备了向量加法的<em>V</em>是交换群，余下的四个公理应用于标量乘法。需要注意的是向量之间的加法“<strong>+</strong>”和标量之间的加法“+”是不一样的，标量与向量之间的标量乘法<strong>·</strong>和两个标量之间的乘法（域<em>F</em>中自带的乘法）也是不一样的。</p>
+<h2 id="模">模</h2>
+<p>模(module)是对向量空间的推广，将标量需为域(向量空间)推广到任意环(模)。维基百科module部分原文如下：</p>
+<blockquote>
+<p>A module over a ring is a generalization of the notion of vector space over a field, wherein the corresponding scalars are the elements of an arbitrary ring.</p>
+</blockquote>
+<p>向量空间是F-模</p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4" target="_blank" rel="noopener">wiki-向量空间</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%9F%9F_(%E6%95%B8%E5%AD%B8)" target="_blank" rel="noopener">wiki-域</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%BE%A4" target="_blank" rel="noopener">wiki-群</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%8E%AF_(%E4%BB%A3%E6%95%B0)" target="_blank" rel="noopener">wiki-环</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%A8%A1" target="_blank" rel="noopener">wiki-模</a></li>
+<li><a href="https://www.zhihu.com/question/61294717/answer/186162348" target="_blank" rel="noopener">向量空间与域</a></li>
 </ul>
 
     </div>
@@ -337,9 +405,8 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/%E6%80%BB%E7%BB%93/" rel="tag"># 总结</a>
-              <a href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/" rel="tag"># 泛函分析</a>
-              <a href="/tags/%E5%AE%8C%E5%A4%87%E7%A9%BA%E9%97%B4/" rel="tag"># 完备空间</a>
-              <a href="/tags/%E6%9F%AF%E8%A5%BF%E5%BA%8F%E5%88%97/" rel="tag"># 柯西序列</a>
+              <a href="/tags/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/" rel="tag"># 抽象代数</a>
+              <a href="/tags/%E7%BE%A4%E7%8E%AF%E5%9F%9F/" rel="tag"># 群环域</a>
           </div>
 
         
@@ -348,13 +415,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/10/05/%E7%89%9B%E9%A1%BF%E6%B3%95%E7%94%A8%E4%BA%8E%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/" rel="prev" title="牛顿法用于优化问题">
-      <i class="fa fa-chevron-left"></i> 牛顿法用于优化问题
+    <a href="/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(1)%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/" rel="prev" title="泛函分析(1)度量空间">
+      <i class="fa fa-chevron-left"></i> 泛函分析(1)度量空间
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(1)%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/" rel="next" title="泛函分析(1)度量空间">
-      泛函分析(1)度量空间 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -414,7 +478,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#空间完备性"><span class="nav-number">1.</span> <span class="nav-text">空间完备性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#收敛性与柯西列"><span class="nav-number">1.1.</span> <span class="nav-text">1. 收敛性与柯西列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#柯西列"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 柯西列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完备空间概念"><span class="nav-number">1.2.</span> <span class="nav-text">2. 完备空间概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">1.2.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#群"><span class="nav-number">1.</span> <span class="nav-text">群</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域"><span class="nav-number">2.</span> <span class="nav-text">域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环"><span class="nav-number">3.</span> <span class="nav-text">环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向量空间"><span class="nav-number">4.</span> <span class="nav-text">向量空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模"><span class="nav-number">5.</span> <span class="nav-text">模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
