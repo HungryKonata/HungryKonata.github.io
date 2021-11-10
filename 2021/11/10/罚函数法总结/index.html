@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="罚函数是一类重要的最优化算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="罚函数法总结">
+<meta property="og:url" content="http://yoursite.com/2021/11/10/%E7%BD%9A%E5%87%BD%E6%95%B0%E6%B3%95%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="konata此方">
+<meta property="og:description" content="罚函数是一类重要的最优化算法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/fb312cd114df4a1d881341aac81d8dfa.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
+<meta property="article:published_time" content="2021-11-10T06:56:22.756Z">
+<meta property="article:modified_time" content="2021-11-10T06:57:24.364Z">
+<meta property="article:author" content="konata">
+<meta property="article:tag" content="总结">
+<meta property="article:tag" content="最优化算法">
+<meta property="article:tag" content="罚函数">
+<meta property="article:tag" content="内点法">
+<meta property="article:tag" content="外点法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/fb312cd114df4a1d881341aac81d8dfa.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
+
+<link rel="canonical" href="http://yoursite.com/2021/11/10/%E7%BD%9A%E5%87%BD%E6%95%B0%E6%B3%95%E6%80%BB%E7%BB%93/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>罚函数法总结 | konata此方</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">konata此方</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">wish you happy everyday</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/11/10/%E7%BD%9A%E5%87%BD%E6%95%B0%E6%B3%95%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="konata">
+      <meta itemprop="description" content="做一个有理想的普通人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="konata此方">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          罚函数法总结
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-11-10 14:56:22 / 修改时间：14:57:24" itemprop="dateCreated datePublished" datetime="2021-11-10T14:56:22+08:00">2021-11-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">数学</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/11/10/%E7%BD%9A%E5%87%BD%E6%95%B0%E6%B3%95%E6%80%BB%E7%BB%93/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/11/10/%E7%BD%9A%E5%87%BD%E6%95%B0%E6%B3%95%E6%80%BB%E7%BB%93/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://img-blog.csdnimg.cn/fb312cd114df4a1d881341aac81d8dfa.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" /></p>
+<p>罚函数是一类重要的最优化算法</p>
+<a id="more"></a>
+<p>处理有约束的优化问题时，一种常见的处理方法是: 将约束条件作为惩罚项加到目标函数中。&quot;惩罚&quot;是一个很形象的称呼，意思是优化过程迭代到约束条件之外时给与惩罚，或者说负反馈。例如，我们在处理<strong>最小化</strong>函数值<span class="math inline">\(f\)</span>时，在f中增加一些项，这些项会使得迭代点在可行域之外时，<strong>增大</strong>函数f的值，这些项就起到了惩罚的作用</p>
+<p>这些约束条件可以是等式，也可以是不等式，又或者是两者都有。</p>
+<p>在处理等式约束时，常常使用外点罚函数法，意思是迭代点允许在可行域之外(其实非常自然，因为等式约束是一种&quot;很严格&quot;的约束，迭代不要限制地太紧了，不然都不好迭代优化);对于不等式约束，常使用内点罚函数法，意思是不让迭代点到可行域之外。<strong>内点法适用于只有不等式约束的问题</strong>。在对函数添加罚函数后，就将有约束的优化问题转换为了无约束优化问题。</p>
+<h1 id="外点罚函数法">外点罚函数法</h1>
+<h3 id="等式约束外点罚函数法">等式约束外点罚函数法</h3>
+<p>考虑问题 <span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)=0 \ \ i \in \mathcal E
+\]</span> 最自然的想法，把约束条件的平方作为罚函数，即</p>
+<p><span class="math display">\[
+P_E(x, \sigma)=f(x)+\frac{1}{2}\sigma \sum_i c_i^{2}(x)
+\]</span> 其中第二项为惩罚项，sigma称为罚因子。这种方法称为<strong>等式约束的二次外点罚函数法</strong>。其迭代过程与收敛性的证明参考文在文的《最优化计算方法》P186</p>
+<p>上面我们说，外点罚函数法<strong>常</strong>用于处理等式约束，但如果通过巧妙的设计，也可以用于不等式约束，例如对于如下问题</p>
+<h3 id="不等式约束外点罚函数法">不等式约束外点罚函数法</h3>
+<p><span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)\le0 \ \ i \in \mathcal I
+\]</span> 将二次罚函数设定为如下样式</p>
+<p><span class="math display">\[
+\tilde c_i(x)=\max (x_i(x),0)
+\]</span> 那么有</p>
+<p><span class="math display">\[
+P_I(x, \sigma)=f(x)+\frac{1}{2}\sigma \sum_i \tilde c_i^{2}(x)
+\]</span> 可见，此时也允许迭代点在可行域之外迭代。值得注意的是，<span class="math inline">\(P_I\)</span>仍然是可导函数，进而可以用梯度类算法求解。</p>
+<h3 id="同时含有等式约束与不等式约束的外点罚函数法">同时含有等式约束与不等式约束的外点罚函数法</h3>
+<p>对于如下问题 <span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)\le0 \ \ \ i\in \mathcal I \\
+\tilde c_i(x)= 0 \ \ \ i\in \mathcal E
+\]</span></p>
+<p>把两个罚函数相加即可</p>
+<p><span class="math display">\[
+P(x, \sigma)=f(x)+\frac{1}{2}\sigma (\sum_i c_i^{2}(x) + \sum_i \tilde c_i^{2}(x))
+\]</span></p>
+<h1 id="内点罚函数法">内点罚函数法</h1>
+<p><strong>内点法使用于只有不等式约束的优化问题</strong>。其思想是: 为了使得迭代过程始终在可行域范围内，如果迭代点迭代到可行域的边界，那么给它一个极大的惩罚。这个惩罚函数的形状就像一睹墙，或者说示性函数。这个惩罚项可以用对数函数、倒数函数构造</p>
+<p>例如对于如下问题:</p>
+<p><span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)\le0 \ \ i \in \mathcal I
+\]</span> 保持迭代点含于可行域内部的方法是 定义障碍函数 <span class="math display">\[
+G(x, r)=f(x) 十 r B(x)
+\]</span> 其中 <span class="math inline">\(\mathbf{B}(\mathbf{x})\)</span> 是连续函数, 当点 <span class="math inline">\(\mathbf{x}\)</span> 趋向可行域 边界时, <span class="math inline">\(B(x) \rightarrow+\infty\)</span> 两种最重要的形式 <span class="math display">\[
+\begin{aligned}
+&amp;B(x)=\sum_{i=1}^{m} \frac{1}{g_{i}(x)} \\
+&amp;B(x)=-\sum_{i=1}^{m} \log g_{i}(x)
+\end{aligned}
+\]</span> r是很小的正数。这样, 当x趋向边界时, 函数 <span class="math inline">\(G(\mathbf{x}, \mathbf{r}) \rightarrow +\infty\)</span> ； 否则, 由于 <span class="math inline">\(\mathbf{r}\)</span> 很小, 则函数 <span class="math inline">\(\mathbf{G}(\mathbf{x}, \mathbf{r})\)</span> 的取值近似 <span class="math inline">\(\mathbf{f}(\mathbf{x})\)</span> 。因此, 可通过求解 下列问题得到的近似解: <span class="math display">\[
+\min G(x, r) \\
+s.t. \ \ x \in intS
+\]</span> 由于 <span class="math inline">\(\mathrm{B}(\mathrm{x})\)</span> 的存在，在可行域边界形成“围墙”, 因此的解x必含于可行域的内部 B(x)的阻挡作用是自动实现的, 因此从计算的观点看,可当作无约束问题来处理</p>
+<h1 id="参考">参考</h1>
+<ul>
+<li>《最优化计算方法》文再文</li>
+<li>《凸优化》Stephen Boyd</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%80%BB%E7%BB%93/" rel="tag"># 总结</a>
+              <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/" rel="tag"># 最优化算法</a>
+              <a href="/tags/%E7%BD%9A%E5%87%BD%E6%95%B0/" rel="tag"># 罚函数</a>
+              <a href="/tags/%E5%86%85%E7%82%B9%E6%B3%95/" rel="tag"># 内点法</a>
+              <a href="/tags/%E5%A4%96%E7%82%B9%E6%B3%95/" rel="tag"># 外点法</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/25/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93/" rel="prev" title="抽象代数基本概念总结">
+      <i class="fa fa-chevron-left"></i> 抽象代数基本概念总结
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#外点罚函数法"><span class="nav-number">1.</span> <span class="nav-text">外点罚函数法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#等式约束外点罚函数法"><span class="nav-number">1.0.1.</span> <span class="nav-text">等式约束外点罚函数法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不等式约束外点罚函数法"><span class="nav-number">1.0.2.</span> <span class="nav-text">不等式约束外点罚函数法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同时含有等式约束与不等式约束的外点罚函数法"><span class="nav-number">1.0.3.</span> <span class="nav-text">同时含有等式约束与不等式约束的外点罚函数法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内点罚函数法"><span class="nav-number">2.</span> <span class="nav-text">内点罚函数法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">konata</p>
+  <div class="site-description" itemprop="description">做一个有理想的普通人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HungryKonata" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HungryKonata" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/plastic-memory" title="Zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;plastic-memory" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i>Zhihu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_42138454" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_42138454" rel="noopener" target="_blank"><i class="fab fa-CSDN fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">konata</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'dty42XsTsHqdJgqPF1O0A9gN-gzGzoHsz',
+      appKey     : 'SPMb6AXN1fjAJBFrBUSu7Gq0',
+      placeholder: "邮箱和网址非必填，填上昵称就可以发表评论啦",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

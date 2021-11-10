@@ -72,12 +72,12 @@
 </blockquote>
 <a id="more"></a>
 
-        <div id="aplayer-VhWWpZKc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-WXyPkAAZ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-VhWWpZKc"),
+            element: document.getElementById("aplayer-WXyPkAAZ"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -114,128 +114,6 @@
       </categories>
       <tags>
         <tag>感想</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>利用爬虫框架获取番剧排行榜</title>
-    <url>/2020/11/30/%E5%88%A9%E7%94%A8%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E8%8E%B7%E5%8F%96%E7%95%AA%E5%89%A7%E6%8E%92%E8%A1%8C%E6%A6%9C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>scrapy框架笔记，参考官方文档与部分教程，完成一个爬虫程序，爬取了b站的2021年1月番剧数</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="创建项目">1. 创建项目</h3>
-<p>在需要存储的代码目录下输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scrapy startproject animeRankSpider</span><br></pre></td></tr></table></figure>
-<p>该命令生成如下文件夹结构</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">|--animeRankSpider</span><br><span class="line">   |--scrapy.cfg</span><br><span class="line">   |--animeRankSpider</span><br><span class="line">      |--__init__.py</span><br><span class="line">      |--items.py</span><br><span class="line">      |--middlewares.py</span><br><span class="line">      |--pipelines.py</span><br><span class="line">      |--settings.py</span><br><span class="line">      |--spiders.py</span><br><span class="line">         |--__init__.py</span><br></pre></td></tr></table></figure>
-<p>这些文件分别为:</p>
-<ul>
-<li><code>scrapy.cfg</code> 为scrapy的配置文件</li>
-<li><code>items.py</code> 为爬取内容的每个小单元设计，称之为item</li>
-<li><code>middlewares.py</code> 为爬虫中间件</li>
-<li><code>pipelines.py</code> 为信息处理过程的设计</li>
-<li><code>setting.py</code> 为爬虫的一些设置</li>
-</ul>
-<h3 id="设计爬虫单元scrapy中称为item">2. 设计爬虫单元(scrapy中称为<code>item</code>)</h3>
-<p>观察b站新番相关数据，我准备爬取的内容为新番标题、弹幕量、播放量、追番人数、排名。</p>
-<p>打开<code>items.py</code>，输入如下内容</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AnimerankspiderItem</span><span class="params">(scrapy.Item)</span>:</span></span><br><span class="line">    <span class="comment"># define the fields for your item here like:</span></span><br><span class="line">    <span class="comment"># name = scrapy.Field()</span></span><br><span class="line">    name = scrapy.Field()</span><br><span class="line">    rank = scrapy.Field()</span><br><span class="line">    view = scrapy.Field()</span><br><span class="line">    bullet = scrapy.Field()</span><br><span class="line">    like = scrapy.Field()</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<h3 id="网页分析">3. 网页分析</h3>
-<p>爬取的网站为<code>https://www.bilibili.com/v/popular/rank/bangumi</code> ，可以在终端中输入下面的指令帮助分析</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy shell &quot;https:&#x2F;&#x2F;www.bilibili.com&#x2F;v&#x2F;popular&#x2F;rank&#x2F;bangumi&quot;</span><br></pre></td></tr></table></figure>
-<p>例如，在输入时</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">response.xpath(&#39;&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a&#x2F;text()&#39;)</span><br></pre></td></tr></table></figure>
-<p>会有输出</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&lt;Selector xpath&#x3D;&#39;&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a&#x2F;text()&#39; data&#x3D;&#39;Re：从零开始的异世界生活 第二季 后半&#39;&gt;]</span><br></pre></td></tr></table></figure>
-<p>也就是说可以根据页面中元素的xpath路径可以找到网页中元素的位置，这正是爬虫所需要的</p>
-<p>这里安利一款chrome插件<code>Xpath Helper</code> ，可以帮助分析Xpath</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20210117220922596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="新番标题xpath" /><figcaption>新番标题xpath</figcaption>
-</figure>
-<p>观察两部新番标题的Xpath，分别为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a</span><br><span class="line">&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[2]&#x2F;div[2]&#x2F;div[2]&#x2F;a</span><br></pre></td></tr></table></figure>
-<p>可以发现，差别仅在于标签<code>li</code>后面的系数。经过进一步验证，发现网站的其他内容也有类似的格式</p>
-<p>因此分析结果如下,<code>index</code>代表不同新番的系数，从1开始取值</p>
-<ul>
-<li>标题格式<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/a</code></li>
-<li>播放量<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[1]</code></li>
-<li>弹幕量<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[2]</code></li>
-<li>追番人数<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[3]</code></li>
-<li>排序<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[1]</code></li>
-</ul>
-<h2 id="爬虫编写">4.爬虫编写</h2>
-<p>输入命令，引号中内容为爬虫网站的主域名</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy genspider animeRankSpider &quot;bilibili.com&quot;</span><br></pre></td></tr></table></figure>
-<p>在animeRankSpider/spiders文件夹下创建了一个py结尾的新爬虫文件，输入如下代码</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> animeRankSpider.items <span class="keyword">import</span> AnimerankspiderItem</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BilibiliSpider</span><span class="params">(scrapy.Spider)</span>:</span></span><br><span class="line">    name = <span class="string">'animeRankSpider'</span></span><br><span class="line">    allowed_domains = [<span class="string">'bilibili.com'</span>]</span><br><span class="line">    start_urls = [<span class="string">'https://www.bilibili.com/v/popular/rank/bangumi'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        <span class="comment"># filename = 'rank.html'</span></span><br><span class="line">        <span class="comment"># open(filename, 'wb').write(response.body)</span></span><br><span class="line">        items = []</span><br><span class="line">        rootPath = <span class="string">'//*[@id="app"]/div[2]/div[2]/ul'</span></span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> range(<span class="number">49</span>):</span><br><span class="line">            item = AnimerankspiderItem()</span><br><span class="line">            namePath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/a/text()'</span>.format(index)</span><br><span class="line">            viewPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[1]/text()'</span>.format(index)</span><br><span class="line">            rankPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[1]/text()'</span>.format(index)</span><br><span class="line">            bulletPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[2]/text()'</span>.format(index)</span><br><span class="line">            likePath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[3]/text()'</span>.format(index)</span><br><span class="line">            name = response.xpath(namePath).extract()</span><br><span class="line">            view = response.xpath(viewPath).extract()</span><br><span class="line">            rank = response.xpath(rankPath).extract()</span><br><span class="line">            bullet = response.xpath(bulletPath).extract()</span><br><span class="line">            like = response.xpath(likePath).extract()</span><br><span class="line">            item[<span class="string">'name'</span>] = name</span><br><span class="line">            item[<span class="string">'view'</span>] = view</span><br><span class="line">            item[<span class="string">'rank'</span>] = rank</span><br><span class="line">            item[<span class="string">'bullet'</span>] = bullet</span><br><span class="line">            item[<span class="string">'like'</span>] = like</span><br><span class="line">            items.append(item)</span><br><span class="line">        <span class="keyword">return</span> items</span><br></pre></td></tr></table></figure>
-<h2 id="运行爬虫">5. 运行爬虫</h2>
-<p>终端中输入命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy crawl animeRankSpider -o out.csv</span><br></pre></td></tr></table></figure>
-<p>等待片刻，生成的out.csv即为爬虫所得，可以用记事本或者excel打开</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20210117211750595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="新番排行榜" /><figcaption>新番排行榜</figcaption>
-</figure>
-<p>代码上传到了百度网盘，链接如下</p>
-<p>链接：https://pan.baidu.com/s/1HzjZdmUQ-u7FeapgyAH8vA 提取码：lhvh</p>
-<h3 id="参考资料">参考资料</h3>
-<ul>
-<li><a href="https://www.osgeo.cn/scrapy/intro/tutorial.html" target="_blank" rel="noopener">scrapy文档</a></li>
-<li><a href="https://www.runoob.com/w3cnote/scrapy-detail.html" target="_blank" rel="noopener">scrapy教程</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>换季了</title>
-    <url>/2020/04/28/%E6%8D%A2%E5%AD%A3%E4%BA%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>--《夏天》 合唱</p>
-</blockquote>
-
-        <div id="aplayer-eCIcZYSq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-eCIcZYSq"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "夏天",
-              author: "金承志",
-              url: "http://music.163.com/song/media/outer/url?id=1302066394.mp3",
-              pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<a id="more"></a>
-<blockquote>
-<p>夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是微微踮起的脚尖</p>
-<p>是海岸线上的尖叫</p>
-<p>夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是列车远去的白烟</p>
-<p>是关门轻轻的背影</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-        <tag>歌曲</tag>
       </tags>
   </entry>
   <entry>
@@ -328,6 +206,226 @@
       </tags>
   </entry>
   <entry>
+    <title>利用爬虫框架获取番剧排行榜</title>
+    <url>/2020/11/30/%E5%88%A9%E7%94%A8%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E8%8E%B7%E5%8F%96%E7%95%AA%E5%89%A7%E6%8E%92%E8%A1%8C%E6%A6%9C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>scrapy框架笔记，参考官方文档与部分教程，完成一个爬虫程序，爬取了b站的2021年1月番剧数</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="创建项目">1. 创建项目</h3>
+<p>在需要存储的代码目录下输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scrapy startproject animeRankSpider</span><br></pre></td></tr></table></figure>
+<p>该命令生成如下文件夹结构</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">|--animeRankSpider</span><br><span class="line">   |--scrapy.cfg</span><br><span class="line">   |--animeRankSpider</span><br><span class="line">      |--__init__.py</span><br><span class="line">      |--items.py</span><br><span class="line">      |--middlewares.py</span><br><span class="line">      |--pipelines.py</span><br><span class="line">      |--settings.py</span><br><span class="line">      |--spiders.py</span><br><span class="line">         |--__init__.py</span><br></pre></td></tr></table></figure>
+<p>这些文件分别为:</p>
+<ul>
+<li><code>scrapy.cfg</code> 为scrapy的配置文件</li>
+<li><code>items.py</code> 为爬取内容的每个小单元设计，称之为item</li>
+<li><code>middlewares.py</code> 为爬虫中间件</li>
+<li><code>pipelines.py</code> 为信息处理过程的设计</li>
+<li><code>setting.py</code> 为爬虫的一些设置</li>
+</ul>
+<h3 id="设计爬虫单元scrapy中称为item">2. 设计爬虫单元(scrapy中称为<code>item</code>)</h3>
+<p>观察b站新番相关数据，我准备爬取的内容为新番标题、弹幕量、播放量、追番人数、排名。</p>
+<p>打开<code>items.py</code>，输入如下内容</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AnimerankspiderItem</span><span class="params">(scrapy.Item)</span>:</span></span><br><span class="line">    <span class="comment"># define the fields for your item here like:</span></span><br><span class="line">    <span class="comment"># name = scrapy.Field()</span></span><br><span class="line">    name = scrapy.Field()</span><br><span class="line">    rank = scrapy.Field()</span><br><span class="line">    view = scrapy.Field()</span><br><span class="line">    bullet = scrapy.Field()</span><br><span class="line">    like = scrapy.Field()</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<h3 id="网页分析">3. 网页分析</h3>
+<p>爬取的网站为<code>https://www.bilibili.com/v/popular/rank/bangumi</code> ，可以在终端中输入下面的指令帮助分析</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy shell &quot;https:&#x2F;&#x2F;www.bilibili.com&#x2F;v&#x2F;popular&#x2F;rank&#x2F;bangumi&quot;</span><br></pre></td></tr></table></figure>
+<p>例如，在输入时</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">response.xpath(&#39;&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a&#x2F;text()&#39;)</span><br></pre></td></tr></table></figure>
+<p>会有输出</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&lt;Selector xpath&#x3D;&#39;&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a&#x2F;text()&#39; data&#x3D;&#39;Re：从零开始的异世界生活 第二季 后半&#39;&gt;]</span><br></pre></td></tr></table></figure>
+<p>也就是说可以根据页面中元素的xpath路径可以找到网页中元素的位置，这正是爬虫所需要的</p>
+<p>这里安利一款chrome插件<code>Xpath Helper</code> ，可以帮助分析Xpath</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20210117220922596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="新番标题xpath" /><figcaption>新番标题xpath</figcaption>
+</figure>
+<p>观察两部新番标题的Xpath，分别为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[1]&#x2F;div[2]&#x2F;div[2]&#x2F;a</span><br><span class="line">&#x2F;&#x2F;*[@id&#x3D;&quot;app&quot;]&#x2F;div[2]&#x2F;div[2]&#x2F;ul&#x2F;li[2]&#x2F;div[2]&#x2F;div[2]&#x2F;a</span><br></pre></td></tr></table></figure>
+<p>可以发现，差别仅在于标签<code>li</code>后面的系数。经过进一步验证，发现网站的其他内容也有类似的格式</p>
+<p>因此分析结果如下,<code>index</code>代表不同新番的系数，从1开始取值</p>
+<ul>
+<li>标题格式<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/a</code></li>
+<li>播放量<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[1]</code></li>
+<li>弹幕量<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[2]</code></li>
+<li>追番人数<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[2]/div[2]/div[2]/span[3]</code></li>
+<li>排序<code>//*[@id=&quot;app&quot;]/div[2]/div[2]/ul/li[index]/div[1]</code></li>
+</ul>
+<h2 id="爬虫编写">4.爬虫编写</h2>
+<p>输入命令，引号中内容为爬虫网站的主域名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy genspider animeRankSpider &quot;bilibili.com&quot;</span><br></pre></td></tr></table></figure>
+<p>在animeRankSpider/spiders文件夹下创建了一个py结尾的新爬虫文件，输入如下代码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> animeRankSpider.items <span class="keyword">import</span> AnimerankspiderItem</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BilibiliSpider</span><span class="params">(scrapy.Spider)</span>:</span></span><br><span class="line">    name = <span class="string">'animeRankSpider'</span></span><br><span class="line">    allowed_domains = [<span class="string">'bilibili.com'</span>]</span><br><span class="line">    start_urls = [<span class="string">'https://www.bilibili.com/v/popular/rank/bangumi'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        <span class="comment"># filename = 'rank.html'</span></span><br><span class="line">        <span class="comment"># open(filename, 'wb').write(response.body)</span></span><br><span class="line">        items = []</span><br><span class="line">        rootPath = <span class="string">'//*[@id="app"]/div[2]/div[2]/ul'</span></span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> range(<span class="number">49</span>):</span><br><span class="line">            item = AnimerankspiderItem()</span><br><span class="line">            namePath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/a/text()'</span>.format(index)</span><br><span class="line">            viewPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[1]/text()'</span>.format(index)</span><br><span class="line">            rankPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[1]/text()'</span>.format(index)</span><br><span class="line">            bulletPath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[2]/text()'</span>.format(index)</span><br><span class="line">            likePath = rootPath + <span class="string">'/li[&#123;&#125;]/div[2]/div[2]/div[2]/span[3]/text()'</span>.format(index)</span><br><span class="line">            name = response.xpath(namePath).extract()</span><br><span class="line">            view = response.xpath(viewPath).extract()</span><br><span class="line">            rank = response.xpath(rankPath).extract()</span><br><span class="line">            bullet = response.xpath(bulletPath).extract()</span><br><span class="line">            like = response.xpath(likePath).extract()</span><br><span class="line">            item[<span class="string">'name'</span>] = name</span><br><span class="line">            item[<span class="string">'view'</span>] = view</span><br><span class="line">            item[<span class="string">'rank'</span>] = rank</span><br><span class="line">            item[<span class="string">'bullet'</span>] = bullet</span><br><span class="line">            item[<span class="string">'like'</span>] = like</span><br><span class="line">            items.append(item)</span><br><span class="line">        <span class="keyword">return</span> items</span><br></pre></td></tr></table></figure>
+<h2 id="运行爬虫">5. 运行爬虫</h2>
+<p>终端中输入命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scrapy crawl animeRankSpider -o out.csv</span><br></pre></td></tr></table></figure>
+<p>等待片刻，生成的out.csv即为爬虫所得，可以用记事本或者excel打开</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20210117211750595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="新番排行榜" /><figcaption>新番排行榜</figcaption>
+</figure>
+<p>代码上传到了百度网盘，链接如下</p>
+<p>链接：https://pan.baidu.com/s/1HzjZdmUQ-u7FeapgyAH8vA 提取码：lhvh</p>
+<h3 id="参考资料">参考资料</h3>
+<ul>
+<li><a href="https://www.osgeo.cn/scrapy/intro/tutorial.html" target="_blank" rel="noopener">scrapy文档</a></li>
+<li><a href="https://www.runoob.com/w3cnote/scrapy-detail.html" target="_blank" rel="noopener">scrapy教程</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法笔记归档</title>
+    <url>/2021/02/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E5%BD%92%E6%A1%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>数据结构与算法笔记。代码大部分使用C++与Java两种实现</p>
+</blockquote>
+<a id="more"></a>
+<p>我的CSDN博客中写了一些数据结构与算法题目笔记，题目均为经典算法题且大部分来自leetcode,并且大都分别使用<code>C++</code>与<code>Java</code>两种实现</p>
+<p>现按题目中使用的数据结构归档如下以方便查阅，不断更新中</p>
+<h3 id="数组与链表">1. 数组与链表</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113125703" target="_blank" rel="noopener">链表 : 反向打印链表</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">数组 : 找出重复元素</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113328112" target="_blank" rel="noopener">链表 : 删除特定结点</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113388316" target="_blank" rel="noopener">数组 : 调整数组顺序使奇数位于偶数之前</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113185283" target="_blank" rel="noopener">数组 : 旋转数组中的最小元素</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113404494" target="_blank" rel="noopener">链表 : 链表中的倒数第k个结点</a></li>
+</ul>
+<h3 id="栈与队列">2. 栈与队列</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113143160" target="_blank" rel="noopener">栈与队列 : 用两个栈实现队列</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113523886" target="_blank" rel="noopener">栈 : 包含min函数的栈</a></li>
+</ul>
+<h3 id="二叉树">3. 二叉树</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113447366" target="_blank" rel="noopener">二叉树 : 二叉树的镜像</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113466097" target="_blank" rel="noopener">二叉树 : 对称的二叉树</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113561673" target="_blank" rel="noopener">二叉树 : 二叉搜索树的第k大结点</a></li>
+</ul>
+<h3 id="动态规划">4. 动态规划</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113177772" target="_blank" rel="noopener">使用动态规划解决斐波那契数列</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113178283" target="_blank" rel="noopener">动态规划 : 青蛙跳台阶问题</a></li>
+</ul>
+<h3 id="堆优先队列集合">5. 堆、优先队列、集合</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113654275" target="_blank" rel="noopener">C++中的堆与优先序列</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">集合 : 寻找数组中的重复元素</a></li>
+</ul>
+<h3 id="位操作">6. 位操作</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113307993" target="_blank" rel="noopener">二进制中1的个数</a></li>
+</ul>
+<h3 id="双指针法">7. 双指针法</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113633652" target="_blank" rel="noopener">合并区间问题</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113407412" target="_blank" rel="noopener">双指针法 ： 反转链表</a></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>换季了</title>
+    <url>/2020/04/28/%E6%8D%A2%E5%AD%A3%E4%BA%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>--《夏天》 合唱</p>
+</blockquote>
+
+        <div id="aplayer-iETAXRkj" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-iETAXRkj"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "夏天",
+              author: "金承志",
+              url: "http://music.163.com/song/media/outer/url?id=1302066394.mp3",
+              pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<a id="more"></a>
+<blockquote>
+<p>夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是微微踮起的脚尖</p>
+<p>是海岸线上的尖叫</p>
+<p>夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是列车远去的白烟</p>
+<p>是关门轻轻的背影</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+        <tag>歌曲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>泛函分析(1)度量空间</title>
+    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(1)%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>度量空间与线性空间是两种基本的空间，本文对度量空间进行简要总结</p>
+<a id="more"></a>
+<figure>
+<img src="https://img-blog.csdnimg.cn/cfd9cb4c538a463cafe54244d43e5c1b.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="圆焰" /><figcaption>圆焰</figcaption>
+</figure>
+<h3 id="符号">符号</h3>
+<p><span class="math inline">\(\mathbb{K}\)</span>表示实数集<span class="math inline">\(\mathbb{R}\)</span>或者复数集<span class="math inline">\(\mathbb{C}\)</span></p>
+<h2 id="定义">1. 定义</h2>
+<p>称度量空间<span class="math inline">\((X,d)\)</span>包括集合<span class="math inline">\(X\)</span>和一度量<span class="math inline">\(d:X\times X \rightarrow \mathbb{R}\)</span>, 同时度量满足以下四个性质</p>
+<ul>
+<li>非负性: <span class="math inline">\(\forall x, y \in X, d(x, y) \geq 0\)</span></li>
+<li>非退化性: <span class="math inline">\(x, y \in X, d(x, y)=0 \Leftrightarrow x=y\)</span></li>
+<li>对称性: <span class="math inline">\(\forall x, y \in X, d(x, y)=d(y, x)\)</span></li>
+<li>三角不等式: <span class="math inline">\(\forall x, y, z \in X, d(x, y) \leq d(x, z)+d(z, y)\)</span></li>
+</ul>
+<p>度量空间是一类基本空间，在度量空间中定义了度量，或者称距离</p>
+<blockquote>
+<p><span class="math inline">\(\text { Remark: 注意到 }\{\infty\} \notin \mathbb{R} \text { ，即还有一个隐含的要求, 距离必须是有限的。 }\)</span></p>
+</blockquote>
+<h2 id="例子">2. 例子</h2>
+<h3 id="一维数集与自然距离构成度量空间">2.1 一维数集与自然距离构成度量空间</h3>
+<p>一维数集上的自然距离是度量，<span class="math inline">\((X,d)\)</span>为一度量空间</p>
+<p><span class="math inline">\(X=A \subset \mathbb{K}, d(x, y)=|x-y|, \forall x, y \in X\)</span></p>
+<h3 id="离散集合与示性函数构成度量空间">2.2 离散集合与示性函数构成度量空间</h3>
+<p><span class="math inline">\(X\)</span> 为离散集合， <span class="math inline">\(d(x, y)=\mathbb{I}[x \neq y]\)</span>, 其中 <span class="math inline">\(\mathbb{I}[\)</span> cond <span class="math inline">\(]\)</span> 为指示函数, 条件为真时取 1 , 否则 取 0 。</p>
+<p>证明它是度量空间: 前三条容易证明，三角不等式可以用分类讨论证明。先考虑 <span class="math inline">\(x=y ，\)</span> 再考虑 <span class="math inline">\(x \neq y\)</span> 。后一种情况再分为 <span class="math inline">\(x=z \neq y, x \neq z=y, x \neq z \neq y\)</span> 三种情况说明。</p>
+<h3 id="序列空间lp与其lp-norm构成度量空间">2.3 序列空间Lp与其Lp-norm构成度量空间</h3>
+<blockquote>
+<p>范数不是为向量定义的吗。序列空间Lp也是向量吗？希望有数学系的小伙伴予以解答</p>
+</blockquote>
+<p><span class="math inline">\(l^{p}:=\left\{\left\{x_{n}\right\}: \sum_{n=1}^{\infty}\left|x_{n}\right|^{p}&lt;\infty\right\}, 1 \leq p&lt;\infty\)</span></p>
+<p><span class="math inline">\(X=l^{p}, \quad d_{p}(x, y)=\left(\sum_{n=1}^{\infty}\left|x_{n}-y_{n}\right|^{p}\right)^{1 / p}\)</span></p>
+<h3 id="几何向量与其无穷p范数构成度量空间">2.4 几何向量与其无穷p范数构成度量空间</h3>
+<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n} ， d_{p}(x, y)=\left(\sum_{i \in[n]}\left|x_{i}-y_{i}\right|^{p}\right)^{1 / p}\)</span> 为其度量, 其中 <span class="math inline">\(p \in[1,+\infty)\)</span></p>
+<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n}, d_{\infty}(x, y)=\max _{i \in[n]}\left|x_{i}-y_{i}\right|\)</span> 为其度量, 它是前述度量中 <span class="math inline">\(p \rightarrow \infty\)</span> 的极限情形。</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>泛函分析</tag>
+        <tag>度量空间</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>校服与个性的表达</title>
     <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -380,43 +478,61 @@
       </tags>
   </entry>
   <entry>
-    <title>泛函分析(1)度量空间</title>
-    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(1)%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>度量空间与线性空间是两种基本的空间，本文对度量空间进行简要总结</p>
+    <title>泛函分析(2)空间完备性</title>
+    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>完备性是泛函分析中的重要概念，本文对此概念进行简要总结</p>
 <a id="more"></a>
 <figure>
-<img src="https://img-blog.csdnimg.cn/cfd9cb4c538a463cafe54244d43e5c1b.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="圆焰" /><figcaption>圆焰</figcaption>
+<img src="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16" alt="圆" /><figcaption>圆</figcaption>
 </figure>
-<h3 id="符号">符号</h3>
-<p><span class="math inline">\(\mathbb{K}\)</span>表示实数集<span class="math inline">\(\mathbb{R}\)</span>或者复数集<span class="math inline">\(\mathbb{C}\)</span></p>
-<h2 id="定义">1. 定义</h2>
-<p>称度量空间<span class="math inline">\((X,d)\)</span>包括集合<span class="math inline">\(X\)</span>和一度量<span class="math inline">\(d:X\times X \rightarrow \mathbb{R}\)</span>, 同时度量满足以下四个性质</p>
+<h1 id="空间完备性"><strong>空间完备性</strong></h1>
+<p>为了定义完备性，需要首先清楚柯西序列和收敛的概念</p>
+<h2 id="收敛性与柯西列"><strong>1. 收敛性与柯西列</strong></h2>
+<h3 id="柯西列"><strong>1.1 柯西列</strong></h3>
+<p>给定某个度量空间 <span class="math inline">\(X\)</span> 中的序列 <span class="math inline">\(\left\{x_{i}\right\}\)</span>, 当满足以下条件时，他就叫做柯西序列 (Cauchy sequence)</p>
+<p>对任意 <span class="math inline">\(\varepsilon&gt;0\)</span>, 存在 <span class="math inline">\(N\)</span> ，当 <span class="math inline">\(m, n \geqslant N\)</span> 时就满足 <span class="math inline">\(d\left(u_{m}, u_{n}\right)&lt;\varepsilon\)</span>.</p>
+<p><strong>1.2 收敛</strong></p>
+<p>设 <span class="math inline">\((X, d)\)</span> 为度量空间， <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为 <span class="math inline">\(\mathrm{X}\)</span> 中的数列，若存在 <span class="math inline">\(x \in X\)</span> 使得 <span class="math inline">\(\lim _{n \rightarrow \infty} d\left(x_{n}, x\right)=0\)</span> ，则 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 在 <span class="math inline">\(X\)</span> 中收敛, 称 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为收敛列, 称 <span class="math inline">\(x\)</span> 为 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 的极限, 记做 <span class="math inline">\(x_{n} \rightarrow x\)</span> 。</p>
+<p><span class="math inline">\(Remark:\)</span></p>
+<ol type="1">
+<li><p>收敛列比柯西列更严格。或者说收敛列一定是柯西列</p></li>
+<li><p>柯西列的直观理解是，一个序列的元素随着序数的增加而愈发靠近，并且最终趋于无限近</p></li>
+<li><p>收敛列一定有界，不仅如此，柯西列也一定有界</p></li>
+</ol>
+<h2 id="完备空间概念"><strong>2. 完备空间概念</strong></h2>
+<p>完备空间指这样性质的空间: 空间中的任何柯西序列都收敛于这个空间中</p>
+<p><span class="math inline">\(Remark:\)</span></p>
+<ol type="1">
+<li><p>完备空间是特殊的度量空间。因为按照定义完备空间需要&quot;柯西列收敛&quot;，而为了定义收敛，需要先定义先度量</p></li>
+<li><p><strong>欧几里得空间是完备空间</strong>。这给了它很好的性质，也即柯西列的收敛性</p></li>
+</ol>
+<p>证明如下:</p>
+<p>Let <span class="math inline">\(\left\langle\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)\right\rangle_{n \in \mathbb{N}}\)</span> be a Cauchy sequence in <span class="math inline">\(\mathbb{R}^{m}\)</span>.</p>
+<p>Let <span class="math inline">\(\epsilon&gt;0\)</span></p>
+<p>Then <span class="math inline">\(\frac{\epsilon}{m}&gt;0\)</span>.</p>
+<p>We have that Real Number Line is Complete Metric Space.</p>
+<p>Therefore:</p>
+<p><span class="math inline">\(\exists y_{1}, y_{2}, \ldots, y_{m} \in \mathbb{R}\)</span> and <span class="math inline">\(N_{1}, N_{2}, \ldots, N_{m} \in \mathbb{N}\)</span> (depending on <span class="math inline">\(\epsilon\)</span> ) such that:</p>
+<p><span class="math display">\[
+\forall k \in \mathbb{N}: 1 \leq k \leq m: \forall n_{k}&gt;N_{k}:\left\langle x_{n, k}-y_{k}\right\rangle&lt;\frac{\epsilon}{m}
+\]</span></p>
+<p>From Euclidean Space is Normed Space:</p>
+<p><span class="math display">\[
+\left\|\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)-\left(y_{1}, y_{2}, \ldots, y_{m}\right)\right\| \leq \sum_{k=1}^{m}\left|x_{n, k}-y_{k}\right|&lt;\epsilon
+\]</span></p>
+<p>Hence the Euclidean space is a complete metric space.</p>
+<ol start="3" type="1">
+<li><p>数集<span class="math inline">\(\mathbb{R}\)</span>、<span class="math inline">\(\mathbb{C}\)</span>都是完备的</p></li>
+<li><p>R和C的子集不一定完备。例如取<span class="math inline">\(X=(0,1)\)</span>。取一柯西列(元素可以无限靠近)<span class="math inline">\(x=1/n\)</span>，其极限0不在该空间中</p></li>
+<li><p>完备度量空间一定为闭集(结合上面例子记忆)</p></li>
+<li><p>完备度量空间的闭子集仍然完备</p></li>
+<li><p>“完备” 可以形象理解为空间中没有 “漏洞”．有限维空间都是完备的．可数维空间都是不完备的．例如有理数集和多项式组成的空间就是不完备的（柯西序列的极限可以是 e^x，但是 e^x并不属于该空间）</p></li>
+</ol>
+<h3 id="参考">参考</h3>
 <ul>
-<li>非负性: <span class="math inline">\(\forall x, y \in X, d(x, y) \geq 0\)</span></li>
-<li>非退化性: <span class="math inline">\(x, y \in X, d(x, y)=0 \Leftrightarrow x=y\)</span></li>
-<li>对称性: <span class="math inline">\(\forall x, y \in X, d(x, y)=d(y, x)\)</span></li>
-<li>三角不等式: <span class="math inline">\(\forall x, y, z \in X, d(x, y) \leq d(x, z)+d(z, y)\)</span></li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/85867887" target="_blank" rel="noopener">收敛性、完备性和紧性</a></p></li>
+<li><p><a href="https://proofwiki.org/wiki/Euclidean_Space_is_Complete_Metric_Space" target="_blank" rel="noopener">Euclidean Space is Complete Metric Space</a></p></li>
 </ul>
-<p>度量空间是一类基本空间，在度量空间中定义了度量，或者称距离</p>
-<blockquote>
-<p><span class="math inline">\(\text { Remark: 注意到 }\{\infty\} \notin \mathbb{R} \text { ，即还有一个隐含的要求, 距离必须是有限的。 }\)</span></p>
-</blockquote>
-<h2 id="例子">2. 例子</h2>
-<h3 id="一维数集与自然距离构成度量空间">2.1 一维数集与自然距离构成度量空间</h3>
-<p>一维数集上的自然距离是度量，<span class="math inline">\((X,d)\)</span>为一度量空间</p>
-<p><span class="math inline">\(X=A \subset \mathbb{K}, d(x, y)=|x-y|, \forall x, y \in X\)</span></p>
-<h3 id="离散集合与示性函数构成度量空间">2.2 离散集合与示性函数构成度量空间</h3>
-<p><span class="math inline">\(X\)</span> 为离散集合， <span class="math inline">\(d(x, y)=\mathbb{I}[x \neq y]\)</span>, 其中 <span class="math inline">\(\mathbb{I}[\)</span> cond <span class="math inline">\(]\)</span> 为指示函数, 条件为真时取 1 , 否则 取 0 。</p>
-<p>证明它是度量空间: 前三条容易证明，三角不等式可以用分类讨论证明。先考虑 <span class="math inline">\(x=y ，\)</span> 再考虑 <span class="math inline">\(x \neq y\)</span> 。后一种情况再分为 <span class="math inline">\(x=z \neq y, x \neq z=y, x \neq z \neq y\)</span> 三种情况说明。</p>
-<h3 id="序列空间lp与其lp-norm构成度量空间">2.3 序列空间Lp与其Lp-norm构成度量空间</h3>
-<blockquote>
-<p>范数不是为向量定义的吗。序列空间Lp也是向量吗？希望有数学系的小伙伴予以解答</p>
-</blockquote>
-<p><span class="math inline">\(l^{p}:=\left\{\left\{x_{n}\right\}: \sum_{n=1}^{\infty}\left|x_{n}\right|^{p}&lt;\infty\right\}, 1 \leq p&lt;\infty\)</span></p>
-<p><span class="math inline">\(X=l^{p}, \quad d_{p}(x, y)=\left(\sum_{n=1}^{\infty}\left|x_{n}-y_{n}\right|^{p}\right)^{1 / p}\)</span></p>
-<h3 id="几何向量与其无穷p范数构成度量空间">2.4 几何向量与其无穷p范数构成度量空间</h3>
-<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n} ， d_{p}(x, y)=\left(\sum_{i \in[n]}\left|x_{i}-y_{i}\right|^{p}\right)^{1 / p}\)</span> 为其度量, 其中 <span class="math inline">\(p \in[1,+\infty)\)</span></p>
-<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n}, d_{\infty}(x, y)=\max _{i \in[n]}\left|x_{i}-y_{i}\right|\)</span> 为其度量, 它是前述度量中 <span class="math inline">\(p \rightarrow \infty\)</span> 的极限情形。</p>
 ]]></content>
       <categories>
         <category>数学</category>
@@ -424,7 +540,382 @@
       <tags>
         <tag>总结</tag>
         <tag>泛函分析</tag>
-        <tag>度量空间</tag>
+        <tag>完备空间</tag>
+        <tag>柯西序列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>罚函数法总结</title>
+    <url>/2021/11/10/%E7%BD%9A%E5%87%BD%E6%95%B0%E6%B3%95%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://img-blog.csdnimg.cn/fb312cd114df4a1d881341aac81d8dfa.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" /></p>
+<p>罚函数是一类重要的最优化算法</p>
+<a id="more"></a>
+<p>处理有约束的优化问题时，一种常见的处理方法是: 将约束条件作为惩罚项加到目标函数中。&quot;惩罚&quot;是一个很形象的称呼，意思是优化过程迭代到约束条件之外时给与惩罚，或者说负反馈。例如，我们在处理<strong>最小化</strong>函数值<span class="math inline">\(f\)</span>时，在f中增加一些项，这些项会使得迭代点在可行域之外时，<strong>增大</strong>函数f的值，这些项就起到了惩罚的作用</p>
+<p>这些约束条件可以是等式，也可以是不等式，又或者是两者都有。</p>
+<p>在处理等式约束时，常常使用外点罚函数法，意思是迭代点允许在可行域之外(其实非常自然，因为等式约束是一种&quot;很严格&quot;的约束，迭代不要限制地太紧了，不然都不好迭代优化);对于不等式约束，常使用内点罚函数法，意思是不让迭代点到可行域之外。<strong>内点法适用于只有不等式约束的问题</strong>。在对函数添加罚函数后，就将有约束的优化问题转换为了无约束优化问题。</p>
+<h1 id="外点罚函数法">外点罚函数法</h1>
+<h3 id="等式约束外点罚函数法">等式约束外点罚函数法</h3>
+<p>考虑问题 <span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)=0 \ \ i \in \mathcal E
+\]</span> 最自然的想法，把约束条件的平方作为罚函数，即</p>
+<p><span class="math display">\[
+P_E(x, \sigma)=f(x)+\frac{1}{2}\sigma \sum_i c_i^{2}(x)
+\]</span> 其中第二项为惩罚项，sigma称为罚因子。这种方法称为<strong>等式约束的二次外点罚函数法</strong>。其迭代过程与收敛性的证明参考文在文的《最优化计算方法》P186</p>
+<p>上面我们说，外点罚函数法<strong>常</strong>用于处理等式约束，但如果通过巧妙的设计，也可以用于不等式约束，例如对于如下问题</p>
+<h3 id="不等式约束外点罚函数法">不等式约束外点罚函数法</h3>
+<p><span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)\le0 \ \ i \in \mathcal I
+\]</span> 将二次罚函数设定为如下样式</p>
+<p><span class="math display">\[
+\tilde c_i(x)=\max (x_i(x),0)
+\]</span> 那么有</p>
+<p><span class="math display">\[
+P_I(x, \sigma)=f(x)+\frac{1}{2}\sigma \sum_i \tilde c_i^{2}(x)
+\]</span> 可见，此时也允许迭代点在可行域之外迭代。值得注意的是，<span class="math inline">\(P_I\)</span>仍然是可导函数，进而可以用梯度类算法求解。</p>
+<h3 id="同时含有等式约束与不等式约束的外点罚函数法">同时含有等式约束与不等式约束的外点罚函数法</h3>
+<p>对于如下问题 <span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)\le0 \ \ \ i\in \mathcal I \\
+\tilde c_i(x)= 0 \ \ \ i\in \mathcal E
+\]</span></p>
+<p>把两个罚函数相加即可</p>
+<p><span class="math display">\[
+P(x, \sigma)=f(x)+\frac{1}{2}\sigma (\sum_i c_i^{2}(x) + \sum_i \tilde c_i^{2}(x))
+\]</span></p>
+<h1 id="内点罚函数法">内点罚函数法</h1>
+<p><strong>内点法使用于只有不等式约束的优化问题</strong>。其思想是: 为了使得迭代过程始终在可行域范围内，如果迭代点迭代到可行域的边界，那么给它一个极大的惩罚。这个惩罚函数的形状就像一睹墙，或者说示性函数。这个惩罚项可以用对数函数、倒数函数构造</p>
+<p>例如对于如下问题:</p>
+<p><span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)\le0 \ \ i \in \mathcal I
+\]</span> 保持迭代点含于可行域内部的方法是 定义障碍函数 <span class="math display">\[
+G(x, r)=f(x) 十 r B(x)
+\]</span> 其中 <span class="math inline">\(\mathbf{B}(\mathbf{x})\)</span> 是连续函数, 当点 <span class="math inline">\(\mathbf{x}\)</span> 趋向可行域 边界时, <span class="math inline">\(B(x) \rightarrow+\infty\)</span> 两种最重要的形式 <span class="math display">\[
+\begin{aligned}
+&amp;B(x)=\sum_{i=1}^{m} \frac{1}{g_{i}(x)} \\
+&amp;B(x)=-\sum_{i=1}^{m} \log g_{i}(x)
+\end{aligned}
+\]</span> r是很小的正数。这样, 当x趋向边界时, 函数 <span class="math inline">\(G(\mathbf{x}, \mathbf{r}) \rightarrow +\infty\)</span> ； 否则, 由于 <span class="math inline">\(\mathbf{r}\)</span> 很小, 则函数 <span class="math inline">\(\mathbf{G}(\mathbf{x}, \mathbf{r})\)</span> 的取值近似 <span class="math inline">\(\mathbf{f}(\mathbf{x})\)</span> 。因此, 可通过求解 下列问题得到的近似解: <span class="math display">\[
+\min G(x, r) \\
+s.t. \ \ x \in intS
+\]</span> 由于 <span class="math inline">\(\mathrm{B}(\mathrm{x})\)</span> 的存在，在可行域边界形成“围墙”, 因此的解x必含于可行域的内部 B(x)的阻挡作用是自动实现的, 因此从计算的观点看,可当作无约束问题来处理</p>
+<h1 id="参考">参考</h1>
+<ul>
+<li>《最优化计算方法》文再文</li>
+<li>《凸优化》Stephen Boyd</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>最优化算法</tag>
+        <tag>罚函数</tag>
+        <tag>内点法</tag>
+        <tag>外点法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>牛顿法用于优化问题</title>
+    <url>/2021/10/05/%E7%89%9B%E9%A1%BF%E6%B3%95%E7%94%A8%E4%BA%8E%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>无约束优化算法可以分为<strong>线搜索类算法</strong>与<strong>信赖域类算法</strong>两类，他们都是对<span class="math inline">\(f(\boldsymbol x)\)</span>在局部进行近似，前者用得更加普遍。而线搜索类算法根据搜索方向选择的不同可以分为<strong>梯度算法、牛顿算法、拟牛顿算法、次梯度算法</strong>等</p>
+<a id="more"></a>
+<p>本文目的是介绍<strong>牛顿法</strong>。平常我们说牛顿法，一般指的是用牛顿法求方程根，因而先复习牛顿法求根的原理，然后扩展到用牛顿法求极值，再进一步扩展到多元函数牛顿法求极值</p>
+<h2 id="一元函数牛顿法求根">1. 一元函数牛顿法求根</h2>
+<p>复杂方程的根很难直接求得，最开始用牛顿法迭代来求方程的根。方法是给 一个初值 <span class="math inline">\(x_{1}\)</span> ，在 <span class="math inline">\(x_{1}\)</span> 处用一阶泰勒展式来近似表示函数 <span class="math inline">\(f(x)\)</span> <span class="math display">\[
+f(x)=f\left(x_{1}\right)+f^{\prime}\left(x_{1}\right)\left(x-x_{1}\right) + \mathcal{O}(x-x_1)
+\]</span> 将 <span class="math inline">\(f(x)=0\)</span> 带入上式, 求得与 <span class="math inline">\(x\)</span> 轴交点横坐标 <span class="math inline">\(x=x_{1}-f\left(x_{1}\right) / f^{\prime}\left(x_{1}\right)\)</span>, 这个 <span class="math inline">\(x\)</span> 点并不是函数 <span class="math inline">\(f(x)\)</span> 的根, 但是距离真正的根更近了一点，不断迭代优化，有如下步骤</p>
+<p><span class="math display">\[
+x_{n+1}=x_{n}-f\left(x_{n}\right) / f^{\prime}\left(x_{n}\right)
+\]</span> 最终求得的 <span class="math inline">\(x\)</span> 值变化小于一个阈值就认为这个 <span class="math inline">\(x\)</span> 值是函数 <span class="math inline">\(f(x)\)</span> 的近似根, 这时牛顿法收敛</p>
+<h2 id="一元函数牛顿法求极值">2. 一元函数牛顿法求极值</h2>
+<p>牛顿法用于求函数极值。对于 <span class="math inline">\(f(x)\)</span> 的极值点也就是求 <span class="math inline">\(f^{\prime}(x)\)</span> 的根, 那么也就是如上面介绍的 求 <span class="math inline">\(f^{\prime}(x)=0\)</span> 的解。给定初值 <span class="math inline">\(x_{1} ，\)</span> 在 <span class="math inline">\(x_{1}\)</span> 处用二阶泰勒展式见公式 <span class="math inline">\((4)\)</span> 。 <span class="math display">\[
+f(x)=f\left(x_{1}\right)+f^{\prime}\left(x_{1}\right)\left(x-x_{1}\right)+\frac{1}{2} f^{\prime \prime}\left(x_{1}\right)\left(x-x_{1}\right)^{2}
+\]</span> 对 <span class="math inline">\(f(x)\)</span> 求导, 令 <span class="math inline">\(f^{\prime}(x)=0\)</span>, 得 <span class="math inline">\(x=x_{1}-f^{\prime}\left(x_{1}\right) / f^{\prime \prime}\left(x_{1}\right)\)</span>, 依次迭代得到递推公式 <span class="math display">\[
+x_{n+1}=x_{n}-f^{\prime}\left(x_{n}\right) / f^{\prime \prime}\left(x_{n}\right)
+\]</span> 当xn的值变化小于阈值时认为算法收敛</p>
+<h2 id="多元函数牛顿法求极值">3. 多元函数牛顿法求极值</h2>
+<p>对定义在<span class="math inline">\(\mathbb{R}^{n}\)</span>上的二次可微函数<span class="math inline">\(f(\boldsymbol x)\)</span>，考虑其在<span class="math inline">\(x_k\)</span>处二阶泰勒展开，在其定义域上取<span class="math inline">\(x_k,d_k \in \mathbb{R}^{n}\)</span>，其中<span class="math inline">\(d_k\)</span>靠近<span class="math inline">\(x_k\)</span>，有如下式子</p>
+<p><span class="math display">\[
+f(x_k+d_k)=f(x_k)+\nabla f(x_k)^\mathrm{T}d_k + \frac{1}{2}(d_k)^\mathrm{T}\nabla^2f(x_k)d_k+\mathcal{O}(||d_k||^2)
+\]</span></p>
+<p>忽略高阶无穷小，将上式看作<span class="math inline">\(d_k\)</span>的函数，对其求导(求梯度？)后令<span class="math inline">\(f&#39;(x_k+d_k)=0\)</span>，化简可得<strong>牛顿方程</strong></p>
+<p><span class="math display">\[
+\nabla^{2} f\left(x_{k}\right) d_{k}=-\nabla f\left(x_{k}\right)
+\]</span></p>
+<p>由上式，可由简单的矩阵运算规则得到优化方向<span class="math inline">\(d_k=-\nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)\)</span></p>
+<p>因而可以得到迭代规则</p>
+<p><span class="math display">\[
+x_{x+1}=x_{k}-\nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)
+\]</span> 当xn的值变化小于阈值时认为算法收敛</p>
+<h3 id="对比">4. 对比</h3>
+<h3 id="牛顿法对比">4.1 牛顿法对比</h3>
+<p>如果把矩阵求逆<span class="math inline">\(\nabla^{2} f\left(x_{k}\right)^{-1}\)</span>，<strong>在形式上写作分母</strong>。将上面三者罗列如下，可见形式完全一样(吐槽：这不废话)</p>
+<p><span class="math display">\[
+x_{n+1}=x_{n}-f\left(x_{n}\right) / f^{\prime}\left(x_{n}\right)
+\]</span> <span class="math display">\[
+x_{n+1}=x_{n}-f^{\prime}\left(x_{n}\right) / f^{\prime \prime}\left(x_{n}\right)
+\]</span> <span class="math display">\[
+x_{x+1}=x_{k}-\nabla f\left(x_{k}\right)/\nabla^{2} f\left(x_{k}\right)
+\]</span></p>
+<h3 id="牛顿法与梯度下降对比">4.2 牛顿法与梯度下降对比</h3>
+<p>梯度下降 <span class="math display">\[
+x_{k+1}=x_{k}-\alpha_{k}\nabla f(x_k)
+\]</span></p>
+<p>步长不等于1的牛顿法(也就是优化方向乘以alpha) <span class="math display">\[
+x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)
+\]</span></p>
+<ol start="5" type="1">
+<li>参考</li>
+</ol>
+<ul>
+<li>《最优化计算方法》 文再文</li>
+<li><a href="https://zhuanlan.zhihu.com/p/75930544" target="_blank" rel="noopener">牛顿法求极值</a></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/23831218512e49bba90a9259ec10e07f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_17,color_FFFFFF,t_70,g_se,x_16" /></p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>最优化</tag>
+        <tag>牛顿法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语在高考中的权重可以调整吗</title>
+    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
+</blockquote>
+<a id="more"></a>
+<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
+<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
+<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
+<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
+<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
+<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
+<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
+<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
+<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平很不咋地，也根本无法直接阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。但只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
+<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>知乎</tag>
+        <tag>高考</tag>
+        <tag>英语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>语音处理笔记--倒谱分析与倒谱系数</title>
+    <url>/2020/04/13/%E8%AF%AD%E9%9F%B3%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0--%E5%80%92%E8%B0%B1%E5%88%86%E6%9E%90%E4%B8%8E%E5%80%92%E8%B0%B1%E7%B3%BB%E6%95%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>本文是我学习时对资料的一个个人学习笔记，资料来自于<a href="https://blog.csdn.net/zouxy09/article/details/9156785/" target="_blank" rel="noopener">MEL原理</a></p>
+</blockquote>
+<a id="more"></a>
+<h3 id="声谱图">1. 声谱图</h3>
+<p>首先我们来弄明白比倒谱分析更易懂的声谱图</p>
+<p>我们处理的是语音信号，那么我们该如何去描述它呢？最简单的方法当然是录下来一段语音，然后把直接它放到语音分析软件里，这时软件就会给我们一个语音的时序图 <img src="https://img-blog.csdnimg.cn/20200316215054369.png" /> 很显然，横轴是时间，纵轴是声音的震幅。</p>
+<p>接下来我们要对这段波形进行傅里叶变换，<strong>但是我们不直接变换。在语音信号处理中我们一般先把语音切片成帧(frame)，对每帧进行傅里叶变换</strong>,我们来看图 <img src="https://img-blog.csdnimg.cn/20200316215605772.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+<blockquote>
+<p>这里，这段语音被分为很多帧，每帧语音都对应于一个频谱（通过短时FFT计算），频谱表示频率与能量的关系。在实际使用中，频谱图有三种，即线性振幅谱、对数振幅谱、自功率谱（对数振幅谱中各谱线的振幅都作了对数计算，所以其纵坐标的单位是dB（分贝）。这个变换的目的是使那些振幅较低的成分相对高振幅成分得以拉高，以便观察掩盖在低幅噪声中的周期信号）</p>
+</blockquote>
+<p>接下来，我们需要做的是分帧进行傅里叶变换后的谱图拼接起来，并且我们并不进行直接地拼接</p>
+<p>拼接方式描述如下 &gt; 我们先将其中一帧语音的频谱通过坐标表示出来，如上图左。现在我们将左边的频谱旋转90度。得到中间的图。然后把这些幅度映射到一个灰度级表示（也可以理解为将连续的幅度量化为256个量化值？），0表示黑，255表示白色。幅度值越大，相应的区域越黑。这样就得到了最右边的图。那为什么要这样呢？为的是增加时间这个维度，这样就可以显示一段语音而不是一帧语音的频谱，而且可以直观的看到静态和动态的信息。优点稍后呈上。</p>
+<blockquote>
+<p>这样我们会得到一个随着时间变化的频谱图，这个就是描述语音信号的spectrogram声谱图。</p>
+</blockquote>
+<figure>
+<img src="https://img-blog.csdnimg.cn/2020031622015033.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20200316220340324.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>也就是说，我们虽然对时域信号进行了傅里叶变换，但是由于我们对信号分帧再拼接，<strong>因此拼接的结果中横轴仍然是时间t</strong>，而<strong>纵轴则是频率</strong>。我们把这种图就叫做声谱图</p>
+<p>下图便是一个实例 <img src="https://img-blog.csdnimg.cn/20200316220601785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 明暗代表这这一段语音信号的这段频率的强弱，图中的蓝线代表着共振峰</p>
+<blockquote>
+<p>那我们为什么要在声谱图中表示语音呢？ 首先，音素（Phones）的属性可以更好的在这里面观察出来。另外，通过观察共振峰和它们的转变可以更好的识别声音。隐马尔科夫模型（Hidden Markov Models）就是隐含地对声谱图进行建模以达到好的识别性能。还有一个作用就是它可以直观的评估TTS系统（text to speech）的好坏，直接对比合成的语音和自然的语音声谱图的匹配度即可。</p>
+</blockquote>
+<h3 id="倒谱分析">2.倒谱分析</h3>
+<p>首先区分一下语谱图(Spectrogram)与语音的频谱图(Spectrum)。 我们上面所说的便是语谱图 而如果将一段语音直接进行傅里叶变换，得到的便是语音的频谱图</p>
+<p>接下来我们来看一个语音的频谱图 &gt;下面是一个语音的频谱图。峰值就表示语音的主要频率成分，我们把这些峰值称为共振峰（formants），而共振峰就是携带了声音的辨识属性（就是个人身份证一样）。所以它特别重要。用它就可以识别不同的声音。 <img src="https://img-blog.csdnimg.cn/20200316221502549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 既然它那么重要，那我们就是需要把它提取出来！我们要提取的不仅仅是共振峰的位置，还得提取它们转变的过程。所以我们提取的是频谱的包络（Spectral Envelope）。这包络就是一条连接这些共振峰点的平滑曲线。 <img src="https://img-blog.csdnimg.cn/20200316221746960.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 我们可以这么理解，将原始的频谱由两部分组成：包络和频谱的细节。这里用到的是对数频谱，所以单位是dB。那现在我们需要把这两部分分离开，这样我们就可以得到包络（Spectral Envelop）了。</p>
+<p><del>这里插一个个人的小想法：如果对一段语音的频谱，再进行一次傅里叶变换，也就是求Spectrum的Spectrum，接着进行低通滤波，会怎么样呢？会不会在控制好参数的情况下也能得到包络呢？哈哈有时间一定要来试试。</del></p>
+<p>说回正题：我们要注意，上图中纵轴的单位都是dB，也就是说这都是对数化了的谱。 现在我们的目标是要取出语音的频谱图中的包络与&quot;频谱的细节&quot;。怎么做？ 一个可行的方法是，对上图<strong>对数化</strong>了的频谱再进行一次傅里叶变换。进行这种变换之后，横轴自然就不是频率了，而是频率的频率。我们也可以叫它&quot;伪频率&quot;（pseudo-frequency），此时再对这个频率的频谱图取低频部分，它就与包络大致相<strong>对应</strong>(不是一样是对应)；相应的，而高频部分就大致与频率的细节相对应。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200316223703478.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 试想，我们如果对包络进行IFFT，那么得到的应该是一个低频部分;而对细节进行IFFT，那么得到的应该是高频部分。当然，进行IFFT后横轴并不是时间，因为进行IFFT的谱的纵轴是对数化了的，因此IFFT后不应该是时间t。</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20200316223746263.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>得到谱的包络有什么作用呢?<strong>谱的包络往往包含着说话的语义成分</strong>--它是声道所对应的部分。而精细的部分对应着人的声门。试想，每个人的声门（声带）都不一样，但是我们仍然能从不同的人的发声上听出相同的&quot;字&quot;，这是因为&quot;字&quot;的<strong>发声方法</strong>是我们在成长过程中学会的、是由声道控制的。 这样，我们就能进行ASR了。 &gt;自动语音识别技术(Automatic Speech Recognition)是一种将人的语音转换为文本的技术</p>
+<blockquote>
+<p>在实际中咱们已经知道log X[k]，所以我们可以得到了x[k]。那么由图可以知道，h[k]是x[k]的低频部分，那么我们将x[k]通过一个低通滤波器就可以得到h[k]了！没错，到这里咱们就可以将它们分离开了，得到了我们想要的h[k]，也就是频谱的包络。</p>
+</blockquote>
+<blockquote>
+<p>x[k]实际上就是倒谱Cepstrum（这个是一个新造出来的词，把频谱的单词spectrum的前面四个字母顺序倒过来就是倒谱的单词了）。而我们所关心的h[k]就是倒谱的低频部分。h[k]描述了频谱的包络，它在语音识别中被广泛用于描述特征。</p>
+</blockquote>
+<p>那现在总结下倒谱分析，它实际上是这样一个过程：</p>
+<p>语音--&gt;FFT--&gt;log--&gt;IFFT--&gt;倒谱 在FFT与IFFT之间加了一个取log而已</p>
+<blockquote>
+<p>1）将原语音信号经过傅里叶变换得到频谱：X[k]=H[k]E[k]； 只考虑幅度就是：|X[k] |=|H[k]||E[k] |； 2）我们在两边取对数：log||X[k] ||= log ||H[k] ||+ log ||E[k] ||。 3）再在两边取逆傅里叶变换得到：x[k]=h[k]+e[k]。</p>
+</blockquote>
+<blockquote>
+<p>这实际上有个专业的名字叫做同态信号处理。它的目的是将非线性问题转化为线性问题的处理方法。对应上面，原来的语音信号实际上是一个卷性信号（声道相当于一个线性时不变系统，声音的产生可以理解为一个激励通过这个系统），第一步通过卷积将其变成了乘性信号（时域的卷积相当于频域的乘积）。第二步通过取对数将乘性信号转化为加性信号，第三步进行逆变换，使其恢复为卷性信号。这时候，虽然前后均是时域序列，但它们所处的离散时域显然不同，所以后者称为倒谱频域。</p>
+</blockquote>
+<p>注: 1. <strong>倒谱中的横轴与时间t类似，而又不是真正的时间，也可以叫做它伪频率</strong> 2. 声音的产生可以理解为<strong>声门</strong>和<strong>声道</strong>的线性卷积 3. <strong>语音信号的倒谱经过低倒谱窗，获得声道响应信号，可分析得到共振峰参数； 语音信号的频谱高倒谱窗，经过声门激励信号，可分析得到基音参数</strong></p>
+<h3 id="mel频率">3.MEL频率</h3>
+<p>通过对人耳听力的研究发现，人耳对低频的声音更为敏感，对高频的声音相对不敏感。 比如说，对于一个500hz的声音和1000hz的声音相比，人的听力系统并不会感觉到后者的音调就是前者的两倍，实际的听力感觉是不到两倍。</p>
+<blockquote>
+<p>而Mel频率分析就是基于人类听觉感知实验的。实验观测发现人耳就像一个滤波器组一样，它只关注某些特定的频率分量（人的听觉对频率是有选择性的）。也就说，它只让某些频率的信号通过，而压根就直接无视它不想感知的某些频率信号。但是这些滤波器在频率坐标轴上却不是统一分布的，在低频区域有很多的滤波器，他们分布比较密集，但在高频区域，滤波器的数目就变得比较少，分布很稀疏。</p>
+</blockquote>
+<p>所谓的mel频率，就是根据人的听力，将线性的频率进行一个变换，使得在mel频率域中，“1000hz”听起来就是&quot;500hz&quot;的两倍音调一样</p>
+<p>将普通频率转化到Mel频率的公式是：<span class="math display">\[mel(f)=2595\times log_{10}(1+\frac{f}{700})\]</span></p>
+<p>由下图可以看到，它可以将不统一的频率转化为统一的频率，也就是统一的滤波器组。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200316225001422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 注意mel频率的单位是mel，是一种“伪频率” ### 4.MFCC与FBANK</p>
+<blockquote>
+<p>总结下提取MFCC特征的过程：（具体的数学过程网上太多了，这里就不想贴了） 1）先对语音进行预加重、分帧和加窗； 2）对每一个短时分析窗，通过FFT得到对应的频谱； 3）将上面的频谱通过Mel滤波器组得到Mel频谱； 4）在Mel频谱上面进行倒谱分析（取对数，做逆变换，实际逆变换一般是通过DCT离散余弦变换来实现，取DCT后的第2个到第13个系数作为MFCC系数），获得Mel频率倒谱系数MFCC，这个MFCC就是这帧语音的特征；</p>
+</blockquote>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20200316225137805.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>下面是一个更完整的图，前面增加了AD转换(采样与量化),后面增加了求两阶差分，暂时可以不管这两步。<img src="https://img-blog.csdnimg.cn/20200319143013615.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 对语音信号提取MFCC特征的过程包括--高频预加重，加哈明窗分帧，DFT变换并平方获得能量谱，通过20个MEL滤波器组，对数运算，DCT变换获得倒谱特征，再加上一阶和二阶动态特征</p>
+<p>在MEL滤波后，得到的便是FBANK参数</p>
+<p><img src="https://img-blog.csdnimg.cn/20200319164111354.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> ### 5.FBank Filter bank和MFCC的计算步骤基本一致，只是没有做IDFT而已（但是包括了求对数） 这里有一篇好例子<a href="https://zjuturtle.com/2020/03/06/fbank-mfcc/" target="_blank" rel="noopener">实例</a></p>
+<p>FBank与MFCC对比：</p>
+<p>1.计算量：MFCC是在FBank的基础上进行的，所以MFCC的计算量更大</p>
+<p>2.特征区分度：FBank特征相关性较高（相邻滤波器组有重叠），MFCC具有更好的判别度，这也是在大多数语音识别论文中用的是MFCC，而不是FBank的原因</p>
+<p>3.使用对角协方差矩阵的GMM由于忽略了不同特征维度的相关性，MFCC更适合用来做特征。</p>
+<p>4.DNN/CNN可以更好的利用这些相关性，使用fbank特征可以更多地降低WER。</p>
+<h3 id="mfcc与基本倒谱分析的对比">MFCC与基本倒谱分析的对比</h3>
+<p>mfcc是一个倒谱参数，它与倒谱分析有相似之处，区别在于 1.多了预加重(使得高频部分变得相对更平坦)</p>
+<p>2.FFT后取绝对值或者平方(<strong>模取平方平方对应着能量谱</strong>) 3.进行了mel滤波，也就是进行了一个频率的非线性变换，参考前面所述的公式 4.IFFT换成了DCT 5.它<strong>得到的是一个12维的向量</strong>，代表了声音的特征。实际上因为取得是<strong>前</strong>12维，因此更多地<strong>包含了语义（共振峰）参数</strong>,利用这个向量，我们就可以进行很多东西了</p>
+<p>在实际中使用的语音特征，往往是各种特征的组合。比如，常用的39维MFCC特征，其组成如下：</p>
+<blockquote>
+<p>12 MFCC feature 1 energy feature 12 delta MFCC features 12 double-delta MFCC features 1 delta energy feature 1 double-delta energy feature</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>语音处理</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>信号处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>闹钟电视</title>
+    <url>/2021/05/14/%E9%97%B9%E9%92%9F%E7%94%B5%E8%A7%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-aKVmveoI" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-aKVmveoI"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "もう少しだけ",
+              author: "Yoasobi",
+              url: "http://music.163.com/song/media/outer/url?id=1840862630.mp3",
+              pic: "https://img-blog.csdnimg.cn/20210514143129720.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<a id="more"></a>
+<p><img src="https://img.3dmgame.com/uploads/images/news/20190830/1567146340_769830.gif" /></p>
+]]></content>
+      <categories>
+        <category>歌曲</category>
+      </categories>
+      <tags>
+        <tag>歌曲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>语音处理笔记--高斯混合模型与最大期望算法</title>
+    <url>/2020/04/13/%E8%AF%AD%E9%9F%B3%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0--%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%9C%80%E5%A4%A7%E6%9C%9F%E6%9C%9B%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>本文内容是我在学习过程中对资料的一个个人总结与学习笔记。引用内容写在灰色的引用框中。如有错误欢迎指正</p>
+</blockquote>
+<a id="more"></a>
+<p>这篇文章的主题是高斯混合模型（GMM），GMM与最大期望（EM）方法有很大的联系，而在GMM的求解过程中使用了极大似然估计法</p>
+<hr />
+<h1 id="一极大似然估计">一、极大似然估计</h1>
+<p>我们先来复习一下极大似然估计法是怎么进行的,来看一个概率论课上的实例</p>
+<p><strong>设样本服从正态分布</strong><span class="math inline">\(N(\mu,\sigma^2)\)</span>，则似然函数为<span class="math display">\[L(\mu,\sigma^2)=\prod^{N}_{i=1}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span></p>
+<p>试估计参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值 其中<span class="math inline">\(x_{i}\)</span>是样本，也就是说这个函数<span class="math inline">\(L(\mu,\sigma^{2})\)</span>是各个样本的概率的积。</p>
+<p>我们需要做的是由似然函数<strong>估计</strong>出参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值。之所以说是估计，是因为<strong>使用有限的样本不可能准确求出原本高斯分布的参数</strong>。 那么怎么由似然函数求值呢？ 1. 首先我们要对似然函数<strong>求对数</strong>，这是因为似然函数是各个事件发生的概率的积，当很多概率乘在一起时，会导致这个似然函数的值非常小，计算机由于精度的原因无法处理 2. <strong>对参数</strong>求导,再令导数为0。我们知道，这样求出的点是似然函数的极值点，而我们需要的是使得似然函数取得最大值时的参数值。这样这个极值点便<strong>很可能</strong>是我们要求的参数值 3. 求解上述似然方程 --- 求解过程如下 对似然函数取对数得到 <span class="math display">\[\ln L(\mu,\sigma^2)=\sum_{i=1}^N \ln\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span> 化简得到<span class="math display">\[\ln L(\mu,\sigma^2) = -\frac{n}{2}\ln(2\pi)-\frac{n}{2}\ln(\sigma^2)-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_{i}-\mu)^2\]</span></p>
+<p>对参数求导得到 <span class="math display">\[ \left \{
+\begin{aligned}
+&amp; \frac{\partial \ln L(\mu,\sigma^2)}{\partial\mu}=\frac{1}{\sigma^2}\sum_{i = 1}^{n}(x_i-\mu) =0\\
+&amp;   \frac{\partial \ln L(\mu,\sigma^2)}{\partial\sigma}=-\frac{n}{2\sigma^2}+\frac{1}{2\sigma^4}\sum_{i=1}^n(x_i-\mu)^2
+\end{aligned}
+\right.\]</span> 联合求解得到 <span class="math display">\[ \left \{
+\begin{aligned}
+&amp; \hat{\mu}=\overline x = \frac{1}{n}\sum_{i=1}^N x_i   \\ 
+&amp; \hat\sigma^2=\frac{1}{n}\sum_{i=1}^N(x_i-\overline x)^2
+\end{aligned}
+\right.\]</span></p>
+<hr />
+<p>现在我们来概括一下，极大似然法分为如下几步 &gt; （1）写出似然函数； &gt; （2）对似然函数取对数，并整理 （3）求导数； （4）解似然方程。</p>
+<pre><code>    最大似然估计的特点：
+    1.比其他估计方法更加简单；
+    2.收敛性：无偏或者渐近无偏，当样本数目增加时，收敛性质会更好；
+    3.如果假设的类条件概率模型正确，则通常能获得较好的结果。但如果假设模型出现偏差，将导致非常差的估计结果。</code></pre>
+<p>一定要注意一点，我们在进行极大似然估计时，样本服从什么分布是我们假定的。 另外，极大似然估计方法也可以用一个简单的式子来概括: <span class="math display">\[θ=arg\max_θ∑_i \log P(x^{(i)};θ)\]</span> 也即<span class="math inline">\(\theta\)</span>为使得似然函数取最大值时对应的<span class="math inline">\(\theta\)</span>值</p>
+<h1 id="二gmm原理">二、GMM原理</h1>
+<p>首先我们来了解一下机器学习中的归纳偏执(bias) &gt;在机器学习中，一个学习算法也会有一个前提假设，这里被称作“归纳偏执 (bias)”（bias 这个英文词在机器学习和统计里还有其他许多的意思）。例如线性回归，目的是要找一个函数尽可能好地拟合给定的数据点，它的归纳偏执就是“满足要求的函数必须是线性函数”。一个没有归纳偏执的学习算法从某种意义上来说毫无用处，就像一个完全没有归纳能力的人一样，在第一次看到鱼的时候有人告诉他那是鱼，下次看到另一条鱼了，他并不知道那也是鱼，因为两条鱼总有一些地方不一样的，或者就算是同一条鱼，在河里不同的地方看到，或者只是看到的时间不一样，也会被他认为是不同的，因为他无法归纳，无法提取主要矛盾、忽略次要因素，只好要求所有的条件都完全一样──然而哲学家已经告诉过我们了：世界上不会有任何样东西是完全一样的，所以这个人即使是有无比强悍的记忆力，也绝学不到任何一点知识。 这个问题在机器学习中称作“过拟合 (Overfitting)”，例如前面的回归的问题，如果去掉“线性函数”这个归纳偏执，因为对于 N 个点，我们总是可以构造一个 N-1 次多项式函数，让它完美地穿过所有的这 N 个点，或者如果我用任何大于 N-1 次的多项式函数的话，我甚至可以构造出无穷多个满足条件的函数出来。如果假定特定领域里的问题所给定的数据个数总是有个上限的话，我可以取一个足够大的 N ，从而得到一个（或者无穷多个）“超级函数”，能够 fit 这个领域内所有的问题。然而这个（或者这无穷多个）“超级函数”有用吗？只要我们注意到学习的目的（通常）不是解释现有的事物，而是从中归纳出知识，并能应用到新的事物上，结果就显而易见了。 没有归纳偏执或者归纳偏执太宽泛会导致 Overfitting ，然而另一个极端──限制过大的归纳偏执也是有问题的：如果数据本身并不是线性的，强行用线性函数去做回归通常并不能得到好结果。难点正在于在这之间寻找一个平衡点。不过人在这里相对于（现在的）机器来说有一个很大的优势：人通常不会孤立地用某一个独立的系统和模型去处理问题，一个人每天都会从各个来源获取大量的信息，并且通过各种手段进行整合处理，归纳所得的所有知识最终得以统一地存储起来，并能有机地组合起来去解决特定的问题。这里的“有机”这个词很有意思，搞理论的人总能提出各种各样的模型，并且这些模型都有严格的理论基础保证能达到期望的目的，然而绝大多数模型都会有那么一些“参数”（例如 K-means 中的 k ），通常没有理论来说明参数取哪个值更好，而模型实际的效果却通常和参数是否取到最优值有很大的关系，我觉得，在这里“有机”不妨看作是所有模型的参数已经自动地取到了最优值。另外，虽然进展不大，但是人们也一直都期望在计算机领域也建立起一个统一的知识系统（例如语意网就是这样一个尝试）。</p>
+<p>GMM就是这样的一种归纳偏执:我们假定样本服从一种高斯分布，不过这种高斯分布与&quot;单一的&quot;高斯分布不一样，它由若干个高斯分布混合起来而形成。</p>
+<blockquote>
+<p>Gaussian Mixture Model (GMM)。 GMM 和 k-means 很像，不过 GMM 是学习出一些概率密度函数来（所以 GMM 除了用在 clustering 上之外，还经常被用于 density estimation ），简单地说，k-means 的结果是每个数据点被 assign 到其中某一个 cluster 了，而 GMM 则给出这些数据点被 assign 到每个 cluster 的概率，又称作 soft assignment 。</p>
+</blockquote>
+<blockquote>
+<p>每个 GMM 由 K 个 Gaussian 分布组成，每个 Gaussian 称为一个“Component”，这些 Component 线性加成在一起就组成了 GMM 的概率密度函数：</p>
+</blockquote>
+<p><span class="math display">\[\displaystyle
+\begin{aligned}
+p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \\
+     &amp; = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)
+\end{aligned}\]</span> &gt;根据上面的式子，如果我们要从 GMM 的分布中随机地取一个点的话，实际上可以分为两步：首先随机地在这 K 个 Component 之中选一个，每个 Component 被选中的概率实际上就是它的系数 _k ，选中了 Component 之后，再单独地考虑从这个 Component 的分布中选取一个点就可以了──这里已经回到了普通的 Gaussian 分布，转化为了已知的问题。</p>
+<p>高斯混合模型解决了一个这样的问题:如果一个样本集的分布有明显的聚类特征，那么我们可以利用GMM来近似这种分布。利用GMM，不仅完成了对样本集的分类，还得到了它的一个概率密度函数。 <strong>利用概率密度函数，我们很容易就可以得到所谓<code>似然函数</code>，再对它进行求解，便可以得到高斯混合模型的参数</strong>。 显然，它的似然函数是<span class="math display">\[L= \prod_{i=1}^N \sum_{k=1}^K \pi_k \mathcal{N}(x ; \mu_k, \Sigma_k)\]</span> log-likelihood function为: <span class="math display">\[L_{log}=\displaystyle
+\sum_{i=1}^N \log \left\{\sum_{k=1}^K \pi_k \mathcal{N}(x_i ; \mu_k, \Sigma_k)\right\}
+\]</span> 然后求解这个似然函数即可，求解过程是一个纯技术问题，我们暂时把它忽略。 总之，求解的结果是一个<span class="math inline">\(N\times K\)</span>的矩阵，这个矩阵的每一行代表了样本属于各个component的概率,对于每一个 <span class="math inline">\(x_i\)</span> ，我们只要取该矩阵第 i 行中最大的那个概率值所对应的那个 Component 为 <span class="math inline">\(x_i\)</span> 所属的 cluster 就可以实现一个完整的聚类方法了。 &gt;从上面的分析中我们可以看到 GMM 和 K-means 的迭代求解法其实非常相似，因此也有和 K-means 同样的问题──并不能保证总是能取到全局最优，如果运气比较差，取到不好的初始值，就有可能得到很差的结果。对于 K-means 的情况，我们通常是重复一定次数然后取最好的结果，不过 GMM 每一次迭代的计算量比 K-means 要大许多，一个更流行的做法是先用 K-means （已经重复并取最优值了）得到一个粗略的结果，然后将其作为初值（只要将 K-means 所得的 centroids 传入 gmm 函数即可），再用 GMM 进行细致迭代。</p>
+<blockquote>
+<p>如我们最开始所讨论的，GMM 所得的结果（Px）不仅仅是数据点的 label ，而包含了数据点标记为每个 label 的概率，很多时候这实际上是非常有用的信息</p>
+</blockquote>
+<h1 id="三丶em算法">三丶EM算法</h1>
+<p>我们可以看到，K-means与GMM实际上是有几分相似的，并且它们都可以追溯到EM算法。 <strong>EM算法是一种利用似然函数来获取模型参数的算法。</strong> 首先我们来复习两个概念</p>
+<h2 id="边缘分布">边缘分布</h2>
+<p>摘取百度百科对边缘分布的解释 &gt;边缘分布（Marginal Distribution）指在概率论和统计学的多维随机变量中，只包含其中部分变量的概率分布。</p>
+<p>假设有一个和两个变量相关的概率分布： <span class="math display">\[P(x|y)\]</span> 关于其中一个特定变量的边缘分布则为给定其他变量的条件概率分布：(增加了一个y和求和符号) <span class="math display">\[P(x)=\sum_{y}P(x,y)=\sum_yP(x|y)P(y)\]</span></p>
+<blockquote>
+<p>在这个边缘分布中，我们得到只关于一个变量的概率分布，而不再考虑另一变量的影响，<strong>实际上进行了降维操作</strong>。在实际应用中，例如人工神经网络的神经元互相关联，在计算它们各自的参数的时候，就会使用边缘分布计算得到某一特定神经元（变量）的值。</p>
+</blockquote>
+<h2 id="jensen不等式">Jensen不等式</h2>
+<p>定理:X为一随机变量，如果<span class="math inline">\(f\)</span>是凸函数，那么有<span class="math display">\[E[f(X)]\ge f[E(X)]\]</span></p>
+<h2 id="推导">推导</h2>
+<h3 id="问题引入">问题引入</h3>
+<p>现在我们有一组观测样本<span class="math display">\[\vec x=(x_1,x_2...x_m)\]</span> 在确定了归纳偏执之后，我们希望获得模型的参数，那么有 <span class="math display">\[θ=arg\max_θ∑\log P(x_i;θ)\]</span> 但是很不幸，<strong>我们的观测数据实际上还有隐藏的观测值数据</strong> <span class="math display">\[\vec z=(z_1,z_2,...z_i)\]</span> 那么我们利用边缘分布的定义，极大化模型分布的对数似然函数如下： <span class="math display">\[θ=arg\max_θ∑logP(x_i;θ)=arg\max_θ∑log∑_{z_i}P(x_i，z_i;θ)\]</span> <strong>这个式子怎么求解呢？所需要用到的方法就是EM算法了</strong></p>
+<h3 id="求解过程">求解过程</h3>
+<p>概括如下 &gt;EM是一个在已知部分相关变量的情况下，估计未知变量的迭代技术。EM的算法流程如下： 初始化分布参数 重复直到收敛： E步骤：根据参数的假设值，给出未知变量的期望估计，应用于缺失值。 M步骤：根据未知变量的估计值，给出当前的参数的极大似然估计。</p>
+<blockquote>
+<p>现在我们总结下EM算法的流程。 　　　　输入：观察数据x=(x(1),x(2),...x(m))，联合分布p(x,z;θ), 条件分布p(z|x;θ), 最大迭代次数J。 　　　　1) 随机初始化模型参数θ的初值θ0。 　　　　2） for j from 1 to J开始EM算法迭代： 　　　　　　a) E步：计算联合分布的条件概率期望： <span class="math display">\[Qi(z(i))=P(z(i)|x(i)，θj))\]</span> <span class="math display">\[L(θ,θ_j)=∑_{i=1}^m∑_{z_i}Q_i(z_i)logP(x_i，z_i;θ)\]</span> 　　　　　　b) M步：极大化L(θ,θj),得到θj+1: <span class="math display">\[θ_{j+1}=arg\max_θL(θ,θ_j)\]</span> 　　　　　　c) 如果θj+1已收敛，则算法结束。否则继续回到步骤a)进行E步迭代。 　　　　输出：模型参数θ。 ### 证明 关于证明我就不ctrl+c/ctrl+v了，直接传送门~ <a href="https://wenku.baidu.com/view/3396bb4d6294dd88d0d26bee.html" target="_blank" rel="noopener">传送门</a> # 参考资料 * <a href="https://baike.baidu.com/item/%E8%BE%B9%E7%BC%98%E5%88%86%E5%B8%83" target="_blank" rel="noopener">边缘分布百度百科</a> * <a href="https://blog.csdn.net/zhihua_oba/article/details/73776553" target="_blank" rel="noopener">EM介绍</a> * <a href="https://www.cnblogs.com/jerrylead/archive/2011/04/06/2006936.html" target="_blank" rel="noopener">EM详细推导</a> * <a href="https://wenku.baidu.com/view/3396bb4d6294dd88d0d26bee.html" target="_blank" rel="noopener">EM文库</a> * <a href="http://blog.pluskid.org/?p=39" target="_blank" rel="noopener">GMM原理</a> * <a href="https://blog.csdn.net/zengxiantao1994/article/details/72787849" target="_blank" rel="noopener">极大似然估计介绍</a></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>总结</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -568,285 +1059,6 @@
       </tags>
   </entry>
   <entry>
-    <title>牛顿法用于优化问题</title>
-    <url>/2021/10/05/%E7%89%9B%E9%A1%BF%E6%B3%95%E7%94%A8%E4%BA%8E%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>无约束优化算法可以分为<strong>线搜索类算法</strong>与<strong>信赖域类算法</strong>两类，他们都是对<span class="math inline">\(f(\boldsymbol x)\)</span>在局部进行近似，前者用得更加普遍。而线搜索类算法根据搜索方向选择的不同可以分为<strong>梯度算法、牛顿算法、拟牛顿算法、次梯度算法</strong>等</p>
-<a id="more"></a>
-<p>本文目的是介绍<strong>牛顿法</strong>。平常我们说牛顿法，一般指的是用牛顿法求方程根，因而先复习牛顿法求根的原理，然后扩展到用牛顿法求极值，再进一步扩展到多元函数牛顿法求极值</p>
-<h2 id="一元函数牛顿法求根">1. 一元函数牛顿法求根</h2>
-<p>复杂方程的根很难直接求得，最开始用牛顿法迭代来求方程的根。方法是给 一个初值 <span class="math inline">\(x_{1}\)</span> ，在 <span class="math inline">\(x_{1}\)</span> 处用一阶泰勒展式来近似表示函数 <span class="math inline">\(f(x)\)</span> <span class="math display">\[
-f(x)=f\left(x_{1}\right)+f^{\prime}\left(x_{1}\right)\left(x-x_{1}\right) + \mathcal{O}(x-x_1)
-\]</span> 将 <span class="math inline">\(f(x)=0\)</span> 带入上式, 求得与 <span class="math inline">\(x\)</span> 轴交点横坐标 <span class="math inline">\(x=x_{1}-f\left(x_{1}\right) / f^{\prime}\left(x_{1}\right)\)</span>, 这个 <span class="math inline">\(x\)</span> 点并不是函数 <span class="math inline">\(f(x)\)</span> 的根, 但是距离真正的根更近了一点，不断迭代优化，有如下步骤</p>
-<p><span class="math display">\[
-x_{n+1}=x_{n}-f\left(x_{n}\right) / f^{\prime}\left(x_{n}\right)
-\]</span> 最终求得的 <span class="math inline">\(x\)</span> 值变化小于一个阈值就认为这个 <span class="math inline">\(x\)</span> 值是函数 <span class="math inline">\(f(x)\)</span> 的近似根, 这时牛顿法收敛</p>
-<h2 id="一元函数牛顿法求极值">2. 一元函数牛顿法求极值</h2>
-<p>牛顿法用于求函数极值。对于 <span class="math inline">\(f(x)\)</span> 的极值点也就是求 <span class="math inline">\(f^{\prime}(x)\)</span> 的根, 那么也就是如上面介绍的 求 <span class="math inline">\(f^{\prime}(x)=0\)</span> 的解。给定初值 <span class="math inline">\(x_{1} ，\)</span> 在 <span class="math inline">\(x_{1}\)</span> 处用二阶泰勒展式见公式 <span class="math inline">\((4)\)</span> 。 <span class="math display">\[
-f(x)=f\left(x_{1}\right)+f^{\prime}\left(x_{1}\right)\left(x-x_{1}\right)+\frac{1}{2} f^{\prime \prime}\left(x_{1}\right)\left(x-x_{1}\right)^{2}
-\]</span> 对 <span class="math inline">\(f(x)\)</span> 求导, 令 <span class="math inline">\(f^{\prime}(x)=0\)</span>, 得 <span class="math inline">\(x=x_{1}-f^{\prime}\left(x_{1}\right) / f^{\prime \prime}\left(x_{1}\right)\)</span>, 依次迭代得到递推公式 <span class="math display">\[
-x_{n+1}=x_{n}-f^{\prime}\left(x_{n}\right) / f^{\prime \prime}\left(x_{n}\right)
-\]</span> 当xn的值变化小于阈值时认为算法收敛</p>
-<h2 id="多元函数牛顿法求极值">3. 多元函数牛顿法求极值</h2>
-<p>对定义在<span class="math inline">\(\mathbb{R}^{n}\)</span>上的二次可微函数<span class="math inline">\(f(\boldsymbol x)\)</span>，考虑其在<span class="math inline">\(x_k\)</span>处二阶泰勒展开，在其定义域上取<span class="math inline">\(x_k,d_k \in \mathbb{R}^{n}\)</span>，其中<span class="math inline">\(d_k\)</span>靠近<span class="math inline">\(x_k\)</span>，有如下式子</p>
-<p><span class="math display">\[
-f(x_k+d_k)=f(x_k)+\nabla f(x_k)^\mathrm{T}d_k + \frac{1}{2}(d_k)^\mathrm{T}\nabla^2f(x_k)d_k+\mathcal{O}(||d_k||^2)
-\]</span></p>
-<p>忽略高阶无穷小，将上式看作<span class="math inline">\(d_k\)</span>的函数，对其求导(求梯度？)后令<span class="math inline">\(f&#39;(x_k+d_k)=0\)</span>，化简可得<strong>牛顿方程</strong></p>
-<p><span class="math display">\[
-\nabla^{2} f\left(x_{k}\right) d_{k}=-\nabla f\left(x_{k}\right)
-\]</span></p>
-<p>由上式，可由简单的矩阵运算规则得到优化方向<span class="math inline">\(d_k=-\nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)\)</span></p>
-<p>因而可以得到迭代规则</p>
-<p><span class="math display">\[
-x_{x+1}=x_{k}-\nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)
-\]</span> 当xn的值变化小于阈值时认为算法收敛</p>
-<h3 id="对比">4. 对比</h3>
-<h3 id="牛顿法对比">4.1 牛顿法对比</h3>
-<p>如果把矩阵求逆<span class="math inline">\(\nabla^{2} f\left(x_{k}\right)^{-1}\)</span>，<strong>在形式上写作分母</strong>。将上面三者罗列如下，可见形式完全一样(吐槽：这不废话)</p>
-<p><span class="math display">\[
-x_{n+1}=x_{n}-f\left(x_{n}\right) / f^{\prime}\left(x_{n}\right)
-\]</span> <span class="math display">\[
-x_{n+1}=x_{n}-f^{\prime}\left(x_{n}\right) / f^{\prime \prime}\left(x_{n}\right)
-\]</span> <span class="math display">\[
-x_{x+1}=x_{k}-\nabla f\left(x_{k}\right)/\nabla^{2} f\left(x_{k}\right)
-\]</span></p>
-<h3 id="牛顿法与梯度下降对比">4.2 牛顿法与梯度下降对比</h3>
-<p>梯度下降 <span class="math display">\[
-x_{k+1}=x_{k}-\alpha_{k}\nabla f(x_k)
-\]</span></p>
-<p>步长不等于1的牛顿法(也就是优化方向乘以alpha) <span class="math display">\[
-x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)
-\]</span></p>
-<ol start="5" type="1">
-<li>参考</li>
-</ol>
-<ul>
-<li>《最优化计算方法》 文再文</li>
-<li><a href="https://zhuanlan.zhihu.com/p/75930544" target="_blank" rel="noopener">牛顿法求极值</a></li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/23831218512e49bba90a9259ec10e07f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_17,color_FFFFFF,t_70,g_se,x_16" /></p>
-]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>最优化</tag>
-        <tag>牛顿法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构与算法笔记归档</title>
-    <url>/2021/02/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E5%BD%92%E6%A1%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>数据结构与算法笔记。代码大部分使用C++与Java两种实现</p>
-</blockquote>
-<a id="more"></a>
-<p>我的CSDN博客中写了一些数据结构与算法题目笔记，题目均为经典算法题且大部分来自leetcode,并且大都分别使用<code>C++</code>与<code>Java</code>两种实现</p>
-<p>现按题目中使用的数据结构归档如下以方便查阅，不断更新中</p>
-<h3 id="数组与链表">1. 数组与链表</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113125703" target="_blank" rel="noopener">链表 : 反向打印链表</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">数组 : 找出重复元素</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113328112" target="_blank" rel="noopener">链表 : 删除特定结点</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113388316" target="_blank" rel="noopener">数组 : 调整数组顺序使奇数位于偶数之前</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113185283" target="_blank" rel="noopener">数组 : 旋转数组中的最小元素</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113404494" target="_blank" rel="noopener">链表 : 链表中的倒数第k个结点</a></li>
-</ul>
-<h3 id="栈与队列">2. 栈与队列</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113143160" target="_blank" rel="noopener">栈与队列 : 用两个栈实现队列</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113523886" target="_blank" rel="noopener">栈 : 包含min函数的栈</a></li>
-</ul>
-<h3 id="二叉树">3. 二叉树</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113447366" target="_blank" rel="noopener">二叉树 : 二叉树的镜像</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113466097" target="_blank" rel="noopener">二叉树 : 对称的二叉树</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113561673" target="_blank" rel="noopener">二叉树 : 二叉搜索树的第k大结点</a></li>
-</ul>
-<h3 id="动态规划">4. 动态规划</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113177772" target="_blank" rel="noopener">使用动态规划解决斐波那契数列</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113178283" target="_blank" rel="noopener">动态规划 : 青蛙跳台阶问题</a></li>
-</ul>
-<h3 id="堆优先队列集合">5. 堆、优先队列、集合</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113654275" target="_blank" rel="noopener">C++中的堆与优先序列</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">集合 : 寻找数组中的重复元素</a></li>
-</ul>
-<h3 id="位操作">6. 位操作</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113307993" target="_blank" rel="noopener">二进制中1的个数</a></li>
-</ul>
-<h3 id="双指针法">7. 双指针法</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113633652" target="_blank" rel="noopener">合并区间问题</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113407412" target="_blank" rel="noopener">双指针法 ： 反转链表</a></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>泛函分析(2)空间完备性</title>
-    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>完备性是泛函分析中的重要概念，本文对此概念进行简要总结</p>
-<a id="more"></a>
-<figure>
-<img src="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16" alt="圆" /><figcaption>圆</figcaption>
-</figure>
-<h1 id="空间完备性"><strong>空间完备性</strong></h1>
-<p>为了定义完备性，需要首先清楚柯西序列和收敛的概念</p>
-<h2 id="收敛性与柯西列"><strong>1. 收敛性与柯西列</strong></h2>
-<h3 id="柯西列"><strong>1.1 柯西列</strong></h3>
-<p>给定某个度量空间 <span class="math inline">\(X\)</span> 中的序列 <span class="math inline">\(\left\{x_{i}\right\}\)</span>, 当满足以下条件时，他就叫做柯西序列 (Cauchy sequence)</p>
-<p>对任意 <span class="math inline">\(\varepsilon&gt;0\)</span>, 存在 <span class="math inline">\(N\)</span> ，当 <span class="math inline">\(m, n \geqslant N\)</span> 时就满足 <span class="math inline">\(d\left(u_{m}, u_{n}\right)&lt;\varepsilon\)</span>.</p>
-<p><strong>1.2 收敛</strong></p>
-<p>设 <span class="math inline">\((X, d)\)</span> 为度量空间， <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为 <span class="math inline">\(\mathrm{X}\)</span> 中的数列，若存在 <span class="math inline">\(x \in X\)</span> 使得 <span class="math inline">\(\lim _{n \rightarrow \infty} d\left(x_{n}, x\right)=0\)</span> ，则 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 在 <span class="math inline">\(X\)</span> 中收敛, 称 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为收敛列, 称 <span class="math inline">\(x\)</span> 为 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 的极限, 记做 <span class="math inline">\(x_{n} \rightarrow x\)</span> 。</p>
-<p><span class="math inline">\(Remark:\)</span></p>
-<ol type="1">
-<li><p>收敛列比柯西列更严格。或者说收敛列一定是柯西列</p></li>
-<li><p>柯西列的直观理解是，一个序列的元素随着序数的增加而愈发靠近，并且最终趋于无限近</p></li>
-<li><p>收敛列一定有界，不仅如此，柯西列也一定有界</p></li>
-</ol>
-<h2 id="完备空间概念"><strong>2. 完备空间概念</strong></h2>
-<p>完备空间指这样性质的空间: 空间中的任何柯西序列都收敛于这个空间中</p>
-<p><span class="math inline">\(Remark:\)</span></p>
-<ol type="1">
-<li><p>完备空间是特殊的度量空间。因为按照定义完备空间需要&quot;柯西列收敛&quot;，而为了定义收敛，需要先定义先度量</p></li>
-<li><p><strong>欧几里得空间是完备空间</strong>。这给了它很好的性质，也即柯西列的收敛性</p></li>
-</ol>
-<p>证明如下:</p>
-<p>Let <span class="math inline">\(\left\langle\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)\right\rangle_{n \in \mathbb{N}}\)</span> be a Cauchy sequence in <span class="math inline">\(\mathbb{R}^{m}\)</span>.</p>
-<p>Let <span class="math inline">\(\epsilon&gt;0\)</span></p>
-<p>Then <span class="math inline">\(\frac{\epsilon}{m}&gt;0\)</span>.</p>
-<p>We have that Real Number Line is Complete Metric Space.</p>
-<p>Therefore:</p>
-<p><span class="math inline">\(\exists y_{1}, y_{2}, \ldots, y_{m} \in \mathbb{R}\)</span> and <span class="math inline">\(N_{1}, N_{2}, \ldots, N_{m} \in \mathbb{N}\)</span> (depending on <span class="math inline">\(\epsilon\)</span> ) such that:</p>
-<p><span class="math display">\[
-\forall k \in \mathbb{N}: 1 \leq k \leq m: \forall n_{k}&gt;N_{k}:\left\langle x_{n, k}-y_{k}\right\rangle&lt;\frac{\epsilon}{m}
-\]</span></p>
-<p>From Euclidean Space is Normed Space:</p>
-<p><span class="math display">\[
-\left\|\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)-\left(y_{1}, y_{2}, \ldots, y_{m}\right)\right\| \leq \sum_{k=1}^{m}\left|x_{n, k}-y_{k}\right|&lt;\epsilon
-\]</span></p>
-<p>Hence the Euclidean space is a complete metric space.</p>
-<ol start="3" type="1">
-<li><p>数集<span class="math inline">\(\mathbb{R}\)</span>、<span class="math inline">\(\mathbb{C}\)</span>都是完备的</p></li>
-<li><p>R和C的子集不一定完备。例如取<span class="math inline">\(X=(0,1)\)</span>。取一柯西列(元素可以无限靠近)<span class="math inline">\(x=1/n\)</span>，其极限0不在该空间中</p></li>
-<li><p>完备度量空间一定为闭集(结合上面例子记忆)</p></li>
-<li><p>完备度量空间的闭子集仍然完备</p></li>
-<li><p>“完备” 可以形象理解为空间中没有 “漏洞”．有限维空间都是完备的．可数维空间都是不完备的．例如有理数集和多项式组成的空间就是不完备的（柯西序列的极限可以是 e^x，但是 e^x并不属于该空间）</p></li>
-</ol>
-<h3 id="参考">参考</h3>
-<ul>
-<li><p><a href="https://zhuanlan.zhihu.com/p/85867887" target="_blank" rel="noopener">收敛性、完备性和紧性</a></p></li>
-<li><p><a href="https://proofwiki.org/wiki/Euclidean_Space_is_Complete_Metric_Space" target="_blank" rel="noopener">Euclidean Space is Complete Metric Space</a></p></li>
-</ul>
-]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>泛函分析</tag>
-        <tag>完备空间</tag>
-        <tag>柯西序列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>语音处理笔记--倒谱分析与倒谱系数</title>
-    <url>/2020/04/13/%E8%AF%AD%E9%9F%B3%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0--%E5%80%92%E8%B0%B1%E5%88%86%E6%9E%90%E4%B8%8E%E5%80%92%E8%B0%B1%E7%B3%BB%E6%95%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>本文是我学习时对资料的一个个人学习笔记，资料来自于<a href="https://blog.csdn.net/zouxy09/article/details/9156785/" target="_blank" rel="noopener">MEL原理</a></p>
-</blockquote>
-<a id="more"></a>
-<h3 id="声谱图">1. 声谱图</h3>
-<p>首先我们来弄明白比倒谱分析更易懂的声谱图</p>
-<p>我们处理的是语音信号，那么我们该如何去描述它呢？最简单的方法当然是录下来一段语音，然后把直接它放到语音分析软件里，这时软件就会给我们一个语音的时序图 <img src="https://img-blog.csdnimg.cn/20200316215054369.png" /> 很显然，横轴是时间，纵轴是声音的震幅。</p>
-<p>接下来我们要对这段波形进行傅里叶变换，<strong>但是我们不直接变换。在语音信号处理中我们一般先把语音切片成帧(frame)，对每帧进行傅里叶变换</strong>,我们来看图 <img src="https://img-blog.csdnimg.cn/20200316215605772.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-<blockquote>
-<p>这里，这段语音被分为很多帧，每帧语音都对应于一个频谱（通过短时FFT计算），频谱表示频率与能量的关系。在实际使用中，频谱图有三种，即线性振幅谱、对数振幅谱、自功率谱（对数振幅谱中各谱线的振幅都作了对数计算，所以其纵坐标的单位是dB（分贝）。这个变换的目的是使那些振幅较低的成分相对高振幅成分得以拉高，以便观察掩盖在低幅噪声中的周期信号）</p>
-</blockquote>
-<p>接下来，我们需要做的是分帧进行傅里叶变换后的谱图拼接起来，并且我们并不进行直接地拼接</p>
-<p>拼接方式描述如下 &gt; 我们先将其中一帧语音的频谱通过坐标表示出来，如上图左。现在我们将左边的频谱旋转90度。得到中间的图。然后把这些幅度映射到一个灰度级表示（也可以理解为将连续的幅度量化为256个量化值？），0表示黑，255表示白色。幅度值越大，相应的区域越黑。这样就得到了最右边的图。那为什么要这样呢？为的是增加时间这个维度，这样就可以显示一段语音而不是一帧语音的频谱，而且可以直观的看到静态和动态的信息。优点稍后呈上。</p>
-<blockquote>
-<p>这样我们会得到一个随着时间变化的频谱图，这个就是描述语音信号的spectrogram声谱图。</p>
-</blockquote>
-<figure>
-<img src="https://img-blog.csdnimg.cn/2020031622015033.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20200316220340324.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<p>也就是说，我们虽然对时域信号进行了傅里叶变换，但是由于我们对信号分帧再拼接，<strong>因此拼接的结果中横轴仍然是时间t</strong>，而<strong>纵轴则是频率</strong>。我们把这种图就叫做声谱图</p>
-<p>下图便是一个实例 <img src="https://img-blog.csdnimg.cn/20200316220601785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 明暗代表这这一段语音信号的这段频率的强弱，图中的蓝线代表着共振峰</p>
-<blockquote>
-<p>那我们为什么要在声谱图中表示语音呢？ 首先，音素（Phones）的属性可以更好的在这里面观察出来。另外，通过观察共振峰和它们的转变可以更好的识别声音。隐马尔科夫模型（Hidden Markov Models）就是隐含地对声谱图进行建模以达到好的识别性能。还有一个作用就是它可以直观的评估TTS系统（text to speech）的好坏，直接对比合成的语音和自然的语音声谱图的匹配度即可。</p>
-</blockquote>
-<h3 id="倒谱分析">2.倒谱分析</h3>
-<p>首先区分一下语谱图(Spectrogram)与语音的频谱图(Spectrum)。 我们上面所说的便是语谱图 而如果将一段语音直接进行傅里叶变换，得到的便是语音的频谱图</p>
-<p>接下来我们来看一个语音的频谱图 &gt;下面是一个语音的频谱图。峰值就表示语音的主要频率成分，我们把这些峰值称为共振峰（formants），而共振峰就是携带了声音的辨识属性（就是个人身份证一样）。所以它特别重要。用它就可以识别不同的声音。 <img src="https://img-blog.csdnimg.cn/20200316221502549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 既然它那么重要，那我们就是需要把它提取出来！我们要提取的不仅仅是共振峰的位置，还得提取它们转变的过程。所以我们提取的是频谱的包络（Spectral Envelope）。这包络就是一条连接这些共振峰点的平滑曲线。 <img src="https://img-blog.csdnimg.cn/20200316221746960.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 我们可以这么理解，将原始的频谱由两部分组成：包络和频谱的细节。这里用到的是对数频谱，所以单位是dB。那现在我们需要把这两部分分离开，这样我们就可以得到包络（Spectral Envelop）了。</p>
-<p><del>这里插一个个人的小想法：如果对一段语音的频谱，再进行一次傅里叶变换，也就是求Spectrum的Spectrum，接着进行低通滤波，会怎么样呢？会不会在控制好参数的情况下也能得到包络呢？哈哈有时间一定要来试试。</del></p>
-<p>说回正题：我们要注意，上图中纵轴的单位都是dB，也就是说这都是对数化了的谱。 现在我们的目标是要取出语音的频谱图中的包络与&quot;频谱的细节&quot;。怎么做？ 一个可行的方法是，对上图<strong>对数化</strong>了的频谱再进行一次傅里叶变换。进行这种变换之后，横轴自然就不是频率了，而是频率的频率。我们也可以叫它&quot;伪频率&quot;（pseudo-frequency），此时再对这个频率的频谱图取低频部分，它就与包络大致相<strong>对应</strong>(不是一样是对应)；相应的，而高频部分就大致与频率的细节相对应。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200316223703478.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 试想，我们如果对包络进行IFFT，那么得到的应该是一个低频部分;而对细节进行IFFT，那么得到的应该是高频部分。当然，进行IFFT后横轴并不是时间，因为进行IFFT的谱的纵轴是对数化了的，因此IFFT后不应该是时间t。</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20200316223746263.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<p>得到谱的包络有什么作用呢?<strong>谱的包络往往包含着说话的语义成分</strong>--它是声道所对应的部分。而精细的部分对应着人的声门。试想，每个人的声门（声带）都不一样，但是我们仍然能从不同的人的发声上听出相同的&quot;字&quot;，这是因为&quot;字&quot;的<strong>发声方法</strong>是我们在成长过程中学会的、是由声道控制的。 这样，我们就能进行ASR了。 &gt;自动语音识别技术(Automatic Speech Recognition)是一种将人的语音转换为文本的技术</p>
-<blockquote>
-<p>在实际中咱们已经知道log X[k]，所以我们可以得到了x[k]。那么由图可以知道，h[k]是x[k]的低频部分，那么我们将x[k]通过一个低通滤波器就可以得到h[k]了！没错，到这里咱们就可以将它们分离开了，得到了我们想要的h[k]，也就是频谱的包络。</p>
-</blockquote>
-<blockquote>
-<p>x[k]实际上就是倒谱Cepstrum（这个是一个新造出来的词，把频谱的单词spectrum的前面四个字母顺序倒过来就是倒谱的单词了）。而我们所关心的h[k]就是倒谱的低频部分。h[k]描述了频谱的包络，它在语音识别中被广泛用于描述特征。</p>
-</blockquote>
-<p>那现在总结下倒谱分析，它实际上是这样一个过程：</p>
-<p>语音--&gt;FFT--&gt;log--&gt;IFFT--&gt;倒谱 在FFT与IFFT之间加了一个取log而已</p>
-<blockquote>
-<p>1）将原语音信号经过傅里叶变换得到频谱：X[k]=H[k]E[k]； 只考虑幅度就是：|X[k] |=|H[k]||E[k] |； 2）我们在两边取对数：log||X[k] ||= log ||H[k] ||+ log ||E[k] ||。 3）再在两边取逆傅里叶变换得到：x[k]=h[k]+e[k]。</p>
-</blockquote>
-<blockquote>
-<p>这实际上有个专业的名字叫做同态信号处理。它的目的是将非线性问题转化为线性问题的处理方法。对应上面，原来的语音信号实际上是一个卷性信号（声道相当于一个线性时不变系统，声音的产生可以理解为一个激励通过这个系统），第一步通过卷积将其变成了乘性信号（时域的卷积相当于频域的乘积）。第二步通过取对数将乘性信号转化为加性信号，第三步进行逆变换，使其恢复为卷性信号。这时候，虽然前后均是时域序列，但它们所处的离散时域显然不同，所以后者称为倒谱频域。</p>
-</blockquote>
-<p>注: 1. <strong>倒谱中的横轴与时间t类似，而又不是真正的时间，也可以叫做它伪频率</strong> 2. 声音的产生可以理解为<strong>声门</strong>和<strong>声道</strong>的线性卷积 3. <strong>语音信号的倒谱经过低倒谱窗，获得声道响应信号，可分析得到共振峰参数； 语音信号的频谱高倒谱窗，经过声门激励信号，可分析得到基音参数</strong></p>
-<h3 id="mel频率">3.MEL频率</h3>
-<p>通过对人耳听力的研究发现，人耳对低频的声音更为敏感，对高频的声音相对不敏感。 比如说，对于一个500hz的声音和1000hz的声音相比，人的听力系统并不会感觉到后者的音调就是前者的两倍，实际的听力感觉是不到两倍。</p>
-<blockquote>
-<p>而Mel频率分析就是基于人类听觉感知实验的。实验观测发现人耳就像一个滤波器组一样，它只关注某些特定的频率分量（人的听觉对频率是有选择性的）。也就说，它只让某些频率的信号通过，而压根就直接无视它不想感知的某些频率信号。但是这些滤波器在频率坐标轴上却不是统一分布的，在低频区域有很多的滤波器，他们分布比较密集，但在高频区域，滤波器的数目就变得比较少，分布很稀疏。</p>
-</blockquote>
-<p>所谓的mel频率，就是根据人的听力，将线性的频率进行一个变换，使得在mel频率域中，“1000hz”听起来就是&quot;500hz&quot;的两倍音调一样</p>
-<p>将普通频率转化到Mel频率的公式是：<span class="math display">\[mel(f)=2595\times log_{10}(1+\frac{f}{700})\]</span></p>
-<p>由下图可以看到，它可以将不统一的频率转化为统一的频率，也就是统一的滤波器组。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200316225001422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 注意mel频率的单位是mel，是一种“伪频率” ### 4.MFCC与FBANK</p>
-<blockquote>
-<p>总结下提取MFCC特征的过程：（具体的数学过程网上太多了，这里就不想贴了） 1）先对语音进行预加重、分帧和加窗； 2）对每一个短时分析窗，通过FFT得到对应的频谱； 3）将上面的频谱通过Mel滤波器组得到Mel频谱； 4）在Mel频谱上面进行倒谱分析（取对数，做逆变换，实际逆变换一般是通过DCT离散余弦变换来实现，取DCT后的第2个到第13个系数作为MFCC系数），获得Mel频率倒谱系数MFCC，这个MFCC就是这帧语音的特征；</p>
-</blockquote>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20200316225137805.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<p>下面是一个更完整的图，前面增加了AD转换(采样与量化),后面增加了求两阶差分，暂时可以不管这两步。<img src="https://img-blog.csdnimg.cn/20200319143013615.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 对语音信号提取MFCC特征的过程包括--高频预加重，加哈明窗分帧，DFT变换并平方获得能量谱，通过20个MEL滤波器组，对数运算，DCT变换获得倒谱特征，再加上一阶和二阶动态特征</p>
-<p>在MEL滤波后，得到的便是FBANK参数</p>
-<p><img src="https://img-blog.csdnimg.cn/20200319164111354.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> ### 5.FBank Filter bank和MFCC的计算步骤基本一致，只是没有做IDFT而已（但是包括了求对数） 这里有一篇好例子<a href="https://zjuturtle.com/2020/03/06/fbank-mfcc/" target="_blank" rel="noopener">实例</a></p>
-<p>FBank与MFCC对比：</p>
-<p>1.计算量：MFCC是在FBank的基础上进行的，所以MFCC的计算量更大</p>
-<p>2.特征区分度：FBank特征相关性较高（相邻滤波器组有重叠），MFCC具有更好的判别度，这也是在大多数语音识别论文中用的是MFCC，而不是FBank的原因</p>
-<p>3.使用对角协方差矩阵的GMM由于忽略了不同特征维度的相关性，MFCC更适合用来做特征。</p>
-<p>4.DNN/CNN可以更好的利用这些相关性，使用fbank特征可以更多地降低WER。</p>
-<h3 id="mfcc与基本倒谱分析的对比">MFCC与基本倒谱分析的对比</h3>
-<p>mfcc是一个倒谱参数，它与倒谱分析有相似之处，区别在于 1.多了预加重(使得高频部分变得相对更平坦)</p>
-<p>2.FFT后取绝对值或者平方(<strong>模取平方平方对应着能量谱</strong>) 3.进行了mel滤波，也就是进行了一个频率的非线性变换，参考前面所述的公式 4.IFFT换成了DCT 5.它<strong>得到的是一个12维的向量</strong>，代表了声音的特征。实际上因为取得是<strong>前</strong>12维，因此更多地<strong>包含了语义（共振峰）参数</strong>,利用这个向量，我们就可以进行很多东西了</p>
-<p>在实际中使用的语音特征，往往是各种特征的组合。比如，常用的39维MFCC特征，其组成如下：</p>
-<blockquote>
-<p>12 MFCC feature 1 energy feature 12 delta MFCC features 12 double-delta MFCC features 1 delta energy feature 1 double-delta energy feature</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>语音处理</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>信号处理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>给博客添加音乐播放器</title>
     <url>/2020/08/30/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -886,12 +1098,12 @@ x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\r
 <p>例如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer <span class="string">"旅行者一号"</span> <span class="string">"合唱团"</span> <span class="string">"http://music.163.com/song/media/outer/url?id=490439632.mp3"</span>  <span class="string">"https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center"</span> %&#125;</span><br></pre></td></tr></table></figure></p>
 <p>效果如下</p>
 
-        <div id="aplayer-njqSbobE" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-tbjWEUIB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-njqSbobE"),
+            element: document.getElementById("aplayer-tbjWEUIB"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -923,12 +1135,12 @@ x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\r
 <p>例如这首歌的歌词就是这样:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayerlrc &quot;旅行者一号&quot; &quot;合唱团&quot; &quot;http:&#x2F;&#x2F;music.163.com&#x2F;song&#x2F;media&#x2F;outer&#x2F;url?id&#x3D;490439632.mp3&quot; %&#125;</span><br><span class="line">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音&#x2F;混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</span><br><span class="line">&#123;% endaplayerlrc %&#125;</span><br></pre></td></tr></table></figure>
 <p>效果如下:</p>
-<div id="aplayer-tRHwzQAH" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+<div id="aplayer-uRYiDLtk" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
 				<pre class="aplayer-lrc-content">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音/混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</pre>
 			</div>
 			<script>
 				var ap = new APlayer({
-					element: document.getElementById("aplayer-tRHwzQAH"),
+					element: document.getElementById("aplayer-uRYiDLtk"),
 					narrow: false,
 					autoplay: false,
 					showlrc: 2,
@@ -950,144 +1162,6 @@ x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\r
       <tags>
         <tag>音乐播放器</tag>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>语音处理笔记--高斯混合模型与最大期望算法</title>
-    <url>/2020/04/13/%E8%AF%AD%E9%9F%B3%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0--%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%9C%80%E5%A4%A7%E6%9C%9F%E6%9C%9B%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>本文内容是我在学习过程中对资料的一个个人总结与学习笔记。引用内容写在灰色的引用框中。如有错误欢迎指正</p>
-</blockquote>
-<a id="more"></a>
-<p>这篇文章的主题是高斯混合模型（GMM），GMM与最大期望（EM）方法有很大的联系，而在GMM的求解过程中使用了极大似然估计法</p>
-<hr />
-<h1 id="一极大似然估计">一、极大似然估计</h1>
-<p>我们先来复习一下极大似然估计法是怎么进行的,来看一个概率论课上的实例</p>
-<p><strong>设样本服从正态分布</strong><span class="math inline">\(N(\mu,\sigma^2)\)</span>，则似然函数为<span class="math display">\[L(\mu,\sigma^2)=\prod^{N}_{i=1}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span></p>
-<p>试估计参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值 其中<span class="math inline">\(x_{i}\)</span>是样本，也就是说这个函数<span class="math inline">\(L(\mu,\sigma^{2})\)</span>是各个样本的概率的积。</p>
-<p>我们需要做的是由似然函数<strong>估计</strong>出参数<span class="math inline">\(\mu\)</span>与<span class="math inline">\(\sigma^2\)</span>的值。之所以说是估计，是因为<strong>使用有限的样本不可能准确求出原本高斯分布的参数</strong>。 那么怎么由似然函数求值呢？ 1. 首先我们要对似然函数<strong>求对数</strong>，这是因为似然函数是各个事件发生的概率的积，当很多概率乘在一起时，会导致这个似然函数的值非常小，计算机由于精度的原因无法处理 2. <strong>对参数</strong>求导,再令导数为0。我们知道，这样求出的点是似然函数的极值点，而我们需要的是使得似然函数取得最大值时的参数值。这样这个极值点便<strong>很可能</strong>是我们要求的参数值 3. 求解上述似然方程 --- 求解过程如下 对似然函数取对数得到 <span class="math display">\[\ln L(\mu,\sigma^2)=\sum_{i=1}^N \ln\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_{i}-\mu)^2}{2\sigma^2}}\]</span> 化简得到<span class="math display">\[\ln L(\mu,\sigma^2) = -\frac{n}{2}\ln(2\pi)-\frac{n}{2}\ln(\sigma^2)-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_{i}-\mu)^2\]</span></p>
-<p>对参数求导得到 <span class="math display">\[ \left \{
-\begin{aligned}
-&amp; \frac{\partial \ln L(\mu,\sigma^2)}{\partial\mu}=\frac{1}{\sigma^2}\sum_{i = 1}^{n}(x_i-\mu) =0\\
-&amp;   \frac{\partial \ln L(\mu,\sigma^2)}{\partial\sigma}=-\frac{n}{2\sigma^2}+\frac{1}{2\sigma^4}\sum_{i=1}^n(x_i-\mu)^2
-\end{aligned}
-\right.\]</span> 联合求解得到 <span class="math display">\[ \left \{
-\begin{aligned}
-&amp; \hat{\mu}=\overline x = \frac{1}{n}\sum_{i=1}^N x_i   \\ 
-&amp; \hat\sigma^2=\frac{1}{n}\sum_{i=1}^N(x_i-\overline x)^2
-\end{aligned}
-\right.\]</span></p>
-<hr />
-<p>现在我们来概括一下，极大似然法分为如下几步 &gt; （1）写出似然函数； &gt; （2）对似然函数取对数，并整理 （3）求导数； （4）解似然方程。</p>
-<pre><code>    最大似然估计的特点：
-    1.比其他估计方法更加简单；
-    2.收敛性：无偏或者渐近无偏，当样本数目增加时，收敛性质会更好；
-    3.如果假设的类条件概率模型正确，则通常能获得较好的结果。但如果假设模型出现偏差，将导致非常差的估计结果。</code></pre>
-<p>一定要注意一点，我们在进行极大似然估计时，样本服从什么分布是我们假定的。 另外，极大似然估计方法也可以用一个简单的式子来概括: <span class="math display">\[θ=arg\max_θ∑_i \log P(x^{(i)};θ)\]</span> 也即<span class="math inline">\(\theta\)</span>为使得似然函数取最大值时对应的<span class="math inline">\(\theta\)</span>值</p>
-<h1 id="二gmm原理">二、GMM原理</h1>
-<p>首先我们来了解一下机器学习中的归纳偏执(bias) &gt;在机器学习中，一个学习算法也会有一个前提假设，这里被称作“归纳偏执 (bias)”（bias 这个英文词在机器学习和统计里还有其他许多的意思）。例如线性回归，目的是要找一个函数尽可能好地拟合给定的数据点，它的归纳偏执就是“满足要求的函数必须是线性函数”。一个没有归纳偏执的学习算法从某种意义上来说毫无用处，就像一个完全没有归纳能力的人一样，在第一次看到鱼的时候有人告诉他那是鱼，下次看到另一条鱼了，他并不知道那也是鱼，因为两条鱼总有一些地方不一样的，或者就算是同一条鱼，在河里不同的地方看到，或者只是看到的时间不一样，也会被他认为是不同的，因为他无法归纳，无法提取主要矛盾、忽略次要因素，只好要求所有的条件都完全一样──然而哲学家已经告诉过我们了：世界上不会有任何样东西是完全一样的，所以这个人即使是有无比强悍的记忆力，也绝学不到任何一点知识。 这个问题在机器学习中称作“过拟合 (Overfitting)”，例如前面的回归的问题，如果去掉“线性函数”这个归纳偏执，因为对于 N 个点，我们总是可以构造一个 N-1 次多项式函数，让它完美地穿过所有的这 N 个点，或者如果我用任何大于 N-1 次的多项式函数的话，我甚至可以构造出无穷多个满足条件的函数出来。如果假定特定领域里的问题所给定的数据个数总是有个上限的话，我可以取一个足够大的 N ，从而得到一个（或者无穷多个）“超级函数”，能够 fit 这个领域内所有的问题。然而这个（或者这无穷多个）“超级函数”有用吗？只要我们注意到学习的目的（通常）不是解释现有的事物，而是从中归纳出知识，并能应用到新的事物上，结果就显而易见了。 没有归纳偏执或者归纳偏执太宽泛会导致 Overfitting ，然而另一个极端──限制过大的归纳偏执也是有问题的：如果数据本身并不是线性的，强行用线性函数去做回归通常并不能得到好结果。难点正在于在这之间寻找一个平衡点。不过人在这里相对于（现在的）机器来说有一个很大的优势：人通常不会孤立地用某一个独立的系统和模型去处理问题，一个人每天都会从各个来源获取大量的信息，并且通过各种手段进行整合处理，归纳所得的所有知识最终得以统一地存储起来，并能有机地组合起来去解决特定的问题。这里的“有机”这个词很有意思，搞理论的人总能提出各种各样的模型，并且这些模型都有严格的理论基础保证能达到期望的目的，然而绝大多数模型都会有那么一些“参数”（例如 K-means 中的 k ），通常没有理论来说明参数取哪个值更好，而模型实际的效果却通常和参数是否取到最优值有很大的关系，我觉得，在这里“有机”不妨看作是所有模型的参数已经自动地取到了最优值。另外，虽然进展不大，但是人们也一直都期望在计算机领域也建立起一个统一的知识系统（例如语意网就是这样一个尝试）。</p>
-<p>GMM就是这样的一种归纳偏执:我们假定样本服从一种高斯分布，不过这种高斯分布与&quot;单一的&quot;高斯分布不一样，它由若干个高斯分布混合起来而形成。</p>
-<blockquote>
-<p>Gaussian Mixture Model (GMM)。 GMM 和 k-means 很像，不过 GMM 是学习出一些概率密度函数来（所以 GMM 除了用在 clustering 上之外，还经常被用于 density estimation ），简单地说，k-means 的结果是每个数据点被 assign 到其中某一个 cluster 了，而 GMM 则给出这些数据点被 assign 到每个 cluster 的概率，又称作 soft assignment 。</p>
-</blockquote>
-<blockquote>
-<p>每个 GMM 由 K 个 Gaussian 分布组成，每个 Gaussian 称为一个“Component”，这些 Component 线性加成在一起就组成了 GMM 的概率密度函数：</p>
-</blockquote>
-<p><span class="math display">\[\displaystyle
-\begin{aligned}
-p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \\
-     &amp; = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)
-\end{aligned}\]</span> &gt;根据上面的式子，如果我们要从 GMM 的分布中随机地取一个点的话，实际上可以分为两步：首先随机地在这 K 个 Component 之中选一个，每个 Component 被选中的概率实际上就是它的系数 _k ，选中了 Component 之后，再单独地考虑从这个 Component 的分布中选取一个点就可以了──这里已经回到了普通的 Gaussian 分布，转化为了已知的问题。</p>
-<p>高斯混合模型解决了一个这样的问题:如果一个样本集的分布有明显的聚类特征，那么我们可以利用GMM来近似这种分布。利用GMM，不仅完成了对样本集的分类，还得到了它的一个概率密度函数。 <strong>利用概率密度函数，我们很容易就可以得到所谓<code>似然函数</code>，再对它进行求解，便可以得到高斯混合模型的参数</strong>。 显然，它的似然函数是<span class="math display">\[L= \prod_{i=1}^N \sum_{k=1}^K \pi_k \mathcal{N}(x ; \mu_k, \Sigma_k)\]</span> log-likelihood function为: <span class="math display">\[L_{log}=\displaystyle
-\sum_{i=1}^N \log \left\{\sum_{k=1}^K \pi_k \mathcal{N}(x_i ; \mu_k, \Sigma_k)\right\}
-\]</span> 然后求解这个似然函数即可，求解过程是一个纯技术问题，我们暂时把它忽略。 总之，求解的结果是一个<span class="math inline">\(N\times K\)</span>的矩阵，这个矩阵的每一行代表了样本属于各个component的概率,对于每一个 <span class="math inline">\(x_i\)</span> ，我们只要取该矩阵第 i 行中最大的那个概率值所对应的那个 Component 为 <span class="math inline">\(x_i\)</span> 所属的 cluster 就可以实现一个完整的聚类方法了。 &gt;从上面的分析中我们可以看到 GMM 和 K-means 的迭代求解法其实非常相似，因此也有和 K-means 同样的问题──并不能保证总是能取到全局最优，如果运气比较差，取到不好的初始值，就有可能得到很差的结果。对于 K-means 的情况，我们通常是重复一定次数然后取最好的结果，不过 GMM 每一次迭代的计算量比 K-means 要大许多，一个更流行的做法是先用 K-means （已经重复并取最优值了）得到一个粗略的结果，然后将其作为初值（只要将 K-means 所得的 centroids 传入 gmm 函数即可），再用 GMM 进行细致迭代。</p>
-<blockquote>
-<p>如我们最开始所讨论的，GMM 所得的结果（Px）不仅仅是数据点的 label ，而包含了数据点标记为每个 label 的概率，很多时候这实际上是非常有用的信息</p>
-</blockquote>
-<h1 id="三丶em算法">三丶EM算法</h1>
-<p>我们可以看到，K-means与GMM实际上是有几分相似的，并且它们都可以追溯到EM算法。 <strong>EM算法是一种利用似然函数来获取模型参数的算法。</strong> 首先我们来复习两个概念</p>
-<h2 id="边缘分布">边缘分布</h2>
-<p>摘取百度百科对边缘分布的解释 &gt;边缘分布（Marginal Distribution）指在概率论和统计学的多维随机变量中，只包含其中部分变量的概率分布。</p>
-<p>假设有一个和两个变量相关的概率分布： <span class="math display">\[P(x|y)\]</span> 关于其中一个特定变量的边缘分布则为给定其他变量的条件概率分布：(增加了一个y和求和符号) <span class="math display">\[P(x)=\sum_{y}P(x,y)=\sum_yP(x|y)P(y)\]</span></p>
-<blockquote>
-<p>在这个边缘分布中，我们得到只关于一个变量的概率分布，而不再考虑另一变量的影响，<strong>实际上进行了降维操作</strong>。在实际应用中，例如人工神经网络的神经元互相关联，在计算它们各自的参数的时候，就会使用边缘分布计算得到某一特定神经元（变量）的值。</p>
-</blockquote>
-<h2 id="jensen不等式">Jensen不等式</h2>
-<p>定理:X为一随机变量，如果<span class="math inline">\(f\)</span>是凸函数，那么有<span class="math display">\[E[f(X)]\ge f[E(X)]\]</span></p>
-<h2 id="推导">推导</h2>
-<h3 id="问题引入">问题引入</h3>
-<p>现在我们有一组观测样本<span class="math display">\[\vec x=(x_1,x_2...x_m)\]</span> 在确定了归纳偏执之后，我们希望获得模型的参数，那么有 <span class="math display">\[θ=arg\max_θ∑\log P(x_i;θ)\]</span> 但是很不幸，<strong>我们的观测数据实际上还有隐藏的观测值数据</strong> <span class="math display">\[\vec z=(z_1,z_2,...z_i)\]</span> 那么我们利用边缘分布的定义，极大化模型分布的对数似然函数如下： <span class="math display">\[θ=arg\max_θ∑logP(x_i;θ)=arg\max_θ∑log∑_{z_i}P(x_i，z_i;θ)\]</span> <strong>这个式子怎么求解呢？所需要用到的方法就是EM算法了</strong></p>
-<h3 id="求解过程">求解过程</h3>
-<p>概括如下 &gt;EM是一个在已知部分相关变量的情况下，估计未知变量的迭代技术。EM的算法流程如下： 初始化分布参数 重复直到收敛： E步骤：根据参数的假设值，给出未知变量的期望估计，应用于缺失值。 M步骤：根据未知变量的估计值，给出当前的参数的极大似然估计。</p>
-<blockquote>
-<p>现在我们总结下EM算法的流程。 　　　　输入：观察数据x=(x(1),x(2),...x(m))，联合分布p(x,z;θ), 条件分布p(z|x;θ), 最大迭代次数J。 　　　　1) 随机初始化模型参数θ的初值θ0。 　　　　2） for j from 1 to J开始EM算法迭代： 　　　　　　a) E步：计算联合分布的条件概率期望： <span class="math display">\[Qi(z(i))=P(z(i)|x(i)，θj))\]</span> <span class="math display">\[L(θ,θ_j)=∑_{i=1}^m∑_{z_i}Q_i(z_i)logP(x_i，z_i;θ)\]</span> 　　　　　　b) M步：极大化L(θ,θj),得到θj+1: <span class="math display">\[θ_{j+1}=arg\max_θL(θ,θ_j)\]</span> 　　　　　　c) 如果θj+1已收敛，则算法结束。否则继续回到步骤a)进行E步迭代。 　　　　输出：模型参数θ。 ### 证明 关于证明我就不ctrl+c/ctrl+v了，直接传送门~ <a href="https://wenku.baidu.com/view/3396bb4d6294dd88d0d26bee.html" target="_blank" rel="noopener">传送门</a> # 参考资料 * <a href="https://baike.baidu.com/item/%E8%BE%B9%E7%BC%98%E5%88%86%E5%B8%83" target="_blank" rel="noopener">边缘分布百度百科</a> * <a href="https://blog.csdn.net/zhihua_oba/article/details/73776553" target="_blank" rel="noopener">EM介绍</a> * <a href="https://www.cnblogs.com/jerrylead/archive/2011/04/06/2006936.html" target="_blank" rel="noopener">EM详细推导</a> * <a href="https://wenku.baidu.com/view/3396bb4d6294dd88d0d26bee.html" target="_blank" rel="noopener">EM文库</a> * <a href="http://blog.pluskid.org/?p=39" target="_blank" rel="noopener">GMM原理</a> * <a href="https://blog.csdn.net/zengxiantao1994/article/details/72787849" target="_blank" rel="noopener">极大似然估计介绍</a></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>总结</tag>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>闹钟电视</title>
-    <url>/2021/05/14/%E9%97%B9%E9%92%9F%E7%94%B5%E8%A7%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-oxZSoLJC" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-oxZSoLJC"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "もう少しだけ",
-              author: "Yoasobi",
-              url: "http://music.163.com/song/media/outer/url?id=1840862630.mp3",
-              pic: "https://img-blog.csdnimg.cn/20210514143129720.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<a id="more"></a>
-<p><img src="https://img.3dmgame.com/uploads/images/news/20190830/1567146340_769830.gif" /></p>
-]]></content>
-      <categories>
-        <category>歌曲</category>
-      </categories>
-      <tags>
-        <tag>歌曲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语在高考中的权重可以调整吗</title>
-    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
-</blockquote>
-<a id="more"></a>
-<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
-<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
-<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
-<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
-<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
-<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
-<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
-<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
-<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平很不咋地，也根本无法直接阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。但只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
-<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>知乎</tag>
-        <tag>高考</tag>
-        <tag>英语</tag>
       </tags>
   </entry>
 </search>
