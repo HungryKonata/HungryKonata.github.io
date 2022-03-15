@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="文本检测(Text Detection)是计算机视觉领域的经典问题，该技术旨在寻求一种可靠方法作为文本识别技术的前端，是目标检测(Object Detection)领域的一个子问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文本检测(Text Detection)综述">
+<meta property="og:url" content="http://yoursite.com/2022/03/15/%E6%96%87%E6%9C%AC%E6%A3%80%E6%B5%8B(Text%20Detection)%E7%BB%BC%E8%BF%B0/index.html">
+<meta property="og:site_name" content="konata此方">
+<meta property="og:description" content="文本检测(Text Detection)是计算机视觉领域的经典问题，该技术旨在寻求一种可靠方法作为文本识别技术的前端，是目标检测(Object Detection)领域的一个子问题">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/47416d12da4e4b1ba4f6355fa14fed3d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/31c7fa05dd1e44398bfcaae46f0b7559.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/6d076851bfb14110892816c6622fde25.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/266852210123452a8ad3b85eb69eb2ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/3e360a42011a4ab28fb289df7768adb3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/409de0f4a1744634872be145c566fe93.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/66c85a5e5fb044b3a505bfeb11e37f1b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/f46ffbfb3cf14c89b7c2995cafe9a607.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_14,color_FFFFFF,t_70,g_se,x_16#pic_center">
+<meta property="article:published_time" content="2022-03-15T09:25:44.385Z">
+<meta property="article:modified_time" content="2022-03-15T09:27:48.022Z">
+<meta property="article:author" content="konata">
+<meta property="article:tag" content="综述">
+<meta property="article:tag" content="计算机视觉">
+<meta property="article:tag" content="目标检测">
+<meta property="article:tag" content="文本检测">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/47416d12da4e4b1ba4f6355fa14fed3d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center">
+
+<link rel="canonical" href="http://yoursite.com/2022/03/15/%E6%96%87%E6%9C%AC%E6%A3%80%E6%B5%8B(Text%20Detection)%E7%BB%BC%E8%BF%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>文本检测(Text Detection)综述 | konata此方</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">konata此方</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">wish you happy everyday</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/15/%E6%96%87%E6%9C%AC%E6%A3%80%E6%B5%8B(Text%20Detection)%E7%BB%BC%E8%BF%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="konata">
+      <meta itemprop="description" content="做一个有理想的普通人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="konata此方">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          文本检测(Text Detection)综述
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-15 17:25:44 / 修改时间：17:27:48" itemprop="dateCreated datePublished" datetime="2022-03-15T17:25:44+08:00">2022-03-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" itemprop="url" rel="index"><span itemprop="name">人工智能</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/15/%E6%96%87%E6%9C%AC%E6%A3%80%E6%B5%8B(Text%20Detection)%E7%BB%BC%E8%BF%B0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/15/%E6%96%87%E6%9C%AC%E6%A3%80%E6%B5%8B(Text%20Detection)%E7%BB%BC%E8%BF%B0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>文本检测</strong>(Text Detection)是计算机视觉领域的经典问题，该技术旨在寻求一种可靠方法作为文本识别技术的前端，是<strong>目标检测</strong>(Object Detection)领域的一个子问题</p>
+<a id="more"></a>
+<h1 id="检测detection在计算机视觉中的位置">检测(Detection)在计算机视觉中的位置</h1>
+<p>计算机视觉有四大基本任务: <strong>分割(classification)、定位(检测localization、detection)、语义分割(Semantic segmentation)、实例分割(Instance segmentation)</strong> <img src="https://img-blog.csdnimg.cn/47416d12da4e4b1ba4f6355fa14fed3d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /></p>
+<blockquote>
+<p>这四个任务需要对图像的理解逐步深入。给定一张输入图像，图像<strong>分类</strong>任务旨在判断该图像所属类别。<strong>定位</strong>是在图像分类的基础上，进一步判断图像中的目标具体在图像的什么位置，通常是以包围盒的(bounding box)形式。在<a href="https://www.zhihu.com/search?q=目标定位&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A304469552%7D" target="_blank" rel="noopener">目标定位</a>中，通常只有一个或固定数目的目标，而目标<strong>检测</strong>更一般化，其图像中出现的目标种类和数目都不定。<strong>语义分割</strong>是目标检测更进阶的任务，目标检测只需要框出每个目标的包围盒，语义分割需要进一步判断图像中哪些像素属于哪个目标。但是，语义分割不区分属于相同类别的不同实例。例如，当图像中有多只猫时，语义分割会将两只猫整体的所有像素预测为“猫”这个类别。与此不同的是，<strong>实例分割</strong>需要区分出哪些像素属于第一只猫、哪些像素属于第二只猫。此外，目标<strong>跟踪</strong>通常是用于视频数据，和目标检测有密切的联系，同时要利用帧之间的时序关系。</p>
+<p>作者：张皓 链接：https://www.zhihu.com/question/36500536/answer/304469552 来源：知乎</p>
+</blockquote>
+<figure>
+<img src="https://img-blog.csdnimg.cn/31c7fa05dd1e44398bfcaae46f0b7559.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>上图中，从上到下逐渐复杂</p>
+<p>复杂程度: 分割(同分类)--&gt;定位(一个或固定数目的目标)--&gt;检测(和定位其实很类似，也是用一个bounding box)--&gt;语义分割(像素级的分割)--&gt;实例分割(在前者的基础上区分出同类的不同实例)</p>
+<h1 id="检测任务">检测任务</h1>
+<h3 id="经典数据集">经典数据集</h3>
+<p><strong>PASCAL VOC</strong> 包含20个类别。通常是用VOC07和VOC12的trainval并集作为训练，用VOC07的测试集作为测试。</p>
+<p><strong>MS COCO</strong> COCO比VOC更困难。COCO包含80k训练图像、40k验证图像、和20k没有公开标记的测试图像(test-dev)，80个类别，平均每张图7.2个目标。通常是用80k训练和35k验证图像的并集作为训练，其余5k图像作为验证，20k测试图像用于线上测试。<strong>区别于ImageNet常用于做分类，COCO用来做检测</strong>，因为COCO没label</p>
+<h3 id="评价指标">评价指标</h3>
+<p><strong>mAP (mean average precision)</strong> 目标检测中的常用评价指标，计算方法如下。当预测的包围盒和真实包围盒的交并比大于某一阈值(通常为0.5)，则认为该预测正确。对每个类别，我们画出它的查准率-查全率(precision-recall)曲线，平均准确率是曲线下的面积。之后再对所有类别的平均准确率求平均，即可得到mAP，其取值为[0, 100%]。</p>
+<p><strong>交并比(intersection over union, IoU)</strong> 算法预测的包围盒和真实包围盒交集的面积除以这两个包围盒并集的面积，取值为[0, 1]。交并比度量了算法预测的包围盒和真实包围盒的接近程度，交并比越大，两个包围盒的重叠程度越高。</p>
+<h3 id="发展历史">发展历史</h3>
+<figure>
+<img src="https://img-blog.csdnimg.cn/6d076851bfb14110892816c6622fde25.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>经典的LeNet、AlexNet、VGG、GoogleNet用来做分类，RCNN、Fast RCNN、Faster RCNN、YOLO、SSD则用来做检测</p>
+<ul>
+<li><p>单阶段目标检测方法是指只需一次提取特征即可实现目标检测，其速度相比多阶段的算法快，一般精度稍微低一些</p></li>
+<li><p><strong>two-stage检测算法</strong>将检测问题划分为两个阶段，首先产生候选区域（region proposals），然后对候选区域分类（一般还需要对位置精修），这类算法的典型代表是基于region proposal的R-CNN系算法，如R-CNN，SPPNet ，Fast R-CNN，Faster R-CNN，FPN，R-FCN等</p></li>
+</ul>
+<h1 id="几个文本检测的较新方法">几个文本检测的较新方法</h1>
+<h3 id="fots2018cvprfast-oriented-text-spotting-with-a-unified-network">FOTS(【2018CVPR】Fast Oriented Text Spotting with a Unified Network)</h3>
+<p>这篇论文是一个<strong>集合了文本检测跟文字识别两部分的一个统一的端到端的框架，可同时对图像中的文字进行检测跟识别。</strong></p>
+<p>之前的大部分方法都是将检测跟识别当做两个独立的任务去做，先检测，再识别。这篇论文提出的框架处处是可微的，所以可以对其进行端到端的训练，结果表明，<strong>该网络无需复杂的后处理和高参数整定，易于训练，并且在保证精度的前提下大大提高速度</strong></p>
+<p>如下图所示</p>
+<p><img src="https://img-blog.csdnimg.cn/266852210123452a8ad3b85eb69eb2ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /> FOTS作为端到端的文本识别，使用了44.2ms; 而用某种其他方法，先检测再识别，两个步骤都分别用了四十多ms</p>
+<h3 id="textsnake2018eccv-textsnake-a-flexible-representation-for-detecting-text-of-arbitrary-shapes">TextSnake(【2018ECCV】 TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes)</h3>
+<figure>
+<img src="https://img-blog.csdnimg.cn/3e360a42011a4ab28fb289df7768adb3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>对于一般的文本检测，往往用一个矩形框框出内容，而TextSnake采用弯曲的<strong>凸N边形</strong>框出内容并复原为矩形，这样使得文本检测更加有效</p>
+<p>网络结构</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/409de0f4a1744634872be145c566fe93.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<h3 id="contournet2020-cvprcontournet-taking-a-further-step-toward-accurate-arbitrary-shaped-scene-text-detection">ContourNet(【2020 CVPR】ContourNet: Taking a Further Step toward Accurate Arbitrary-shaped Scene Text Detection)</h3>
+<p>文章设计了文本水平与竖直方向的轮廓检测方法，对尺度(形状)变化大的文本检测任务提高了精确度</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/66c85a5e5fb044b3a505bfeb11e37f1b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>上半部分是用简单BoundingBox做的检测</p>
+<p>下半部分用水平与竖直两方向进行检测并融合，也即文章目的</p>
+<h3 id="abcnet2020-cvpr-oralabcnet-real-time-scene-text-spotting-with-adaptive-bezier-curve-network">ABCNet(【2020 CVPR Oral】ABCNet: Real-time Scene Text Spotting with Adaptive Bezier-Curve Network)</h3>
+<p>Adaptive-Bezier Curve Network</p>
+<p>主要部分是通过<strong>参数化的贝塞尔曲线</strong>作为线框来检测文本，提高了检测的有效性，并且速度较快，达到了实时性的要求</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/f46ffbfb3cf14c89b7c2995cafe9a607.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_14,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>如上图所示，对一个弯曲形的文字，使用Bezier曲线来对齐(所谓BezierAlign)，并拉成一个平的，从而有了更好的效果</p>
+<h1 id="参考">参考</h1>
+<ul>
+<li><a href="https://www.zhihu.com/question/36500536/answer/304469552?utm_source=qq&amp;utm_medium=social&amp;utm_oi=602621611652943872" target="_blank" rel="noopener">计算机视觉中各任务的区别--知乎-张皓</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/31727402" target="_blank" rel="noopener">计算机视觉中的四大任务</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/367069340" target="_blank" rel="noopener">单阶段、两阶段检测</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/85545272" target="_blank" rel="noopener">文本检测综述</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BB%BC%E8%BF%B0/" rel="tag"># 综述</a>
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" rel="tag"># 计算机视觉</a>
+              <a href="/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/" rel="tag"># 目标检测</a>
+              <a href="/tags/%E6%96%87%E6%9C%AC%E6%A3%80%E6%B5%8B/" rel="tag"># 文本检测</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/02/25/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E6%80%BB%E7%BB%93%E5%BD%92%E6%A1%A3/" rel="prev" title="随机过程总结归档">
+      <i class="fa fa-chevron-left"></i> 随机过程总结归档
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#检测detection在计算机视觉中的位置"><span class="nav-number">1.</span> <span class="nav-text">检测(Detection)在计算机视觉中的位置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检测任务"><span class="nav-number">2.</span> <span class="nav-text">检测任务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#经典数据集"><span class="nav-number">2.0.1.</span> <span class="nav-text">经典数据集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#评价指标"><span class="nav-number">2.0.2.</span> <span class="nav-text">评价指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发展历史"><span class="nav-number">2.0.3.</span> <span class="nav-text">发展历史</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#几个文本检测的较新方法"><span class="nav-number">3.</span> <span class="nav-text">几个文本检测的较新方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fots2018cvprfast-oriented-text-spotting-with-a-unified-network"><span class="nav-number">3.0.1.</span> <span class="nav-text">FOTS(【2018CVPR】Fast Oriented Text Spotting with a Unified Network)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#textsnake2018eccv-textsnake-a-flexible-representation-for-detecting-text-of-arbitrary-shapes"><span class="nav-number">3.0.2.</span> <span class="nav-text">TextSnake(【2018ECCV】 TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#contournet2020-cvprcontournet-taking-a-further-step-toward-accurate-arbitrary-shaped-scene-text-detection"><span class="nav-number">3.0.3.</span> <span class="nav-text">ContourNet(【2020 CVPR】ContourNet: Taking a Further Step toward Accurate Arbitrary-shaped Scene Text Detection)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#abcnet2020-cvpr-oralabcnet-real-time-scene-text-spotting-with-adaptive-bezier-curve-network"><span class="nav-number">3.0.4.</span> <span class="nav-text">ABCNet(【2020 CVPR Oral】ABCNet: Real-time Scene Text Spotting with Adaptive Bezier-Curve Network)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">konata</p>
+  <div class="site-description" itemprop="description">做一个有理想的普通人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HungryKonata" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HungryKonata" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/plastic-memory" title="Zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;plastic-memory" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i>Zhihu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_42138454" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_42138454" rel="noopener" target="_blank"><i class="fab fa-CSDN fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">konata</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'dty42XsTsHqdJgqPF1O0A9gN-gzGzoHsz',
+      appKey     : 'SPMb6AXN1fjAJBFrBUSu7Gq0',
+      placeholder: "邮箱和网址非必填，填上昵称就可以发表评论啦",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
