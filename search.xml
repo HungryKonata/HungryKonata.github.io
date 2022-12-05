@@ -7,116 +7,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>我喜欢</title>
-    <url>/2020/05/06/%E6%88%91%E5%96%9C%E6%AC%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>--《what I adore》 合唱</p>
-</blockquote>
-<a id="more"></a>
-
-        <div id="aplayer-WuQXWWId" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-WuQXWWId"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "我喜欢",
-              author: "金承志",
-              url: "http://music.163.com/song/media/outer/url?id=464647435.mp3",
-              pic: "https://img-blog.csdnimg.cn/20200831131615443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<blockquote>
-<p>我喜欢 无尽田野上奔跑的麋鹿</p>
-<p>我喜欢 外婆门前的榕树</p>
-<p>我喜欢母亲的便当</p>
-<p>我喜欢父亲的胡渣</p>
-<p>我喜欢八月的夜晚还在营业的游乐场</p>
-<p>我喜欢放学的铃铛</p>
-<p>我喜欢停电的夜晚</p>
-<p>点一对蜡烛 在幽静的玄关</p>
-<p>我喜欢 城市尽头那远远的青山</p>
-<p>我喜欢 热气球飞上西边的天空</p>
-<p>我喜欢 清晨的石板路</p>
-<p>雾腾腾的早餐店 阿公的桂花糕</p>
-<p>我喜欢 每一朵暮云 每一株绿树</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200506214619877.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ubuntu20.04换源与中文输入法+chrome+LinuxQQ的安装</title>
-    <url>/2020/06/25/ubuntu20.04%E6%8D%A2%E6%BA%90%E4%B8%8E%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95+chrome+LinuxQQ%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>安装了最新的ubuntu20.04，赶紧来配置一下吧</p>
-<a id="more"></a>
-<h3 id="换源">1. 换源</h3>
-<p>在gnome中不需要手动操作文本进行换源，比全命令行方便很多</p>
-<p>点击左下角的<code>show applications</code>按钮,找到<code>Software＆Updates</code>，点进去</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20200625142754297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="设置页面" /><figcaption>设置页面</figcaption>
-</figure>
-<p>在其中点击<code>Download from</code>按键，下拉菜单中点击<code>other</code>，然后在其中找到国内你喜欢的源就可以了。推荐使用阿里镜像(我觉得比其他源下载更快</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20200625143227790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="选择镜像站" /><figcaption>选择镜像站</figcaption>
-</figure>
-<p>保存退出即可</p>
-<h3 id="chrome的安装">2. chrome的安装</h3>
-<p>ubuntu并不自带chrome，需要自行安装</p>
-<p>可以通过以下命令下载安装包</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</span><br></pre></td></tr></table></figure>
-<p>当然也可以进入官网下载(在ubuntu的火狐浏览器上打开官网，这样才默认下载linux版安装包)</p>
-<p>下载完成后，找到安装包所在文件夹，右键点击<code>Open in Terminal</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install ./google-chrome-stable_current_amd64.deb</span><br></pre></td></tr></table></figure>
-<p>在左下角的<code>Show Applications</code>中打开chrome即可 <img src="https://img-blog.csdnimg.cn/20200625151902101.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-<h3 id="中文输入法-fcitx">3. 中文输入法 &quot;fcitx&quot;</h3>
-<p>ubuntu20.04暂不支持搜狗输入法，所以使用fcitx（Fcitx[ˈfaɪtɪks]是 (Free Chinese Input Toy for X) 的英文缩写，由谷歌中国开发） 首先安装fctix，在终端中输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install fcitx-googlepinyin</span><br></pre></td></tr></table></figure>
-<p>如图点击language support进行配置 <img src="https://img-blog.csdnimg.cn/20200625155744224.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 初次打开时它会提示安装一堆东西，直接确认安装即可</p>
-<p>在下方选择fcitx <img src="https://img-blog.csdnimg.cn/2020062516002936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 接着重启电脑，可以看到右上角多了一个小键盘按键，点击config <img src="https://img-blog.csdnimg.cn/20200625160329592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 点击左下角的小加号，进入到<code>Add inpt method</code>页面，然后取消左下角的<code>Only Show current Language</code>勾选，在搜索框搜索pinyin，选择<code>Google pinyin</code>点击ok即可。</p>
-<blockquote>
-<p>==<strong>注意是<code>Google pinyin</code>，不是我下图中选中的这个。图中因为我已经安装好了<code>Google pinyin</code>，所以没有显示出来</strong>==。<del>当然如果想要安装这个也是可以的</del></p>
-</blockquote>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20200625161111964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<p>保存好后关闭窗口，然后就可以输入中文了。切换输入法的快捷键是<code>ctrl+space</code>，也可以手动点击右上角的小键盘标志进行设置</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20200625161903732.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<h3 id="qq-for-linux安装">4.QQ for linux安装</h3>
-<p>首先进入QQ官网下载安装包,网站为<code>https://im.qq.com/linuxqq/download.html</code> 可以看到支持的版本非常多 <img src="https://img-blog.csdnimg.cn/20200625170451981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 根据处理器的架构进行选择下载 我下载的是<code>x64的shell版本</code> <img src="https://img-blog.csdnimg.cn/20200625170611711.png" alt="在这里插入图片描述" /> 这里直接用命令<code>sudo ./linuxqq_2.0.0-b2-1082_x86_64.sh</code>进行安装可能会产生如下报错 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo: ./linuxqq_2.0.0-b2-1082_x86_64.sh: <span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure> 通过如下面的方法进行解决 找到安装包，右键点击属性</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20200625170708252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<p>勾选上如下内容</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/20200625170739124.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<p>保存好后关闭窗口，在本地打开终端 输入命令(根据版本的不同可能要进行适当的改变) <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo ./linuxqq_2.0.0-b2-1082_x86_64.sh</span><br></pre></td></tr></table></figure> 等待安装完成即可，在应用中找到QQ，然后就可以登陆啦 <img src="https://img-blog.csdnimg.cn/20200625171124316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-]]></content>
-      <categories>
-        <category>ubuntu</category>
-      </categories>
-      <tags>
-        <tag>配环境</tag>
-        <tag>ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《置身事内》阅读总结</title>
     <url>/2022/12/05/%E3%80%8A%E7%BD%AE%E8%BA%AB%E4%BA%8B%E5%86%85%E3%80%8B%E9%98%85%E8%AF%BB%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>一本有关中国经济发展的故事</p>
@@ -135,7 +25,7 @@
 <ul>
 <li>介绍了94税改及其影响</li>
 </ul>
-<p>八十年代中国经济的主旋律是“财政包干”（交完中央的，剩下自己的）。这样的结果就是到了1994年，地方财政收入已经占比过高，中央财政收入占比过低（20%出头）</p>
+<p>计划经济时代中国的财税体系是“统收统支”，到了八十年代中国经济的主旋律则是“财政包干”（交完中央的，剩下自己的）。这样的结果就是到了1994年，地方财政收入已经占比过高，中央财政收入占比过低（20%出头）</p>
 <p>于是在94年分税制改革中，新出现了地税局，从而有了地税和国税两套系统(注意2018年又重新合并了)。在这次改革中，把税收分为了中央税、地税、央地共享税，从而拉高了中央税收占比。这套税改的缺点是出现了两套税收人马，人员比较冗余。</p>
 <p>在94税改以前，增值税是最重要的地方税；而在94年以后，增值税成为了央地共享税。为了解决地方税收过少，<strong>中央也建立了税收返还制度(这是一种妥协制度，有两套中央向地方给税收的机制--中央转移支付和税收返还。税收返还金额相比中央转移支付数额较小</strong>，见<a href="http://yss.mof.gov.cn/2018zyys/201804/t20180403_2859259.htm" target="_blank" rel="noopener">统计链接</a></p>
 <p>书中第56页有一句印象很深的金句：<strong>成功的政策背后是成功的协商和妥协，而不是机械的命令与执行，所以理解利益冲突，理解协调和解决机制，是理解政策的基础</strong></p>
@@ -224,6 +114,64 @@
       </tags>
   </entry>
   <entry>
+    <title>ubuntu20.04换源与中文输入法+chrome+LinuxQQ的安装</title>
+    <url>/2020/06/25/ubuntu20.04%E6%8D%A2%E6%BA%90%E4%B8%8E%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95+chrome+LinuxQQ%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>安装了最新的ubuntu20.04，赶紧来配置一下吧</p>
+<a id="more"></a>
+<h3 id="换源">1. 换源</h3>
+<p>在gnome中不需要手动操作文本进行换源，比全命令行方便很多</p>
+<p>点击左下角的<code>show applications</code>按钮,找到<code>Software＆Updates</code>，点进去</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20200625142754297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="设置页面" /><figcaption>设置页面</figcaption>
+</figure>
+<p>在其中点击<code>Download from</code>按键，下拉菜单中点击<code>other</code>，然后在其中找到国内你喜欢的源就可以了。推荐使用阿里镜像(我觉得比其他源下载更快</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20200625143227790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="选择镜像站" /><figcaption>选择镜像站</figcaption>
+</figure>
+<p>保存退出即可</p>
+<h3 id="chrome的安装">2. chrome的安装</h3>
+<p>ubuntu并不自带chrome，需要自行安装</p>
+<p>可以通过以下命令下载安装包</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</span><br></pre></td></tr></table></figure>
+<p>当然也可以进入官网下载(在ubuntu的火狐浏览器上打开官网，这样才默认下载linux版安装包)</p>
+<p>下载完成后，找到安装包所在文件夹，右键点击<code>Open in Terminal</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install ./google-chrome-stable_current_amd64.deb</span><br></pre></td></tr></table></figure>
+<p>在左下角的<code>Show Applications</code>中打开chrome即可 <img src="https://img-blog.csdnimg.cn/20200625151902101.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+<h3 id="中文输入法-fcitx">3. 中文输入法 &quot;fcitx&quot;</h3>
+<p>ubuntu20.04暂不支持搜狗输入法，所以使用fcitx（Fcitx[ˈfaɪtɪks]是 (Free Chinese Input Toy for X) 的英文缩写，由谷歌中国开发） 首先安装fctix，在终端中输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install fcitx-googlepinyin</span><br></pre></td></tr></table></figure>
+<p>如图点击language support进行配置 <img src="https://img-blog.csdnimg.cn/20200625155744224.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 初次打开时它会提示安装一堆东西，直接确认安装即可</p>
+<p>在下方选择fcitx <img src="https://img-blog.csdnimg.cn/2020062516002936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 接着重启电脑，可以看到右上角多了一个小键盘按键，点击config <img src="https://img-blog.csdnimg.cn/20200625160329592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 点击左下角的小加号，进入到<code>Add inpt method</code>页面，然后取消左下角的<code>Only Show current Language</code>勾选，在搜索框搜索pinyin，选择<code>Google pinyin</code>点击ok即可。</p>
+<blockquote>
+<p>==<strong>注意是<code>Google pinyin</code>，不是我下图中选中的这个。图中因为我已经安装好了<code>Google pinyin</code>，所以没有显示出来</strong>==。<del>当然如果想要安装这个也是可以的</del></p>
+</blockquote>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20200625161111964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>保存好后关闭窗口，然后就可以输入中文了。切换输入法的快捷键是<code>ctrl+space</code>，也可以手动点击右上角的小键盘标志进行设置</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20200625161903732.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<h3 id="qq-for-linux安装">4.QQ for linux安装</h3>
+<p>首先进入QQ官网下载安装包,网站为<code>https://im.qq.com/linuxqq/download.html</code> 可以看到支持的版本非常多 <img src="https://img-blog.csdnimg.cn/20200625170451981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 根据处理器的架构进行选择下载 我下载的是<code>x64的shell版本</code> <img src="https://img-blog.csdnimg.cn/20200625170611711.png" alt="在这里插入图片描述" /> 这里直接用命令<code>sudo ./linuxqq_2.0.0-b2-1082_x86_64.sh</code>进行安装可能会产生如下报错 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo: ./linuxqq_2.0.0-b2-1082_x86_64.sh: <span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure> 通过如下面的方法进行解决 找到安装包，右键点击属性</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20200625170708252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>勾选上如下内容</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/20200625170739124.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>保存好后关闭窗口，在本地打开终端 输入命令(根据版本的不同可能要进行适当的改变) <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo ./linuxqq_2.0.0-b2-1082_x86_64.sh</span><br></pre></td></tr></table></figure> 等待安装完成即可，在应用中找到QQ，然后就可以登陆啦 <img src="https://img-blog.csdnimg.cn/20200625171124316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+]]></content>
+      <categories>
+        <category>ubuntu</category>
+      </categories>
+      <tags>
+        <tag>配环境</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>利用爬虫框架获取番剧排行榜</title>
     <url>/2020/11/30/%E5%88%A9%E7%94%A8%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E8%8E%B7%E5%8F%96%E7%95%AA%E5%89%A7%E6%8E%92%E8%A1%8C%E6%A6%9C/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -295,6 +243,193 @@
       </categories>
       <tags>
         <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法笔记归档</title>
+    <url>/2021/02/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E5%BD%92%E6%A1%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>数据结构与算法笔记。代码大部分使用C++与Java两种实现</p>
+</blockquote>
+<a id="more"></a>
+<p>我的CSDN博客中写了一些数据结构与算法题目笔记，题目均为经典算法题且大部分来自leetcode,并且大都分别使用<code>C++</code>与<code>Java</code>两种实现</p>
+<p>现按题目中使用的数据结构归档如下以方便查阅，不断更新中</p>
+<h3 id="数组与链表">1. 数组与链表</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113125703" target="_blank" rel="noopener">链表 : 反向打印链表</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">数组 : 找出重复元素</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113328112" target="_blank" rel="noopener">链表 : 删除特定结点</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113388316" target="_blank" rel="noopener">数组 : 调整数组顺序使奇数位于偶数之前</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113185283" target="_blank" rel="noopener">数组 : 旋转数组中的最小元素</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113404494" target="_blank" rel="noopener">链表 : 链表中的倒数第k个结点</a></li>
+</ul>
+<h3 id="栈与队列">2. 栈与队列</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113143160" target="_blank" rel="noopener">栈与队列 : 用两个栈实现队列</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113523886" target="_blank" rel="noopener">栈 : 包含min函数的栈</a></li>
+</ul>
+<h3 id="二叉树">3. 二叉树</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113447366" target="_blank" rel="noopener">二叉树 : 二叉树的镜像</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113466097" target="_blank" rel="noopener">二叉树 : 对称的二叉树</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113561673" target="_blank" rel="noopener">二叉树 : 二叉搜索树的第k大结点</a></li>
+</ul>
+<h3 id="动态规划">4. 动态规划</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113177772" target="_blank" rel="noopener">使用动态规划解决斐波那契数列</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113178283" target="_blank" rel="noopener">动态规划 : 青蛙跳台阶问题</a></li>
+</ul>
+<h3 id="堆优先队列集合">5. 堆、优先队列、集合</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113654275" target="_blank" rel="noopener">C++中的堆与优先序列</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">集合 : 寻找数组中的重复元素</a></li>
+</ul>
+<h3 id="位操作">6. 位操作</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113307993" target="_blank" rel="noopener">二进制中1的个数</a></li>
+</ul>
+<h3 id="双指针法">7. 双指针法</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113633652" target="_blank" rel="noopener">合并区间问题</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/113407412" target="_blank" rel="noopener">双指针法 ： 反转链表</a></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>换季了</title>
+    <url>/2020/04/28/%E6%8D%A2%E5%AD%A3%E4%BA%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>--《夏天》 合唱</p>
+</blockquote>
+
+        <div id="aplayer-liDtCGSC" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-liDtCGSC"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "夏天",
+              author: "金承志",
+              url: "http://music.163.com/song/media/outer/url?id=1302066394.mp3",
+              pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<a id="more"></a>
+<blockquote>
+<p>夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是微微踮起的脚尖</p>
+<p>是海岸线上的尖叫</p>
+<p>夏天的梦</p>
+<p>是什么颜色的</p>
+<p>是列车远去的白烟</p>
+<p>是关门轻轻的背影</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+        <tag>歌曲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拉普拉斯算子的疑惑</title>
+    <url>/2021/10/05/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90%E7%9A%84%E7%96%91%E6%83%91/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>国内许多工科教材在讲到有关拉普拉斯算子(<span class="math inline">\(\Delta\)</span>)与哈密顿算子(<span class="math inline">\(\nabla\)</span>)的内容时含混不清，忽略了许多重要定义，使得一些进一步的推导难以理解</p>
+<p>现记录我发现的两个主要问题，并予以解答，希望可以帮助到学习国内教材时有相似疑惑的同学</p>
+<a id="more"></a>
+<h2 id="拉普拉斯算子作用于矢量">1. 拉普拉斯算子作用于矢量</h2>
+<h3 id="课本中的定义">1.1 课本中的定义</h3>
+<p>课本在介绍拉普拉斯算子时，一般会有如下定义:</p>
+<blockquote>
+<p>设<span class="math inline">\(\displaystyle f\)</span>为二阶可微的实函数，那么有:</p>
+<p>$f = ^2f = f $</p>
+</blockquote>
+<p>紧接着，教材通常还会将其在直角坐标系下展开，也即</p>
+<blockquote>
+<p>$^2f=_{i=1}^n{} $</p>
+</blockquote>
+<p>同时，教科书中常常还会在这里进一步解释它的含义是: 对一实值函数求其<strong>梯度的散度</strong></p>
+<h3 id="疑问">1.2 疑问</h3>
+<p>但是，在许多进一步的推导中，我们又常常可以看到如下过程，例如在波动方程(<strong>亥姆霍兹方程</strong>)的推导中有如下内容</p>
+<blockquote>
+<p><span class="math display">\[\nabla^2 \boldsymbol E + \omega ^2\mu\epsilon\boldsymbol E =0\]</span></p>
+</blockquote>
+<p><strong>其中E为矢量</strong>，或者说场量</p>
+<p>这就奇了棒棒锤的怪了，说好的求梯度的散度呢？<strong>对于矢量我该如何进行计算<span class="math inline">\(\nabla ^2 \boldsymbol E\)</span></strong>？</p>
+<h3 id="真正的定义">1.3 真正的定义</h3>
+<p>其实，对矢量进行拉普拉斯算子，其定义与标量下并不相同，在Wolfram(https://mathworld.wolfram.com/VectorLaplacian.html)中可以查找到如下定义</p>
+<blockquote>
+<p>Vector Laplacian A vector Laplacian can be defined for a vector <span class="math inline">\(\mathbf{A}\)</span> by <span class="math display">\[
+\nabla^{2} \mathbf{A}=\nabla(\nabla \cdot \mathbf{A})-\nabla \times(\nabla \times \mathbf{A})
+\]</span> where the notation <span class="math inline">\(\dot{ }\)</span> is sometimes used to distinguish the vector Laplacian from the scalar Laplacian <span class="math inline">\(\nabla^{2}\)</span> (Moon and Spencer <span class="math inline">\(1988, \mathrm{p} .3\)</span> ). In tensor notation, <span class="math inline">\(\mathbf{A}\)</span> is written <span class="math inline">\(A_{\mu}\)</span>, and the identity becomes</p>
+</blockquote>
+<p><span class="math display">\[
+\begin{aligned}
+\nabla^{2} A_{\mu} &amp;=A_{\mu ; \lambda} ; \lambda \\
+&amp;=\left(g^{\lambda x} A_{\mu ; \lambda}\right)_{; \kappa} \\
+&amp;=g^{\lambda} \kappa_{; \kappa} A_{\mu ; \lambda}+g^{\lambda x} A_{\mu ; \lambda x}
+\end{aligned}
+\]</span> &gt; A tensor Laplacian may be similarly defined. &gt; In cylindrical coordinates, the vector Laplacian is given by</p>
+<p><strong>上面的定义式，在国内教材中通常作为一个张量运算的性质给出，但是在国外的许多资料中，则是拉普拉斯算子作用于矢量时的定义</strong></p>
+<p>显然，在这样的定义下，对矢量进行拉普拉斯算子运算已经<strong>失去了梯度的散度</strong>的含义。而之所以这样定义，我的理解是为了方便进一步的数学运算，例如在直角坐标系下将其展开，可以按照简单向量运算进行下去</p>
+<p><span class="math display">\[\nabla^2 \boldsymbol T = \nabla^2(T_x,T_y,T_z) = (\nabla^2 T_x)\hat x + (\nabla^2 T_y)\hat y + (\nabla^2 T_z)\hat z\]</span></p>
+<p>上式可以解释为: 直角系下，矢量的拉普拉斯运算相当于对矢量的各个分量分别做拉普拉斯运算，再组成一个矢量</p>
+<h3 id="拉普拉斯算子在hessian矩阵中的含义">2. 拉普拉斯算子在Hessian矩阵中的含义</h3>
+<h3 id="hessian矩阵的定义">2.1 Hessian矩阵的定义</h3>
+<p>Hessian矩阵通常定义如下: <span class="math display">\[
+\nabla^2f = \mathbf{H}=\left[\begin{array}{cccc}
+\frac{\partial^{2} f}{\partial x_{1}^{2}} &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{n}} \\
+\frac{\partial^{2} f}{\partial x_{2} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{2}^{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{2} \partial x_{n}} \\
+\frac{\partial^{2} f}{\partial x_{n} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{n} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{n}^{2}}
+\end{array}\right]
+\]</span></p>
+<h3 id="疑问-1">2.2 疑问</h3>
+<p>我们知道，如果<span class="math inline">\(\nabla^2\)</span>作用于标量时，如<span class="math inline">\(\nabla^2 \phi\)</span>，所得结果也为一<strong>标量</strong></p>
+<p><span class="math inline">\(\nabla^2\)</span>作用于矢量时，如<span class="math inline">\(\nabla^2 \boldsymbol E\)</span>，所得结果为一<strong>向量</strong></p>
+<p>那么在Hessian矩阵的定义中，究竟是何种逆天的力量，能够使得拉普拉斯算子作用于在f上时，却得到了一个<strong>矩阵</strong>?</p>
+<h3 id="符号的混淆">2.3 符号的混淆</h3>
+<p>在维基百科中，终于找到了如下解释</p>
+<blockquote>
+<p>Hessian matrix</p>
+<p>While <span class="math inline">\(\nabla^{2}\)</span> usually represents the Laplacian, sometimes <span class="math inline">\(\nabla^{2}\)</span> also represents the Hessian matrix. The former refers to the inner product of <span class="math inline">\(\nabla\)</span>, while the latter refers to the dyadic product of <span class="math inline">\(\nabla\)</span> : <span class="math display">\[
+\nabla^{2}=\nabla \cdot \nabla^{T}
+\]</span> So whether <span class="math inline">\(\nabla^{2}\)</span> refers to a Laplacian or a Hessian matrix depends on the context.</p>
+</blockquote>
+<p>原来，在Hessian矩阵的定义中，<span class="math inline">\(\nabla^2\)</span>符号的含义与拉普拉斯算子有所区别。我们将</p>
+<p><span class="math display">\[\nabla=\left[\begin{array}{l}
+\frac{\partial }{\partial x_{1}} \\
+\frac{\partial }{\partial x_{2}} \\
+\cdots \\
+\frac{\partial }{\partial x_{n}} \\
+\end{array}\right]\]</span></p>
+<p>经过简单的矩阵运算<span class="math inline">\(\nabla^{2}=\nabla \cdot \nabla^{T}\)</span>,即可得到Hessian的定义式</p>
+<h3 id="参考资料">* 参考资料</h3>
+<ul>
+<li><a href="https://mathworld.wolfram.com/VectorLaplacian.html" target="_blank" rel="noopener">Vector Laplacian</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Del#Hessian_matrix" target="_blank" rel="noopener">Del Wiki</a></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/47f128522fa648f6b252a835848a9199.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_12,color_FFFFFF,t_70,g_se,x_16" /></p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>最优化</tag>
+        <tag>拉普拉斯算子</tag>
+        <tag>海瑟矩阵</tag>
       </tags>
   </entry>
   <entry>
@@ -438,140 +573,222 @@
       </tags>
   </entry>
   <entry>
-    <title>拉普拉斯算子的疑惑</title>
-    <url>/2021/10/05/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90%E7%9A%84%E7%96%91%E6%83%91/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>国内许多工科教材在讲到有关拉普拉斯算子(<span class="math inline">\(\Delta\)</span>)与哈密顿算子(<span class="math inline">\(\nabla\)</span>)的内容时含混不清，忽略了许多重要定义，使得一些进一步的推导难以理解</p>
-<p>现记录我发现的两个主要问题，并予以解答，希望可以帮助到学习国内教材时有相似疑惑的同学</p>
+    <title>校服与个性的表达</title>
+    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
+</blockquote>
 <a id="more"></a>
-<h2 id="拉普拉斯算子作用于矢量">1. 拉普拉斯算子作用于矢量</h2>
-<h3 id="课本中的定义">1.1 课本中的定义</h3>
-<p>课本在介绍拉普拉斯算子时，一般会有如下定义:</p>
+<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
+<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
+<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>知乎</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则化笔记</title>
+    <url>/2020/04/13/%E6%AD%A3%E5%88%99%E5%8C%96%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一.为什么需要正则化">一.为什么需要正则化?</h2>
+<p>简单来说，在使用神经网络时，为了增加模型的泛化能力，防止模型只在训练集上有效、在测试集上不够有效，我们使用正则化</p>
 <blockquote>
-<p>设<span class="math inline">\(\displaystyle f\)</span>为二阶可微的实函数，那么有:</p>
-<p>$f = ^2f = f $</p>
+<p>正则化是为了防止过拟合， 进而增强泛化能力。泛化误差= 测试误差。也可以说是为了使得训练数据训练的模型在测试集上的表现（或说性能）好不好</p>
 </blockquote>
-<p>紧接着，教材通常还会将其在直角坐标系下展开，也即</p>
-<blockquote>
-<p>$^2f=_{i=1}^n{} $</p>
-</blockquote>
-<p>同时，教科书中常常还会在这里进一步解释它的含义是: 对一实值函数求其<strong>梯度的散度</strong></p>
-<h3 id="疑问">1.2 疑问</h3>
-<p>但是，在许多进一步的推导中，我们又常常可以看到如下过程，例如在波动方程(<strong>亥姆霍兹方程</strong>)的推导中有如下内容</p>
-<blockquote>
-<p><span class="math display">\[\nabla^2 \boldsymbol E + \omega ^2\mu\epsilon\boldsymbol E =0\]</span></p>
-</blockquote>
-<p><strong>其中E为矢量</strong>，或者说场量</p>
-<p>这就奇了棒棒锤的怪了，说好的求梯度的散度呢？<strong>对于矢量我该如何进行计算<span class="math inline">\(\nabla ^2 \boldsymbol E\)</span></strong>？</p>
-<h3 id="真正的定义">1.3 真正的定义</h3>
-<p>其实，对矢量进行拉普拉斯算子，其定义与标量下并不相同，在Wolfram(https://mathworld.wolfram.com/VectorLaplacian.html)中可以查找到如下定义</p>
-<blockquote>
-<p>Vector Laplacian A vector Laplacian can be defined for a vector <span class="math inline">\(\mathbf{A}\)</span> by <span class="math display">\[
-\nabla^{2} \mathbf{A}=\nabla(\nabla \cdot \mathbf{A})-\nabla \times(\nabla \times \mathbf{A})
-\]</span> where the notation <span class="math inline">\(\dot{ }\)</span> is sometimes used to distinguish the vector Laplacian from the scalar Laplacian <span class="math inline">\(\nabla^{2}\)</span> (Moon and Spencer <span class="math inline">\(1988, \mathrm{p} .3\)</span> ). In tensor notation, <span class="math inline">\(\mathbf{A}\)</span> is written <span class="math inline">\(A_{\mu}\)</span>, and the identity becomes</p>
-</blockquote>
-<p><span class="math display">\[
-\begin{aligned}
-\nabla^{2} A_{\mu} &amp;=A_{\mu ; \lambda} ; \lambda \\
-&amp;=\left(g^{\lambda x} A_{\mu ; \lambda}\right)_{; \kappa} \\
-&amp;=g^{\lambda} \kappa_{; \kappa} A_{\mu ; \lambda}+g^{\lambda x} A_{\mu ; \lambda x}
-\end{aligned}
-\]</span> &gt; A tensor Laplacian may be similarly defined. &gt; In cylindrical coordinates, the vector Laplacian is given by</p>
-<p><strong>上面的定义式，在国内教材中通常作为一个张量运算的性质给出，但是在国外的许多资料中，则是拉普拉斯算子作用于矢量时的定义</strong></p>
-<p>显然，在这样的定义下，对矢量进行拉普拉斯算子运算已经<strong>失去了梯度的散度</strong>的含义。而之所以这样定义，我的理解是为了方便进一步的数学运算，例如在直角坐标系下将其展开，可以按照简单向量运算进行下去</p>
-<p><span class="math display">\[\nabla^2 \boldsymbol T = \nabla^2(T_x,T_y,T_z) = (\nabla^2 T_x)\hat x + (\nabla^2 T_y)\hat y + (\nabla^2 T_z)\hat z\]</span></p>
-<p>上式可以解释为: 直角系下，矢量的拉普拉斯运算相当于对矢量的各个分量分别做拉普拉斯运算，再组成一个矢量</p>
-<h3 id="拉普拉斯算子在hessian矩阵中的含义">2. 拉普拉斯算子在Hessian矩阵中的含义</h3>
-<h3 id="hessian矩阵的定义">2.1 Hessian矩阵的定义</h3>
-<p>Hessian矩阵通常定义如下: <span class="math display">\[
-\nabla^2f = \mathbf{H}=\left[\begin{array}{cccc}
-\frac{\partial^{2} f}{\partial x_{1}^{2}} &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{n}} \\
-\frac{\partial^{2} f}{\partial x_{2} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{2}^{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{2} \partial x_{n}} \\
-\frac{\partial^{2} f}{\partial x_{n} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{n} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{n}^{2}}
-\end{array}\right]
-\]</span></p>
-<h3 id="疑问-1">2.2 疑问</h3>
-<p>我们知道，如果<span class="math inline">\(\nabla^2\)</span>作用于标量时，如<span class="math inline">\(\nabla^2 \phi\)</span>，所得结果也为一<strong>标量</strong></p>
-<p><span class="math inline">\(\nabla^2\)</span>作用于矢量时，如<span class="math inline">\(\nabla^2 \boldsymbol E\)</span>，所得结果为一<strong>向量</strong></p>
-<p>那么在Hessian矩阵的定义中，究竟是何种逆天的力量，能够使得拉普拉斯算子作用于在f上时，却得到了一个<strong>矩阵</strong>?</p>
-<h3 id="符号的混淆">2.3 符号的混淆</h3>
-<p>在维基百科中，终于找到了如下解释</p>
-<blockquote>
-<p>Hessian matrix</p>
-<p>While <span class="math inline">\(\nabla^{2}\)</span> usually represents the Laplacian, sometimes <span class="math inline">\(\nabla^{2}\)</span> also represents the Hessian matrix. The former refers to the inner product of <span class="math inline">\(\nabla\)</span>, while the latter refers to the dyadic product of <span class="math inline">\(\nabla\)</span> : <span class="math display">\[
-\nabla^{2}=\nabla \cdot \nabla^{T}
-\]</span> So whether <span class="math inline">\(\nabla^{2}\)</span> refers to a Laplacian or a Hessian matrix depends on the context.</p>
-</blockquote>
-<p>原来，在Hessian矩阵的定义中，<span class="math inline">\(\nabla^2\)</span>符号的含义与拉普拉斯算子有所区别。我们将</p>
-<p><span class="math display">\[\nabla=\left[\begin{array}{l}
-\frac{\partial }{\partial x_{1}} \\
-\frac{\partial }{\partial x_{2}} \\
-\cdots \\
-\frac{\partial }{\partial x_{n}} \\
-\end{array}\right]\]</span></p>
-<p>经过简单的矩阵运算<span class="math inline">\(\nabla^{2}=\nabla \cdot \nabla^{T}\)</span>,即可得到Hessian的定义式</p>
-<h3 id="参考资料">* 参考资料</h3>
+<a id="more"></a>
+<h2 id="二.正则化有哪几种常用方法">二.正则化有哪几种常用方法？</h2>
+<p>常用的有<span class="math inline">\(l_1-norm\)</span>、<span class="math inline">\(l_2-norm\)</span>即在损失函数中添加<strong>惩罚项</strong>;还有例如<span class="math inline">\(Droupout\)</span>方法。下面让我们来更仔细地看一下是怎么进行的</p>
+<h3 id="l_1-norm">2.1 <span class="math inline">\(l_1-norm\)</span></h3>
+<p><span class="math inline">\(l_1-norm\)</span>也叫做<code>lasso回归</code>。 机器学习模型当中的参数，可形式化地组成参数向量，记为<span class="math inline">\(\vec w\)</span>，为方便表示，我下面都记为大写字母W。不失一般性，以线性模型为例，模型可记为 <span class="math display">\[F(x;W)=W^Tx=\sum_{i=1}^nw_i\cdot x\]</span> 为了进一步地偷懒，我们将<span class="math inline">\(W^T\)</span>也叫做<span class="math inline">\(W\)</span>。 现在我们来定义一个平方损失函数，其中W是模型的参数矩阵，x为模型的某个输入值，y为实际值，那么有损失函数 <span class="math display">\[C=||Wx-y||^2\]</span> 所以有模型参数 <span class="math display">\[W^*=arg\min_{C}||Wx-y||^2\]</span> 试想，假如我们使用某种方法使得cost降到最小，那么可想而知很容易便会产生过拟合(overfitting)。现在我们不希望这个cost降到最低，一个可行的方法是在损失函数公式中我们给它加入一个反向的<code>干扰项</code>，我们给它取个更专业的名字--<code>惩罚项</code>。 我们重新定义这个这个损失函数。<span class="math inline">\(l_1-norm\)</span>方法在式子中加入了一个<code>一次</code>的惩罚项,<code>用来描述模型的复杂程度</code> <span class="math display">\[C=||Wx-y||^2+\alpha||W||\]</span> 其中<span class="math inline">\(\alpha\)</span>用来衡量惩罚项的重要程度。 使用这样的损失函数，便可以一定程度上防止产生过拟合</p>
+<h3 id="l_2-norm">2.2 <span class="math inline">\(l_2-norm\)</span></h3>
+<p>将惩罚项定位二次项，这样定义损失函数的方法我们称之为<span class="math inline">\(l_2-norm\)</span>,也可以叫它Ridge回归（岭回归）。例如: <span class="math display">\[C=||Wx-y||^2+\alpha||W||^2\]</span></p>
+<h3 id="dropout正则化">2.3 Dropout正则化</h3>
+<p>L1、L2正则化是通过修改损失函数来实现的，而Dropout则是通过<strong>修改神经网络本身</strong>来实现的，它是在训练网络时用的一种技巧(trick)。 举例来说，假如现在我们有20个样本，但是定义了300个神经元，那么直接进行训练，由于神经元数量很多，所以模型的拟合效果会很好，也因此会很容易产生过拟合现象。现在我们每一次训练神经网络时，随机丢弃一部分神经元，下一次训练时，再随机丢掉一部分神经元，那么这样我们也可以有效降低过拟合效应。 下面是一个示例代码，来自莫烦py教程 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># torch.manual_seed(1)    # reproducible</span></span><br><span class="line"></span><br><span class="line">N_SAMPLES = <span class="number">20</span></span><br><span class="line">N_HIDDEN = <span class="number">300</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># training data</span></span><br><span class="line">x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">y = x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># test data</span></span><br><span class="line">test_x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">test_y = test_x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># show data</span></span><br><span class="line">plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'train'</span>)</span><br><span class="line">plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'test'</span>)</span><br><span class="line">plt.legend(loc=<span class="string">'upper left'</span>)</span><br><span class="line">plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>))</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">net_overfitting = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">net_dropped = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">print(net_overfitting)  <span class="comment"># net architecture</span></span><br><span class="line">print(net_dropped)</span><br><span class="line"></span><br><span class="line">optimizer_ofit = torch.optim.Adam(net_overfitting.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">optimizer_drop = torch.optim.Adam(net_dropped.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">loss_func = torch.nn.MSELoss()</span><br><span class="line"></span><br><span class="line">plt.ion()   <span class="comment"># something about plotting</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> range(<span class="number">500</span>):</span><br><span class="line">    pred_ofit = net_overfitting(x)</span><br><span class="line">    pred_drop = net_dropped(x)</span><br><span class="line">    loss_ofit = loss_func(pred_ofit, y)</span><br><span class="line">    loss_drop = loss_func(pred_drop, y)</span><br><span class="line"></span><br><span class="line">    optimizer_ofit.zero_grad()</span><br><span class="line">    optimizer_drop.zero_grad()  <span class="comment"># 清空过往梯度，才能更顺利地进行再一次地计算梯度</span></span><br><span class="line">    loss_ofit.backward()</span><br><span class="line">    loss_drop.backward()  <span class="comment"># backward通过反向传播计算当前梯度</span></span><br><span class="line">    optimizer_ofit.step()  <span class="comment"># step才更新网络参数</span></span><br><span class="line">    optimizer_drop.step()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> t % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># change to eval mode in order to fix drop out effect</span></span><br><span class="line">        net_overfitting.eval()</span><br><span class="line">        net_dropped.eval()  <span class="comment"># parameters for dropout differ from train mode</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># plotting</span></span><br><span class="line">        plt.cla()</span><br><span class="line">        test_pred_ofit = net_overfitting(test_x)</span><br><span class="line">        test_pred_drop = net_dropped(test_x)</span><br><span class="line">        plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'train'</span>)</span><br><span class="line">        plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'test'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_ofit.data.numpy(), <span class="string">'r-'</span>, lw=<span class="number">3</span>, label=<span class="string">'overfitting'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_drop.data.numpy(), <span class="string">'b--'</span>, lw=<span class="number">3</span>, label=<span class="string">'dropout(50%)'</span>)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.2</span>, <span class="string">'overfitting loss=%.4f'</span> % loss_func(test_pred_ofit, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>:  <span class="string">'red'</span>&#125;)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.5</span>, <span class="string">'dropout loss=%.4f'</span> % loss_func(test_pred_drop, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>: <span class="string">'blue'</span>&#125;)</span><br><span class="line">        plt.legend(loc=<span class="string">'upper left'</span>); plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>));plt.pause(<span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># change back to train mode</span></span><br><span class="line">        net_overfitting.train()</span><br><span class="line">        net_dropped.train()</span><br><span class="line"></span><br><span class="line">plt.ioff()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure> 结果： <img src="https://img-blog.csdnimg.cn/20200407134135992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 可以看到进行所谓dropout后的网络在所有数据上的损失函数更小</p>
+<p>总结一下我们应该怎么使用这种dropout技巧： 1. 定义网络时，在隐藏层中间使用<code>torch.nn.Dropout(prop)</code> 2. 神经网络有eval()和train()两种模式。计算预测值时记得切换到eval()模式，这种模式会关闭dropout；而在train()模式下，使用模型进行预测时仍然有部分神经元被dropout ### 2.4 增加训练集样本数量 这种方法自然也是可以削减过拟合的</p>
+<h2 id="参考">参考</h2>
 <ul>
-<li><a href="https://mathworld.wolfram.com/VectorLaplacian.html" target="_blank" rel="noopener">Vector Laplacian</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Del#Hessian_matrix" target="_blank" rel="noopener">Del Wiki</a></li>
+<li><a href="https://blog.csdn.net/qq_20412595/article/details/81636105?depth_1-utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1&amp;utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1" target="_blank" rel="noopener">正则化理解</a></li>
+<li><a href="https://blog.csdn.net/jinping_shi/article/details/52433975" target="_blank" rel="noopener">L1与L2正则化</a></li>
+<li><a href="https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg" target="_blank" rel="noopener">莫烦python</a></li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/47f128522fa648f6b252a835848a9199.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_12,color_FFFFFF,t_70,g_se,x_16" /></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>回归</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>泛函分析(1)度量空间</title>
+    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(1)%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>度量空间与线性空间是两种基本的空间，本文对度量空间进行简要总结</p>
+<a id="more"></a>
+<figure>
+<img src="https://img-blog.csdnimg.cn/cfd9cb4c538a463cafe54244d43e5c1b.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="圆焰" /><figcaption>圆焰</figcaption>
+</figure>
+<h3 id="符号">符号</h3>
+<p><span class="math inline">\(\mathbb{K}\)</span>表示实数集<span class="math inline">\(\mathbb{R}\)</span>或者复数集<span class="math inline">\(\mathbb{C}\)</span></p>
+<h2 id="定义">1. 定义</h2>
+<p>称度量空间<span class="math inline">\((X,d)\)</span>包括集合<span class="math inline">\(X\)</span>和一度量<span class="math inline">\(d:X\times X \rightarrow \mathbb{R}\)</span>, 同时度量满足以下四个性质</p>
+<ul>
+<li>非负性: <span class="math inline">\(\forall x, y \in X, d(x, y) \geq 0\)</span></li>
+<li>非退化性: <span class="math inline">\(x, y \in X, d(x, y)=0 \Leftrightarrow x=y\)</span></li>
+<li>对称性: <span class="math inline">\(\forall x, y \in X, d(x, y)=d(y, x)\)</span></li>
+<li>三角不等式: <span class="math inline">\(\forall x, y, z \in X, d(x, y) \leq d(x, z)+d(z, y)\)</span></li>
+</ul>
+<p>度量空间是一类基本空间，在度量空间中定义了度量，或者称距离</p>
+<blockquote>
+<p><span class="math inline">\(\text { Remark: 注意到 }\{\infty\} \notin \mathbb{R} \text { ，即还有一个隐含的要求, 距离必须是有限的。 }\)</span></p>
+</blockquote>
+<h2 id="例子">2. 例子</h2>
+<h3 id="一维数集与自然距离构成度量空间">2.1 一维数集与自然距离构成度量空间</h3>
+<p>一维数集上的自然距离是度量，<span class="math inline">\((X,d)\)</span>为一度量空间</p>
+<p><span class="math inline">\(X=A \subset \mathbb{K}, d(x, y)=|x-y|, \forall x, y \in X\)</span></p>
+<h3 id="离散集合与示性函数构成度量空间">2.2 离散集合与示性函数构成度量空间</h3>
+<p><span class="math inline">\(X\)</span> 为离散集合， <span class="math inline">\(d(x, y)=\mathbb{I}[x \neq y]\)</span>, 其中 <span class="math inline">\(\mathbb{I}[\)</span> cond <span class="math inline">\(]\)</span> 为指示函数, 条件为真时取 1 , 否则 取 0 。</p>
+<p>证明它是度量空间: 前三条容易证明，三角不等式可以用分类讨论证明。先考虑 <span class="math inline">\(x=y ，\)</span> 再考虑 <span class="math inline">\(x \neq y\)</span> 。后一种情况再分为 <span class="math inline">\(x=z \neq y, x \neq z=y, x \neq z \neq y\)</span> 三种情况说明。</p>
+<h3 id="序列空间lp与其lp-norm构成度量空间">2.3 序列空间Lp与其Lp-norm构成度量空间</h3>
+<blockquote>
+<p>范数不是为向量定义的吗。序列空间Lp也是向量吗？希望有数学系的小伙伴予以解答</p>
+</blockquote>
+<p><span class="math inline">\(l^{p}:=\left\{\left\{x_{n}\right\}: \sum_{n=1}^{\infty}\left|x_{n}\right|^{p}&lt;\infty\right\}, 1 \leq p&lt;\infty\)</span></p>
+<p><span class="math inline">\(X=l^{p}, \quad d_{p}(x, y)=\left(\sum_{n=1}^{\infty}\left|x_{n}-y_{n}\right|^{p}\right)^{1 / p}\)</span></p>
+<h3 id="几何向量与其无穷p范数构成度量空间">2.4 几何向量与其无穷p范数构成度量空间</h3>
+<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n} ， d_{p}(x, y)=\left(\sum_{i \in[n]}\left|x_{i}-y_{i}\right|^{p}\right)^{1 / p}\)</span> 为其度量, 其中 <span class="math inline">\(p \in[1,+\infty)\)</span></p>
+<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n}, d_{\infty}(x, y)=\max _{i \in[n]}\left|x_{i}-y_{i}\right|\)</span> 为其度量, 它是前述度量中 <span class="math inline">\(p \rightarrow \infty\)</span> 的极限情形。</p>
 ]]></content>
       <categories>
         <category>数学</category>
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>最优化</tag>
-        <tag>拉普拉斯算子</tag>
-        <tag>海瑟矩阵</tag>
+        <tag>泛函分析</tag>
+        <tag>度量空间</tag>
       </tags>
   </entry>
   <entry>
-    <title>换季了</title>
-    <url>/2020/04/28/%E6%8D%A2%E5%AD%A3%E4%BA%86/</url>
+    <title>泛函分析(2)空间完备性</title>
+    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>完备性是泛函分析中的重要概念，本文对此概念进行简要总结</p>
+<a id="more"></a>
+<figure>
+<img src="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16" alt="圆" /><figcaption>圆</figcaption>
+</figure>
+<h1 id="空间完备性"><strong>空间完备性</strong></h1>
+<p>为了定义完备性，需要首先清楚柯西序列和收敛的概念</p>
+<h2 id="收敛性与柯西列"><strong>1. 收敛性与柯西列</strong></h2>
+<h3 id="柯西列"><strong>1.1 柯西列</strong></h3>
+<p>给定某个度量空间 <span class="math inline">\(X\)</span> 中的序列 <span class="math inline">\(\left\{x_{i}\right\}\)</span>, 当满足以下条件时，他就叫做柯西序列 (Cauchy sequence)</p>
+<p>对任意 <span class="math inline">\(\varepsilon&gt;0\)</span>, 存在 <span class="math inline">\(N\)</span> ，当 <span class="math inline">\(m, n \geqslant N\)</span> 时就满足 <span class="math inline">\(d\left(u_{m}, u_{n}\right)&lt;\varepsilon\)</span>.</p>
+<p><strong>1.2 收敛</strong></p>
+<p>设 <span class="math inline">\((X, d)\)</span> 为度量空间， <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为 <span class="math inline">\(\mathrm{X}\)</span> 中的数列，若存在 <span class="math inline">\(x \in X\)</span> 使得 <span class="math inline">\(\lim _{n \rightarrow \infty} d\left(x_{n}, x\right)=0\)</span> ，则 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 在 <span class="math inline">\(X\)</span> 中收敛, 称 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为收敛列, 称 <span class="math inline">\(x\)</span> 为 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 的极限, 记做 <span class="math inline">\(x_{n} \rightarrow x\)</span> 。</p>
+<p><span class="math inline">\(Remark:\)</span></p>
+<ol type="1">
+<li><p>收敛列比柯西列更严格。或者说收敛列一定是柯西列</p></li>
+<li><p>柯西列的直观理解是，一个序列的元素随着序数的增加而愈发靠近，并且最终趋于无限近</p></li>
+<li><p>收敛列一定有界，不仅如此，柯西列也一定有界</p></li>
+</ol>
+<h2 id="完备空间概念"><strong>2. 完备空间概念</strong></h2>
+<p>完备空间指这样性质的空间: 空间中的任何柯西序列都收敛于这个空间中</p>
+<p><span class="math inline">\(Remark:\)</span></p>
+<ol type="1">
+<li><p>完备空间是特殊的度量空间。因为按照定义完备空间需要&quot;柯西列收敛&quot;，而为了定义收敛，需要先定义先度量</p></li>
+<li><p><strong>欧几里得空间是完备空间</strong>。这给了它很好的性质，也即柯西列的收敛性</p></li>
+</ol>
+<p>证明如下:</p>
+<p>Let <span class="math inline">\(\left\langle\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)\right\rangle_{n \in \mathbb{N}}\)</span> be a Cauchy sequence in <span class="math inline">\(\mathbb{R}^{m}\)</span>.</p>
+<p>Let <span class="math inline">\(\epsilon&gt;0\)</span></p>
+<p>Then <span class="math inline">\(\frac{\epsilon}{m}&gt;0\)</span>.</p>
+<p>We have that Real Number Line is Complete Metric Space.</p>
+<p>Therefore:</p>
+<p><span class="math inline">\(\exists y_{1}, y_{2}, \ldots, y_{m} \in \mathbb{R}\)</span> and <span class="math inline">\(N_{1}, N_{2}, \ldots, N_{m} \in \mathbb{N}\)</span> (depending on <span class="math inline">\(\epsilon\)</span> ) such that:</p>
+<p><span class="math display">\[
+\forall k \in \mathbb{N}: 1 \leq k \leq m: \forall n_{k}&gt;N_{k}:\left\langle x_{n, k}-y_{k}\right\rangle&lt;\frac{\epsilon}{m}
+\]</span></p>
+<p>From Euclidean Space is Normed Space:</p>
+<p><span class="math display">\[
+\left\|\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)-\left(y_{1}, y_{2}, \ldots, y_{m}\right)\right\| \leq \sum_{k=1}^{m}\left|x_{n, k}-y_{k}\right|&lt;\epsilon
+\]</span></p>
+<p>Hence the Euclidean space is a complete metric space.</p>
+<ol start="3" type="1">
+<li><p>数集<span class="math inline">\(\mathbb{R}\)</span>、<span class="math inline">\(\mathbb{C}\)</span>都是完备的</p></li>
+<li><p>R和C的子集不一定完备。例如取<span class="math inline">\(X=(0,1)\)</span>。取一柯西列(元素可以无限靠近)<span class="math inline">\(x=1/n\)</span>，其极限0不在该空间中</p></li>
+<li><p>完备度量空间一定为闭集(结合上面例子记忆)</p></li>
+<li><p>完备度量空间的闭子集仍然完备</p></li>
+<li><p>“完备” 可以形象理解为空间中没有 “漏洞”．有限维空间都是完备的．可数维空间都是不完备的．例如有理数集和多项式组成的空间就是不完备的（柯西序列的极限可以是 e^x，但是 e^x并不属于该空间）</p></li>
+</ol>
+<h3 id="参考">参考</h3>
+<ul>
+<li><p><a href="https://zhuanlan.zhihu.com/p/85867887" target="_blank" rel="noopener">收敛性、完备性和紧性</a></p></li>
+<li><p><a href="https://proofwiki.org/wiki/Euclidean_Space_is_Complete_Metric_Space" target="_blank" rel="noopener">Euclidean Space is Complete Metric Space</a></p></li>
+</ul>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>泛函分析</tag>
+        <tag>完备空间</tag>
+        <tag>柯西序列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我喜欢</title>
+    <url>/2020/05/06/%E6%88%91%E5%96%9C%E6%AC%A2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>--《夏天》 合唱</p>
+<p>--《what I adore》 合唱</p>
 </blockquote>
+<a id="more"></a>
 
-        <div id="aplayer-FvcYEfFf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-SsDSsfck" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-FvcYEfFf"),
+            element: document.getElementById("aplayer-SsDSsfck"),
             narrow: false,
             autoplay: false,
             showlrc: false,
             music: {
-              title: "夏天",
+              title: "我喜欢",
               author: "金承志",
-              url: "http://music.163.com/song/media/outer/url?id=1302066394.mp3",
-              pic: "https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
+              url: "http://music.163.com/song/media/outer/url?id=464647435.mp3",
+              pic: "https://img-blog.csdnimg.cn/20200831131615443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
               lrc: ""
             }
           });
           window.aplayers || (window.aplayers = []);
           window.aplayers.push(ap);
         </script>
-<a id="more"></a>
 <blockquote>
-<p>夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是微微踮起的脚尖</p>
-<p>是海岸线上的尖叫</p>
-<p>夏天的梦</p>
-<p>是什么颜色的</p>
-<p>是列车远去的白烟</p>
-<p>是关门轻轻的背影</p>
+<p>我喜欢 无尽田野上奔跑的麋鹿</p>
+<p>我喜欢 外婆门前的榕树</p>
+<p>我喜欢母亲的便当</p>
+<p>我喜欢父亲的胡渣</p>
+<p>我喜欢八月的夜晚还在营业的游乐场</p>
+<p>我喜欢放学的铃铛</p>
+<p>我喜欢停电的夜晚</p>
+<p>点一对蜡烛 在幽静的玄关</p>
+<p>我喜欢 城市尽头那远远的青山</p>
+<p>我喜欢 热气球飞上西边的天空</p>
+<p>我喜欢 清晨的石板路</p>
+<p>雾腾腾的早餐店 阿公的桂花糕</p>
+<p>我喜欢 每一朵暮云 每一株绿树</p>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200428115308761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+<p><img src="https://img-blog.csdnimg.cn/20200506214619877.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
 ]]></content>
       <categories>
         <category>感想</category>
       </categories>
       <tags>
         <tag>感想</tag>
-        <tag>歌曲</tag>
       </tags>
   </entry>
   <entry>
@@ -654,224 +871,6 @@
       </tags>
   </entry>
   <entry>
-    <title>校服与个性的表达</title>
-    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
-</blockquote>
-<a id="more"></a>
-<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
-<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
-<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>知乎</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构与算法笔记归档</title>
-    <url>/2021/02/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E5%BD%92%E6%A1%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>数据结构与算法笔记。代码大部分使用C++与Java两种实现</p>
-</blockquote>
-<a id="more"></a>
-<p>我的CSDN博客中写了一些数据结构与算法题目笔记，题目均为经典算法题且大部分来自leetcode,并且大都分别使用<code>C++</code>与<code>Java</code>两种实现</p>
-<p>现按题目中使用的数据结构归档如下以方便查阅，不断更新中</p>
-<h3 id="数组与链表">1. 数组与链表</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113125703" target="_blank" rel="noopener">链表 : 反向打印链表</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">数组 : 找出重复元素</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113328112" target="_blank" rel="noopener">链表 : 删除特定结点</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113388316" target="_blank" rel="noopener">数组 : 调整数组顺序使奇数位于偶数之前</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113185283" target="_blank" rel="noopener">数组 : 旋转数组中的最小元素</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113404494" target="_blank" rel="noopener">链表 : 链表中的倒数第k个结点</a></li>
-</ul>
-<h3 id="栈与队列">2. 栈与队列</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113143160" target="_blank" rel="noopener">栈与队列 : 用两个栈实现队列</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113523886" target="_blank" rel="noopener">栈 : 包含min函数的栈</a></li>
-</ul>
-<h3 id="二叉树">3. 二叉树</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113447366" target="_blank" rel="noopener">二叉树 : 二叉树的镜像</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113466097" target="_blank" rel="noopener">二叉树 : 对称的二叉树</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113561673" target="_blank" rel="noopener">二叉树 : 二叉搜索树的第k大结点</a></li>
-</ul>
-<h3 id="动态规划">4. 动态规划</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113177772" target="_blank" rel="noopener">使用动态规划解决斐波那契数列</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113178283" target="_blank" rel="noopener">动态规划 : 青蛙跳台阶问题</a></li>
-</ul>
-<h3 id="堆优先队列集合">5. 堆、优先队列、集合</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113654275" target="_blank" rel="noopener">C++中的堆与优先序列</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113089896" target="_blank" rel="noopener">集合 : 寻找数组中的重复元素</a></li>
-</ul>
-<h3 id="位操作">6. 位操作</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113307993" target="_blank" rel="noopener">二进制中1的个数</a></li>
-</ul>
-<h3 id="双指针法">7. 双指针法</h3>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113633652" target="_blank" rel="noopener">合并区间问题</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/113407412" target="_blank" rel="noopener">双指针法 ： 反转链表</a></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>泛函分析(1)度量空间</title>
-    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(1)%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>度量空间与线性空间是两种基本的空间，本文对度量空间进行简要总结</p>
-<a id="more"></a>
-<figure>
-<img src="https://img-blog.csdnimg.cn/cfd9cb4c538a463cafe54244d43e5c1b.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="圆焰" /><figcaption>圆焰</figcaption>
-</figure>
-<h3 id="符号">符号</h3>
-<p><span class="math inline">\(\mathbb{K}\)</span>表示实数集<span class="math inline">\(\mathbb{R}\)</span>或者复数集<span class="math inline">\(\mathbb{C}\)</span></p>
-<h2 id="定义">1. 定义</h2>
-<p>称度量空间<span class="math inline">\((X,d)\)</span>包括集合<span class="math inline">\(X\)</span>和一度量<span class="math inline">\(d:X\times X \rightarrow \mathbb{R}\)</span>, 同时度量满足以下四个性质</p>
-<ul>
-<li>非负性: <span class="math inline">\(\forall x, y \in X, d(x, y) \geq 0\)</span></li>
-<li>非退化性: <span class="math inline">\(x, y \in X, d(x, y)=0 \Leftrightarrow x=y\)</span></li>
-<li>对称性: <span class="math inline">\(\forall x, y \in X, d(x, y)=d(y, x)\)</span></li>
-<li>三角不等式: <span class="math inline">\(\forall x, y, z \in X, d(x, y) \leq d(x, z)+d(z, y)\)</span></li>
-</ul>
-<p>度量空间是一类基本空间，在度量空间中定义了度量，或者称距离</p>
-<blockquote>
-<p><span class="math inline">\(\text { Remark: 注意到 }\{\infty\} \notin \mathbb{R} \text { ，即还有一个隐含的要求, 距离必须是有限的。 }\)</span></p>
-</blockquote>
-<h2 id="例子">2. 例子</h2>
-<h3 id="一维数集与自然距离构成度量空间">2.1 一维数集与自然距离构成度量空间</h3>
-<p>一维数集上的自然距离是度量，<span class="math inline">\((X,d)\)</span>为一度量空间</p>
-<p><span class="math inline">\(X=A \subset \mathbb{K}, d(x, y)=|x-y|, \forall x, y \in X\)</span></p>
-<h3 id="离散集合与示性函数构成度量空间">2.2 离散集合与示性函数构成度量空间</h3>
-<p><span class="math inline">\(X\)</span> 为离散集合， <span class="math inline">\(d(x, y)=\mathbb{I}[x \neq y]\)</span>, 其中 <span class="math inline">\(\mathbb{I}[\)</span> cond <span class="math inline">\(]\)</span> 为指示函数, 条件为真时取 1 , 否则 取 0 。</p>
-<p>证明它是度量空间: 前三条容易证明，三角不等式可以用分类讨论证明。先考虑 <span class="math inline">\(x=y ，\)</span> 再考虑 <span class="math inline">\(x \neq y\)</span> 。后一种情况再分为 <span class="math inline">\(x=z \neq y, x \neq z=y, x \neq z \neq y\)</span> 三种情况说明。</p>
-<h3 id="序列空间lp与其lp-norm构成度量空间">2.3 序列空间Lp与其Lp-norm构成度量空间</h3>
-<blockquote>
-<p>范数不是为向量定义的吗。序列空间Lp也是向量吗？希望有数学系的小伙伴予以解答</p>
-</blockquote>
-<p><span class="math inline">\(l^{p}:=\left\{\left\{x_{n}\right\}: \sum_{n=1}^{\infty}\left|x_{n}\right|^{p}&lt;\infty\right\}, 1 \leq p&lt;\infty\)</span></p>
-<p><span class="math inline">\(X=l^{p}, \quad d_{p}(x, y)=\left(\sum_{n=1}^{\infty}\left|x_{n}-y_{n}\right|^{p}\right)^{1 / p}\)</span></p>
-<h3 id="几何向量与其无穷p范数构成度量空间">2.4 几何向量与其无穷p范数构成度量空间</h3>
-<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n} ， d_{p}(x, y)=\left(\sum_{i \in[n]}\left|x_{i}-y_{i}\right|^{p}\right)^{1 / p}\)</span> 为其度量, 其中 <span class="math inline">\(p \in[1,+\infty)\)</span></p>
-<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n}, d_{\infty}(x, y)=\max _{i \in[n]}\left|x_{i}-y_{i}\right|\)</span> 为其度量, 它是前述度量中 <span class="math inline">\(p \rightarrow \infty\)</span> 的极限情形。</p>
-]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>泛函分析</tag>
-        <tag>度量空间</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>牛顿法用于优化问题</title>
-    <url>/2021/10/05/%E7%89%9B%E9%A1%BF%E6%B3%95%E7%94%A8%E4%BA%8E%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>无约束优化算法可以分为<strong>线搜索类算法</strong>与<strong>信赖域类算法</strong>两类，他们都是对<span class="math inline">\(f(\boldsymbol x)\)</span>在局部进行近似，前者用得更加普遍。而线搜索类算法根据搜索方向选择的不同可以分为<strong>梯度算法、牛顿算法、拟牛顿算法、次梯度算法</strong>等</p>
-<a id="more"></a>
-<p>本文目的是介绍<strong>牛顿法</strong>。平常我们说牛顿法，一般指的是用牛顿法求方程根，因而先复习牛顿法求根的原理，然后扩展到用牛顿法求极值，再进一步扩展到多元函数牛顿法求极值</p>
-<h2 id="一元函数牛顿法求根">1. 一元函数牛顿法求根</h2>
-<p>复杂方程的根很难直接求得，最开始用牛顿法迭代来求方程的根。方法是给 一个初值 <span class="math inline">\(x_{1}\)</span> ，在 <span class="math inline">\(x_{1}\)</span> 处用一阶泰勒展式来近似表示函数 <span class="math inline">\(f(x)\)</span> <span class="math display">\[
-f(x)=f\left(x_{1}\right)+f^{\prime}\left(x_{1}\right)\left(x-x_{1}\right) + \mathcal{O}(x-x_1)
-\]</span> 将 <span class="math inline">\(f(x)=0\)</span> 带入上式, 求得与 <span class="math inline">\(x\)</span> 轴交点横坐标 <span class="math inline">\(x=x_{1}-f\left(x_{1}\right) / f^{\prime}\left(x_{1}\right)\)</span>, 这个 <span class="math inline">\(x\)</span> 点并不是函数 <span class="math inline">\(f(x)\)</span> 的根, 但是距离真正的根更近了一点，不断迭代优化，有如下步骤</p>
-<p><span class="math display">\[
-x_{n+1}=x_{n}-f\left(x_{n}\right) / f^{\prime}\left(x_{n}\right)
-\]</span> 最终求得的 <span class="math inline">\(x\)</span> 值变化小于一个阈值就认为这个 <span class="math inline">\(x\)</span> 值是函数 <span class="math inline">\(f(x)\)</span> 的近似根, 这时牛顿法收敛</p>
-<h2 id="一元函数牛顿法求极值">2. 一元函数牛顿法求极值</h2>
-<p>牛顿法用于求函数极值。对于 <span class="math inline">\(f(x)\)</span> 的极值点也就是求 <span class="math inline">\(f^{\prime}(x)\)</span> 的根, 那么也就是如上面介绍的 求 <span class="math inline">\(f^{\prime}(x)=0\)</span> 的解。给定初值 <span class="math inline">\(x_{1} ，\)</span> 在 <span class="math inline">\(x_{1}\)</span> 处用二阶泰勒展式见公式 <span class="math inline">\((4)\)</span> 。 <span class="math display">\[
-f(x)=f\left(x_{1}\right)+f^{\prime}\left(x_{1}\right)\left(x-x_{1}\right)+\frac{1}{2} f^{\prime \prime}\left(x_{1}\right)\left(x-x_{1}\right)^{2}
-\]</span> 对 <span class="math inline">\(f(x)\)</span> 求导, 令 <span class="math inline">\(f^{\prime}(x)=0\)</span>, 得 <span class="math inline">\(x=x_{1}-f^{\prime}\left(x_{1}\right) / f^{\prime \prime}\left(x_{1}\right)\)</span>, 依次迭代得到递推公式 <span class="math display">\[
-x_{n+1}=x_{n}-f^{\prime}\left(x_{n}\right) / f^{\prime \prime}\left(x_{n}\right)
-\]</span> 当xn的值变化小于阈值时认为算法收敛</p>
-<h2 id="多元函数牛顿法求极值">3. 多元函数牛顿法求极值</h2>
-<p>对定义在<span class="math inline">\(\mathbb{R}^{n}\)</span>上的二次可微函数<span class="math inline">\(f(\boldsymbol x)\)</span>，考虑其在<span class="math inline">\(x_k\)</span>处二阶泰勒展开，在其定义域上取<span class="math inline">\(x_k,d_k \in \mathbb{R}^{n}\)</span>，其中<span class="math inline">\(d_k\)</span>靠近<span class="math inline">\(x_k\)</span>，有如下式子</p>
-<p><span class="math display">\[
-f(x_k+d_k)=f(x_k)+\nabla f(x_k)^\mathrm{T}d_k + \frac{1}{2}(d_k)^\mathrm{T}\nabla^2f(x_k)d_k+\mathcal{O}(||d_k||^2)
-\]</span></p>
-<p>忽略高阶无穷小，将上式看作<span class="math inline">\(d_k\)</span>的函数，对其求导(求梯度？)后令<span class="math inline">\(f&#39;(x_k+d_k)=0\)</span>，化简可得<strong>牛顿方程</strong></p>
-<p><span class="math display">\[
-\nabla^{2} f\left(x_{k}\right) d_{k}=-\nabla f\left(x_{k}\right)
-\]</span></p>
-<p>由上式，可由简单的矩阵运算规则得到优化方向<span class="math inline">\(d_k=-\nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)\)</span></p>
-<p>因而可以得到迭代规则</p>
-<p><span class="math display">\[
-x_{x+1}=x_{k}-\nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)
-\]</span> 当xn的值变化小于阈值时认为算法收敛</p>
-<h3 id="对比">4. 对比</h3>
-<h3 id="牛顿法对比">4.1 牛顿法对比</h3>
-<p>如果把矩阵求逆<span class="math inline">\(\nabla^{2} f\left(x_{k}\right)^{-1}\)</span>，<strong>在形式上写作分母</strong>。将上面三者罗列如下，可见形式完全一样(吐槽：这不废话)</p>
-<p><span class="math display">\[
-x_{n+1}=x_{n}-f\left(x_{n}\right) / f^{\prime}\left(x_{n}\right)
-\]</span> <span class="math display">\[
-x_{n+1}=x_{n}-f^{\prime}\left(x_{n}\right) / f^{\prime \prime}\left(x_{n}\right)
-\]</span> <span class="math display">\[
-x_{x+1}=x_{k}-\nabla f\left(x_{k}\right)/\nabla^{2} f\left(x_{k}\right)
-\]</span></p>
-<h3 id="牛顿法与梯度下降对比">4.2 牛顿法与梯度下降对比</h3>
-<p>梯度下降 <span class="math display">\[
-x_{k+1}=x_{k}-\alpha_{k}\nabla f(x_k)
-\]</span></p>
-<p>步长不等于1的牛顿法(也就是优化方向乘以alpha) <span class="math display">\[
-x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)
-\]</span></p>
-<ol start="5" type="1">
-<li>参考</li>
-</ol>
-<ul>
-<li>《最优化计算方法》 文再文</li>
-<li><a href="https://zhuanlan.zhihu.com/p/75930544" target="_blank" rel="noopener">牛顿法求极值</a></li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/23831218512e49bba90a9259ec10e07f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_17,color_FFFFFF,t_70,g_se,x_16" /></p>
-]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>最优化</tag>
-        <tag>牛顿法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>正则化笔记</title>
-    <url>/2020/04/13/%E6%AD%A3%E5%88%99%E5%8C%96%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一.为什么需要正则化">一.为什么需要正则化?</h2>
-<p>简单来说，在使用神经网络时，为了增加模型的泛化能力，防止模型只在训练集上有效、在测试集上不够有效，我们使用正则化</p>
-<blockquote>
-<p>正则化是为了防止过拟合， 进而增强泛化能力。泛化误差= 测试误差。也可以说是为了使得训练数据训练的模型在测试集上的表现（或说性能）好不好</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="二.正则化有哪几种常用方法">二.正则化有哪几种常用方法？</h2>
-<p>常用的有<span class="math inline">\(l_1-norm\)</span>、<span class="math inline">\(l_2-norm\)</span>即在损失函数中添加<strong>惩罚项</strong>;还有例如<span class="math inline">\(Droupout\)</span>方法。下面让我们来更仔细地看一下是怎么进行的</p>
-<h3 id="l_1-norm">2.1 <span class="math inline">\(l_1-norm\)</span></h3>
-<p><span class="math inline">\(l_1-norm\)</span>也叫做<code>lasso回归</code>。 机器学习模型当中的参数，可形式化地组成参数向量，记为<span class="math inline">\(\vec w\)</span>，为方便表示，我下面都记为大写字母W。不失一般性，以线性模型为例，模型可记为 <span class="math display">\[F(x;W)=W^Tx=\sum_{i=1}^nw_i\cdot x\]</span> 为了进一步地偷懒，我们将<span class="math inline">\(W^T\)</span>也叫做<span class="math inline">\(W\)</span>。 现在我们来定义一个平方损失函数，其中W是模型的参数矩阵，x为模型的某个输入值，y为实际值，那么有损失函数 <span class="math display">\[C=||Wx-y||^2\]</span> 所以有模型参数 <span class="math display">\[W^*=arg\min_{C}||Wx-y||^2\]</span> 试想，假如我们使用某种方法使得cost降到最小，那么可想而知很容易便会产生过拟合(overfitting)。现在我们不希望这个cost降到最低，一个可行的方法是在损失函数公式中我们给它加入一个反向的<code>干扰项</code>，我们给它取个更专业的名字--<code>惩罚项</code>。 我们重新定义这个这个损失函数。<span class="math inline">\(l_1-norm\)</span>方法在式子中加入了一个<code>一次</code>的惩罚项,<code>用来描述模型的复杂程度</code> <span class="math display">\[C=||Wx-y||^2+\alpha||W||\]</span> 其中<span class="math inline">\(\alpha\)</span>用来衡量惩罚项的重要程度。 使用这样的损失函数，便可以一定程度上防止产生过拟合</p>
-<h3 id="l_2-norm">2.2 <span class="math inline">\(l_2-norm\)</span></h3>
-<p>将惩罚项定位二次项，这样定义损失函数的方法我们称之为<span class="math inline">\(l_2-norm\)</span>,也可以叫它Ridge回归（岭回归）。例如: <span class="math display">\[C=||Wx-y||^2+\alpha||W||^2\]</span></p>
-<h3 id="dropout正则化">2.3 Dropout正则化</h3>
-<p>L1、L2正则化是通过修改损失函数来实现的，而Dropout则是通过<strong>修改神经网络本身</strong>来实现的，它是在训练网络时用的一种技巧(trick)。 举例来说，假如现在我们有20个样本，但是定义了300个神经元，那么直接进行训练，由于神经元数量很多，所以模型的拟合效果会很好，也因此会很容易产生过拟合现象。现在我们每一次训练神经网络时，随机丢弃一部分神经元，下一次训练时，再随机丢掉一部分神经元，那么这样我们也可以有效降低过拟合效应。 下面是一个示例代码，来自莫烦py教程 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># torch.manual_seed(1)    # reproducible</span></span><br><span class="line"></span><br><span class="line">N_SAMPLES = <span class="number">20</span></span><br><span class="line">N_HIDDEN = <span class="number">300</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># training data</span></span><br><span class="line">x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">y = x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># test data</span></span><br><span class="line">test_x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">test_y = test_x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># show data</span></span><br><span class="line">plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'train'</span>)</span><br><span class="line">plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'test'</span>)</span><br><span class="line">plt.legend(loc=<span class="string">'upper left'</span>)</span><br><span class="line">plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>))</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">net_overfitting = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">net_dropped = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">print(net_overfitting)  <span class="comment"># net architecture</span></span><br><span class="line">print(net_dropped)</span><br><span class="line"></span><br><span class="line">optimizer_ofit = torch.optim.Adam(net_overfitting.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">optimizer_drop = torch.optim.Adam(net_dropped.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">loss_func = torch.nn.MSELoss()</span><br><span class="line"></span><br><span class="line">plt.ion()   <span class="comment"># something about plotting</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> range(<span class="number">500</span>):</span><br><span class="line">    pred_ofit = net_overfitting(x)</span><br><span class="line">    pred_drop = net_dropped(x)</span><br><span class="line">    loss_ofit = loss_func(pred_ofit, y)</span><br><span class="line">    loss_drop = loss_func(pred_drop, y)</span><br><span class="line"></span><br><span class="line">    optimizer_ofit.zero_grad()</span><br><span class="line">    optimizer_drop.zero_grad()  <span class="comment"># 清空过往梯度，才能更顺利地进行再一次地计算梯度</span></span><br><span class="line">    loss_ofit.backward()</span><br><span class="line">    loss_drop.backward()  <span class="comment"># backward通过反向传播计算当前梯度</span></span><br><span class="line">    optimizer_ofit.step()  <span class="comment"># step才更新网络参数</span></span><br><span class="line">    optimizer_drop.step()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> t % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># change to eval mode in order to fix drop out effect</span></span><br><span class="line">        net_overfitting.eval()</span><br><span class="line">        net_dropped.eval()  <span class="comment"># parameters for dropout differ from train mode</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># plotting</span></span><br><span class="line">        plt.cla()</span><br><span class="line">        test_pred_ofit = net_overfitting(test_x)</span><br><span class="line">        test_pred_drop = net_dropped(test_x)</span><br><span class="line">        plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'train'</span>)</span><br><span class="line">        plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'test'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_ofit.data.numpy(), <span class="string">'r-'</span>, lw=<span class="number">3</span>, label=<span class="string">'overfitting'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_drop.data.numpy(), <span class="string">'b--'</span>, lw=<span class="number">3</span>, label=<span class="string">'dropout(50%)'</span>)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.2</span>, <span class="string">'overfitting loss=%.4f'</span> % loss_func(test_pred_ofit, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>:  <span class="string">'red'</span>&#125;)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.5</span>, <span class="string">'dropout loss=%.4f'</span> % loss_func(test_pred_drop, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>: <span class="string">'blue'</span>&#125;)</span><br><span class="line">        plt.legend(loc=<span class="string">'upper left'</span>); plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>));plt.pause(<span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># change back to train mode</span></span><br><span class="line">        net_overfitting.train()</span><br><span class="line">        net_dropped.train()</span><br><span class="line"></span><br><span class="line">plt.ioff()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure> 结果： <img src="https://img-blog.csdnimg.cn/20200407134135992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 可以看到进行所谓dropout后的网络在所有数据上的损失函数更小</p>
-<p>总结一下我们应该怎么使用这种dropout技巧： 1. 定义网络时，在隐藏层中间使用<code>torch.nn.Dropout(prop)</code> 2. 神经网络有eval()和train()两种模式。计算预测值时记得切换到eval()模式，这种模式会关闭dropout；而在train()模式下，使用模型进行预测时仍然有部分神经元被dropout ### 2.4 增加训练集样本数量 这种方法自然也是可以削减过拟合的</p>
-<h2 id="参考">参考</h2>
-<ul>
-<li><a href="https://blog.csdn.net/qq_20412595/article/details/81636105?depth_1-utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1&amp;utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1" target="_blank" rel="noopener">正则化理解</a></li>
-<li><a href="https://blog.csdn.net/jinping_shi/article/details/52433975" target="_blank" rel="noopener">L1与L2正则化</a></li>
-<li><a href="https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg" target="_blank" rel="noopener">莫烦python</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>回归</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>给博客添加音乐播放器</title>
     <url>/2020/08/30/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -911,12 +910,12 @@ x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\r
 <p>例如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer <span class="string">"旅行者一号"</span> <span class="string">"合唱团"</span> <span class="string">"http://music.163.com/song/media/outer/url?id=490439632.mp3"</span>  <span class="string">"https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center"</span> %&#125;</span><br></pre></td></tr></table></figure></p>
 <p>效果如下</p>
 
-        <div id="aplayer-PuxpIwpb" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-NdmGkZqn" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-PuxpIwpb"),
+            element: document.getElementById("aplayer-NdmGkZqn"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -948,12 +947,12 @@ x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\r
 <p>例如这首歌的歌词就是这样:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayerlrc &quot;旅行者一号&quot; &quot;合唱团&quot; &quot;http:&#x2F;&#x2F;music.163.com&#x2F;song&#x2F;media&#x2F;outer&#x2F;url?id&#x3D;490439632.mp3&quot; %&#125;</span><br><span class="line">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音&#x2F;混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</span><br><span class="line">&#123;% endaplayerlrc %&#125;</span><br></pre></td></tr></table></figure>
 <p>效果如下:</p>
-<div id="aplayer-SDObPJvf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+<div id="aplayer-ieLhUlSK" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
 				<pre class="aplayer-lrc-content">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音/混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</pre>
 			</div>
 			<script>
 				var ap = new APlayer({
-					element: document.getElementById("aplayer-SDObPJvf"),
+					element: document.getElementById("aplayer-ieLhUlSK"),
 					narrow: false,
 					autoplay: false,
 					showlrc: 2,
@@ -978,144 +977,31 @@ x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\r
       </tags>
   </entry>
   <entry>
-    <title>泛函分析(2)空间完备性</title>
-    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>完备性是泛函分析中的重要概念，本文对此概念进行简要总结</p>
+    <title>英语在高考中的权重可以调整吗</title>
+    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
+</blockquote>
 <a id="more"></a>
-<figure>
-<img src="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16" alt="圆" /><figcaption>圆</figcaption>
-</figure>
-<h1 id="空间完备性"><strong>空间完备性</strong></h1>
-<p>为了定义完备性，需要首先清楚柯西序列和收敛的概念</p>
-<h2 id="收敛性与柯西列"><strong>1. 收敛性与柯西列</strong></h2>
-<h3 id="柯西列"><strong>1.1 柯西列</strong></h3>
-<p>给定某个度量空间 <span class="math inline">\(X\)</span> 中的序列 <span class="math inline">\(\left\{x_{i}\right\}\)</span>, 当满足以下条件时，他就叫做柯西序列 (Cauchy sequence)</p>
-<p>对任意 <span class="math inline">\(\varepsilon&gt;0\)</span>, 存在 <span class="math inline">\(N\)</span> ，当 <span class="math inline">\(m, n \geqslant N\)</span> 时就满足 <span class="math inline">\(d\left(u_{m}, u_{n}\right)&lt;\varepsilon\)</span>.</p>
-<p><strong>1.2 收敛</strong></p>
-<p>设 <span class="math inline">\((X, d)\)</span> 为度量空间， <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为 <span class="math inline">\(\mathrm{X}\)</span> 中的数列，若存在 <span class="math inline">\(x \in X\)</span> 使得 <span class="math inline">\(\lim _{n \rightarrow \infty} d\left(x_{n}, x\right)=0\)</span> ，则 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 在 <span class="math inline">\(X\)</span> 中收敛, 称 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为收敛列, 称 <span class="math inline">\(x\)</span> 为 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 的极限, 记做 <span class="math inline">\(x_{n} \rightarrow x\)</span> 。</p>
-<p><span class="math inline">\(Remark:\)</span></p>
-<ol type="1">
-<li><p>收敛列比柯西列更严格。或者说收敛列一定是柯西列</p></li>
-<li><p>柯西列的直观理解是，一个序列的元素随着序数的增加而愈发靠近，并且最终趋于无限近</p></li>
-<li><p>收敛列一定有界，不仅如此，柯西列也一定有界</p></li>
-</ol>
-<h2 id="完备空间概念"><strong>2. 完备空间概念</strong></h2>
-<p>完备空间指这样性质的空间: 空间中的任何柯西序列都收敛于这个空间中</p>
-<p><span class="math inline">\(Remark:\)</span></p>
-<ol type="1">
-<li><p>完备空间是特殊的度量空间。因为按照定义完备空间需要&quot;柯西列收敛&quot;，而为了定义收敛，需要先定义先度量</p></li>
-<li><p><strong>欧几里得空间是完备空间</strong>。这给了它很好的性质，也即柯西列的收敛性</p></li>
-</ol>
-<p>证明如下:</p>
-<p>Let <span class="math inline">\(\left\langle\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)\right\rangle_{n \in \mathbb{N}}\)</span> be a Cauchy sequence in <span class="math inline">\(\mathbb{R}^{m}\)</span>.</p>
-<p>Let <span class="math inline">\(\epsilon&gt;0\)</span></p>
-<p>Then <span class="math inline">\(\frac{\epsilon}{m}&gt;0\)</span>.</p>
-<p>We have that Real Number Line is Complete Metric Space.</p>
-<p>Therefore:</p>
-<p><span class="math inline">\(\exists y_{1}, y_{2}, \ldots, y_{m} \in \mathbb{R}\)</span> and <span class="math inline">\(N_{1}, N_{2}, \ldots, N_{m} \in \mathbb{N}\)</span> (depending on <span class="math inline">\(\epsilon\)</span> ) such that:</p>
-<p><span class="math display">\[
-\forall k \in \mathbb{N}: 1 \leq k \leq m: \forall n_{k}&gt;N_{k}:\left\langle x_{n, k}-y_{k}\right\rangle&lt;\frac{\epsilon}{m}
-\]</span></p>
-<p>From Euclidean Space is Normed Space:</p>
-<p><span class="math display">\[
-\left\|\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)-\left(y_{1}, y_{2}, \ldots, y_{m}\right)\right\| \leq \sum_{k=1}^{m}\left|x_{n, k}-y_{k}\right|&lt;\epsilon
-\]</span></p>
-<p>Hence the Euclidean space is a complete metric space.</p>
-<ol start="3" type="1">
-<li><p>数集<span class="math inline">\(\mathbb{R}\)</span>、<span class="math inline">\(\mathbb{C}\)</span>都是完备的</p></li>
-<li><p>R和C的子集不一定完备。例如取<span class="math inline">\(X=(0,1)\)</span>。取一柯西列(元素可以无限靠近)<span class="math inline">\(x=1/n\)</span>，其极限0不在该空间中</p></li>
-<li><p>完备度量空间一定为闭集(结合上面例子记忆)</p></li>
-<li><p>完备度量空间的闭子集仍然完备</p></li>
-<li><p>“完备” 可以形象理解为空间中没有 “漏洞”．有限维空间都是完备的．可数维空间都是不完备的．例如有理数集和多项式组成的空间就是不完备的（柯西序列的极限可以是 e^x，但是 e^x并不属于该空间）</p></li>
-</ol>
-<h3 id="参考">参考</h3>
-<ul>
-<li><p><a href="https://zhuanlan.zhihu.com/p/85867887" target="_blank" rel="noopener">收敛性、完备性和紧性</a></p></li>
-<li><p><a href="https://proofwiki.org/wiki/Euclidean_Space_is_Complete_Metric_Space" target="_blank" rel="noopener">Euclidean Space is Complete Metric Space</a></p></li>
-</ul>
+<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
+<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
+<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
+<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
+<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
+<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
+<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
+<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
+<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平很不咋地，也根本无法直接阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。但只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
+<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
 ]]></content>
       <categories>
-        <category>数学</category>
+        <category>感想</category>
       </categories>
       <tags>
-        <tag>总结</tag>
-        <tag>泛函分析</tag>
-        <tag>完备空间</tag>
-        <tag>柯西序列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>罚函数法总结</title>
-    <url>/2021/11/10/%E7%BD%9A%E5%87%BD%E6%95%B0%E6%B3%95%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://img-blog.csdnimg.cn/fb312cd114df4a1d881341aac81d8dfa.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" /></p>
-<p>罚函数是一类重要的最优化算法</p>
-<a id="more"></a>
-<p>处理有约束的优化问题时，一种常见的处理方法是: 将约束条件作为惩罚项加到目标函数中。&quot;惩罚&quot;是一个很形象的称呼，意思是优化过程迭代到约束条件之外时给与惩罚，或者说负反馈。例如，我们在处理<strong>最小化</strong>函数值<span class="math inline">\(f\)</span>时，在f中增加一些项，这些项会使得迭代点在可行域之外时，<strong>增大</strong>函数f的值，这些项就起到了惩罚的作用</p>
-<p>这些约束条件可以是等式，也可以是不等式，又或者是两者都有。</p>
-<p>在处理等式约束时，常常使用外点罚函数法，意思是迭代点允许在可行域之外(其实非常自然，因为等式约束是一种&quot;很严格&quot;的约束，迭代不要限制地太紧了，不然都不好迭代优化);对于不等式约束，常使用内点罚函数法，意思是不让迭代点到可行域之外。<strong>内点法适用于只有不等式约束的问题</strong>。在对函数添加罚函数后，就将有约束的优化问题转换为了无约束优化问题。</p>
-<h1 id="外点罚函数法">外点罚函数法</h1>
-<h3 id="等式约束外点罚函数法">等式约束外点罚函数法</h3>
-<p>考虑问题 <span class="math display">\[
-\min_x f(x) \quad x\in \mathbb{R^n}\\
-s.t. \ \  c_i(x)=0 \ \ i \in \mathcal E
-\]</span> 最自然的想法，把约束条件的平方作为罚函数，即</p>
-<p><span class="math display">\[
-P_E(x, \sigma)=f(x)+\frac{1}{2}\sigma \sum_i c_i^{2}(x)
-\]</span> 其中第二项为惩罚项，sigma称为罚因子。这种方法称为<strong>等式约束的二次外点罚函数法</strong>。其迭代过程与收敛性的证明参考文在文的《最优化计算方法》P186</p>
-<p>上面我们说，外点罚函数法<strong>常</strong>用于处理等式约束，但如果通过巧妙的设计，也可以用于不等式约束，例如对于如下问题</p>
-<h3 id="不等式约束外点罚函数法">不等式约束外点罚函数法</h3>
-<p><span class="math display">\[
-\min_x f(x) \quad x\in \mathbb{R^n}\\
-s.t. \ \  c_i(x)\le0 \ \ i \in \mathcal I
-\]</span> 将二次罚函数设定为如下样式</p>
-<p><span class="math display">\[
-\tilde c_i(x)=\max (x_i(x),0)
-\]</span> 那么有</p>
-<p><span class="math display">\[
-P_I(x, \sigma)=f(x)+\frac{1}{2}\sigma \sum_i \tilde c_i^{2}(x)
-\]</span> 可见，此时也允许迭代点在可行域之外迭代。值得注意的是，<span class="math inline">\(P_I\)</span>仍然是可导函数，进而可以用梯度类算法求解。</p>
-<h3 id="同时含有等式约束与不等式约束的外点罚函数法">同时含有等式约束与不等式约束的外点罚函数法</h3>
-<p>对于如下问题 <span class="math display">\[
-\min_x f(x) \quad x\in \mathbb{R^n}\\
-s.t. \ \  c_i(x)\le0 \ \ \ i\in \mathcal I \\
-\tilde c_i(x)= 0 \ \ \ i\in \mathcal E
-\]</span></p>
-<p>把两个罚函数相加即可</p>
-<p><span class="math display">\[
-P(x, \sigma)=f(x)+\frac{1}{2}\sigma (\sum_i c_i^{2}(x) + \sum_i \tilde c_i^{2}(x))
-\]</span></p>
-<h1 id="内点罚函数法">内点罚函数法</h1>
-<p><strong>内点法使用于只有不等式约束的优化问题</strong>。其思想是: 为了使得迭代过程始终在可行域范围内，如果迭代点迭代到可行域的边界，那么给它一个极大的惩罚。这个惩罚函数的形状就像一睹墙，或者说示性函数。这个惩罚项可以用对数函数、倒数函数构造</p>
-<p>例如对于如下问题:</p>
-<p><span class="math display">\[
-\min_x f(x) \quad x\in \mathbb{R^n}\\
-s.t. \ \  c_i(x)\le0 \ \ i \in \mathcal I
-\]</span> 保持迭代点含于可行域内部的方法是 定义障碍函数 <span class="math display">\[
-G(x, r)=f(x) 十 r B(x)
-\]</span> 其中 <span class="math inline">\(\mathbf{B}(\mathbf{x})\)</span> 是连续函数, 当点 <span class="math inline">\(\mathbf{x}\)</span> 趋向可行域 边界时, <span class="math inline">\(B(x) \rightarrow+\infty\)</span> 两种最重要的形式 <span class="math display">\[
-\begin{aligned}
-&amp;B(x)=\sum_{i=1}^{m} \frac{1}{g_{i}(x)} \\
-&amp;B(x)=-\sum_{i=1}^{m} \log g_{i}(x)
-\end{aligned}
-\]</span> r是很小的正数。这样, 当x趋向边界时, 函数 <span class="math inline">\(G(\mathbf{x}, \mathbf{r}) \rightarrow +\infty\)</span> ； 否则, 由于 <span class="math inline">\(\mathbf{r}\)</span> 很小, 则函数 <span class="math inline">\(\mathbf{G}(\mathbf{x}, \mathbf{r})\)</span> 的取值近似 <span class="math inline">\(\mathbf{f}(\mathbf{x})\)</span> 。因此, 可通过求解 下列问题得到的近似解: <span class="math display">\[
-\min G(x, r) \\
-s.t. \ \ x \in intS
-\]</span> 由于 <span class="math inline">\(\mathrm{B}(\mathrm{x})\)</span> 的存在，在可行域边界形成“围墙”, 因此的解x必含于可行域的内部 B(x)的阻挡作用是自动实现的, 因此从计算的观点看,可当作无约束问题来处理</p>
-<h1 id="参考">参考</h1>
-<ul>
-<li>《最优化计算方法》文再文</li>
-<li>《凸优化》Stephen Boyd</li>
-</ul>
-]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>最优化算法</tag>
-        <tag>罚函数</tag>
-        <tag>内点法</tag>
-        <tag>外点法</tag>
+        <tag>知乎</tag>
+        <tag>高考</tag>
+        <tag>英语</tag>
       </tags>
   </entry>
   <entry>
@@ -1213,92 +1099,6 @@ s.t. \ \ x \in intS
       </tags>
   </entry>
   <entry>
-    <title>英语在高考中的权重可以调整吗</title>
-    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
-</blockquote>
-<a id="more"></a>
-<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
-<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
-<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
-<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
-<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
-<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
-<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
-<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
-<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平很不咋地，也根本无法直接阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。但只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
-<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>知乎</tag>
-        <tag>高考</tag>
-        <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>闹钟电视</title>
-    <url>/2021/05/14/%E9%97%B9%E9%92%9F%E7%94%B5%E8%A7%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-rcsDrhAX" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-rcsDrhAX"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "もう少しだけ",
-              author: "Yoasobi",
-              url: "http://music.163.com/song/media/outer/url?id=1840862630.mp3",
-              pic: "https://img-blog.csdnimg.cn/20210514143129720.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<a id="more"></a>
-<p><img src="https://img.3dmgame.com/uploads/images/news/20190830/1567146340_769830.gif" /></p>
-]]></content>
-      <categories>
-        <category>歌曲</category>
-      </categories>
-      <tags>
-        <tag>歌曲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随机过程总结归档</title>
-    <url>/2022/02/25/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E6%80%BB%E7%BB%93%E5%BD%92%E6%A1%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>随机过程的总结</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/939d5175eeec4740b4e4779cfcc6c7b2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" /></p>
-<a id="more"></a>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/122657736" target="_blank" rel="noopener">一些基本概念</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/122677290" target="_blank" rel="noopener">相关分析和谱分析</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/122693119" target="_blank" rel="noopener">一些非平稳过程</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/122721280" target="_blank" rel="noopener">泊松过程</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/122721551" target="_blank" rel="noopener">马尔可夫过程与高斯过程</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>总结</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>随机过程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>语音处理笔记--高斯混合模型与最大期望算法</title>
     <url>/2020/04/13/%E8%AF%AD%E9%9F%B3%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0--%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%9C%80%E5%A4%A7%E6%9C%9F%E6%9C%9B%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -1372,6 +1172,206 @@ p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \\
       <tags>
         <tag>总结</tag>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>罚函数法总结</title>
+    <url>/2021/11/10/%E7%BD%9A%E5%87%BD%E6%95%B0%E6%B3%95%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://img-blog.csdnimg.cn/fb312cd114df4a1d881341aac81d8dfa.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" /></p>
+<p>罚函数是一类重要的最优化算法</p>
+<a id="more"></a>
+<p>处理有约束的优化问题时，一种常见的处理方法是: 将约束条件作为惩罚项加到目标函数中。&quot;惩罚&quot;是一个很形象的称呼，意思是优化过程迭代到约束条件之外时给与惩罚，或者说负反馈。例如，我们在处理<strong>最小化</strong>函数值<span class="math inline">\(f\)</span>时，在f中增加一些项，这些项会使得迭代点在可行域之外时，<strong>增大</strong>函数f的值，这些项就起到了惩罚的作用</p>
+<p>这些约束条件可以是等式，也可以是不等式，又或者是两者都有。</p>
+<p>在处理等式约束时，常常使用外点罚函数法，意思是迭代点允许在可行域之外(其实非常自然，因为等式约束是一种&quot;很严格&quot;的约束，迭代不要限制地太紧了，不然都不好迭代优化);对于不等式约束，常使用内点罚函数法，意思是不让迭代点到可行域之外。<strong>内点法适用于只有不等式约束的问题</strong>。在对函数添加罚函数后，就将有约束的优化问题转换为了无约束优化问题。</p>
+<h1 id="外点罚函数法">外点罚函数法</h1>
+<h3 id="等式约束外点罚函数法">等式约束外点罚函数法</h3>
+<p>考虑问题 <span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)=0 \ \ i \in \mathcal E
+\]</span> 最自然的想法，把约束条件的平方作为罚函数，即</p>
+<p><span class="math display">\[
+P_E(x, \sigma)=f(x)+\frac{1}{2}\sigma \sum_i c_i^{2}(x)
+\]</span> 其中第二项为惩罚项，sigma称为罚因子。这种方法称为<strong>等式约束的二次外点罚函数法</strong>。其迭代过程与收敛性的证明参考文在文的《最优化计算方法》P186</p>
+<p>上面我们说，外点罚函数法<strong>常</strong>用于处理等式约束，但如果通过巧妙的设计，也可以用于不等式约束，例如对于如下问题</p>
+<h3 id="不等式约束外点罚函数法">不等式约束外点罚函数法</h3>
+<p><span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)\le0 \ \ i \in \mathcal I
+\]</span> 将二次罚函数设定为如下样式</p>
+<p><span class="math display">\[
+\tilde c_i(x)=\max (x_i(x),0)
+\]</span> 那么有</p>
+<p><span class="math display">\[
+P_I(x, \sigma)=f(x)+\frac{1}{2}\sigma \sum_i \tilde c_i^{2}(x)
+\]</span> 可见，此时也允许迭代点在可行域之外迭代。值得注意的是，<span class="math inline">\(P_I\)</span>仍然是可导函数，进而可以用梯度类算法求解。</p>
+<h3 id="同时含有等式约束与不等式约束的外点罚函数法">同时含有等式约束与不等式约束的外点罚函数法</h3>
+<p>对于如下问题 <span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)\le0 \ \ \ i\in \mathcal I \\
+\tilde c_i(x)= 0 \ \ \ i\in \mathcal E
+\]</span></p>
+<p>把两个罚函数相加即可</p>
+<p><span class="math display">\[
+P(x, \sigma)=f(x)+\frac{1}{2}\sigma (\sum_i c_i^{2}(x) + \sum_i \tilde c_i^{2}(x))
+\]</span></p>
+<h1 id="内点罚函数法">内点罚函数法</h1>
+<p><strong>内点法使用于只有不等式约束的优化问题</strong>。其思想是: 为了使得迭代过程始终在可行域范围内，如果迭代点迭代到可行域的边界，那么给它一个极大的惩罚。这个惩罚函数的形状就像一睹墙，或者说示性函数。这个惩罚项可以用对数函数、倒数函数构造</p>
+<p>例如对于如下问题:</p>
+<p><span class="math display">\[
+\min_x f(x) \quad x\in \mathbb{R^n}\\
+s.t. \ \  c_i(x)\le0 \ \ i \in \mathcal I
+\]</span> 保持迭代点含于可行域内部的方法是 定义障碍函数 <span class="math display">\[
+G(x, r)=f(x) 十 r B(x)
+\]</span> 其中 <span class="math inline">\(\mathbf{B}(\mathbf{x})\)</span> 是连续函数, 当点 <span class="math inline">\(\mathbf{x}\)</span> 趋向可行域 边界时, <span class="math inline">\(B(x) \rightarrow+\infty\)</span> 两种最重要的形式 <span class="math display">\[
+\begin{aligned}
+&amp;B(x)=\sum_{i=1}^{m} \frac{1}{g_{i}(x)} \\
+&amp;B(x)=-\sum_{i=1}^{m} \log g_{i}(x)
+\end{aligned}
+\]</span> r是很小的正数。这样, 当x趋向边界时, 函数 <span class="math inline">\(G(\mathbf{x}, \mathbf{r}) \rightarrow +\infty\)</span> ； 否则, 由于 <span class="math inline">\(\mathbf{r}\)</span> 很小, 则函数 <span class="math inline">\(\mathbf{G}(\mathbf{x}, \mathbf{r})\)</span> 的取值近似 <span class="math inline">\(\mathbf{f}(\mathbf{x})\)</span> 。因此, 可通过求解 下列问题得到的近似解: <span class="math display">\[
+\min G(x, r) \\
+s.t. \ \ x \in intS
+\]</span> 由于 <span class="math inline">\(\mathrm{B}(\mathrm{x})\)</span> 的存在，在可行域边界形成“围墙”, 因此的解x必含于可行域的内部 B(x)的阻挡作用是自动实现的, 因此从计算的观点看,可当作无约束问题来处理</p>
+<h1 id="参考">参考</h1>
+<ul>
+<li>《最优化计算方法》文再文</li>
+<li>《凸优化》Stephen Boyd</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>最优化算法</tag>
+        <tag>罚函数</tag>
+        <tag>内点法</tag>
+        <tag>外点法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>闹钟电视</title>
+    <url>/2021/05/14/%E9%97%B9%E9%92%9F%E7%94%B5%E8%A7%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-hmgLIilv" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-hmgLIilv"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "もう少しだけ",
+              author: "Yoasobi",
+              url: "http://music.163.com/song/media/outer/url?id=1840862630.mp3",
+              pic: "https://img-blog.csdnimg.cn/20210514143129720.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<a id="more"></a>
+<p><img src="https://img.3dmgame.com/uploads/images/news/20190830/1567146340_769830.gif" /></p>
+]]></content>
+      <categories>
+        <category>歌曲</category>
+      </categories>
+      <tags>
+        <tag>歌曲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>牛顿法用于优化问题</title>
+    <url>/2021/10/05/%E7%89%9B%E9%A1%BF%E6%B3%95%E7%94%A8%E4%BA%8E%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>无约束优化算法可以分为<strong>线搜索类算法</strong>与<strong>信赖域类算法</strong>两类，他们都是对<span class="math inline">\(f(\boldsymbol x)\)</span>在局部进行近似，前者用得更加普遍。而线搜索类算法根据搜索方向选择的不同可以分为<strong>梯度算法、牛顿算法、拟牛顿算法、次梯度算法</strong>等</p>
+<a id="more"></a>
+<p>本文目的是介绍<strong>牛顿法</strong>。平常我们说牛顿法，一般指的是用牛顿法求方程根，因而先复习牛顿法求根的原理，然后扩展到用牛顿法求极值，再进一步扩展到多元函数牛顿法求极值</p>
+<h2 id="一元函数牛顿法求根">1. 一元函数牛顿法求根</h2>
+<p>复杂方程的根很难直接求得，最开始用牛顿法迭代来求方程的根。方法是给 一个初值 <span class="math inline">\(x_{1}\)</span> ，在 <span class="math inline">\(x_{1}\)</span> 处用一阶泰勒展式来近似表示函数 <span class="math inline">\(f(x)\)</span> <span class="math display">\[
+f(x)=f\left(x_{1}\right)+f^{\prime}\left(x_{1}\right)\left(x-x_{1}\right) + \mathcal{O}(x-x_1)
+\]</span> 将 <span class="math inline">\(f(x)=0\)</span> 带入上式, 求得与 <span class="math inline">\(x\)</span> 轴交点横坐标 <span class="math inline">\(x=x_{1}-f\left(x_{1}\right) / f^{\prime}\left(x_{1}\right)\)</span>, 这个 <span class="math inline">\(x\)</span> 点并不是函数 <span class="math inline">\(f(x)\)</span> 的根, 但是距离真正的根更近了一点，不断迭代优化，有如下步骤</p>
+<p><span class="math display">\[
+x_{n+1}=x_{n}-f\left(x_{n}\right) / f^{\prime}\left(x_{n}\right)
+\]</span> 最终求得的 <span class="math inline">\(x\)</span> 值变化小于一个阈值就认为这个 <span class="math inline">\(x\)</span> 值是函数 <span class="math inline">\(f(x)\)</span> 的近似根, 这时牛顿法收敛</p>
+<h2 id="一元函数牛顿法求极值">2. 一元函数牛顿法求极值</h2>
+<p>牛顿法用于求函数极值。对于 <span class="math inline">\(f(x)\)</span> 的极值点也就是求 <span class="math inline">\(f^{\prime}(x)\)</span> 的根, 那么也就是如上面介绍的 求 <span class="math inline">\(f^{\prime}(x)=0\)</span> 的解。给定初值 <span class="math inline">\(x_{1} ，\)</span> 在 <span class="math inline">\(x_{1}\)</span> 处用二阶泰勒展式见公式 <span class="math inline">\((4)\)</span> 。 <span class="math display">\[
+f(x)=f\left(x_{1}\right)+f^{\prime}\left(x_{1}\right)\left(x-x_{1}\right)+\frac{1}{2} f^{\prime \prime}\left(x_{1}\right)\left(x-x_{1}\right)^{2}
+\]</span> 对 <span class="math inline">\(f(x)\)</span> 求导, 令 <span class="math inline">\(f^{\prime}(x)=0\)</span>, 得 <span class="math inline">\(x=x_{1}-f^{\prime}\left(x_{1}\right) / f^{\prime \prime}\left(x_{1}\right)\)</span>, 依次迭代得到递推公式 <span class="math display">\[
+x_{n+1}=x_{n}-f^{\prime}\left(x_{n}\right) / f^{\prime \prime}\left(x_{n}\right)
+\]</span> 当xn的值变化小于阈值时认为算法收敛</p>
+<h2 id="多元函数牛顿法求极值">3. 多元函数牛顿法求极值</h2>
+<p>对定义在<span class="math inline">\(\mathbb{R}^{n}\)</span>上的二次可微函数<span class="math inline">\(f(\boldsymbol x)\)</span>，考虑其在<span class="math inline">\(x_k\)</span>处二阶泰勒展开，在其定义域上取<span class="math inline">\(x_k,d_k \in \mathbb{R}^{n}\)</span>，其中<span class="math inline">\(d_k\)</span>靠近<span class="math inline">\(x_k\)</span>，有如下式子</p>
+<p><span class="math display">\[
+f(x_k+d_k)=f(x_k)+\nabla f(x_k)^\mathrm{T}d_k + \frac{1}{2}(d_k)^\mathrm{T}\nabla^2f(x_k)d_k+\mathcal{O}(||d_k||^2)
+\]</span></p>
+<p>忽略高阶无穷小，将上式看作<span class="math inline">\(d_k\)</span>的函数，对其求导(求梯度？)后令<span class="math inline">\(f&#39;(x_k+d_k)=0\)</span>，化简可得<strong>牛顿方程</strong></p>
+<p><span class="math display">\[
+\nabla^{2} f\left(x_{k}\right) d_{k}=-\nabla f\left(x_{k}\right)
+\]</span></p>
+<p>由上式，可由简单的矩阵运算规则得到优化方向<span class="math inline">\(d_k=-\nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)\)</span></p>
+<p>因而可以得到迭代规则</p>
+<p><span class="math display">\[
+x_{x+1}=x_{k}-\nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)
+\]</span> 当xn的值变化小于阈值时认为算法收敛</p>
+<h3 id="对比">4. 对比</h3>
+<h3 id="牛顿法对比">4.1 牛顿法对比</h3>
+<p>如果把矩阵求逆<span class="math inline">\(\nabla^{2} f\left(x_{k}\right)^{-1}\)</span>，<strong>在形式上写作分母</strong>。将上面三者罗列如下，可见形式完全一样(吐槽：这不废话)</p>
+<p><span class="math display">\[
+x_{n+1}=x_{n}-f\left(x_{n}\right) / f^{\prime}\left(x_{n}\right)
+\]</span> <span class="math display">\[
+x_{n+1}=x_{n}-f^{\prime}\left(x_{n}\right) / f^{\prime \prime}\left(x_{n}\right)
+\]</span> <span class="math display">\[
+x_{x+1}=x_{k}-\nabla f\left(x_{k}\right)/\nabla^{2} f\left(x_{k}\right)
+\]</span></p>
+<h3 id="牛顿法与梯度下降对比">4.2 牛顿法与梯度下降对比</h3>
+<p>梯度下降 <span class="math display">\[
+x_{k+1}=x_{k}-\alpha_{k}\nabla f(x_k)
+\]</span></p>
+<p>步长不等于1的牛顿法(也就是优化方向乘以alpha) <span class="math display">\[
+x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\right)
+\]</span></p>
+<ol start="5" type="1">
+<li>参考</li>
+</ol>
+<ul>
+<li>《最优化计算方法》 文再文</li>
+<li><a href="https://zhuanlan.zhihu.com/p/75930544" target="_blank" rel="noopener">牛顿法求极值</a></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/23831218512e49bba90a9259ec10e07f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_17,color_FFFFFF,t_70,g_se,x_16" /></p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>最优化</tag>
+        <tag>牛顿法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随机过程总结归档</title>
+    <url>/2022/02/25/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E6%80%BB%E7%BB%93%E5%BD%92%E6%A1%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>随机过程的总结</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/939d5175eeec4740b4e4779cfcc6c7b2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" /></p>
+<a id="more"></a>
+<ul>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/122657736" target="_blank" rel="noopener">一些基本概念</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/122677290" target="_blank" rel="noopener">相关分析和谱分析</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/122693119" target="_blank" rel="noopener">一些非平稳过程</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/122721280" target="_blank" rel="noopener">泊松过程</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/122721551" target="_blank" rel="noopener">马尔可夫过程与高斯过程</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>随机过程</tag>
       </tags>
   </entry>
 </search>
