@@ -7,6 +7,58 @@
 ]]></content>
   </entry>
   <entry>
+    <title>我喜欢</title>
+    <url>/2020/05/06/%E6%88%91%E5%96%9C%E6%AC%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>--《what I adore》 合唱</p>
+</blockquote>
+<a id="more"></a>
+
+        <div id="aplayer-WuQXWWId" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-WuQXWWId"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "我喜欢",
+              author: "金承志",
+              url: "http://music.163.com/song/media/outer/url?id=464647435.mp3",
+              pic: "https://img-blog.csdnimg.cn/20200831131615443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<blockquote>
+<p>我喜欢 无尽田野上奔跑的麋鹿</p>
+<p>我喜欢 外婆门前的榕树</p>
+<p>我喜欢母亲的便当</p>
+<p>我喜欢父亲的胡渣</p>
+<p>我喜欢八月的夜晚还在营业的游乐场</p>
+<p>我喜欢放学的铃铛</p>
+<p>我喜欢停电的夜晚</p>
+<p>点一对蜡烛 在幽静的玄关</p>
+<p>我喜欢 城市尽头那远远的青山</p>
+<p>我喜欢 热气球飞上西边的天空</p>
+<p>我喜欢 清晨的石板路</p>
+<p>雾腾腾的早餐店 阿公的桂花糕</p>
+<p>我喜欢 每一朵暮云 每一株绿树</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200506214619877.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ubuntu20.04换源与中文输入法+chrome+LinuxQQ的安装</title>
     <url>/2020/06/25/ubuntu20.04%E6%8D%A2%E6%BA%90%E4%B8%8E%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95+chrome+LinuxQQ%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>安装了最新的ubuntu20.04，赶紧来配置一下吧</p>
@@ -62,6 +114,113 @@
       <tags>
         <tag>配环境</tag>
         <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《置身事内》阅读总结</title>
+    <url>/2022/12/05/%E3%80%8A%E7%BD%AE%E8%BA%AB%E4%BA%8B%E5%86%85%E3%80%8B%E9%98%85%E8%AF%BB%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>一本有关中国经济发展的故事</p>
+<a id="more"></a>
+<p>《置身事内》的文风非常坦诚，作者兰小欢视野广阔、知识丰富、功底深厚，真正做到了&quot;把复杂的事情说简单&quot;，实在是一本不可多得的好书</p>
+<p>作者把第一章到第四章概括为“微观机制”部分，从小的例子、具体的制度与事件切入；第五章到第八章概括为“宏观现象”部分，从宏观经济的角度切入</p>
+<h1 id="微观机制">微观机制</h1>
+<h2 id="第一章-地方政府的权力与事务">第一章 地方政府的权力与事务</h2>
+<ul>
+<li><p>介绍央地关系、中央到地方的五级结构</p></li>
+<li><p>地方具体部门的行事上同时有&quot;条条和块块&quot;两重领导关系</p></li>
+<li><p>央地权力划分三个原则：考虑外部性和规模经济(如国防)、信息传递问题（具体事务的信息地方更清楚）、激励相容性（事权、责任、权力、财权必须匹配）</p></li>
+<li><p>地方部门具有招商引资作用</p></li>
+</ul>
+<h2 id="第二章-财税与政府行为">第二章 财税与政府行为</h2>
+<ul>
+<li>介绍了94税改及其影响</li>
+</ul>
+<p>八十年代中国经济的主旋律是“财政包干”（交完中央的，剩下自己的）。这样的结果就是到了1994年，地方财政收入已经占比过高，中央财政收入占比过低（20%出头）</p>
+<p>于是在94年分税制改革中，新出现了地税局，从而有了地税和国税两套系统(注意2018年又重新合并了)。在这次改革中，把税收分为了中央税、地税、央地共享税，从而拉高了中央税收占比。这套税改的缺点是出现了两套税收人马，人员比较冗余。</p>
+<p>在94税改以前，增值税是最重要的地方税；而在94年以后，增值税成为了央地共享税。为了解决地方税收过少，<strong>中央也建立了税收返还制度(这是一种妥协制度，有两套中央向地方给税收的机制--中央转移支付和税收返还。税收返还金额相比中央转移支付数额较小</strong>，见<a href="http://yss.mof.gov.cn/2018zyys/201804/t20180403_2859259.htm" target="_blank" rel="noopener">统计链接</a></p>
+<p>书中第56页有一句印象很深的金句：<strong>成功的政策背后是成功的协商和妥协，而不是机械的命令与执行，所以理解利益冲突，理解协调和解决机制，是理解政策的基础</strong></p>
+<p>书中此处还讲到一个有趣的事实：企业所得税是中国第二大税种，央企税收交给中央、地方国企税收交给地方，因此地方政府有动机做大地方国企，甚至容易出现<strong>地域保护</strong>（典型如烟厂、酒厂）<del>这其实说明了为什么不同的省区烟的牌子、酒的牌子不一样、并且以省级单位划分</del>。</p>
+<ul>
+<li>土地财政</li>
+</ul>
+<p>98年发生了一件大事--单位停止福利分房，增加了对城建土地的<strong><em>需求</em></strong></p>
+<p>同时新修订的《土地管理法》，锁死了农村集体土地的非农建设，限制了城建用地的<strong><em>供给</em></strong></p>
+<p>商品房和房地产时代的大幕拉开了，在98年之前，地方政府也有一定的卖地收入，但是占比很低，98年之后土地财政收入占比逐年拉高。起初卖地收入并不高，后来才引入了更规范也耳熟能详的“招拍挂”制度</p>
+<p>另外要注意一点，土地财政并非仅依靠卖地收入，还包括税收收入</p>
+<h2 id="第三章-政府投融资与债务">第三章 政府投融资与债务</h2>
+<p>除了财政收入以外（地方财政收入主要来自一般公共预算收入和政府性基金收入，后者主要以土地出让收入为主） ，政府也可以融资，融资方式包括国债、城投公司(贷款+城投债)、地方债</p>
+<p>这一章作者主要介绍了城投公司的一些具体例子、融资方式以及地方债</p>
+<ul>
+<li>城投公司</li>
+</ul>
+<p><strong>地方政府依照法律不可从银行贷款，2015年新《预算法》公布之前也不允许发行债券</strong>。因此地方政府有动机设立融资平台公司</p>
+<p>本章从成都文旅集团的“宽窄巷子”和苏州工业园区的开发(土地一级开发+土地二级开发)为例展开说明</p>
+<p>城投公司模式由<strong>国开行发明</strong>，这也是国开行本身的作用性质所决定（政策性银行，为政策融资）。 2008年之前，城投公司主要从国开行贷款融资；2008年之后，除了国开行，还有四大行、城商行提供贷款融资</p>
+<p><strong>城商行</strong>的主要资金来自哪里？来自同业融资。相对来说城商行相对风险较大(显然因为自身实力弱)，存在一定风险，典型例如包商银行</p>
+<ul>
+<li>地方债</li>
+</ul>
+<p>书中没有专门区分城投债和地方债，把城投债也列为了一种“地方债”</p>
+<p>简单总结城投债的<strong><em>资金来源</em></strong> 我们在生活中几乎没有感觉到过城投的融资，它如此巨量的钱是哪里融资过来的？ 1.银行贷款 2.城投债。但是城投债中七八成也是由商业银行持有 城投债的资金来源特点是，资金大部分来自于各种银行(国开行、四大行、城商行) 。这也是中国大部分企业的共性，融资高度依赖银行</p>
+<p>关于城投公司融资的<strong><em>规范化</em></strong>，如今也在推进，主要包括用地方债置换城投贷款和城投债（限制融资规模、降低偿债成本），剥离政府为城投公司提供隐形担保(典型例子如重庆黔江，处罚了其地财政局为城投提供担保函的事件）、城投公司国企化</p>
+<h2 id="第四章-工业化中的政府角色">第四章 工业化中的政府角色</h2>
+<p>本章介绍了三个故事，三个故事中政府在为企业融资服务的过程中承担了不同的角色</p>
+<p>政府和银行如何给企业帮助与融资？</p>
+<p>不用偿还地给--补贴；约束性地给--产业引导基金/股权投资；给点优惠--低息贷款；不给优惠--普通贷款</p>
+<p>实际执行中，产业引导基金中产生了部分“名股实债”--也就是与企业约定可以以一定价格赎回基金的股权投资并支付利息。现在已经禁止</p>
+<ul>
+<li>京东方与政府投资</li>
+</ul>
+<p>合肥建投与合肥鑫城为京东方在合肥的建设投入了大量资金，这部分内容详细见P124</p>
+<ul>
+<li>光伏发展与政府补贴</li>
+</ul>
+<p>在江西尚德和江西赛维的发展过程中，政府给予了廉价土地、税收优惠、贴息贷款</p>
+<ul>
+<li>政府产业引导基金</li>
+</ul>
+<p>在2007年的《合伙企业法》和2015年的新《预算法》之后，政府引导基金逐渐发展起来</p>
+<p>政府引导基金的特点</p>
+<p>1.是一种&quot;基金的基金&quot;（母基金），这个基金作为出资方LP把钱交给一些其他的基金作为GP(其中也可以包括社会资金)，来管理这部分资金</p>
+<p>2.可以看作&quot;<strong>政府VC</strong>&quot; 典型的产业引导基金有比如大基金和深创投</p>
+<ul>
+<li><p>产业引导基金本质上还是招商引资的工具，因此对企业的投资往往有地域性约束</p></li>
+<li><p>为什么政府要采用母基金的方式运作而不是自己找一批人做GP？因为体制内对于市场的感知与经验不如市场中的人，并且薪酬激励上有限制。因而才采用母基金方式</p></li>
+</ul>
+<h1 id="宏观现象">宏观现象</h1>
+<h2 id="第五章-城市化与不平衡">第五章 城市化与不平衡</h2>
+<p>2019年数据，<strong>城镇常住人口</strong>占中国总人口的60%，而<strong>城镇户籍人口</strong>为44%，换句话说有超过两亿人虽然常住人口没有户口。第五章内容总结了有关房价的一些宏观现象</p>
+<p>房价与居民债务、不平衡与要素市场改革 主要在说明了居民债务情况(房贷问题)与居民资产情况。北上的户均资产约为800W，这些资产价格大多来自房子</p>
+<p>解决办法之一则是要素市场改革（户籍改革和土地市场改革）</p>
+<p>经济发展与贫富差距 这部分说明了不同地区之间的收入差别情况</p>
+<h2 id="第六章-债务与风险">第六章 债务与风险</h2>
+<p>高杠杆会给宏观经济带来更高的风险、使得整个经济体的偿债成本大（利息支付高）</p>
+<p>目前中国的债务情况如何？</p>
+<ul>
+<li><p>债务负担。债务/GDP比重大约为250%，比美国稍低，处于正常水平</p></li>
+<li><p>企业融资低效问题。主要是资金的使用效率低、以及部分国企使用效率低</p></li>
+<li><p>影子银行的潜在增加了杠杆。<strong>影子银行是指那些执行银行功能，但是却不在银行资产负债表中的业务，典型例如银信合作（银行出售理财产品，然后将资金给信托公司，信托公司又进行信托贷款）、银证信合作业务（银行把钱委托给券商的资管计划，再让券商把钱给信托，再贷款给企业）</strong>。资金在不同的金融机构内空转几道，使得企业融资成本变得更高了</p></li>
+</ul>
+<p>不过，目前中国的金融业务模式大多简单，证券化程度不高，衍生品种类很少，所以还没有发展得过度复杂。</p>
+<p>如何降杠杆？当然是降低新增债务和偿还已有债务、拓展直接融资渠道</p>
+<h2 id="第七章-国内国际失衡">第七章 国内国际失衡</h2>
+<ul>
+<li><p>国内失衡，指的是低消费与产能过剩，这样的结构性失衡。前几年比较火的“供给侧结构性改革”，指就是调整产能、调整经济运行中投资的占比；实际上供给与需求是一体两面，供给侧结构性改革也可以说就是结构性改革</p></li>
+<li><p>国际失衡，指的是巨大的产能对外国产品形成强竞争、挤压外国销量</p></li>
+<li><p>如何解决？国内失衡需要提高消费占比，国际失衡需要依靠国内大循环</p></li>
+</ul>
+<h2 id="第八章-总结政府与经济发展">第八章 总结：政府与经济发展</h2>
+<ul>
+<li><p>地区间竞争。地方招商引资实际上存在竞争</p></li>
+<li><p>政府由&quot;生产型政府&quot;转向&quot;服务型政府&quot;</p></li>
+</ul>
+]]></content>
+      <categories>
+        <category>阅读</category>
+      </categories>
+      <tags>
+        <tag>宏观经济</tag>
+        <tag>微观经济</tag>
       </tags>
   </entry>
   <entry>
@@ -136,58 +295,6 @@
       </categories>
       <tags>
         <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我喜欢</title>
-    <url>/2020/05/06/%E6%88%91%E5%96%9C%E6%AC%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>--《what I adore》 合唱</p>
-</blockquote>
-<a id="more"></a>
-
-        <div id="aplayer-CAscNnEF" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-CAscNnEF"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "我喜欢",
-              author: "金承志",
-              url: "http://music.163.com/song/media/outer/url?id=464647435.mp3",
-              pic: "https://img-blog.csdnimg.cn/20200831131615443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<blockquote>
-<p>我喜欢 无尽田野上奔跑的麋鹿</p>
-<p>我喜欢 外婆门前的榕树</p>
-<p>我喜欢母亲的便当</p>
-<p>我喜欢父亲的胡渣</p>
-<p>我喜欢八月的夜晚还在营业的游乐场</p>
-<p>我喜欢放学的铃铛</p>
-<p>我喜欢停电的夜晚</p>
-<p>点一对蜡烛 在幽静的玄关</p>
-<p>我喜欢 城市尽头那远远的青山</p>
-<p>我喜欢 热气球飞上西边的天空</p>
-<p>我喜欢 清晨的石板路</p>
-<p>雾腾腾的早餐店 阿公的桂花糕</p>
-<p>我喜欢 每一朵暮云 每一株绿树</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200506214619877.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
       </tags>
   </entry>
   <entry>
@@ -331,85 +438,6 @@
       </tags>
   </entry>
   <entry>
-    <title>文本检测(Text Detection)综述</title>
-    <url>/2022/03/15/%E6%96%87%E6%9C%AC%E6%A3%80%E6%B5%8B(Text%20Detection)%E7%BB%BC%E8%BF%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>文本检测</strong>(Text Detection)是计算机视觉领域的经典问题，该技术旨在寻求一种可靠方法作为文本识别技术的前端，是<strong>目标检测</strong>(Object Detection)领域的一个子问题</p>
-<a id="more"></a>
-<h1 id="检测detection在计算机视觉中的位置">检测(Detection)在计算机视觉中的位置</h1>
-<p>计算机视觉有四大基本任务: <strong>分割(classification)、定位(检测localization、detection)、语义分割(Semantic segmentation)、实例分割(Instance segmentation)</strong> <img src="https://img-blog.csdnimg.cn/47416d12da4e4b1ba4f6355fa14fed3d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /></p>
-<blockquote>
-<p>这四个任务需要对图像的理解逐步深入。给定一张输入图像，图像<strong>分类</strong>任务旨在判断该图像所属类别。<strong>定位</strong>是在图像分类的基础上，进一步判断图像中的目标具体在图像的什么位置，通常是以包围盒的(bounding box)形式。在<a href="https://www.zhihu.com/search?q=目标定位&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A304469552%7D" target="_blank" rel="noopener">目标定位</a>中，通常只有一个或固定数目的目标，而目标<strong>检测</strong>更一般化，其图像中出现的目标种类和数目都不定。<strong>语义分割</strong>是目标检测更进阶的任务，目标检测只需要框出每个目标的包围盒，语义分割需要进一步判断图像中哪些像素属于哪个目标。但是，语义分割不区分属于相同类别的不同实例。例如，当图像中有多只猫时，语义分割会将两只猫整体的所有像素预测为“猫”这个类别。与此不同的是，<strong>实例分割</strong>需要区分出哪些像素属于第一只猫、哪些像素属于第二只猫。此外，目标<strong>跟踪</strong>通常是用于视频数据，和目标检测有密切的联系，同时要利用帧之间的时序关系。</p>
-<p>作者：张皓 链接：https://www.zhihu.com/question/36500536/answer/304469552 来源：知乎</p>
-</blockquote>
-<figure>
-<img src="https://img-blog.csdnimg.cn/31c7fa05dd1e44398bfcaae46f0b7559.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<p>上图中，从上到下逐渐复杂</p>
-<p>复杂程度: 分割(同分类)--&gt;定位(一个或固定数目的目标)--&gt;检测(和定位其实很类似，也是用一个bounding box)--&gt;语义分割(像素级的分割)--&gt;实例分割(在前者的基础上区分出同类的不同实例)</p>
-<h1 id="检测任务">检测任务</h1>
-<h3 id="经典数据集">经典数据集</h3>
-<p><strong>PASCAL VOC</strong> 包含20个类别。通常是用VOC07和VOC12的trainval并集作为训练，用VOC07的测试集作为测试。</p>
-<p><strong>MS COCO</strong> COCO比VOC更困难。COCO包含80k训练图像、40k验证图像、和20k没有公开标记的测试图像(test-dev)，80个类别，平均每张图7.2个目标。通常是用80k训练和35k验证图像的并集作为训练，其余5k图像作为验证，20k测试图像用于线上测试。<strong>区别于ImageNet常用于做分类，COCO用来做检测</strong>，因为COCO没label</p>
-<h3 id="评价指标">评价指标</h3>
-<p><strong>mAP (mean average precision)</strong> 目标检测中的常用评价指标，计算方法如下。当预测的包围盒和真实包围盒的交并比大于某一阈值(通常为0.5)，则认为该预测正确。对每个类别，我们画出它的查准率-查全率(precision-recall)曲线，平均准确率是曲线下的面积。之后再对所有类别的平均准确率求平均，即可得到mAP，其取值为[0, 100%]。</p>
-<p><strong>交并比(intersection over union, IoU)</strong> 算法预测的包围盒和真实包围盒交集的面积除以这两个包围盒并集的面积，取值为[0, 1]。交并比度量了算法预测的包围盒和真实包围盒的接近程度，交并比越大，两个包围盒的重叠程度越高。</p>
-<h3 id="发展历史">发展历史</h3>
-<figure>
-<img src="https://img-blog.csdnimg.cn/6d076851bfb14110892816c6622fde25.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<p>经典的LeNet、AlexNet、VGG、GoogleNet用来做分类，RCNN、Fast RCNN、Faster RCNN、YOLO、SSD则用来做检测</p>
-<ul>
-<li><p>单阶段目标检测方法是指只需一次提取特征即可实现目标检测，其速度相比多阶段的算法快，一般精度稍微低一些</p></li>
-<li><p><strong>two-stage检测算法</strong>将检测问题划分为两个阶段，首先产生候选区域（region proposals），然后对候选区域分类（一般还需要对位置精修），这类算法的典型代表是基于region proposal的R-CNN系算法，如R-CNN，SPPNet ，Fast R-CNN，Faster R-CNN，FPN，R-FCN等</p></li>
-</ul>
-<h1 id="几个文本检测的较新方法">几个文本检测的较新方法</h1>
-<h3 id="fots2018cvprfast-oriented-text-spotting-with-a-unified-network">FOTS(【2018CVPR】Fast Oriented Text Spotting with a Unified Network)</h3>
-<p>这篇论文是一个<strong>集合了文本检测跟文字识别两部分的一个统一的端到端的框架，可同时对图像中的文字进行检测跟识别。</strong></p>
-<p>之前的大部分方法都是将检测跟识别当做两个独立的任务去做，先检测，再识别。这篇论文提出的框架处处是可微的，所以可以对其进行端到端的训练，结果表明，<strong>该网络无需复杂的后处理和高参数整定，易于训练，并且在保证精度的前提下大大提高速度</strong></p>
-<p>如下图所示</p>
-<p><img src="https://img-blog.csdnimg.cn/266852210123452a8ad3b85eb69eb2ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /> FOTS作为端到端的文本识别，使用了44.2ms; 而用某种其他方法，先检测再识别，两个步骤都分别用了四十多ms</p>
-<h3 id="textsnake2018eccv-textsnake-a-flexible-representation-for-detecting-text-of-arbitrary-shapes">TextSnake(【2018ECCV】 TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes)</h3>
-<figure>
-<img src="https://img-blog.csdnimg.cn/3e360a42011a4ab28fb289df7768adb3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<p>对于一般的文本检测，往往用一个矩形框框出内容，而TextSnake采用弯曲的<strong>凸N边形</strong>框出内容并复原为矩形，这样使得文本检测更加有效</p>
-<p>网络结构</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/409de0f4a1744634872be145c566fe93.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<h3 id="contournet2020-cvprcontournet-taking-a-further-step-toward-accurate-arbitrary-shaped-scene-text-detection">ContourNet(【2020 CVPR】ContourNet: Taking a Further Step toward Accurate Arbitrary-shaped Scene Text Detection)</h3>
-<p>文章设计了文本水平与竖直方向的轮廓检测方法，对尺度(形状)变化大的文本检测任务提高了精确度</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/66c85a5e5fb044b3a505bfeb11e37f1b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<p>上半部分是用简单BoundingBox做的检测</p>
-<p>下半部分用水平与竖直两方向进行检测并融合，也即文章目的</p>
-<h3 id="abcnet2020-cvpr-oralabcnet-real-time-scene-text-spotting-with-adaptive-bezier-curve-network">ABCNet(【2020 CVPR Oral】ABCNet: Real-time Scene Text Spotting with Adaptive Bezier-Curve Network)</h3>
-<p>Adaptive-Bezier Curve Network</p>
-<p>主要部分是通过<strong>参数化的贝塞尔曲线</strong>作为线框来检测文本，提高了检测的有效性，并且速度较快，达到了实时性的要求</p>
-<figure>
-<img src="https://img-blog.csdnimg.cn/f46ffbfb3cf14c89b7c2995cafe9a607.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_14,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
-</figure>
-<p>如上图所示，对一个弯曲形的文字，使用Bezier曲线来对齐(所谓BezierAlign)，并拉成一个平的，从而有了更好的效果</p>
-<h1 id="参考">参考</h1>
-<ul>
-<li><a href="https://www.zhihu.com/question/36500536/answer/304469552?utm_source=qq&amp;utm_medium=social&amp;utm_oi=602621611652943872" target="_blank" rel="noopener">计算机视觉中各任务的区别--知乎-张皓</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/31727402" target="_blank" rel="noopener">计算机视觉中的四大任务</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/367069340" target="_blank" rel="noopener">单阶段、两阶段检测</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/85545272" target="_blank" rel="noopener">文本检测综述</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>综述</tag>
-        <tag>计算机视觉</tag>
-        <tag>目标检测</tag>
-        <tag>文本检测</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>拉普拉斯算子的疑惑</title>
     <url>/2021/10/05/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90%E7%9A%84%E7%96%91%E6%83%91/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>国内许多工科教材在讲到有关拉普拉斯算子(<span class="math inline">\(\Delta\)</span>)与哈密顿算子(<span class="math inline">\(\nabla\)</span>)的内容时含混不清，忽略了许多重要定义，使得一些进一步的推导难以理解</p>
@@ -505,12 +533,12 @@
 <p>--《夏天》 合唱</p>
 </blockquote>
 
-        <div id="aplayer-UTkciHNO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-FvcYEfFf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-UTkciHNO"),
+            element: document.getElementById("aplayer-FvcYEfFf"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -544,6 +572,104 @@
       <tags>
         <tag>感想</tag>
         <tag>歌曲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文本检测(Text Detection)综述</title>
+    <url>/2022/03/15/%E6%96%87%E6%9C%AC%E6%A3%80%E6%B5%8B(Text%20Detection)%E7%BB%BC%E8%BF%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>文本检测</strong>(Text Detection)是计算机视觉领域的经典问题，该技术旨在寻求一种可靠方法作为文本识别技术的前端，是<strong>目标检测</strong>(Object Detection)领域的一个子问题</p>
+<a id="more"></a>
+<h1 id="检测detection在计算机视觉中的位置">检测(Detection)在计算机视觉中的位置</h1>
+<p>计算机视觉有四大基本任务: <strong>分割(classification)、定位(检测localization、detection)、语义分割(Semantic segmentation)、实例分割(Instance segmentation)</strong> <img src="https://img-blog.csdnimg.cn/47416d12da4e4b1ba4f6355fa14fed3d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /></p>
+<blockquote>
+<p>这四个任务需要对图像的理解逐步深入。给定一张输入图像，图像<strong>分类</strong>任务旨在判断该图像所属类别。<strong>定位</strong>是在图像分类的基础上，进一步判断图像中的目标具体在图像的什么位置，通常是以包围盒的(bounding box)形式。在<a href="https://www.zhihu.com/search?q=目标定位&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A304469552%7D" target="_blank" rel="noopener">目标定位</a>中，通常只有一个或固定数目的目标，而目标<strong>检测</strong>更一般化，其图像中出现的目标种类和数目都不定。<strong>语义分割</strong>是目标检测更进阶的任务，目标检测只需要框出每个目标的包围盒，语义分割需要进一步判断图像中哪些像素属于哪个目标。但是，语义分割不区分属于相同类别的不同实例。例如，当图像中有多只猫时，语义分割会将两只猫整体的所有像素预测为“猫”这个类别。与此不同的是，<strong>实例分割</strong>需要区分出哪些像素属于第一只猫、哪些像素属于第二只猫。此外，目标<strong>跟踪</strong>通常是用于视频数据，和目标检测有密切的联系，同时要利用帧之间的时序关系。</p>
+<p>作者：张皓 链接：https://www.zhihu.com/question/36500536/answer/304469552 来源：知乎</p>
+</blockquote>
+<figure>
+<img src="https://img-blog.csdnimg.cn/31c7fa05dd1e44398bfcaae46f0b7559.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>上图中，从上到下逐渐复杂</p>
+<p>复杂程度: 分割(同分类)--&gt;定位(一个或固定数目的目标)--&gt;检测(和定位其实很类似，也是用一个bounding box)--&gt;语义分割(像素级的分割)--&gt;实例分割(在前者的基础上区分出同类的不同实例)</p>
+<h1 id="检测任务">检测任务</h1>
+<h3 id="经典数据集">经典数据集</h3>
+<p><strong>PASCAL VOC</strong> 包含20个类别。通常是用VOC07和VOC12的trainval并集作为训练，用VOC07的测试集作为测试。</p>
+<p><strong>MS COCO</strong> COCO比VOC更困难。COCO包含80k训练图像、40k验证图像、和20k没有公开标记的测试图像(test-dev)，80个类别，平均每张图7.2个目标。通常是用80k训练和35k验证图像的并集作为训练，其余5k图像作为验证，20k测试图像用于线上测试。<strong>区别于ImageNet常用于做分类，COCO用来做检测</strong>，因为COCO没label</p>
+<h3 id="评价指标">评价指标</h3>
+<p><strong>mAP (mean average precision)</strong> 目标检测中的常用评价指标，计算方法如下。当预测的包围盒和真实包围盒的交并比大于某一阈值(通常为0.5)，则认为该预测正确。对每个类别，我们画出它的查准率-查全率(precision-recall)曲线，平均准确率是曲线下的面积。之后再对所有类别的平均准确率求平均，即可得到mAP，其取值为[0, 100%]。</p>
+<p><strong>交并比(intersection over union, IoU)</strong> 算法预测的包围盒和真实包围盒交集的面积除以这两个包围盒并集的面积，取值为[0, 1]。交并比度量了算法预测的包围盒和真实包围盒的接近程度，交并比越大，两个包围盒的重叠程度越高。</p>
+<h3 id="发展历史">发展历史</h3>
+<figure>
+<img src="https://img-blog.csdnimg.cn/6d076851bfb14110892816c6622fde25.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>经典的LeNet、AlexNet、VGG、GoogleNet用来做分类，RCNN、Fast RCNN、Faster RCNN、YOLO、SSD则用来做检测</p>
+<ul>
+<li><p>单阶段目标检测方法是指只需一次提取特征即可实现目标检测，其速度相比多阶段的算法快，一般精度稍微低一些</p></li>
+<li><p><strong>two-stage检测算法</strong>将检测问题划分为两个阶段，首先产生候选区域（region proposals），然后对候选区域分类（一般还需要对位置精修），这类算法的典型代表是基于region proposal的R-CNN系算法，如R-CNN，SPPNet ，Fast R-CNN，Faster R-CNN，FPN，R-FCN等</p></li>
+</ul>
+<h1 id="几个文本检测的较新方法">几个文本检测的较新方法</h1>
+<h3 id="fots2018cvprfast-oriented-text-spotting-with-a-unified-network">FOTS(【2018CVPR】Fast Oriented Text Spotting with a Unified Network)</h3>
+<p>这篇论文是一个<strong>集合了文本检测跟文字识别两部分的一个统一的端到端的框架，可同时对图像中的文字进行检测跟识别。</strong></p>
+<p>之前的大部分方法都是将检测跟识别当做两个独立的任务去做，先检测，再识别。这篇论文提出的框架处处是可微的，所以可以对其进行端到端的训练，结果表明，<strong>该网络无需复杂的后处理和高参数整定，易于训练，并且在保证精度的前提下大大提高速度</strong></p>
+<p>如下图所示</p>
+<p><img src="https://img-blog.csdnimg.cn/266852210123452a8ad3b85eb69eb2ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /> FOTS作为端到端的文本识别，使用了44.2ms; 而用某种其他方法，先检测再识别，两个步骤都分别用了四十多ms</p>
+<h3 id="textsnake2018eccv-textsnake-a-flexible-representation-for-detecting-text-of-arbitrary-shapes">TextSnake(【2018ECCV】 TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes)</h3>
+<figure>
+<img src="https://img-blog.csdnimg.cn/3e360a42011a4ab28fb289df7768adb3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>对于一般的文本检测，往往用一个矩形框框出内容，而TextSnake采用弯曲的<strong>凸N边形</strong>框出内容并复原为矩形，这样使得文本检测更加有效</p>
+<p>网络结构</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/409de0f4a1744634872be145c566fe93.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<h3 id="contournet2020-cvprcontournet-taking-a-further-step-toward-accurate-arbitrary-shaped-scene-text-detection">ContourNet(【2020 CVPR】ContourNet: Taking a Further Step toward Accurate Arbitrary-shaped Scene Text Detection)</h3>
+<p>文章设计了文本水平与竖直方向的轮廓检测方法，对尺度(形状)变化大的文本检测任务提高了精确度</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/66c85a5e5fb044b3a505bfeb11e37f1b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>上半部分是用简单BoundingBox做的检测</p>
+<p>下半部分用水平与竖直两方向进行检测并融合，也即文章目的</p>
+<h3 id="abcnet2020-cvpr-oralabcnet-real-time-scene-text-spotting-with-adaptive-bezier-curve-network">ABCNet(【2020 CVPR Oral】ABCNet: Real-time Scene Text Spotting with Adaptive Bezier-Curve Network)</h3>
+<p>Adaptive-Bezier Curve Network</p>
+<p>主要部分是通过<strong>参数化的贝塞尔曲线</strong>作为线框来检测文本，提高了检测的有效性，并且速度较快，达到了实时性的要求</p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/f46ffbfb3cf14c89b7c2995cafe9a607.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_14,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" /><figcaption>在这里插入图片描述</figcaption>
+</figure>
+<p>如上图所示，对一个弯曲形的文字，使用Bezier曲线来对齐(所谓BezierAlign)，并拉成一个平的，从而有了更好的效果</p>
+<h1 id="参考">参考</h1>
+<ul>
+<li><a href="https://www.zhihu.com/question/36500536/answer/304469552?utm_source=qq&amp;utm_medium=social&amp;utm_oi=602621611652943872" target="_blank" rel="noopener">计算机视觉中各任务的区别--知乎-张皓</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/31727402" target="_blank" rel="noopener">计算机视觉中的四大任务</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/367069340" target="_blank" rel="noopener">单阶段、两阶段检测</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/85545272" target="_blank" rel="noopener">文本检测综述</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>综述</tag>
+        <tag>计算机视觉</tag>
+        <tag>目标检测</tag>
+        <tag>文本检测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>校服与个性的表达</title>
+    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
+</blockquote>
+<a id="more"></a>
+<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
+<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
+<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+]]></content>
+      <categories>
+        <category>感想</category>
+      </categories>
+      <tags>
+        <tag>知乎</tag>
       </tags>
   </entry>
   <entry>
@@ -597,22 +723,51 @@
 ]]></content>
   </entry>
   <entry>
-    <title>校服与个性的表达</title>
-    <url>/2020/04/16/%E6%A0%A1%E6%9C%8D%E4%B8%8E%E4%B8%AA%E6%80%A7%E7%9A%84%E8%A1%A8%E8%BE%BE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>知乎上最近有一个热门问题 <a href="https://www.zhihu.com/question/51687266/answer/1140006550" target="_blank" rel="noopener">中国校服是否扼杀了个性?</a>。不同的观点很多，其实都有一定的道理。我也有我的观点</p>
-</blockquote>
+    <title>泛函分析(1)度量空间</title>
+    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(1)%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>度量空间与线性空间是两种基本的空间，本文对度量空间进行简要总结</p>
 <a id="more"></a>
-<p>在我看来，人的个性来自于他的处事法则、来自于他的真诚与习惯，而很少来自于他的穿着</p>
-<p>中学时代，我的周围有幽默感十足喜欢拿自己开涮的“谐星”，有上课时呼呼大睡下课后与我一起打闹的厕友，有喜欢安静地一个人看书听歌的女神，也有非常叛逆喜欢和别人不同的酷boy。他们都穿着一样的校服，但是他们的个性却如此地鲜明、也如此地不同</p>
-<p>能通过校服扼杀的不是个性。如果一个人的个性能通过这一件校服就可以扼杀，那么不如说他其实缺乏个性。况且，中学的大家身体里满是活力与荷尔蒙，吃一顿食堂就能打一整个下午的球，喜欢的女孩一个眼神就让我浮想联翩，这样的年纪，哪能靠一件衣服就能阻碍个性的表达呢?</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416183802510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
+<figure>
+<img src="https://img-blog.csdnimg.cn/cfd9cb4c538a463cafe54244d43e5c1b.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="圆焰" /><figcaption>圆焰</figcaption>
+</figure>
+<h3 id="符号">符号</h3>
+<p><span class="math inline">\(\mathbb{K}\)</span>表示实数集<span class="math inline">\(\mathbb{R}\)</span>或者复数集<span class="math inline">\(\mathbb{C}\)</span></p>
+<h2 id="定义">1. 定义</h2>
+<p>称度量空间<span class="math inline">\((X,d)\)</span>包括集合<span class="math inline">\(X\)</span>和一度量<span class="math inline">\(d:X\times X \rightarrow \mathbb{R}\)</span>, 同时度量满足以下四个性质</p>
+<ul>
+<li>非负性: <span class="math inline">\(\forall x, y \in X, d(x, y) \geq 0\)</span></li>
+<li>非退化性: <span class="math inline">\(x, y \in X, d(x, y)=0 \Leftrightarrow x=y\)</span></li>
+<li>对称性: <span class="math inline">\(\forall x, y \in X, d(x, y)=d(y, x)\)</span></li>
+<li>三角不等式: <span class="math inline">\(\forall x, y, z \in X, d(x, y) \leq d(x, z)+d(z, y)\)</span></li>
+</ul>
+<p>度量空间是一类基本空间，在度量空间中定义了度量，或者称距离</p>
+<blockquote>
+<p><span class="math inline">\(\text { Remark: 注意到 }\{\infty\} \notin \mathbb{R} \text { ，即还有一个隐含的要求, 距离必须是有限的。 }\)</span></p>
+</blockquote>
+<h2 id="例子">2. 例子</h2>
+<h3 id="一维数集与自然距离构成度量空间">2.1 一维数集与自然距离构成度量空间</h3>
+<p>一维数集上的自然距离是度量，<span class="math inline">\((X,d)\)</span>为一度量空间</p>
+<p><span class="math inline">\(X=A \subset \mathbb{K}, d(x, y)=|x-y|, \forall x, y \in X\)</span></p>
+<h3 id="离散集合与示性函数构成度量空间">2.2 离散集合与示性函数构成度量空间</h3>
+<p><span class="math inline">\(X\)</span> 为离散集合， <span class="math inline">\(d(x, y)=\mathbb{I}[x \neq y]\)</span>, 其中 <span class="math inline">\(\mathbb{I}[\)</span> cond <span class="math inline">\(]\)</span> 为指示函数, 条件为真时取 1 , 否则 取 0 。</p>
+<p>证明它是度量空间: 前三条容易证明，三角不等式可以用分类讨论证明。先考虑 <span class="math inline">\(x=y ，\)</span> 再考虑 <span class="math inline">\(x \neq y\)</span> 。后一种情况再分为 <span class="math inline">\(x=z \neq y, x \neq z=y, x \neq z \neq y\)</span> 三种情况说明。</p>
+<h3 id="序列空间lp与其lp-norm构成度量空间">2.3 序列空间Lp与其Lp-norm构成度量空间</h3>
+<blockquote>
+<p>范数不是为向量定义的吗。序列空间Lp也是向量吗？希望有数学系的小伙伴予以解答</p>
+</blockquote>
+<p><span class="math inline">\(l^{p}:=\left\{\left\{x_{n}\right\}: \sum_{n=1}^{\infty}\left|x_{n}\right|^{p}&lt;\infty\right\}, 1 \leq p&lt;\infty\)</span></p>
+<p><span class="math inline">\(X=l^{p}, \quad d_{p}(x, y)=\left(\sum_{n=1}^{\infty}\left|x_{n}-y_{n}\right|^{p}\right)^{1 / p}\)</span></p>
+<h3 id="几何向量与其无穷p范数构成度量空间">2.4 几何向量与其无穷p范数构成度量空间</h3>
+<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n} ， d_{p}(x, y)=\left(\sum_{i \in[n]}\left|x_{i}-y_{i}\right|^{p}\right)^{1 / p}\)</span> 为其度量, 其中 <span class="math inline">\(p \in[1,+\infty)\)</span></p>
+<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n}, d_{\infty}(x, y)=\max _{i \in[n]}\left|x_{i}-y_{i}\right|\)</span> 为其度量, 它是前述度量中 <span class="math inline">\(p \rightarrow \infty\)</span> 的极限情形。</p>
 ]]></content>
       <categories>
-        <category>感想</category>
+        <category>数学</category>
       </categories>
       <tags>
-        <tag>知乎</tag>
+        <tag>总结</tag>
+        <tag>泛函分析</tag>
+        <tag>度量空间</tag>
       </tags>
   </entry>
   <entry>
@@ -684,51 +839,36 @@ x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\r
       </tags>
   </entry>
   <entry>
-    <title>泛函分析(1)度量空间</title>
-    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(1)%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>度量空间与线性空间是两种基本的空间，本文对度量空间进行简要总结</p>
+    <title>正则化笔记</title>
+    <url>/2020/04/13/%E6%AD%A3%E5%88%99%E5%8C%96%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一.为什么需要正则化">一.为什么需要正则化?</h2>
+<p>简单来说，在使用神经网络时，为了增加模型的泛化能力，防止模型只在训练集上有效、在测试集上不够有效，我们使用正则化</p>
+<blockquote>
+<p>正则化是为了防止过拟合， 进而增强泛化能力。泛化误差= 测试误差。也可以说是为了使得训练数据训练的模型在测试集上的表现（或说性能）好不好</p>
+</blockquote>
 <a id="more"></a>
-<figure>
-<img src="https://img-blog.csdnimg.cn/cfd9cb4c538a463cafe54244d43e5c1b.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="圆焰" /><figcaption>圆焰</figcaption>
-</figure>
-<h3 id="符号">符号</h3>
-<p><span class="math inline">\(\mathbb{K}\)</span>表示实数集<span class="math inline">\(\mathbb{R}\)</span>或者复数集<span class="math inline">\(\mathbb{C}\)</span></p>
-<h2 id="定义">1. 定义</h2>
-<p>称度量空间<span class="math inline">\((X,d)\)</span>包括集合<span class="math inline">\(X\)</span>和一度量<span class="math inline">\(d:X\times X \rightarrow \mathbb{R}\)</span>, 同时度量满足以下四个性质</p>
+<h2 id="二.正则化有哪几种常用方法">二.正则化有哪几种常用方法？</h2>
+<p>常用的有<span class="math inline">\(l_1-norm\)</span>、<span class="math inline">\(l_2-norm\)</span>即在损失函数中添加<strong>惩罚项</strong>;还有例如<span class="math inline">\(Droupout\)</span>方法。下面让我们来更仔细地看一下是怎么进行的</p>
+<h3 id="l_1-norm">2.1 <span class="math inline">\(l_1-norm\)</span></h3>
+<p><span class="math inline">\(l_1-norm\)</span>也叫做<code>lasso回归</code>。 机器学习模型当中的参数，可形式化地组成参数向量，记为<span class="math inline">\(\vec w\)</span>，为方便表示，我下面都记为大写字母W。不失一般性，以线性模型为例，模型可记为 <span class="math display">\[F(x;W)=W^Tx=\sum_{i=1}^nw_i\cdot x\]</span> 为了进一步地偷懒，我们将<span class="math inline">\(W^T\)</span>也叫做<span class="math inline">\(W\)</span>。 现在我们来定义一个平方损失函数，其中W是模型的参数矩阵，x为模型的某个输入值，y为实际值，那么有损失函数 <span class="math display">\[C=||Wx-y||^2\]</span> 所以有模型参数 <span class="math display">\[W^*=arg\min_{C}||Wx-y||^2\]</span> 试想，假如我们使用某种方法使得cost降到最小，那么可想而知很容易便会产生过拟合(overfitting)。现在我们不希望这个cost降到最低，一个可行的方法是在损失函数公式中我们给它加入一个反向的<code>干扰项</code>，我们给它取个更专业的名字--<code>惩罚项</code>。 我们重新定义这个这个损失函数。<span class="math inline">\(l_1-norm\)</span>方法在式子中加入了一个<code>一次</code>的惩罚项,<code>用来描述模型的复杂程度</code> <span class="math display">\[C=||Wx-y||^2+\alpha||W||\]</span> 其中<span class="math inline">\(\alpha\)</span>用来衡量惩罚项的重要程度。 使用这样的损失函数，便可以一定程度上防止产生过拟合</p>
+<h3 id="l_2-norm">2.2 <span class="math inline">\(l_2-norm\)</span></h3>
+<p>将惩罚项定位二次项，这样定义损失函数的方法我们称之为<span class="math inline">\(l_2-norm\)</span>,也可以叫它Ridge回归（岭回归）。例如: <span class="math display">\[C=||Wx-y||^2+\alpha||W||^2\]</span></p>
+<h3 id="dropout正则化">2.3 Dropout正则化</h3>
+<p>L1、L2正则化是通过修改损失函数来实现的，而Dropout则是通过<strong>修改神经网络本身</strong>来实现的，它是在训练网络时用的一种技巧(trick)。 举例来说，假如现在我们有20个样本，但是定义了300个神经元，那么直接进行训练，由于神经元数量很多，所以模型的拟合效果会很好，也因此会很容易产生过拟合现象。现在我们每一次训练神经网络时，随机丢弃一部分神经元，下一次训练时，再随机丢掉一部分神经元，那么这样我们也可以有效降低过拟合效应。 下面是一个示例代码，来自莫烦py教程 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># torch.manual_seed(1)    # reproducible</span></span><br><span class="line"></span><br><span class="line">N_SAMPLES = <span class="number">20</span></span><br><span class="line">N_HIDDEN = <span class="number">300</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># training data</span></span><br><span class="line">x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">y = x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># test data</span></span><br><span class="line">test_x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">test_y = test_x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># show data</span></span><br><span class="line">plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'train'</span>)</span><br><span class="line">plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'test'</span>)</span><br><span class="line">plt.legend(loc=<span class="string">'upper left'</span>)</span><br><span class="line">plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>))</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">net_overfitting = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">net_dropped = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">print(net_overfitting)  <span class="comment"># net architecture</span></span><br><span class="line">print(net_dropped)</span><br><span class="line"></span><br><span class="line">optimizer_ofit = torch.optim.Adam(net_overfitting.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">optimizer_drop = torch.optim.Adam(net_dropped.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">loss_func = torch.nn.MSELoss()</span><br><span class="line"></span><br><span class="line">plt.ion()   <span class="comment"># something about plotting</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> range(<span class="number">500</span>):</span><br><span class="line">    pred_ofit = net_overfitting(x)</span><br><span class="line">    pred_drop = net_dropped(x)</span><br><span class="line">    loss_ofit = loss_func(pred_ofit, y)</span><br><span class="line">    loss_drop = loss_func(pred_drop, y)</span><br><span class="line"></span><br><span class="line">    optimizer_ofit.zero_grad()</span><br><span class="line">    optimizer_drop.zero_grad()  <span class="comment"># 清空过往梯度，才能更顺利地进行再一次地计算梯度</span></span><br><span class="line">    loss_ofit.backward()</span><br><span class="line">    loss_drop.backward()  <span class="comment"># backward通过反向传播计算当前梯度</span></span><br><span class="line">    optimizer_ofit.step()  <span class="comment"># step才更新网络参数</span></span><br><span class="line">    optimizer_drop.step()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> t % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># change to eval mode in order to fix drop out effect</span></span><br><span class="line">        net_overfitting.eval()</span><br><span class="line">        net_dropped.eval()  <span class="comment"># parameters for dropout differ from train mode</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># plotting</span></span><br><span class="line">        plt.cla()</span><br><span class="line">        test_pred_ofit = net_overfitting(test_x)</span><br><span class="line">        test_pred_drop = net_dropped(test_x)</span><br><span class="line">        plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'train'</span>)</span><br><span class="line">        plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'test'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_ofit.data.numpy(), <span class="string">'r-'</span>, lw=<span class="number">3</span>, label=<span class="string">'overfitting'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_drop.data.numpy(), <span class="string">'b--'</span>, lw=<span class="number">3</span>, label=<span class="string">'dropout(50%)'</span>)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.2</span>, <span class="string">'overfitting loss=%.4f'</span> % loss_func(test_pred_ofit, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>:  <span class="string">'red'</span>&#125;)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.5</span>, <span class="string">'dropout loss=%.4f'</span> % loss_func(test_pred_drop, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>: <span class="string">'blue'</span>&#125;)</span><br><span class="line">        plt.legend(loc=<span class="string">'upper left'</span>); plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>));plt.pause(<span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># change back to train mode</span></span><br><span class="line">        net_overfitting.train()</span><br><span class="line">        net_dropped.train()</span><br><span class="line"></span><br><span class="line">plt.ioff()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure> 结果： <img src="https://img-blog.csdnimg.cn/20200407134135992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 可以看到进行所谓dropout后的网络在所有数据上的损失函数更小</p>
+<p>总结一下我们应该怎么使用这种dropout技巧： 1. 定义网络时，在隐藏层中间使用<code>torch.nn.Dropout(prop)</code> 2. 神经网络有eval()和train()两种模式。计算预测值时记得切换到eval()模式，这种模式会关闭dropout；而在train()模式下，使用模型进行预测时仍然有部分神经元被dropout ### 2.4 增加训练集样本数量 这种方法自然也是可以削减过拟合的</p>
+<h2 id="参考">参考</h2>
 <ul>
-<li>非负性: <span class="math inline">\(\forall x, y \in X, d(x, y) \geq 0\)</span></li>
-<li>非退化性: <span class="math inline">\(x, y \in X, d(x, y)=0 \Leftrightarrow x=y\)</span></li>
-<li>对称性: <span class="math inline">\(\forall x, y \in X, d(x, y)=d(y, x)\)</span></li>
-<li>三角不等式: <span class="math inline">\(\forall x, y, z \in X, d(x, y) \leq d(x, z)+d(z, y)\)</span></li>
+<li><a href="https://blog.csdn.net/qq_20412595/article/details/81636105?depth_1-utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1&amp;utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1" target="_blank" rel="noopener">正则化理解</a></li>
+<li><a href="https://blog.csdn.net/jinping_shi/article/details/52433975" target="_blank" rel="noopener">L1与L2正则化</a></li>
+<li><a href="https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg" target="_blank" rel="noopener">莫烦python</a></li>
 </ul>
-<p>度量空间是一类基本空间，在度量空间中定义了度量，或者称距离</p>
-<blockquote>
-<p><span class="math inline">\(\text { Remark: 注意到 }\{\infty\} \notin \mathbb{R} \text { ，即还有一个隐含的要求, 距离必须是有限的。 }\)</span></p>
-</blockquote>
-<h2 id="例子">2. 例子</h2>
-<h3 id="一维数集与自然距离构成度量空间">2.1 一维数集与自然距离构成度量空间</h3>
-<p>一维数集上的自然距离是度量，<span class="math inline">\((X,d)\)</span>为一度量空间</p>
-<p><span class="math inline">\(X=A \subset \mathbb{K}, d(x, y)=|x-y|, \forall x, y \in X\)</span></p>
-<h3 id="离散集合与示性函数构成度量空间">2.2 离散集合与示性函数构成度量空间</h3>
-<p><span class="math inline">\(X\)</span> 为离散集合， <span class="math inline">\(d(x, y)=\mathbb{I}[x \neq y]\)</span>, 其中 <span class="math inline">\(\mathbb{I}[\)</span> cond <span class="math inline">\(]\)</span> 为指示函数, 条件为真时取 1 , 否则 取 0 。</p>
-<p>证明它是度量空间: 前三条容易证明，三角不等式可以用分类讨论证明。先考虑 <span class="math inline">\(x=y ，\)</span> 再考虑 <span class="math inline">\(x \neq y\)</span> 。后一种情况再分为 <span class="math inline">\(x=z \neq y, x \neq z=y, x \neq z \neq y\)</span> 三种情况说明。</p>
-<h3 id="序列空间lp与其lp-norm构成度量空间">2.3 序列空间Lp与其Lp-norm构成度量空间</h3>
-<blockquote>
-<p>范数不是为向量定义的吗。序列空间Lp也是向量吗？希望有数学系的小伙伴予以解答</p>
-</blockquote>
-<p><span class="math inline">\(l^{p}:=\left\{\left\{x_{n}\right\}: \sum_{n=1}^{\infty}\left|x_{n}\right|^{p}&lt;\infty\right\}, 1 \leq p&lt;\infty\)</span></p>
-<p><span class="math inline">\(X=l^{p}, \quad d_{p}(x, y)=\left(\sum_{n=1}^{\infty}\left|x_{n}-y_{n}\right|^{p}\right)^{1 / p}\)</span></p>
-<h3 id="几何向量与其无穷p范数构成度量空间">2.4 几何向量与其无穷p范数构成度量空间</h3>
-<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n} ， d_{p}(x, y)=\left(\sum_{i \in[n]}\left|x_{i}-y_{i}\right|^{p}\right)^{1 / p}\)</span> 为其度量, 其中 <span class="math inline">\(p \in[1,+\infty)\)</span></p>
-<p>对于向量空间 <span class="math inline">\(X=A \subset \mathbb{K}^{n}, d_{\infty}(x, y)=\max _{i \in[n]}\left|x_{i}-y_{i}\right|\)</span> 为其度量, 它是前述度量中 <span class="math inline">\(p \rightarrow \infty\)</span> 的极限情形。</p>
 ]]></content>
       <categories>
-        <category>数学</category>
+        <category>机器学习</category>
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>泛函分析</tag>
-        <tag>度量空间</tag>
+        <tag>回归</tag>
       </tags>
   </entry>
   <entry>
@@ -771,12 +911,12 @@ x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\r
 <p>例如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer <span class="string">"旅行者一号"</span> <span class="string">"合唱团"</span> <span class="string">"http://music.163.com/song/media/outer/url?id=490439632.mp3"</span>  <span class="string">"https://img-blog.csdnimg.cn/20200830142014845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70#pic_center"</span> %&#125;</span><br></pre></td></tr></table></figure></p>
 <p>效果如下</p>
 
-        <div id="aplayer-PCQwBmiG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-PuxpIwpb" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-PCQwBmiG"),
+            element: document.getElementById("aplayer-PuxpIwpb"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -808,12 +948,12 @@ x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\r
 <p>例如这首歌的歌词就是这样:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayerlrc &quot;旅行者一号&quot; &quot;合唱团&quot; &quot;http:&#x2F;&#x2F;music.163.com&#x2F;song&#x2F;media&#x2F;outer&#x2F;url?id&#x3D;490439632.mp3&quot; %&#125;</span><br><span class="line">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音&#x2F;混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</span><br><span class="line">&#123;% endaplayerlrc %&#125;</span><br></pre></td></tr></table></figure>
 <p>效果如下:</p>
-<div id="aplayer-gayiXtQO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+<div id="aplayer-SDObPJvf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
 				<pre class="aplayer-lrc-content">[00:04.181]钢琴伴奏：白苑彤[00:06.367]录音/混音：莫家伟[00:07.552][00:10.500]小小火车 快快开向南方[00:17.500]是昨夜的星辰润化作春风[00:22.200]吹绿了小稻秧[00:27.550]小小火车 快快开向南方[00:34.354]饭后三点的窗外 摇曳河道两旁[00:38.851]洁白的小铃兰[00:43.700]春假已经过了一半[00:47.228]小山电话说功课还没做完(太多啦！)[00:52.261]我挎上老街买的白色背包 想四处游玩![01:00.494]海棠山茶紫玉兰 六十四只小鸳鸯[01:09.118]白兔野马梅花鹿 我热爱的大自然[01:17.758]敲鱼松糕大馄饨 三元一份桂花糖[01:27.300]朱砂白墨纸风筝 追着白云山外山[01:38.610][01:56.876]小小火车 快快开向南方[02:04.400]期待一个温暖又美丽的清晨[02:08.664]薄雾飘散的车站[02:13.404]小美亲手做的饼干[02:16.891]虽然有点硬但是还得吃完 (不想吃就寄还给我!)[02:22.060]老妈在远程普及注意事项[02:25.800]知道! 不要太紧张 安心啦![02:30.588]海棠山茶紫玉兰 六十四只小鸳鸯[02:38.781]白兔野马梅花鹿 我热爱的大自然[02:47.448]敲鱼松糕大馄饨 三元一份桂花糖[02:57.000]朱砂白墨纸风筝 追着白云山外山[03:09.400]啦啦啦啦啦啦啦 啦啦啦啦啦啦啦[03:18.603]朱砂白墨纸风筝 追着白云山外山[03:30.200]</pre>
 			</div>
 			<script>
 				var ap = new APlayer({
-					element: document.getElementById("aplayer-gayiXtQO"),
+					element: document.getElementById("aplayer-SDObPJvf"),
 					narrow: false,
 					autoplay: false,
 					showlrc: 2,
@@ -835,6 +975,73 @@ x_{x+1}=x_{k}-\alpha_k \nabla^{2} f\left(x_{k}\right)^{-1} \nabla f\left(x_{k}\r
       <tags>
         <tag>音乐播放器</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>泛函分析(2)空间完备性</title>
+    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>完备性是泛函分析中的重要概念，本文对此概念进行简要总结</p>
+<a id="more"></a>
+<figure>
+<img src="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16" alt="圆" /><figcaption>圆</figcaption>
+</figure>
+<h1 id="空间完备性"><strong>空间完备性</strong></h1>
+<p>为了定义完备性，需要首先清楚柯西序列和收敛的概念</p>
+<h2 id="收敛性与柯西列"><strong>1. 收敛性与柯西列</strong></h2>
+<h3 id="柯西列"><strong>1.1 柯西列</strong></h3>
+<p>给定某个度量空间 <span class="math inline">\(X\)</span> 中的序列 <span class="math inline">\(\left\{x_{i}\right\}\)</span>, 当满足以下条件时，他就叫做柯西序列 (Cauchy sequence)</p>
+<p>对任意 <span class="math inline">\(\varepsilon&gt;0\)</span>, 存在 <span class="math inline">\(N\)</span> ，当 <span class="math inline">\(m, n \geqslant N\)</span> 时就满足 <span class="math inline">\(d\left(u_{m}, u_{n}\right)&lt;\varepsilon\)</span>.</p>
+<p><strong>1.2 收敛</strong></p>
+<p>设 <span class="math inline">\((X, d)\)</span> 为度量空间， <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为 <span class="math inline">\(\mathrm{X}\)</span> 中的数列，若存在 <span class="math inline">\(x \in X\)</span> 使得 <span class="math inline">\(\lim _{n \rightarrow \infty} d\left(x_{n}, x\right)=0\)</span> ，则 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 在 <span class="math inline">\(X\)</span> 中收敛, 称 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为收敛列, 称 <span class="math inline">\(x\)</span> 为 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 的极限, 记做 <span class="math inline">\(x_{n} \rightarrow x\)</span> 。</p>
+<p><span class="math inline">\(Remark:\)</span></p>
+<ol type="1">
+<li><p>收敛列比柯西列更严格。或者说收敛列一定是柯西列</p></li>
+<li><p>柯西列的直观理解是，一个序列的元素随着序数的增加而愈发靠近，并且最终趋于无限近</p></li>
+<li><p>收敛列一定有界，不仅如此，柯西列也一定有界</p></li>
+</ol>
+<h2 id="完备空间概念"><strong>2. 完备空间概念</strong></h2>
+<p>完备空间指这样性质的空间: 空间中的任何柯西序列都收敛于这个空间中</p>
+<p><span class="math inline">\(Remark:\)</span></p>
+<ol type="1">
+<li><p>完备空间是特殊的度量空间。因为按照定义完备空间需要&quot;柯西列收敛&quot;，而为了定义收敛，需要先定义先度量</p></li>
+<li><p><strong>欧几里得空间是完备空间</strong>。这给了它很好的性质，也即柯西列的收敛性</p></li>
+</ol>
+<p>证明如下:</p>
+<p>Let <span class="math inline">\(\left\langle\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)\right\rangle_{n \in \mathbb{N}}\)</span> be a Cauchy sequence in <span class="math inline">\(\mathbb{R}^{m}\)</span>.</p>
+<p>Let <span class="math inline">\(\epsilon&gt;0\)</span></p>
+<p>Then <span class="math inline">\(\frac{\epsilon}{m}&gt;0\)</span>.</p>
+<p>We have that Real Number Line is Complete Metric Space.</p>
+<p>Therefore:</p>
+<p><span class="math inline">\(\exists y_{1}, y_{2}, \ldots, y_{m} \in \mathbb{R}\)</span> and <span class="math inline">\(N_{1}, N_{2}, \ldots, N_{m} \in \mathbb{N}\)</span> (depending on <span class="math inline">\(\epsilon\)</span> ) such that:</p>
+<p><span class="math display">\[
+\forall k \in \mathbb{N}: 1 \leq k \leq m: \forall n_{k}&gt;N_{k}:\left\langle x_{n, k}-y_{k}\right\rangle&lt;\frac{\epsilon}{m}
+\]</span></p>
+<p>From Euclidean Space is Normed Space:</p>
+<p><span class="math display">\[
+\left\|\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)-\left(y_{1}, y_{2}, \ldots, y_{m}\right)\right\| \leq \sum_{k=1}^{m}\left|x_{n, k}-y_{k}\right|&lt;\epsilon
+\]</span></p>
+<p>Hence the Euclidean space is a complete metric space.</p>
+<ol start="3" type="1">
+<li><p>数集<span class="math inline">\(\mathbb{R}\)</span>、<span class="math inline">\(\mathbb{C}\)</span>都是完备的</p></li>
+<li><p>R和C的子集不一定完备。例如取<span class="math inline">\(X=(0,1)\)</span>。取一柯西列(元素可以无限靠近)<span class="math inline">\(x=1/n\)</span>，其极限0不在该空间中</p></li>
+<li><p>完备度量空间一定为闭集(结合上面例子记忆)</p></li>
+<li><p>完备度量空间的闭子集仍然完备</p></li>
+<li><p>“完备” 可以形象理解为空间中没有 “漏洞”．有限维空间都是完备的．可数维空间都是不完备的．例如有理数集和多项式组成的空间就是不完备的（柯西序列的极限可以是 e^x，但是 e^x并不属于该空间）</p></li>
+</ol>
+<h3 id="参考">参考</h3>
+<ul>
+<li><p><a href="https://zhuanlan.zhihu.com/p/85867887" target="_blank" rel="noopener">收敛性、完备性和紧性</a></p></li>
+<li><p><a href="https://proofwiki.org/wiki/Euclidean_Space_is_Complete_Metric_Space" target="_blank" rel="noopener">Euclidean Space is Complete Metric Space</a></p></li>
+</ul>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>泛函分析</tag>
+        <tag>完备空间</tag>
+        <tag>柯西序列</tag>
       </tags>
   </entry>
   <entry>
@@ -909,34 +1116,6 @@ s.t. \ \ x \in intS
         <tag>罚函数</tag>
         <tag>内点法</tag>
         <tag>外点法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语在高考中的权重可以调整吗</title>
-    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
-</blockquote>
-<a id="more"></a>
-<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
-<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
-<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
-<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
-<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
-<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
-<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
-<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
-<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平很不咋地，也根本无法直接阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。但只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
-<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及</p>
-<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
-]]></content>
-      <categories>
-        <category>感想</category>
-      </categories>
-      <tags>
-        <tag>知乎</tag>
-        <tag>高考</tag>
-        <tag>英语</tag>
       </tags>
   </entry>
   <entry>
@@ -1034,103 +1213,89 @@ s.t. \ \ x \in intS
       </tags>
   </entry>
   <entry>
-    <title>正则化笔记</title>
-    <url>/2020/04/13/%E6%AD%A3%E5%88%99%E5%8C%96%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一.为什么需要正则化">一.为什么需要正则化?</h2>
-<p>简单来说，在使用神经网络时，为了增加模型的泛化能力，防止模型只在训练集上有效、在测试集上不够有效，我们使用正则化</p>
-<blockquote>
-<p>正则化是为了防止过拟合， 进而增强泛化能力。泛化误差= 测试误差。也可以说是为了使得训练数据训练的模型在测试集上的表现（或说性能）好不好</p>
+    <title>英语在高考中的权重可以调整吗</title>
+    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E5%9C%A8%E9%AB%98%E8%80%83%E4%B8%AD%E7%9A%84%E6%9D%83%E9%87%8D%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%90%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>最近看到一个问题 <a href="https://www.zhihu.com/question/387415591/answer/1152066851" target="_blank" rel="noopener">郑强认为「我们过分夸大了英语在成长中的分量，英语耗费了中国青年宝贵的时光」，怎么看？</a></p>
 </blockquote>
 <a id="more"></a>
-<h2 id="二.正则化有哪几种常用方法">二.正则化有哪几种常用方法？</h2>
-<p>常用的有<span class="math inline">\(l_1-norm\)</span>、<span class="math inline">\(l_2-norm\)</span>即在损失函数中添加<strong>惩罚项</strong>;还有例如<span class="math inline">\(Droupout\)</span>方法。下面让我们来更仔细地看一下是怎么进行的</p>
-<h3 id="l_1-norm">2.1 <span class="math inline">\(l_1-norm\)</span></h3>
-<p><span class="math inline">\(l_1-norm\)</span>也叫做<code>lasso回归</code>。 机器学习模型当中的参数，可形式化地组成参数向量，记为<span class="math inline">\(\vec w\)</span>，为方便表示，我下面都记为大写字母W。不失一般性，以线性模型为例，模型可记为 <span class="math display">\[F(x;W)=W^Tx=\sum_{i=1}^nw_i\cdot x\]</span> 为了进一步地偷懒，我们将<span class="math inline">\(W^T\)</span>也叫做<span class="math inline">\(W\)</span>。 现在我们来定义一个平方损失函数，其中W是模型的参数矩阵，x为模型的某个输入值，y为实际值，那么有损失函数 <span class="math display">\[C=||Wx-y||^2\]</span> 所以有模型参数 <span class="math display">\[W^*=arg\min_{C}||Wx-y||^2\]</span> 试想，假如我们使用某种方法使得cost降到最小，那么可想而知很容易便会产生过拟合(overfitting)。现在我们不希望这个cost降到最低，一个可行的方法是在损失函数公式中我们给它加入一个反向的<code>干扰项</code>，我们给它取个更专业的名字--<code>惩罚项</code>。 我们重新定义这个这个损失函数。<span class="math inline">\(l_1-norm\)</span>方法在式子中加入了一个<code>一次</code>的惩罚项,<code>用来描述模型的复杂程度</code> <span class="math display">\[C=||Wx-y||^2+\alpha||W||\]</span> 其中<span class="math inline">\(\alpha\)</span>用来衡量惩罚项的重要程度。 使用这样的损失函数，便可以一定程度上防止产生过拟合</p>
-<h3 id="l_2-norm">2.2 <span class="math inline">\(l_2-norm\)</span></h3>
-<p>将惩罚项定位二次项，这样定义损失函数的方法我们称之为<span class="math inline">\(l_2-norm\)</span>,也可以叫它Ridge回归（岭回归）。例如: <span class="math display">\[C=||Wx-y||^2+\alpha||W||^2\]</span></p>
-<h3 id="dropout正则化">2.3 Dropout正则化</h3>
-<p>L1、L2正则化是通过修改损失函数来实现的，而Dropout则是通过<strong>修改神经网络本身</strong>来实现的，它是在训练网络时用的一种技巧(trick)。 举例来说，假如现在我们有20个样本，但是定义了300个神经元，那么直接进行训练，由于神经元数量很多，所以模型的拟合效果会很好，也因此会很容易产生过拟合现象。现在我们每一次训练神经网络时，随机丢弃一部分神经元，下一次训练时，再随机丢掉一部分神经元，那么这样我们也可以有效降低过拟合效应。 下面是一个示例代码，来自莫烦py教程 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># torch.manual_seed(1)    # reproducible</span></span><br><span class="line"></span><br><span class="line">N_SAMPLES = <span class="number">20</span></span><br><span class="line">N_HIDDEN = <span class="number">300</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># training data</span></span><br><span class="line">x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">y = x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># test data</span></span><br><span class="line">test_x = torch.unsqueeze(torch.linspace(<span class="number">-1</span>, <span class="number">1</span>, N_SAMPLES), <span class="number">1</span>)</span><br><span class="line">test_y = test_x + <span class="number">0.3</span>*torch.normal(torch.zeros(N_SAMPLES, <span class="number">1</span>), torch.ones(N_SAMPLES, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># show data</span></span><br><span class="line">plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'train'</span>)</span><br><span class="line">plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.5</span>, label=<span class="string">'test'</span>)</span><br><span class="line">plt.legend(loc=<span class="string">'upper left'</span>)</span><br><span class="line">plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>))</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">net_overfitting = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">net_dropped = torch.nn.Sequential(</span><br><span class="line">    torch.nn.Linear(<span class="number">1</span>, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, N_HIDDEN),</span><br><span class="line">    torch.nn.Dropout(<span class="number">0.5</span>),  <span class="comment"># drop 50% of the neuron</span></span><br><span class="line">    torch.nn.ReLU(),</span><br><span class="line">    torch.nn.Linear(N_HIDDEN, <span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">print(net_overfitting)  <span class="comment"># net architecture</span></span><br><span class="line">print(net_dropped)</span><br><span class="line"></span><br><span class="line">optimizer_ofit = torch.optim.Adam(net_overfitting.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">optimizer_drop = torch.optim.Adam(net_dropped.parameters(), lr=<span class="number">0.01</span>)</span><br><span class="line">loss_func = torch.nn.MSELoss()</span><br><span class="line"></span><br><span class="line">plt.ion()   <span class="comment"># something about plotting</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> range(<span class="number">500</span>):</span><br><span class="line">    pred_ofit = net_overfitting(x)</span><br><span class="line">    pred_drop = net_dropped(x)</span><br><span class="line">    loss_ofit = loss_func(pred_ofit, y)</span><br><span class="line">    loss_drop = loss_func(pred_drop, y)</span><br><span class="line"></span><br><span class="line">    optimizer_ofit.zero_grad()</span><br><span class="line">    optimizer_drop.zero_grad()  <span class="comment"># 清空过往梯度，才能更顺利地进行再一次地计算梯度</span></span><br><span class="line">    loss_ofit.backward()</span><br><span class="line">    loss_drop.backward()  <span class="comment"># backward通过反向传播计算当前梯度</span></span><br><span class="line">    optimizer_ofit.step()  <span class="comment"># step才更新网络参数</span></span><br><span class="line">    optimizer_drop.step()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> t % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># change to eval mode in order to fix drop out effect</span></span><br><span class="line">        net_overfitting.eval()</span><br><span class="line">        net_dropped.eval()  <span class="comment"># parameters for dropout differ from train mode</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># plotting</span></span><br><span class="line">        plt.cla()</span><br><span class="line">        test_pred_ofit = net_overfitting(test_x)</span><br><span class="line">        test_pred_drop = net_dropped(test_x)</span><br><span class="line">        plt.scatter(x.data.numpy(), y.data.numpy(), c=<span class="string">'magenta'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'train'</span>)</span><br><span class="line">        plt.scatter(test_x.data.numpy(), test_y.data.numpy(), c=<span class="string">'cyan'</span>, s=<span class="number">50</span>, alpha=<span class="number">0.3</span>, label=<span class="string">'test'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_ofit.data.numpy(), <span class="string">'r-'</span>, lw=<span class="number">3</span>, label=<span class="string">'overfitting'</span>)</span><br><span class="line">        plt.plot(test_x.data.numpy(), test_pred_drop.data.numpy(), <span class="string">'b--'</span>, lw=<span class="number">3</span>, label=<span class="string">'dropout(50%)'</span>)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.2</span>, <span class="string">'overfitting loss=%.4f'</span> % loss_func(test_pred_ofit, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>:  <span class="string">'red'</span>&#125;)</span><br><span class="line">        plt.text(<span class="number">0</span>, <span class="number">-1.5</span>, <span class="string">'dropout loss=%.4f'</span> % loss_func(test_pred_drop, test_y).data.numpy(), fontdict=&#123;<span class="string">'size'</span>: <span class="number">20</span>, <span class="string">'color'</span>: <span class="string">'blue'</span>&#125;)</span><br><span class="line">        plt.legend(loc=<span class="string">'upper left'</span>); plt.ylim((<span class="number">-2.5</span>, <span class="number">2.5</span>));plt.pause(<span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># change back to train mode</span></span><br><span class="line">        net_overfitting.train()</span><br><span class="line">        net_dropped.train()</span><br><span class="line"></span><br><span class="line">plt.ioff()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure> 结果： <img src="https://img-blog.csdnimg.cn/20200407134135992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /> 可以看到进行所谓dropout后的网络在所有数据上的损失函数更小</p>
-<p>总结一下我们应该怎么使用这种dropout技巧： 1. 定义网络时，在隐藏层中间使用<code>torch.nn.Dropout(prop)</code> 2. 神经网络有eval()和train()两种模式。计算预测值时记得切换到eval()模式，这种模式会关闭dropout；而在train()模式下，使用模型进行预测时仍然有部分神经元被dropout ### 2.4 增加训练集样本数量 这种方法自然也是可以削减过拟合的</p>
-<h2 id="参考">参考</h2>
-<ul>
-<li><a href="https://blog.csdn.net/qq_20412595/article/details/81636105?depth_1-utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1&amp;utm_source=distribute.pc_relevant_right.none-task-blog-BlogCommendFromBaidu-1" target="_blank" rel="noopener">正则化理解</a></li>
-<li><a href="https://blog.csdn.net/jinping_shi/article/details/52433975" target="_blank" rel="noopener">L1与L2正则化</a></li>
-<li><a href="https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg" target="_blank" rel="noopener">莫烦python</a></li>
-</ul>
+<p>我觉得可以适当降低英语在高考中的比重，但这不是因为英语不重要，相反，因为现在查资料时常常会查到英文内容，我越来越感觉到英语的重要性与自身英语水平的不足</p>
+<p>而我之所以觉得可以适当降低高考英语的比重，也是有理由的</p>
+<p>一是英语是一个增大社会不公平的学科--发达地区/省会城市的学生往往可以相对比较轻松地学好英语，他的周围环境不断在告诉他英语很重要、老师自己也有较高的水平，相反在欠发达地区的同学想学好英语则要付出多得多的努力，在学习过程中也缺乏正反馈。对于英语水平的地区差异，相信正在读大学的同学们一定会有更深的体会。</p>
+<p>而其他比如数学、语文等学科，虽然也会有不同地区教育水平的差距，但这种差距却更容易由自身努力去弥补--无非就是自己多做题多总结而已。</p>
+<p>别忘了，高考除了筛选人才的属性外，另一个重要使命是促进社会公平</p>
+<p>二是英语比重的适当降低其实不会明显降低学生英语水平。回忆一下高中时光，我们是否去认真学一门学科，并不是由这门课分数的多寡来决定的，学习时长取决于这门课的难度以及我是否对它感兴趣。比如说，语文的总分是150，物理是110，足足比语文少了40分，但是绝大部分人学物理的时长其实是远超语文的，这就是因为物理要比语文更难、更拉分</p>
+<p>所以说，在教材不变、难度不变的情况下，只要英语依然拉分，学生们依然会去好好地学习它，无非是疯狂地刷题少了一些。擅长英语的人依旧擅长，不擅长的人依然不擅长</p>
+<p>三是英语要在实际使用中才能更快地进步。诚然英语水平对于一个人才来说的确很重要，而且多数学科的一手资料也都是英雄写成，但是能读懂这些英语靠的并不是中学英语－－靠的是长期浸淫在这些论文/资料中日积月累下来的词汇量。</p>
+<p>我高中时的英语考试成绩还算勉强，常常能考到130分以上，但我深知我自己的实际水平很不咋地，也根本无法直接阅读一篇原版英语文章，更不用谈去看与专业相关的英语了。但只有真正自己在实际中需要使用一样东西时，学生才有更多的动力去学习它，英语水平也才能有更快地长进。</p>
+<p>在高考英语比重只是适当降低的情况下，该学时再继续学也完全来得及</p>
+<p><img src="https://img-blog.csdnimg.cn/20200416184346500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMTM4NDU0,size_16,color_FFFFFF,t_70" /></p>
 ]]></content>
       <categories>
-        <category>机器学习</category>
+        <category>感想</category>
       </categories>
       <tags>
-        <tag>总结</tag>
-        <tag>回归</tag>
+        <tag>知乎</tag>
+        <tag>高考</tag>
+        <tag>英语</tag>
       </tags>
   </entry>
   <entry>
-    <title>泛函分析(2)空间完备性</title>
-    <url>/2021/10/13/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90(2)%E7%A9%BA%E9%97%B4%E5%AE%8C%E5%A4%87%E6%80%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>完备性是泛函分析中的重要概念，本文对此概念进行简要总结</p>
+    <title>闹钟电视</title>
+    <url>/2021/05/14/%E9%97%B9%E9%92%9F%E7%94%B5%E8%A7%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-rcsDrhAX" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-rcsDrhAX"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "もう少しだけ",
+              author: "Yoasobi",
+              url: "http://music.163.com/song/media/outer/url?id=1840862630.mp3",
+              pic: "https://img-blog.csdnimg.cn/20210514143129720.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
 <a id="more"></a>
-<figure>
-<img src="https://img-blog.csdnimg.cn/fab6fa5236774ceaa264aeaa85a24580.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_13,color_FFFFFF,t_70,g_se,x_16" alt="圆" /><figcaption>圆</figcaption>
-</figure>
-<h1 id="空间完备性"><strong>空间完备性</strong></h1>
-<p>为了定义完备性，需要首先清楚柯西序列和收敛的概念</p>
-<h2 id="收敛性与柯西列"><strong>1. 收敛性与柯西列</strong></h2>
-<h3 id="柯西列"><strong>1.1 柯西列</strong></h3>
-<p>给定某个度量空间 <span class="math inline">\(X\)</span> 中的序列 <span class="math inline">\(\left\{x_{i}\right\}\)</span>, 当满足以下条件时，他就叫做柯西序列 (Cauchy sequence)</p>
-<p>对任意 <span class="math inline">\(\varepsilon&gt;0\)</span>, 存在 <span class="math inline">\(N\)</span> ，当 <span class="math inline">\(m, n \geqslant N\)</span> 时就满足 <span class="math inline">\(d\left(u_{m}, u_{n}\right)&lt;\varepsilon\)</span>.</p>
-<p><strong>1.2 收敛</strong></p>
-<p>设 <span class="math inline">\((X, d)\)</span> 为度量空间， <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为 <span class="math inline">\(\mathrm{X}\)</span> 中的数列，若存在 <span class="math inline">\(x \in X\)</span> 使得 <span class="math inline">\(\lim _{n \rightarrow \infty} d\left(x_{n}, x\right)=0\)</span> ，则 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 在 <span class="math inline">\(X\)</span> 中收敛, 称 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 为收敛列, 称 <span class="math inline">\(x\)</span> 为 <span class="math inline">\(\left\{x_{n}\right\}\)</span> 的极限, 记做 <span class="math inline">\(x_{n} \rightarrow x\)</span> 。</p>
-<p><span class="math inline">\(Remark:\)</span></p>
-<ol type="1">
-<li><p>收敛列比柯西列更严格。或者说收敛列一定是柯西列</p></li>
-<li><p>柯西列的直观理解是，一个序列的元素随着序数的增加而愈发靠近，并且最终趋于无限近</p></li>
-<li><p>收敛列一定有界，不仅如此，柯西列也一定有界</p></li>
-</ol>
-<h2 id="完备空间概念"><strong>2. 完备空间概念</strong></h2>
-<p>完备空间指这样性质的空间: 空间中的任何柯西序列都收敛于这个空间中</p>
-<p><span class="math inline">\(Remark:\)</span></p>
-<ol type="1">
-<li><p>完备空间是特殊的度量空间。因为按照定义完备空间需要&quot;柯西列收敛&quot;，而为了定义收敛，需要先定义先度量</p></li>
-<li><p><strong>欧几里得空间是完备空间</strong>。这给了它很好的性质，也即柯西列的收敛性</p></li>
-</ol>
-<p>证明如下:</p>
-<p>Let <span class="math inline">\(\left\langle\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)\right\rangle_{n \in \mathbb{N}}\)</span> be a Cauchy sequence in <span class="math inline">\(\mathbb{R}^{m}\)</span>.</p>
-<p>Let <span class="math inline">\(\epsilon&gt;0\)</span></p>
-<p>Then <span class="math inline">\(\frac{\epsilon}{m}&gt;0\)</span>.</p>
-<p>We have that Real Number Line is Complete Metric Space.</p>
-<p>Therefore:</p>
-<p><span class="math inline">\(\exists y_{1}, y_{2}, \ldots, y_{m} \in \mathbb{R}\)</span> and <span class="math inline">\(N_{1}, N_{2}, \ldots, N_{m} \in \mathbb{N}\)</span> (depending on <span class="math inline">\(\epsilon\)</span> ) such that:</p>
-<p><span class="math display">\[
-\forall k \in \mathbb{N}: 1 \leq k \leq m: \forall n_{k}&gt;N_{k}:\left\langle x_{n, k}-y_{k}\right\rangle&lt;\frac{\epsilon}{m}
-\]</span></p>
-<p>From Euclidean Space is Normed Space:</p>
-<p><span class="math display">\[
-\left\|\left(x_{n, 1}, x_{n, 2}, \ldots, x_{n, m}\right)-\left(y_{1}, y_{2}, \ldots, y_{m}\right)\right\| \leq \sum_{k=1}^{m}\left|x_{n, k}-y_{k}\right|&lt;\epsilon
-\]</span></p>
-<p>Hence the Euclidean space is a complete metric space.</p>
-<ol start="3" type="1">
-<li><p>数集<span class="math inline">\(\mathbb{R}\)</span>、<span class="math inline">\(\mathbb{C}\)</span>都是完备的</p></li>
-<li><p>R和C的子集不一定完备。例如取<span class="math inline">\(X=(0,1)\)</span>。取一柯西列(元素可以无限靠近)<span class="math inline">\(x=1/n\)</span>，其极限0不在该空间中</p></li>
-<li><p>完备度量空间一定为闭集(结合上面例子记忆)</p></li>
-<li><p>完备度量空间的闭子集仍然完备</p></li>
-<li><p>“完备” 可以形象理解为空间中没有 “漏洞”．有限维空间都是完备的．可数维空间都是不完备的．例如有理数集和多项式组成的空间就是不完备的（柯西序列的极限可以是 e^x，但是 e^x并不属于该空间）</p></li>
-</ol>
-<h3 id="参考">参考</h3>
+<p><img src="https://img.3dmgame.com/uploads/images/news/20190830/1567146340_769830.gif" /></p>
+]]></content>
+      <categories>
+        <category>歌曲</category>
+      </categories>
+      <tags>
+        <tag>歌曲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随机过程总结归档</title>
+    <url>/2022/02/25/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E6%80%BB%E7%BB%93%E5%BD%92%E6%A1%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>随机过程的总结</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/939d5175eeec4740b4e4779cfcc6c7b2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" /></p>
+<a id="more"></a>
 <ul>
-<li><p><a href="https://zhuanlan.zhihu.com/p/85867887" target="_blank" rel="noopener">收敛性、完备性和紧性</a></p></li>
-<li><p><a href="https://proofwiki.org/wiki/Euclidean_Space_is_Complete_Metric_Space" target="_blank" rel="noopener">Euclidean Space is Complete Metric Space</a></p></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/122657736" target="_blank" rel="noopener">一些基本概念</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/122677290" target="_blank" rel="noopener">相关分析和谱分析</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/122693119" target="_blank" rel="noopener">一些非平稳过程</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/122721280" target="_blank" rel="noopener">泊松过程</a></li>
+<li><a href="https://blog.csdn.net/qq_42138454/article/details/122721551" target="_blank" rel="noopener">马尔可夫过程与高斯过程</a></li>
 </ul>
 ]]></content>
       <categories>
-        <category>数学</category>
+        <category>总结</category>
       </categories>
       <tags>
-        <tag>总结</tag>
-        <tag>泛函分析</tag>
-        <tag>完备空间</tag>
-        <tag>柯西序列</tag>
+        <tag>数学</tag>
+        <tag>随机过程</tag>
       </tags>
   </entry>
   <entry>
@@ -1207,64 +1372,6 @@ p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \\
       <tags>
         <tag>总结</tag>
         <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随机过程总结归档</title>
-    <url>/2022/02/25/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E6%80%BB%E7%BB%93%E5%BD%92%E6%A1%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>随机过程的总结</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/939d5175eeec4740b4e4779cfcc6c7b2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5q2k5pa55a6255qE56m66IW5,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" /></p>
-<a id="more"></a>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/122657736" target="_blank" rel="noopener">一些基本概念</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/122677290" target="_blank" rel="noopener">相关分析和谱分析</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/122693119" target="_blank" rel="noopener">一些非平稳过程</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/122721280" target="_blank" rel="noopener">泊松过程</a></li>
-<li><a href="https://blog.csdn.net/qq_42138454/article/details/122721551" target="_blank" rel="noopener">马尔可夫过程与高斯过程</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>总结</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>随机过程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>闹钟电视</title>
-    <url>/2021/05/14/%E9%97%B9%E9%92%9F%E7%94%B5%E8%A7%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-qrqQRadE" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-qrqQRadE"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "もう少しだけ",
-              author: "Yoasobi",
-              url: "http://music.163.com/song/media/outer/url?id=1840862630.mp3",
-              pic: "https://img-blog.csdnimg.cn/20210514143129720.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<a id="more"></a>
-<p><img src="https://img.3dmgame.com/uploads/images/news/20190830/1567146340_769830.gif" /></p>
-]]></content>
-      <categories>
-        <category>歌曲</category>
-      </categories>
-      <tags>
-        <tag>歌曲</tag>
       </tags>
   </entry>
 </search>
